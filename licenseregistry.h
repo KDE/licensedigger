@@ -18,23 +18,33 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include <QGuiApplication>
-#include <QQmlApplicationEngine>
+#ifndef LICENSEREGISTRY_H
+#define LICENSEREGISTRY_H
 
-int main(int argc, char *argv[])
+#include <QObject>
+#include <QVector>
+#include <QMap>
+
+class LicenseRegistry : public QObject
 {
-    QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
+    Q_OBJECT
 
-    QGuiApplication app(argc, argv);
+    using SpdxIdentifer = QString;
 
-    QQmlApplicationEngine engine;
-    const QUrl url(QStringLiteral("qrc:/main.qml"));
-    QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,
-                     &app, [url](QObject *obj, const QUrl &objUrl) {
-        if (!obj && url == objUrl)
-            QCoreApplication::exit(-1);
-    }, Qt::QueuedConnection);
-    engine.load(url);
+public:
+    explicit LicenseRegistry(QObject *parent = nullptr);
 
-    return app.exec();
-}
+    QVector<SpdxIdentifer> identifiers() const;
+
+    QVector<QString> headerTexts(const SpdxIdentifer &identifier) const;
+
+Q_SIGNALS:
+
+public Q_SLOTS:
+
+private:
+    void loadLicenseHeaders();
+    QMap<SpdxIdentifer, QVector<QString>> m_registry;
+};
+
+#endif // LICENSEREGISTRY_H

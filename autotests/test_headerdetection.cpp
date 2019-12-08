@@ -19,6 +19,7 @@
  */
 
 #include "test_headerdetection.h"
+#include "../licenseregistry.h"
 #include <QTest>
 #include <QDir>
 #include <QDirIterator>
@@ -26,19 +27,13 @@
 void TestHeaderDetection::detectLGPL20orlater()
 {
     const QString spdxMarker { "LGPL-2.0-or-later" };
-    const QString spdxHeaderDir { ":/licenses/" + spdxMarker };
     const QString testdataDir { ":/testdata/" + spdxMarker };
 
     // read comparison headers
-    QVERIFY(QDir().exists(spdxHeaderDir));
-    QVector<QString> headers;
-    QDirIterator headerIter(spdxHeaderDir);
-    while (headerIter.hasNext()) {
-        QFile file(headerIter.next());
-        file.open(QIODevice::ReadOnly);
-        headers.append(file.readAll());
-    }
-    QVERIFY(headers.size() > 0);
+    LicenseRegistry registry;
+
+    QVERIFY(registry.identifiers().contains(spdxMarker));
+    QVERIFY(registry.headerTexts(spdxMarker).size() > 0);
 
     // load test data
     QVERIFY(QDir().exists(testdataDir));
@@ -48,7 +43,7 @@ void TestHeaderDetection::detectLGPL20orlater()
         file.open(QIODevice::ReadOnly);
         const QString fileContents { file.readAll() };
         QVERIFY(!fileContents.isEmpty());
-        bool result = fileContents.contains(headers.first()); //TODO all must be tests
+        bool result = fileContents.contains(registry.headerTexts(spdxMarker).first()); //TODO all must be tests
         QVERIFY(result);
     }
 

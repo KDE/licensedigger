@@ -30,6 +30,7 @@ add_subdirectory(autotests)
 add_executable(
     licensedigger
     main.cpp
+    licenseregistry.cpp
     qml.qrc
     licenses.qrc
 )
