@@ -61,3 +61,28 @@ QVector<QString> LicenseRegistry::headerTexts(const LicenseRegistry::SpdxIdentif
 {
     return m_registry.value(identifier);
 }
+
+QRegularExpression LicenseRegistry::headerTextRegExp(const SpdxIdentifer &identifier) const
+{
+    if (!m_registry.contains(identifier)) {
+        qCritical() << "Identifier not found, returning error matcher";
+        return QRegularExpression("DOES_NOT_MATCH_ANY_LICENSE_HEADER");
+    }
+
+    QVector<QString> patterns;
+    for (const QString &header : m_registry.value(identifier)) {
+        QString pattern(QRegularExpression::escape(header));
+        pattern.prepend("[\\* ]*");
+        pattern.replace("\n", "\n[\\* ]*"); // allow prefixes of whitespace mixed with stars
+        patterns.append(pattern);
+    }
+
+    QVector<QString>::const_iterator iter = patterns.constBegin();
+    QString fullPattern = QString("(%1)").arg(*iter);
+    while (++iter != patterns.constEnd()) {
+        fullPattern.append(QString("|(%1)").arg(*iter));
+    }
+//    qDebug() << "PATTERN" << fullPattern;
+    QRegularExpression detector(fullPattern);
+    return detector;
+}

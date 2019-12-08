@@ -43,7 +43,7 @@ void TestHeaderDetection::detectLGPL20orlater()
         file.open(QIODevice::ReadOnly);
         const QString fileContents { file.readAll() };
         QVERIFY(!fileContents.isEmpty());
-        bool result = fileContents.contains(registry.headerTexts(spdxMarker).first()); //TODO all must be tests
+        bool result = fileContents.contains(registry.headerTextRegExp(spdxMarker));
         QVERIFY(result);
     }
 

@@ -24,6 +24,7 @@
 #include <QObject>
 #include <QVector>
 #include <QMap>
+#include <QRegularExpression>
 
 class LicenseRegistry : public QObject
 {
@@ -38,9 +39,7 @@ public:
 
     QVector<QString> headerTexts(const SpdxIdentifer &identifier) const;
 
-Q_SIGNALS:
-
-public Q_SLOTS:
+    QRegularExpression headerTextRegExp(const SpdxIdentifer &identifier) const;
 
 private:
     void loadLicenseHeaders();
