@@ -21,6 +21,7 @@
 #include "test_headerdetection.h"
 #include "../licenseregistry.h"
 #include <QTest>
+#include <QDebug>
 #include <QDir>
 #include <QDirIterator>
 
@@ -44,6 +45,9 @@ void TestHeaderDetection::detectForIdentifier(const QString &spdxMarker)
         const QString fileContents { file.readAll() };
         QVERIFY(!fileContents.isEmpty());
         bool result = fileContents.contains(registry.headerTextRegExp(spdxMarker));
+        if (!result) {
+            qWarning() << "Could not detect" << spdxMarker << ":" << testdataIter.filePath();
+        }
         QVERIFY(result);
     }
 }
@@ -56,6 +60,11 @@ void TestHeaderDetection::detectLGPL20orlater()
 void TestHeaderDetection::detectLGPL20only()
 {
     detectForIdentifier("LGPL-2.0-only");
+}
+
+void TestHeaderDetection::detectLGPL20_or_LGPL30_or_KDE()
+{
+    detectForIdentifier("LGPL-2.0_OR_LGPL-3.0_OR_LicenseRef-KDE");
 }
 
 QTEST_GUILESS_MAIN(TestHeaderDetection);

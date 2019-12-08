@@ -76,7 +76,7 @@ QRegularExpression LicenseRegistry::headerTextRegExp(const SpdxIdentifer &identi
     for (const QString &header : m_registry.value(identifier)) {
         QString pattern(QRegularExpression::escape(header));
         pattern.prepend("[\\* ]*");
-        pattern.replace("\n", "\n[\\* ]*"); // allow prefixes of whitespace mixed with stars
+        pattern.replace("\\\n", "[\\* ]*\\\n[\\* ]*"); // allow prefixes and suffices of whitespace mixed with stars
         patterns.append(pattern);
     }
 

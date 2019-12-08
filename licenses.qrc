@@ -2,7 +2,11 @@
     <qresource prefix="/">
         <file>licenses/GPL-2.0-or-later/kde-licensing-wiki</file>
         <file>licenses/LGPL-2.0-only/kservice</file>
+        <file>licenses/LGPL-2.0_OR_LGPL-3.0_OR_LicenseRef-KDE/kservice_kmimeassociations</file>
         <file>licenses/LGPL-2.0-or-later/kservice</file>
+        <file>licenses/LGPL-2.0-or-later/kservice_plugintest</file>
         <file>licenses/LGPL-2.1-or-later/kde-licensing-wiki</file>
+        <file>licenses/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/kservice_findservice</file>
+        <file>licenses/TO-CLARIFY/kservice_might-be-gpl-or-lgpl</file>
     </qresource>
 </RCC>
