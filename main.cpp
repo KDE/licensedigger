@@ -45,12 +45,15 @@ int main(int argc, char *argv[])
     DirectoryParser licenseParser;
     const auto results = licenseParser.parseAll(directory);
     int undetectedLicenses = 0;
+    int detectedLicenses = 0;
     for (auto iter = results.constBegin(); iter != results.constEnd(); iter++) {
         if (iter.value() == LicenseRegistry::UnknownLicense) {
             ++undetectedLicenses;
+        } else {
+            ++detectedLicenses;
         }
         qDebug() << iter.key() << " --> " << iter.value();
     }
 
-    qDebug().nospace() << "\n" << "Undetected files: " << undetectedLicenses;
+    qDebug().nospace() << "\n" << "Undetected files: " << undetectedLicenses << " (total: " << (undetectedLicenses + detectedLicenses) << ")";
 }

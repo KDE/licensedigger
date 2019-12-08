@@ -44,6 +44,7 @@ public:
 private:
     void loadLicenseHeaders();
     QMap<SpdxIdentifer, QVector<QString>> m_registry;
+    mutable QMap<SpdxIdentifer, QRegularExpression> m_regexpCache;
 };
 
 #endif // LICENSEREGISTRY_H

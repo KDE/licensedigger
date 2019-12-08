@@ -71,6 +71,9 @@ QRegularExpression LicenseRegistry::headerTextRegExp(const SpdxIdentifer &identi
         qCritical() << "Identifier not found, returning error matcher";
         return QRegularExpression("DOES_NOT_MATCH_ANY_LICENSE_HEADER");
     }
+    if (m_regexpCache.contains(identifier)) {
+        return m_regexpCache.value(identifier);
+    }
 
     QVector<QString> patterns;
     for (const QString &header : m_registry.value(identifier)) {
@@ -87,5 +90,7 @@ QRegularExpression LicenseRegistry::headerTextRegExp(const SpdxIdentifer &identi
     }
 //    qDebug() << "PATTERN" << fullPattern;
     QRegularExpression detector(fullPattern);
+    m_regexpCache[identifier] = detector;
+
     return detector;
 }
