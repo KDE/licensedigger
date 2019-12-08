@@ -57,6 +57,11 @@ void TestHeaderDetection::detectLGPL20orlater()
     detectForIdentifier("LGPL-2.0-or-later");
 }
 
+void TestHeaderDetection::detectLGPL21orlater()
+{
+    detectForIdentifier("LGPL-2.1-or-later");
+}
+
 void TestHeaderDetection::detectLGPL20only()
 {
     detectForIdentifier("LGPL-2.0-only");
@@ -65,6 +70,11 @@ void TestHeaderDetection::detectLGPL20only()
 void TestHeaderDetection::detectLGPL20_or_LGPL30_or_KDE()
 {
     detectForIdentifier("LGPL-2.0_OR_LGPL-3.0_OR_LicenseRef-KDE");
+}
+
+void TestHeaderDetection::detectGPL20orlater()
+{
+    detectForIdentifier("GPL-2.0-or-later");
 }
 
 void TestHeaderDetection::detectGPL20_or_GPL30_or_KDE()
