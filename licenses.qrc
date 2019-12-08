@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>licenses/GPL-2.0-or-later/kde-licensing-wiki</file>
+        <file>licenses/LGPL-2.0-or-later/kservice</file>
+        <file>licenses/LGPL-2.1-or-later/kde-licensing-wiki</file>
+    </qresource>
+</RCC>

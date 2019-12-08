@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>testdata/LGPL-2.0-or-later/kautostart.cpp</file>
+    </qresource>
+</RCC>
