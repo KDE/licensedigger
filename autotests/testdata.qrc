@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/">
         <file>testdata/LGPL-2.0-or-later/kautostart.cpp</file>
+        <file>testdata/LGPL-2.0-only/ksycocautils_p.h</file>
     </qresource>
 </RCC>

@@ -12,5 +12,9 @@ public:
 
 private Q_SLOTS:
     void detectLGPL20orlater();
+    void detectLGPL20only();
+
+private:
+    void detectForIdentifier(const QString &spdxMarker);
 };
 #endif

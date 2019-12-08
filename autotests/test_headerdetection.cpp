@@ -24,9 +24,8 @@
 #include <QDir>
 #include <QDirIterator>
 
-void TestHeaderDetection::detectLGPL20orlater()
+void TestHeaderDetection::detectForIdentifier(const QString &spdxMarker)
 {
-    const QString spdxMarker { "LGPL-2.0-or-later" };
     const QString testdataDir { ":/testdata/" + spdxMarker };
 
     // read comparison headers
@@ -37,6 +36,7 @@ void TestHeaderDetection::detectLGPL20orlater()
 
     // load test data
     QVERIFY(QDir().exists(testdataDir));
+    QVERIFY(QDir(testdataDir).count() > 0);
     QDirIterator testdataIter(testdataDir);
     while (testdataIter.hasNext()) {
         QFile file(testdataIter.next());
@@ -46,7 +46,16 @@ void TestHeaderDetection::detectLGPL20orlater()
         bool result = fileContents.contains(registry.headerTextRegExp(spdxMarker));
         QVERIFY(result);
     }
+}
 
+void TestHeaderDetection::detectLGPL20orlater()
+{
+    detectForIdentifier("LGPL-2.0-or-later");
+}
+
+void TestHeaderDetection::detectLGPL20only()
+{
+    detectForIdentifier("LGPL-2.0-only");
 }
 
 QTEST_GUILESS_MAIN(TestHeaderDetection);
