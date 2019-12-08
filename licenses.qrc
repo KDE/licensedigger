@@ -2,6 +2,8 @@
     <qresource prefix="/">
         <file>licenses/GPL-2.0-or-later/kde-licensing-wiki</file>
         <file>licenses/LGPL-2.0-only/kservice</file>
+        <file>licenses/LGPL-2.0-only/kservice_kbuildservicegroupfactory</file>
+        <file>licenses/LGPL-2.0-only/kservice_kmimetypetrader</file>
         <file>licenses/LGPL-2.0_OR_LGPL-3.0_OR_LicenseRef-KDE/kservice_kmimeassociations</file>
         <file>licenses/LGPL-2.0-or-later/kservice</file>
         <file>licenses/LGPL-2.0-or-later/kservice_plugintest</file>
