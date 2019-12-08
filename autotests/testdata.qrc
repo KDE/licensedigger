@@ -15,7 +15,9 @@
         <file>testdata/LGPL-2.0_OR_LGPL-3.0_OR_LicenseRef-KDE/kmimeassociations.cpp</file>
         <file>testdata/LGPL-2.0_OR_LGPL-3.0_OR_LicenseRef-KDE/ksycocadevices_p.h</file>
         <file>testdata/LGPL-2.1-or-later/authorizationmanager_p.h</file>
+        <file>testdata/LGPL-2.1-or-later/knewstuffaction.cpp</file>
         <file>testdata/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/findservice.cpp</file>
+        <file>testdata/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/inhibition.cpp</file>
         <file>testdata/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/projectparser.cpp</file>
         <file>testdata/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/qtplatformdependent.cpp</file>
     </qresource>
