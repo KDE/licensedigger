@@ -23,6 +23,8 @@
 #include <QDir>
 #include <QDirIterator>
 
+const QString LicenseRegistry::UnknownLicense("UNKOWN_LICENSE");
+
 LicenseRegistry::LicenseRegistry(QObject *parent) : QObject(parent)
 {
     loadLicenseHeaders();
@@ -33,6 +35,7 @@ void LicenseRegistry::loadLicenseHeaders()
     if (!m_registry.isEmpty()) {
         m_registry.clear();
     }
+    m_registry[LicenseRegistry::UnknownLicense] = QVector<QString>{ "THIS IS A STUB HEADER FOR UNKONWN LICENSES, IT SHALL NEVER MATCH" };
 
     QDirIterator spdxIter(":/licenses/");
     while (spdxIter.hasNext()) {

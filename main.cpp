@@ -18,23 +18,39 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+#include "directoryparser.h"
 #include <QGuiApplication>
-#include <QQmlApplicationEngine>
+#include <QCommandLineParser>
+#include <QDebug>
 
 int main(int argc, char *argv[])
 {
-    QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
+    QCoreApplication app(argc, argv);
 
-    QGuiApplication app(argc, argv);
+    QCommandLineParser parser;
+    parser.setApplicationDescription("Digs into licenses and replaces them with SPDX identifiers");
+    parser.addHelpOption();
+    parser.addVersionOption();
+    parser.addPositionalArgument("directory", QCoreApplication::translate("main", "Source file to copy."));
+    parser.process(app);
 
-    QQmlApplicationEngine engine;
-    const QUrl url(QStringLiteral("qrc:/main.qml"));
-    QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,
-                     &app, [url](QObject *obj, const QUrl &objUrl) {
-        if (!obj && url == objUrl)
-            QCoreApplication::exit(-1);
-    }, Qt::QueuedConnection);
-    engine.load(url);
+    const QStringList args = parser.positionalArguments();
+    if (args.count() == 0) {
+        qCritical() << "Directory for scanning must be provided";
+        return 1;
+    }
+    const QString directory = args.at(0);
 
-    return app.exec();
+    qInfo() << "Parsing headers in" << directory;
+    DirectoryParser licenseParser;
+    const auto results = licenseParser.parseAll(directory);
+    int undetectedLicenses = 0;
+    for (auto iter = results.constBegin(); iter != results.constEnd(); iter++) {
+        if (iter.value() == LicenseRegistry::UnknownLicense) {
+            ++undetectedLicenses;
+        }
+        qDebug() << iter.key() << " --> " << iter.value();
+    }
+
+    qDebug().nospace() << "\n" << "Undetected files: " << undetectedLicenses;
 }

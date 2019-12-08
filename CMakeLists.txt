@@ -31,6 +31,7 @@ add_executable(
     licensedigger
     main.cpp
     licenseregistry.cpp
+    directoryparser.cpp
     qml.qrc
     licenses.qrc
 )

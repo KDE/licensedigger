@@ -18,32 +18,18 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef LICENSEREGISTRY_H
-#define LICENSEREGISTRY_H
+#ifndef DIRECTORYPARSER_H
+#define DIRECTORYPARSER_H
 
-#include <QObject>
-#include <QVector>
-#include <QMap>
-#include <QRegularExpression>
+#include "licenseregistry.h"
 
-class LicenseRegistry : public QObject
+class DirectoryParser
 {
-    Q_OBJECT
 public:
-    using SpdxIdentifer = QString;
-    const static QString UnknownLicense;
-
-    explicit LicenseRegistry(QObject *parent = nullptr);
-
-    QVector<SpdxIdentifer> identifiers() const;
-
-    QVector<QString> headerTexts(const SpdxIdentifer &identifier) const;
-
-    QRegularExpression headerTextRegExp(const SpdxIdentifer &identifier) const;
+    QMap<QString, LicenseRegistry::SpdxIdentifer> parseAll(const QString &directory) const;
 
 private:
-    void loadLicenseHeaders();
-    QMap<SpdxIdentifer, QVector<QString>> m_registry;
+    LicenseRegistry m_registry;
 };
 
-#endif // LICENSEREGISTRY_H
+#endif // DIRECTORYPARSER_H
