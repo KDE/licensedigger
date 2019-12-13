@@ -23,7 +23,7 @@
 #include <QDir>
 #include <QDirIterator>
 
-const QString LicenseRegistry::UnknownLicense("UNKOWN_LICENSE");
+const QString LicenseRegistry::UnknownLicense("UNKNOWN_LICENSE");
 
 LicenseRegistry::LicenseRegistry(QObject *parent) : QObject(parent)
 {
