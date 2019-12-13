@@ -19,6 +19,7 @@ private Q_SLOTS:
     void detectLGPL21only();
     void detectLGPL21orlater();
     void detectLGPL21_or_LGPL30_or_KDE();
+    void detectLGPL30orlater();
 
 private:
     void detectForIdentifier(const QString &spdxMarker);

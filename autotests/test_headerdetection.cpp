@@ -92,5 +92,9 @@ void TestHeaderDetection::detectLGPL21_or_LGPL30_or_KDE()
     detectForIdentifier("LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE");
 }
 
+void TestHeaderDetection::detectLGPL30orlater()
+{
+    detectForIdentifier("LGPL-3.0-or-later");
+}
 
 QTEST_GUILESS_MAIN(TestHeaderDetection);
