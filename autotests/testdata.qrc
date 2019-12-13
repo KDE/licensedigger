@@ -9,13 +9,18 @@
         <file>testdata/LGPL-2.0-or-later/package.cpp</file>
         <file>testdata/LGPL-2.0-or-later/framesvg.cpp</file>
         <file>testdata/LGPL-2.0-or-later/dialogshadows.cpp</file>
+        <file>testdata/LGPL-2.0-or-later/kmodelindexproxymapper.cpp</file>
         <file>testdata/LGPL-2.0-only/ksycocautils_p.h</file>
         <file>testdata/LGPL-2.0-only/kbuildservicegroupfactory_p.h</file>
         <file>testdata/LGPL-2.0-only/kmimetypetrader.cpp</file>
         <file>testdata/LGPL-2.0_OR_LGPL-3.0_OR_LicenseRef-KDE/kmimeassociations.cpp</file>
         <file>testdata/LGPL-2.0_OR_LGPL-3.0_OR_LicenseRef-KDE/ksycocadevices_p.h</file>
+        <file>testdata/LGPL-2.1-only/modeltest.cpp</file>
         <file>testdata/LGPL-2.1-or-later/authorizationmanager_p.h</file>
         <file>testdata/LGPL-2.1-or-later/knewstuffaction.cpp</file>
+        <file>testdata/LGPL-2.1-or-later/proxymodeltestwidget.cpp</file>
+        <file>testdata/LGPL-2.1-or-later/kconcatenaterows_qml.cpp</file>
+        <file>testdata/LGPL-2.1-or-later/lessthanwidget.h</file>
         <file>testdata/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/findservice.cpp</file>
         <file>testdata/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/inhibition.cpp</file>
         <file>testdata/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/projectparser.cpp</file>
