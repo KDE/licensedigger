@@ -38,6 +38,16 @@ QMap<QString, LicenseRegistry::SpdxIdentifer> DirectoryParser::parseAll(const QS
             missingLicenseHeaderBlacklist.append(line);
         }
     }
+    QStringList missingLicenseHeaderGeneratedFileBlacklist;
+    {
+        QFile file(":/annotations/generated-files.txt");
+        file.open(QIODevice::ReadOnly);
+        QTextStream in(&file);
+        QString line;
+        while (in.readLineInto(&line)) {
+            missingLicenseHeaderGeneratedFileBlacklist.append(line);
+        }
+    }
 
     QDirIterator iterator(directory, QDirIterator::Subdirectories);
     while (iterator.hasNext()) {
@@ -69,6 +79,12 @@ QMap<QString, LicenseRegistry::SpdxIdentifer> DirectoryParser::parseAll(const QS
         for (auto backlistPath : missingLicenseHeaderBlacklist) {
             if (iterator.fileInfo().filePath().endsWith(backlistPath)) {
                 results.insert(iterator.fileInfo().filePath(), LicenseRegistry::MissingLicense);
+                break;
+            }
+        }
+        for (auto backlistPath : missingLicenseHeaderGeneratedFileBlacklist) {
+            if (iterator.fileInfo().filePath().endsWith(backlistPath)) {
+                results.insert(iterator.fileInfo().filePath(), LicenseRegistry::MissingLicenseForGeneratedFile);
                 break;
             }
         }

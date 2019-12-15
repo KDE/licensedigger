@@ -33,6 +33,7 @@ public:
     using SpdxIdentifer = QString;
     const static QString UnknownLicense;
     const static QString MissingLicense;
+    const static QString MissingLicenseForGeneratedFile;
 
     explicit LicenseRegistry(QObject *parent = nullptr);
 

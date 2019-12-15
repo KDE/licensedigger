@@ -25,6 +25,7 @@
 
 const QString LicenseRegistry::UnknownLicense("UNKNOWN_LICENSE");
 const QString LicenseRegistry::MissingLicense("MISSING_LICENSE");
+const QString LicenseRegistry::MissingLicenseForGeneratedFile("MISSING_LICENSE_GENERATED_FILE");
 
 LicenseRegistry::LicenseRegistry(QObject *parent) : QObject(parent)
 {

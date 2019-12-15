@@ -1,0 +1,2 @@
+baloo/src/file/mainadaptor.cpp
+baloo/src/file/mainadaptor.h

@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/">
         <file>annotations/missing-headers-blacklist.txt</file>
+        <file>annotations/generated-files.txt</file>
     </qresource>
 </RCC>
