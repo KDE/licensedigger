@@ -17,3 +17,4 @@ syntax-highlighting/autotests/input/preprocessor-bug363280.c
 syntax-highlighting/autotests/input/preprocessor-bug363280.cpp
 syntax-highlighting/autotests/input/test.c
 kjs/src/kjs/context.h
+karchive/test_package/example.cpp

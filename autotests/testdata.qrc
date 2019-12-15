@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/">
+        <file>testdata/BSD-2-Clause/unzipper_main.cpp</file>
         <file>testdata/BSD-3-Clause/SymbolTable.h</file>
         <file>testdata/GPL-2.0_OR_GPL-3.0_OR_LicenseRef-KDE/nsaplugin.cpp</file>
         <file>testdata/GPL-2.0-or-later/shellpluginloader.cpp</file>
@@ -8,6 +9,7 @@
         <file>testdata/GPL-2.0-or-later/kio_search.cpp</file>
         <file>testdata/GPL-2.0-or-later/activityinfo.cpp</file>
         <file>testdata/GPL-2.0-or-later/kcharsetstest.cpp</file>
+        <file>testdata/GPL-3.0-or-later/testcreateddatecompat.cpp</file>
         <file>testdata/LGPL-2.0-or-later/kautostart.cpp</file>
         <file>testdata/LGPL-2.0-or-later/ecmatest.cpp</file>
         <file>testdata/LGPL-2.0-or-later/plugintest.cpp</file>
@@ -35,6 +37,7 @@
         <file>testdata/LGPL-2.0_OR_LGPL-3.0_OR_LicenseRef-KDE/ksycocadevices_p.h</file>
         <file>testdata/LGPL-2.1-only/modeltest.cpp</file>
         <file>testdata/LGPL-2.1-or-later/authorizationmanager_p.h</file>
+        <file>testdata/LGPL-2.1-or-later/a2dp-codecs.h</file>
         <file>testdata/LGPL-2.1-or-later/knewstuffaction.cpp</file>
         <file>testdata/LGPL-2.1-or-later/proxymodeltestwidget.cpp</file>
         <file>testdata/LGPL-2.1-or-later/kconcatenaterows_qml.cpp</file>

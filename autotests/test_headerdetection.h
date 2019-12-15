@@ -13,6 +13,7 @@ public:
 private Q_SLOTS:
     void detectGPL20_or_GPL30_or_KDE();
     void detectGPL20orlater();
+    void detectGPL30orlater();
     void detectLGPL20orlater();
     void detectLGPL20only();
     void detectLGPL20_or_LGPL30_or_KDE();
@@ -20,6 +21,7 @@ private Q_SLOTS:
     void detectLGPL21orlater();
     void detectLGPL21_or_LGPL30_or_KDE();
     void detectLGPL30orlater();
+    void detectBSD2Clause();
     void detectBSD3Clause();
     void detectMIT();
 

@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/">
+        <file>licenses/BSD-2-Clause/karchive_unzipper_main</file>
         <file>licenses/BSD-3-Clause/kjs_symboltable</file>
         <file>licenses/GPL-2.0-or-later/kde-licensing-wiki</file>
         <file>licenses/GPL-2.0-or-later/plasma-framework_shellpluginloader</file>
@@ -8,6 +9,7 @@
         <file>licenses/GPL-2.0-or-later/baloo_kio_search</file>
         <file>licenses/GPL-2.0-or-later/kactivities_activityinfo</file>
         <file>licenses/GPL-2.0-or-later/kcodecs_kcharsetstest</file>
+        <file>licenses/GPL-3.0-or-later/kcalendarcore_testcreateddatecompat</file>
         <file>licenses/GPL-2.0_OR_GPL-3.0_OR_LicenseRef-KDE/kservice_autotest_nsaplugin</file>
         <file>licenses/LGPL-2.0-only/kcodecs_kcodecs</file>
         <file>licenses/LGPL-2.0-only/kservice</file>
@@ -35,6 +37,7 @@
         <file>licenses/LGPL-2.0_OR_LGPL-3.0_OR_LicenseRef-KDE/kservice_ksycocadevices_p</file>
         <file>licenses/LGPL-2.1-only/kitemmodels_modeltest</file>
         <file>licenses/LGPL-2.1-or-later/kde-licensing-wiki</file>
+        <file>licenses/LGPL-2.1-or-later/bluezqt_a2dp-codecs</file>
         <file>licenses/LGPL-2.1-or-later/kitemmodel_kconcatenaterows</file>
         <file>licenses/LGPL-2.1-or-later/kitemmodels_lessthanwidget</file>
         <file>licenses/LGPL-2.1-or-later/kitemmodels_proxymodeltestwidget</file>

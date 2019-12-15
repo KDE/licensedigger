@@ -77,6 +77,11 @@ void TestHeaderDetection::detectGPL20orlater()
     detectForIdentifier("GPL-2.0-or-later");
 }
 
+void TestHeaderDetection::detectGPL30orlater()
+{
+    detectForIdentifier("GPL-3.0-or-later");
+}
+
 void TestHeaderDetection::detectGPL20_or_GPL30_or_KDE()
 {
     detectForIdentifier("GPL-2.0_OR_GPL-3.0_OR_LicenseRef-KDE");
@@ -95,6 +100,11 @@ void TestHeaderDetection::detectLGPL21_or_LGPL30_or_KDE()
 void TestHeaderDetection::detectLGPL30orlater()
 {
     detectForIdentifier("LGPL-3.0-or-later");
+}
+
+void TestHeaderDetection::detectBSD2Clause()
+{
+    detectForIdentifier("BSD-2-Clause");
 }
 
 void TestHeaderDetection::detectBSD3Clause()
