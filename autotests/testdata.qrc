@@ -38,6 +38,8 @@
         <file>testdata/LGPL-2.0_OR_LGPL-3.0_OR_LicenseRef-KDE/kmimeassociations.cpp</file>
         <file>testdata/LGPL-2.0_OR_LGPL-3.0_OR_LicenseRef-KDE/ksycocadevices_p.h</file>
         <file>testdata/LGPL-2.1-only/modeltest.cpp</file>
+        <file>testdata/LGPL-2.1-only/kprocesslist_unix_procstat.cpp</file>
+        <file>testdata/LGPL-2.1-only/kfilesystemtype.cpp</file>
         <file>testdata/LGPL-2.1-or-later/authorizationmanager_p.h</file>
         <file>testdata/LGPL-2.1-or-later/a2dp-codecs.h</file>
         <file>testdata/LGPL-2.1-or-later/knewstuffaction.cpp</file>
@@ -50,6 +52,8 @@
         <file>testdata/LGPL-2.1-or-later/kurllabel.cpp</file>
         <file>testdata/LGPL-2.1-or-later/databasebenchmark.cpp</file>
         <file>testdata/LGPL-2.1-or-later/basicindexingjobtest.cpp</file>
+        <file>testdata/LGPL-2.1-only_WITH_Qt-LGPL-exception-1.1/kprocesslist.cpp</file>
+        <file>testdata/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/desktoptojson.cpp</file>
         <file>testdata/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/findservice.cpp</file>
         <file>testdata/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/ksplittercollapserbuttontest.cpp</file>
         <file>testdata/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/inhibition.cpp</file>

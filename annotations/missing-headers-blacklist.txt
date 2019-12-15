@@ -21,3 +21,5 @@ karchive/test_package/example.cpp
 kconfig/autotests/kconfig_compiler/myprefs.h
 kconfig/autotests/kconfig_compiler/test_qdebugcategory_debug.cpp
 kconfig/autotests/kconfig_compiler/test_qdebugcategory_debug.h
+kcoreaddons/autotests/kstringhandlertest.cpp
+kcoreaddons/autotests/kstringhandlertest.h

@@ -38,6 +38,9 @@
         <file>licenses/LGPL-2.0_OR_LGPL-3.0_OR_LicenseRef-KDE/kservice_kmimeassociations</file>
         <file>licenses/LGPL-2.0_OR_LGPL-3.0_OR_LicenseRef-KDE/kservice_ksycocadevices_p</file>
         <file>licenses/LGPL-2.1-only/kitemmodels_modeltest</file>
+        <file>licenses/LGPL-2.1-only/kprocesslist_unix_procstat</file>
+        <file>licenses/LGPL-2.1-only/kcoreaddons_kfilesystemtype</file>
+        <file>licenses/LGPL-2.1-only_WITH_Qt-LGPL-exception-1.1/kcoreaddons_kprocesslist</file>
         <file>licenses/LGPL-2.1-or-later/kde-licensing-wiki</file>
         <file>licenses/LGPL-2.1-or-later/bluezqt_a2dp-codecs</file>
         <file>licenses/LGPL-2.1-or-later/kitemmodel_kconcatenaterows</file>
@@ -58,6 +61,7 @@
         <file>licenses/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/kwidgetaddons_ksplittercollapserbuttontest</file>
         <file>licenses/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/kwidgetsaddons_kbusyindicatorwidget</file>
         <file>licenses/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/solid_inhibition</file>
+        <file>licenses/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/kcoreaddons_desktoptojson</file>
         <file>licenses/LGPL-3.0-or-later/kwidgetaddons_kmessagebox</file>
         <file>licenses/TO-CLARIFY/kservice_might-be-gpl-or-lgpl</file>
         <file>licenses/MIT/ksyntaxhighlighter</file>

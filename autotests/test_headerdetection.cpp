@@ -117,4 +117,8 @@ void TestHeaderDetection::detectMIT()
     detectForIdentifier("MIT");
 }
 
+void TestHeaderDetection::detectLGPL21withQtLGPLexception()
+{
+    detectForIdentifier("LGPL-2.1-only_WITH_Qt-LGPL-exception-1.1");
+}
 QTEST_GUILESS_MAIN(TestHeaderDetection);
