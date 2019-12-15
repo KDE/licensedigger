@@ -1,6 +1,7 @@
 <RCC>
     <qresource prefix="/">
         <file>testdata/BSD-2-Clause/unzipper_main.cpp</file>
+        <file>testdata/BSD-2-Clause/kemailsettings.cpp</file>
         <file>testdata/BSD-3-Clause/SymbolTable.h</file>
         <file>testdata/GPL-2.0_OR_GPL-3.0_OR_LicenseRef-KDE/nsaplugin.cpp</file>
         <file>testdata/GPL-2.0-or-later/shellpluginloader.cpp</file>
@@ -27,6 +28,7 @@
         <file>testdata/LGPL-2.0-or-later/balooplugin.cpp</file>
         <file>testdata/LGPL-2.0-or-later/resourceinstance.cpp</file>
         <file>testdata/LGPL-2.0-or-later/range.h</file>
+        <file>testdata/LGPL-2.0-or-later/test_kconf_update.cpp</file>
         <file>testdata/LGPL-2.0-only/kcodecs.cpp</file>
         <file>testdata/LGPL-2.0-only/ksycocautils_p.h</file>
         <file>testdata/LGPL-2.0-only/kbuildservicegroupfactory_p.h</file>
@@ -58,5 +60,6 @@
         <file>testdata/LGPL-3.0-or-later/main.cpp</file>
         <file>testdata/MIT/syntaxhighlighter.cpp</file>
         <file>testdata/MIT/CharDistribution.cpp</file>
+        <file>testdata/MIT/kconfigcompiler_test_signals.cpp</file>
     </qresource>
 </RCC>

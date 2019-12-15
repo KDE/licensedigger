@@ -18,3 +18,6 @@ syntax-highlighting/autotests/input/preprocessor-bug363280.cpp
 syntax-highlighting/autotests/input/test.c
 kjs/src/kjs/context.h
 karchive/test_package/example.cpp
+kconfig/autotests/kconfig_compiler/myprefs.h
+kconfig/autotests/kconfig_compiler/test_qdebugcategory_debug.cpp
+kconfig/autotests/kconfig_compiler/test_qdebugcategory_debug.h
