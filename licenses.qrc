@@ -9,6 +9,7 @@
         <file>licenses/LGPL-2.0-only/kservice_kbuildservicegroupfactory</file>
         <file>licenses/LGPL-2.0-only/kservice_kmimetypetrader</file>
         <file>licenses/LGPL-2.0-only/kwidgetsaddons_kmessagebox</file>
+        <file>licenses/LGPL-2.0-only/kwidgetsaddons_kfontrequestertest</file>
         <file>licenses/LGPL-2.0-or-later/kitemmodels_kmodelindexproymapper</file>
         <file>licenses/LGPL-2.0-or-later/kservice</file>
         <file>licenses/LGPL-2.0-or-later/kservice_plugintest</file>
@@ -19,6 +20,7 @@
         <file>licenses/LGPL-2.0-or-later/kwidgetsaddons_kstyleextensions</file>
         <file>licenses/LGPL-2.0-or-later/plasma-framework_dialogshadows</file>
         <file>licenses/LGPL-2.0-or-later/plasma-framework_framesvg</file>
+        <file>licenses/LGPL-2.0-or-later/kcharselect-translation</file>
         <file>licenses/LGPL-2.0_OR_LGPL-3.0_OR_LicenseRef-KDE/kservice_kmimeassociations</file>
         <file>licenses/LGPL-2.0_OR_LGPL-3.0_OR_LicenseRef-KDE/kservice_ksycocadevices_p</file>
         <file>licenses/LGPL-2.1-only/kitemmodels_modeltest</file>
@@ -29,7 +31,9 @@
         <file>licenses/LGPL-2.1-or-later/knewstuff_knewstuffaction</file>
         <file>licenses/LGPL-2.1-or-later/kwidgetsaddons_kpixmapsequence</file>
         <file>licenses/LGPL-2.1-or-later/kwidgetsaddons_ktooltipwidgettest</file>
+        <file>licenses/LGPL-2.1-or-later/kwidgetsaddons_kurllabel</file>
         <file>licenses/LGPL-2.1-or-later/plasma-framework_authorizationmanager_p</file>
+        <file>licenses/LGPL-2.1-or-later/kwidgetsaddons_kcollapsiblegroupboxtest</file>
         <file>licenses/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/attica_projectparser</file>
         <file>licenses/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/attica_qtplatformdependent_typo</file>
         <file>licenses/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/kservice_findservice</file>

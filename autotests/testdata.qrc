@@ -15,9 +15,11 @@
         <file>testdata/LGPL-2.0-or-later/kpassworddialog.h</file>
         <file>testdata/LGPL-2.0-or-later/kseparator.cpp</file>
         <file>testdata/LGPL-2.0-or-later/kstyleextensions.cpp</file>
+        <file>testdata/LGPL-2.0-or-later/kcharselect-translation.cpp</file>
         <file>testdata/LGPL-2.0-only/ksycocautils_p.h</file>
         <file>testdata/LGPL-2.0-only/kbuildservicegroupfactory_p.h</file>
         <file>testdata/LGPL-2.0-only/kmessagebox.cpp</file>
+        <file>testdata/LGPL-2.0-only/kfontrequestertest.cpp</file>
         <file>testdata/LGPL-2.0-only/kmimetypetrader.cpp</file>
         <file>testdata/LGPL-2.0_OR_LGPL-3.0_OR_LicenseRef-KDE/kmimeassociations.cpp</file>
         <file>testdata/LGPL-2.0_OR_LGPL-3.0_OR_LicenseRef-KDE/ksycocadevices_p.h</file>
@@ -29,6 +31,8 @@
         <file>testdata/LGPL-2.1-or-later/lessthanwidget.h</file>
         <file>testdata/LGPL-2.1-or-later/ktooltipwidgettest.cpp</file>
         <file>testdata/LGPL-2.1-or-later/kpixmapsequence.cpp</file>
+        <file>testdata/LGPL-2.1-or-later/kcollapsiblegroupboxtest.cpp</file>
+        <file>testdata/LGPL-2.1-or-later/kurllabel.cpp</file>
         <file>testdata/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/findservice.cpp</file>
         <file>testdata/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/ksplittercollapserbuttontest.cpp</file>
         <file>testdata/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/inhibition.cpp</file>

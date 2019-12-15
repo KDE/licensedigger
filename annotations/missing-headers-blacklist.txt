@@ -7,3 +7,5 @@ kwidgetsaddons/tests/kdatetabletest.cpp
 widgetsaddons/tests/kledtest.cpp
 widgetsaddons/tests/kledtest.h
 kwidgetsaddons/tests/kmessageboxtest.cpp
+kwidgetsaddons/tests/kdatetimeedittestapp.cpp
+kwidgetsaddons/tests/keditlistwidgettest.cpp
