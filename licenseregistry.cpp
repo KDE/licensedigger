@@ -24,6 +24,7 @@
 #include <QDirIterator>
 
 const QString LicenseRegistry::UnknownLicense("UNKNOWN_LICENSE");
+const QString LicenseRegistry::MissingLicense("MISSING_LICENSE");
 
 LicenseRegistry::LicenseRegistry(QObject *parent) : QObject(parent)
 {

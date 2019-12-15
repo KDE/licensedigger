@@ -1,0 +1,9 @@
+kwidgetsaddons/tests/kpixmapsequenceoverlaypaintertest.cpp
+kwidgetsaddons/tests/kpixmapsequenceoverlaypaintertest.h
+kwidgetsaddons/tests/ksqueezedtextlabeltest.cpp
+kwidgetsaddons/tests/kcharselecttest.cpp
+kwidgetsaddons/tests/kcolorcombotest.h
+kwidgetsaddons/tests/kdatetabletest.cpp
+widgetsaddons/tests/kledtest.cpp
+widgetsaddons/tests/kledtest.h
+kwidgetsaddons/tests/kmessageboxtest.cpp

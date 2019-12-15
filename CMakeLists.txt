@@ -34,6 +34,7 @@ add_executable(
     directoryparser.cpp
     qml.qrc
     licenses.qrc
+    annotations.qrc
 )
 
 target_compile_definitions(licensedigger

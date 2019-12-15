@@ -20,12 +20,24 @@
 
 #include "directoryparser.h"
 #include <QDirIterator>
+#include <QTextStream>
 #include <QDebug>
 
 QMap<QString, LicenseRegistry::SpdxIdentifer> DirectoryParser::parseAll(const QString &directory) const
 {
     QVector<LicenseRegistry::SpdxIdentifer> identifiers = m_registry.identifiers();
     QMap<QString, LicenseRegistry::SpdxIdentifer> results;
+
+    QStringList missingLicenseHeaderBlacklist;
+    {
+        QFile file(":/annotations/missing-headers-blacklist.txt");
+        file.open(QIODevice::ReadOnly);
+        QTextStream in(&file);
+        QString line;
+        while (in.readLineInto(&line)) {
+            missingLicenseHeaderBlacklist.append(line);
+        }
+    }
 
     QDirIterator iterator(directory, QDirIterator::Subdirectories);
     while (iterator.hasNext()) {
@@ -52,6 +64,16 @@ QMap<QString, LicenseRegistry::SpdxIdentifer> DirectoryParser::parseAll(const QS
 //                qDebug() << "---> " << iterator.fileInfo().filePath() << identifier;
             }
         }
+
+        // check for blacklisted file because of missing license header
+        for (auto backlistPath : missingLicenseHeaderBlacklist) {
+            if (iterator.fileInfo().filePath().endsWith(backlistPath)) {
+                results.insert(iterator.fileInfo().filePath(), LicenseRegistry::MissingLicense);
+                break;
+            }
+        }
+
+        // if nothing matches, report error
         if (!results.contains(iterator.fileInfo().filePath())) {
             results.insert(iterator.fileInfo().filePath(), LicenseRegistry::UnknownLicense);
         }

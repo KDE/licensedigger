@@ -32,6 +32,7 @@ class LicenseRegistry : public QObject
 public:
     using SpdxIdentifer = QString;
     const static QString UnknownLicense;
+    const static QString MissingLicense;
 
     explicit LicenseRegistry(QObject *parent = nullptr);
 
