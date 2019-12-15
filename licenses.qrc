@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/">
+        <file>licenses/BSD-3-Clause/kjs_symboltable</file>
         <file>licenses/GPL-2.0-or-later/kde-licensing-wiki</file>
         <file>licenses/GPL-2.0-or-later/plasma-framework_shellpluginloader</file>
         <file>licenses/GPL-2.0-or-later/plasma-framework_tooltip</file>
@@ -15,6 +16,7 @@
         <file>licenses/LGPL-2.0-only/kwidgetsaddons_kmessagebox</file>
         <file>licenses/LGPL-2.0-only/kwidgetsaddons_kfontrequestertest</file>
         <file>licenses/LGPL-2.0-or-later/kitemmodels_kmodelindexproymapper</file>
+        <file>licenses/LGPL-2.0-or-later/kjs_ecmatest</file>
         <file>licenses/LGPL-2.0-or-later/kservice</file>
         <file>licenses/LGPL-2.0-or-later/kservice_plugintest</file>
         <file>licenses/LGPL-2.0-or-later/kwidgetsaddons_kcourser_p</file>
@@ -27,6 +29,7 @@
         <file>licenses/LGPL-2.0-or-later/kcharselect-translation</file>
         <file>licenses/LGPL-2.0-or-later/baloo_balooplugin</file>
         <file>licenses/LGPL-2.0-or-later/kactivities_range</file>
+        <file>licenses/LGPL-2.0-or-later/kjs_jslock</file>
         <file>licenses/LGPL-2.0-or-later/kactivities_resourceinstance</file>
         <file>licenses/LGPL-2.0_OR_LGPL-3.0_OR_LicenseRef-KDE/kservice_kmimeassociations</file>
         <file>licenses/LGPL-2.0_OR_LGPL-3.0_OR_LicenseRef-KDE/kservice_ksycocadevices_p</file>

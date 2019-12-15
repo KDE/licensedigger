@@ -97,6 +97,11 @@ void TestHeaderDetection::detectLGPL30orlater()
     detectForIdentifier("LGPL-3.0-or-later");
 }
 
+void TestHeaderDetection::detectBSD3Clause()
+{
+    detectForIdentifier("BSD-3-Clause");
+}
+
 void TestHeaderDetection::detectMIT()
 {
     detectForIdentifier("MIT");

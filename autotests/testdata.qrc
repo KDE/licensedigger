@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/">
+        <file>testdata/BSD-3-Clause/SymbolTable.h</file>
         <file>testdata/GPL-2.0_OR_GPL-3.0_OR_LicenseRef-KDE/nsaplugin.cpp</file>
         <file>testdata/GPL-2.0-or-later/shellpluginloader.cpp</file>
         <file>testdata/GPL-2.0-or-later/view.cpp</file>
@@ -8,9 +9,11 @@
         <file>testdata/GPL-2.0-or-later/activityinfo.cpp</file>
         <file>testdata/GPL-2.0-or-later/kcharsetstest.cpp</file>
         <file>testdata/LGPL-2.0-or-later/kautostart.cpp</file>
+        <file>testdata/LGPL-2.0-or-later/ecmatest.cpp</file>
         <file>testdata/LGPL-2.0-or-later/plugintest.cpp</file>
         <file>testdata/LGPL-2.0-or-later/package.cpp</file>
         <file>testdata/LGPL-2.0-or-later/framesvg.cpp</file>
+        <file>testdata/LGPL-2.0-or-later/JSLock.cpp</file>
         <file>testdata/LGPL-2.0-or-later/dialogshadows.cpp</file>
         <file>testdata/LGPL-2.0-or-later/kmodelindexproxymapper.cpp</file>
         <file>testdata/LGPL-2.0-or-later/kcursor_p.h</file>
