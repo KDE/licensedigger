@@ -42,5 +42,6 @@
         <file>licenses/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/solid_inhibition</file>
         <file>licenses/LGPL-3.0-or-later/kwidgetaddons_kmessagebox</file>
         <file>licenses/TO-CLARIFY/kservice_might-be-gpl-or-lgpl</file>
+        <file>licenses/MIT/ksyntaxhighlighter</file>
     </qresource>
 </RCC>

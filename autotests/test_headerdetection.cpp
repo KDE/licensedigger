@@ -97,4 +97,9 @@ void TestHeaderDetection::detectLGPL30orlater()
     detectForIdentifier("LGPL-3.0-or-later");
 }
 
+void TestHeaderDetection::detectMIT()
+{
+    detectForIdentifier("MIT");
+}
+
 QTEST_GUILESS_MAIN(TestHeaderDetection);

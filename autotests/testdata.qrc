@@ -40,5 +40,6 @@
         <file>testdata/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/qtplatformdependent.cpp</file>
         <file>testdata/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/kbusyindicatorwidget.cpp</file>
         <file>testdata/LGPL-3.0-or-later/main.cpp</file>
+        <file>testdata/MIT/syntaxhighlighter.cpp</file>
     </qresource>
 </RCC>
