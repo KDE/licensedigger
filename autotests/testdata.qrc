@@ -29,12 +29,16 @@
         <file>testdata/LGPL-2.0-or-later/resourceinstance.cpp</file>
         <file>testdata/LGPL-2.0-or-later/range.h</file>
         <file>testdata/LGPL-2.0-or-later/test_kconf_update.cpp</file>
+        <file>testdata/LGPL-2.0-or-later/holidayregionsmodel.cpp</file>
         <file>testdata/LGPL-2.0-only/kcodecs.cpp</file>
         <file>testdata/LGPL-2.0-only/ksycocautils_p.h</file>
         <file>testdata/LGPL-2.0-only/kbuildservicegroupfactory_p.h</file>
         <file>testdata/LGPL-2.0-only/kmessagebox.cpp</file>
         <file>testdata/LGPL-2.0-only/kfontrequestertest.cpp</file>
         <file>testdata/LGPL-2.0-only/kmimetypetrader.cpp</file>
+        <file>testdata/LGPL-2.0-only/kquitapp.cpp</file>
+        <file>testdata/LGPL-2.0-only/kcolorcollection.cpp</file>
+        <file>testdata/LGPL-2.0-only/kcolorcollection.h</file>
         <file>testdata/LGPL-2.0_OR_LGPL-3.0_OR_LicenseRef-KDE/kmimeassociations.cpp</file>
         <file>testdata/LGPL-2.0_OR_LGPL-3.0_OR_LicenseRef-KDE/ksycocadevices_p.h</file>
         <file>testdata/LGPL-2.1-only/modeltest.cpp</file>

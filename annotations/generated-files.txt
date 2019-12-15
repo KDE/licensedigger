@@ -1,2 +1,8 @@
 baloo/src/file/mainadaptor.cpp
 baloo/src/file/mainadaptor.h
+kdnssd/src/avahi_entrygroup_interface.cpp
+kdnssd/src/avahi_entrygroup_interface.h
+kdnssd/src/avahi_server_interface.cpp
+kdnssd/src/avahi_server_interface.h
+kdnssd/src/avahi_serviceresolver_interface.cpp
+kdnssd/src/avahi_serviceresolver_interface.h

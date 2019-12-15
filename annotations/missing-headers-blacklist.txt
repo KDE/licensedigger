@@ -23,3 +23,7 @@ kconfig/autotests/kconfig_compiler/test_qdebugcategory_debug.cpp
 kconfig/autotests/kconfig_compiler/test_qdebugcategory_debug.h
 kcoreaddons/autotests/kstringhandlertest.cpp
 kcoreaddons/autotests/kstringhandlertest.h
+kdbusaddons/tests/dbuscalltest.cpp
+kguiaddons/autotests/kcolorutilstest.cpp
+kguiaddons/autotests/kcolorutilstest.h
+kguiaddons/tests/kcolorcollectiontest.cpp

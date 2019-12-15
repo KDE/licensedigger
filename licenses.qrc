@@ -3,23 +3,33 @@
         <file>licenses/BSD-2-Clause/karchive_unzipper_main</file>
         <file>licenses/BSD-2-Clause/kconfig_kemailsettings</file>
         <file>licenses/BSD-3-Clause/kjs_symboltable</file>
+        <file>licenses/GPL-2.0-or-later/baloo_kio_search</file>
+        <file>licenses/GPL-2.0-or-later/kactivities_activityinfo</file>
+        <file>licenses/GPL-2.0-or-later/kcodecs_kcharsetstest</file>
         <file>licenses/GPL-2.0-or-later/kde-licensing-wiki</file>
         <file>licenses/GPL-2.0-or-later/plasma-framework_shellpluginloader</file>
         <file>licenses/GPL-2.0-or-later/plasma-framework_tooltip</file>
         <file>licenses/GPL-2.0-or-later/plasma-framework_view</file>
-        <file>licenses/GPL-2.0-or-later/baloo_kio_search</file>
-        <file>licenses/GPL-2.0-or-later/kactivities_activityinfo</file>
-        <file>licenses/GPL-2.0-or-later/kcodecs_kcharsetstest</file>
-        <file>licenses/GPL-3.0-or-later/kcalendarcore_testcreateddatecompat</file>
         <file>licenses/GPL-2.0_OR_GPL-3.0_OR_LicenseRef-KDE/kservice_autotest_nsaplugin</file>
+        <file>licenses/GPL-3.0-or-later/kcalendarcore_testcreateddatecompat</file>
         <file>licenses/LGPL-2.0-only/kcodecs_kcodecs</file>
+        <file>licenses/LGPL-2.0-only/kdbusaddons_kquitapp</file>
         <file>licenses/LGPL-2.0-only/kservice</file>
         <file>licenses/LGPL-2.0-only/kservice_kbuildservicegroupfactory</file>
         <file>licenses/LGPL-2.0-only/kservice_kmimetypetrader</file>
-        <file>licenses/LGPL-2.0-only/kwidgetsaddons_kmessagebox</file>
         <file>licenses/LGPL-2.0-only/kwidgetsaddons_kfontrequestertest</file>
+        <file>licenses/LGPL-2.0-only/kwidgetsaddons_kmessagebox</file>
+        <file>licenses/LGPL-2.0-only/kguiaddons_kcolorcorrection</file>
+        <file>licenses/LGPL-2.0-only/kguiaddons_kcolorcorrection_h</file>
+        <file>licenses/LGPL-2.0-or-later/baloo_balooplugin</file>
+        <file>licenses/LGPL-2.0-or-later/kholidays_holidayregionsmodel</file>
+        <file>licenses/LGPL-2.0-or-later/kactivities_range</file>
+        <file>licenses/LGPL-2.0-or-later/kactivities_resourceinstance</file>
+        <file>licenses/LGPL-2.0-or-later/kcharselect-translation</file>
+        <file>licenses/LGPL-2.0-or-later/kconfig_test_kconf_update</file>
         <file>licenses/LGPL-2.0-or-later/kitemmodels_kmodelindexproymapper</file>
         <file>licenses/LGPL-2.0-or-later/kjs_ecmatest</file>
+        <file>licenses/LGPL-2.0-or-later/kjs_jslock</file>
         <file>licenses/LGPL-2.0-or-later/kservice</file>
         <file>licenses/LGPL-2.0-or-later/kservice_plugintest</file>
         <file>licenses/LGPL-2.0-or-later/kwidgetsaddons_kcourser_p</file>
@@ -29,43 +39,37 @@
         <file>licenses/LGPL-2.0-or-later/kwidgetsaddons_kstyleextensions</file>
         <file>licenses/LGPL-2.0-or-later/plasma-framework_dialogshadows</file>
         <file>licenses/LGPL-2.0-or-later/plasma-framework_framesvg</file>
-        <file>licenses/LGPL-2.0-or-later/kcharselect-translation</file>
-        <file>licenses/LGPL-2.0-or-later/baloo_balooplugin</file>
-        <file>licenses/LGPL-2.0-or-later/kactivities_range</file>
-        <file>licenses/LGPL-2.0-or-later/kjs_jslock</file>
-        <file>licenses/LGPL-2.0-or-later/kconfig_test_kconf_update</file>
-        <file>licenses/LGPL-2.0-or-later/kactivities_resourceinstance</file>
         <file>licenses/LGPL-2.0_OR_LGPL-3.0_OR_LicenseRef-KDE/kservice_kmimeassociations</file>
         <file>licenses/LGPL-2.0_OR_LGPL-3.0_OR_LicenseRef-KDE/kservice_ksycocadevices_p</file>
+        <file>licenses/LGPL-2.1-only/kcoreaddons_kfilesystemtype</file>
         <file>licenses/LGPL-2.1-only/kitemmodels_modeltest</file>
         <file>licenses/LGPL-2.1-only/kprocesslist_unix_procstat</file>
-        <file>licenses/LGPL-2.1-only/kcoreaddons_kfilesystemtype</file>
         <file>licenses/LGPL-2.1-only_WITH_Qt-LGPL-exception-1.1/kcoreaddons_kprocesslist</file>
-        <file>licenses/LGPL-2.1-or-later/kde-licensing-wiki</file>
+        <file>licenses/LGPL-2.1-or-later/baloo_basicindexingjobtest</file>
+        <file>licenses/LGPL-2.1-or-later/baloo_databasebenchmark</file>
         <file>licenses/LGPL-2.1-or-later/bluezqt_a2dp-codecs</file>
+        <file>licenses/LGPL-2.1-or-later/kde-licensing-wiki</file>
         <file>licenses/LGPL-2.1-or-later/kitemmodel_kconcatenaterows</file>
         <file>licenses/LGPL-2.1-or-later/kitemmodels_lessthanwidget</file>
         <file>licenses/LGPL-2.1-or-later/kitemmodels_proxymodeltestwidget</file>
         <file>licenses/LGPL-2.1-or-later/knewstuff_knewstuffaction</file>
+        <file>licenses/LGPL-2.1-or-later/kwidgetsaddons_kcollapsiblegroupboxtest</file>
         <file>licenses/LGPL-2.1-or-later/kwidgetsaddons_kpixmapsequence</file>
         <file>licenses/LGPL-2.1-or-later/kwidgetsaddons_ktooltipwidgettest</file>
         <file>licenses/LGPL-2.1-or-later/kwidgetsaddons_kurllabel</file>
         <file>licenses/LGPL-2.1-or-later/plasma-framework_authorizationmanager_p</file>
-        <file>licenses/LGPL-2.1-or-later/kwidgetsaddons_kcollapsiblegroupboxtest</file>
-        <file>licenses/LGPL-2.1-or-later/baloo_databasebenchmark</file>
-        <file>licenses/LGPL-2.1-or-later/baloo_basicindexingjobtest</file>
         <file>licenses/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/attica_projectparser</file>
-        <file>licenses/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/kactivities_utils</file>
         <file>licenses/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/attica_qtplatformdependent_typo</file>
+        <file>licenses/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/kactivities_utils</file>
+        <file>licenses/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/kcoreaddons_desktoptojson</file>
         <file>licenses/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/kservice_findservice</file>
         <file>licenses/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/kwidgetaddons_ksplittercollapserbuttontest</file>
         <file>licenses/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/kwidgetsaddons_kbusyindicatorwidget</file>
         <file>licenses/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/solid_inhibition</file>
-        <file>licenses/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/kcoreaddons_desktoptojson</file>
         <file>licenses/LGPL-3.0-or-later/kwidgetaddons_kmessagebox</file>
-        <file>licenses/TO-CLARIFY/kservice_might-be-gpl-or-lgpl</file>
-        <file>licenses/MIT/ksyntaxhighlighter</file>
         <file>licenses/MIT/kcodecs_chardistribution</file>
         <file>licenses/MIT/kconfig_kconfigcompiler_test_signals</file>
+        <file>licenses/MIT/ksyntaxhighlighter</file>
+        <file>licenses/TO-CLARIFY/kservice_might-be-gpl-or-lgpl</file>
     </qresource>
 </RCC>
