@@ -5,6 +5,7 @@
         <file>testdata/GPL-2.0-or-later/view.cpp</file>
         <file>testdata/GPL-2.0-or-later/tooltip.cpp</file>
         <file>testdata/GPL-2.0-or-later/kio_search.cpp</file>
+        <file>testdata/GPL-2.0-or-later/activityinfo.cpp</file>
         <file>testdata/LGPL-2.0-or-later/kautostart.cpp</file>
         <file>testdata/LGPL-2.0-or-later/plugintest.cpp</file>
         <file>testdata/LGPL-2.0-or-later/package.cpp</file>
@@ -17,12 +18,14 @@
         <file>testdata/LGPL-2.0-or-later/kseparator.cpp</file>
         <file>testdata/LGPL-2.0-or-later/kstyleextensions.cpp</file>
         <file>testdata/LGPL-2.0-or-later/kcharselect-translation.cpp</file>
+        <file>testdata/LGPL-2.0-or-later/balooplugin.cpp</file>
+        <file>testdata/LGPL-2.0-or-later/resourceinstance.cpp</file>
+        <file>testdata/LGPL-2.0-or-later/range.h</file>
         <file>testdata/LGPL-2.0-only/ksycocautils_p.h</file>
         <file>testdata/LGPL-2.0-only/kbuildservicegroupfactory_p.h</file>
         <file>testdata/LGPL-2.0-only/kmessagebox.cpp</file>
         <file>testdata/LGPL-2.0-only/kfontrequestertest.cpp</file>
         <file>testdata/LGPL-2.0-only/kmimetypetrader.cpp</file>
-        <file>testdata/LGPL-2.0-or-later/balooplugin.cpp</file>
         <file>testdata/LGPL-2.0_OR_LGPL-3.0_OR_LicenseRef-KDE/kmimeassociations.cpp</file>
         <file>testdata/LGPL-2.0_OR_LGPL-3.0_OR_LicenseRef-KDE/ksycocadevices_p.h</file>
         <file>testdata/LGPL-2.1-only/modeltest.cpp</file>
@@ -43,6 +46,7 @@
         <file>testdata/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/projectparser.cpp</file>
         <file>testdata/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/qtplatformdependent.cpp</file>
         <file>testdata/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/kbusyindicatorwidget.cpp</file>
+        <file>testdata/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/utils.h</file>
         <file>testdata/LGPL-3.0-or-later/main.cpp</file>
         <file>testdata/MIT/syntaxhighlighter.cpp</file>
     </qresource>
