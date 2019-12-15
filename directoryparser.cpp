@@ -68,7 +68,7 @@ QMap<QString, LicenseRegistry::SpdxIdentifer> DirectoryParser::parseAll(const QS
             auto regexp = m_registry.headerTextRegExp(identifier);
             if (fileContent.contains(regexp)) {
                 if (results.contains(iterator.fileInfo().filePath())) {
-                    qCritical() << "NOT SUPPORT FOR MULTI-LICENSED FILES YET";
+                    qCritical() << "UNHANDLED MULTI-LICENSE CASE" << iterator.fileInfo().filePath() << identifier << results.value(iterator.fileInfo().filePath());
                 }
                 results.insert(iterator.fileInfo().filePath(), identifier);
 //                qDebug() << "---> " << iterator.fileInfo().filePath() << identifier;
