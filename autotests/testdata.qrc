@@ -36,6 +36,8 @@
         <file>testdata/LGPL-2.0-or-later/test_kconf_update.cpp</file>
         <file>testdata/LGPL-2.0-or-later/holidayregionsmodel.cpp</file>
         <file>testdata/LGPL-2.0-only/kcodecs.cpp</file>
+        <file>testdata/LGPL-2.0-only/kfindtest.cpp</file>
+        <file>testdata/LGPL-2.0-only/krichtextwidget.cpp</file>
         <file>testdata/LGPL-2.0-only/ksycocautils_p.h</file>
         <file>testdata/LGPL-2.0-only/kbuildservicegroupfactory_p.h</file>
         <file>testdata/LGPL-2.0-only/kmessagebox.cpp</file>

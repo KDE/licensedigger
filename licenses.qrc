@@ -23,6 +23,8 @@
         <file>licenses/LGPL-2.0-only/kwidgetsaddons_kmessagebox</file>
         <file>licenses/LGPL-2.0-only/kguiaddons_kcolorcorrection</file>
         <file>licenses/LGPL-2.0-only/kguiaddons_kcolorcorrection_h</file>
+        <file>licenses/LGPL-2.0-only/ktextwidgets_kfindtest</file>
+        <file>licenses/LGPL-2.0-only/ktextwidgets_krichtextwidget</file>
         <file>licenses/LGPL-2.0-or-later/baloo_balooplugin</file>
         <file>licenses/LGPL-2.0-or-later/kdeclarative_qtquicksettings</file>
         <file>licenses/LGPL-2.0-or-later/kcompletion_klineedit</file>
