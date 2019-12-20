@@ -35,6 +35,9 @@
         <file>testdata/LGPL-2.0-or-later/range.h</file>
         <file>testdata/LGPL-2.0-or-later/test_kconf_update.cpp</file>
         <file>testdata/LGPL-2.0-or-later/holidayregionsmodel.cpp</file>
+        <file>testdata/LGPL-2.0-or-later/SimplePage.qml</file>
+        <file>testdata/LGPL-2.0-or-later/AboutPage.qml</file>
+        <file>testdata/LGPL-2.0-or-later/AbstractListItem.qml</file>
         <file>testdata/LGPL-2.0-only/kcodecs.cpp</file>
         <file>testdata/LGPL-2.0-only/kfindtest.cpp</file>
         <file>testdata/LGPL-2.0-only/krichtextwidget.cpp</file>
