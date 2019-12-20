@@ -46,6 +46,7 @@
         <file>licenses/LGPL-2.1-only/kitemmodels_modeltest</file>
         <file>licenses/LGPL-2.1-only/kprocesslist_unix_procstat</file>
         <file>licenses/LGPL-2.1-only_WITH_Qt-LGPL-exception-1.1/kcoreaddons_kprocesslist</file>
+        <file>licenses/LGPL-2.1-or-later/kauth_backendsmanager</file>
         <file>licenses/LGPL-2.1-or-later/baloo_basicindexingjobtest</file>
         <file>licenses/LGPL-2.1-or-later/baloo_databasebenchmark</file>
         <file>licenses/LGPL-2.1-or-later/bluezqt_a2dp-codecs</file>

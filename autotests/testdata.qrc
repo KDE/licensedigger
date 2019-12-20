@@ -46,6 +46,7 @@
         <file>testdata/LGPL-2.1-only/kprocesslist_unix_procstat.cpp</file>
         <file>testdata/LGPL-2.1-only/kfilesystemtype.cpp</file>
         <file>testdata/LGPL-2.1-or-later/authorizationmanager_p.h</file>
+        <file>testdata/LGPL-2.1-or-later/BackendsManager.cpp</file>
         <file>testdata/LGPL-2.1-or-later/a2dp-codecs.h</file>
         <file>testdata/LGPL-2.1-or-later/knewstuffaction.cpp</file>
         <file>testdata/LGPL-2.1-or-later/proxymodeltestwidget.cpp</file>
