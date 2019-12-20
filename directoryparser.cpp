@@ -55,7 +55,7 @@ QMap<QString, LicenseRegistry::SpdxIdentifer> DirectoryParser::parseAll(const QS
         if (!iterator.fileInfo().isFile()) {
             continue;
         }
-        if (!file.fileName().endsWith(".cpp") && !file.fileName().endsWith(".h") && !file.fileName().endsWith(".hpp") && !file.fileName().endsWith(".c")) {
+        if (!file.fileName().endsWith(".cpp") && !file.fileName().endsWith(".h") && !file.fileName().endsWith(".hpp") && !file.fileName().endsWith(".c") && !file.fileName().endsWith(".qml")) {
             //TODO only support C files for now
             continue;
         }
