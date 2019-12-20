@@ -54,3 +54,13 @@ kdeclarative/src/qmlcontrols/kquickcontrols/KeySequenceItem.qml
 kdeclarative/tests/qiconitem_resize.qml
 kdeclarative/tests/qiconitem_test.qml
 kdeclarative/tests/qimageitemtest.qml
+kitemmodels/autotests/concatenaterowstest.qml
+kitemmodels/tests/qml/columnheaders.qml
+kitemmodels/autotests/proxymodeltestsuite/templates/rowsremoved.cpp
+kitemmodels/autotests/proxymodeltestsuite/templates/rowsinserted.cpp
+kitemmodels/autotests/proxymodeltestsuite/templates/datachanged.cpp
+kitemmodels/autotests/proxymodeltestsuite/templates/init.cpp
+kitemmodels/autotests/proxymodeltestsuite/templates/layoutchanged.cpp
+kitemmodels/autotests/proxymodeltestsuite/templates/main.cpp
+kitemmodels/autotests/proxymodeltestsuite/templates/modelreset.cpp
+kitemmodels/autotests/kconcatenaterowsproxymodeltest.cpp
