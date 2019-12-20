@@ -23,6 +23,8 @@
         <file>licenses/LGPL-2.0-only/kguiaddons_kcolorcorrection</file>
         <file>licenses/LGPL-2.0-only/kguiaddons_kcolorcorrection_h</file>
         <file>licenses/LGPL-2.0-or-later/baloo_balooplugin</file>
+        <file>licenses/LGPL-2.0-or-later/kcompletion_klineedit</file>
+        <file>licenses/LGPL-2.0-or-later/kcompletion_kcompletionbase</file>
         <file>licenses/LGPL-2.0-or-later/kholidays_holidayregionsmodel</file>
         <file>licenses/LGPL-2.0-or-later/kactivities_range</file>
         <file>licenses/LGPL-2.0-or-later/kactivities_resourceinstance</file>
@@ -51,6 +53,7 @@
         <file>licenses/LGPL-2.1-or-later/baloo_databasebenchmark</file>
         <file>licenses/LGPL-2.1-or-later/bluezqt_a2dp-codecs</file>
         <file>licenses/LGPL-2.1-or-later/kde-licensing-wiki</file>
+        <file>licenses/LGPL-2.1-or-later/kcompletion_kcombobox</file>
         <file>licenses/LGPL-2.1-or-later/kitemmodel_kconcatenaterows</file>
         <file>licenses/LGPL-2.1-or-later/kitemmodels_lessthanwidget</file>
         <file>licenses/LGPL-2.1-or-later/kitemmodels_proxymodeltestwidget</file>

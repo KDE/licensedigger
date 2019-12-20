@@ -40,3 +40,10 @@ kdesu/src/kdesud/handler.h
 kdesu/src/kdesud/kdesud.cpp
 kdesu/src/kdesud/lexer.h
 kdesu/src/kdesud/lexer.cpp
+kcompletion/autotests/ksortablelisttest.cpp
+kcompletion/tests/kcomboboxtest.cpp
+kcompletion/tests/kcomboboxtest.h
+kcompletion/tests/kcompletionuitest.cpp
+kcompletion/tests/kcompletionuitest.h
+kcompletion/tests/klineedittest.cpp
+kcompletion/tests/klineedittest.h
