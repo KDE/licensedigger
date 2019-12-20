@@ -4,6 +4,7 @@
         <file>licenses/BSD-2-Clause/kconfig_kemailsettings</file>
         <file>licenses/BSD-3-Clause/kjs_symboltable</file>
         <file>licenses/GPL-2.0-only/kdesu_client</file>
+        <file>licenses/GPL-2.0-only/kio_kpasswdserver</file>
         <file>licenses/GPL-2.0-or-later/baloo_kio_search</file>
         <file>licenses/GPL-2.0-or-later/kactivities_activityinfo</file>
         <file>licenses/GPL-2.0-or-later/kcodecs_kcharsetstest</file>
@@ -17,6 +18,8 @@
         <file>licenses/LGPL-2.0-only/kcodecs_kcodecs</file>
         <file>licenses/LGPL-2.0-only/kdbusaddons_kquitapp</file>
         <file>licenses/LGPL-2.0-only/kservice</file>
+        <file>licenses/LGPL-2.0-only/kio_kurlrequester</file>
+        <file>licenses/LGPL-2.0-only/kio_dataprotocol</file>
         <file>licenses/LGPL-2.0-only/kservice_kbuildservicegroupfactory</file>
         <file>licenses/LGPL-2.0-only/kservice_kmimetypetrader</file>
         <file>licenses/LGPL-2.0-only/kwidgetsaddons_kfontrequestertest</file>
@@ -39,6 +42,9 @@
         <file>licenses/LGPL-2.0-or-later/kjs_jslock</file>
         <file>licenses/LGPL-2.0-or-later/kservice</file>
         <file>licenses/LGPL-2.0-or-later/kservice_plugintest</file>
+        <file>licenses/LGPL-2.0-or-later/kio_joburlcache</file>
+        <file>licenses/LGPL-2.0-or-later/kio_kurlcompletion</file>
+        <file>licenses/LGPL-2.0-or-later/kio_kacleditwidget</file>
         <file>licenses/LGPL-2.0-or-later/kwidgetsaddons_kcourser_p</file>
         <file>licenses/LGPL-2.0-or-later/kwidgetsaddons_kpagemodel</file>
         <file>licenses/LGPL-2.0-or-later/kwidgetsaddons_kpassworddialog</file>
@@ -86,6 +92,7 @@
         <file>licenses/MIT/ksyntaxhighlighter</file>
         <file>licenses/MIT/prison</file>
         <file>licenses/MIT/kdeclarative_declarativedragarea</file>
+        <file>licenses/MIT/kio_kcookiejar</file>
         <file>licenses/TO-CLARIFY/kservice_might-be-gpl-or-lgpl</file>
     </qresource>
 </RCC>

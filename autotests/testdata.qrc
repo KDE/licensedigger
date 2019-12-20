@@ -6,6 +6,7 @@
         <file>testdata/GPL-2.0_OR_GPL-3.0_OR_LicenseRef-KDE/nsaplugin.cpp</file>
         <file>testdata/GPL-2.0_OR_GPL-3.0_OR_LicenseRef-KDE/formats.cpp</file>
         <file>testdata/GPL-2.0-only/client.cpp</file>
+        <file>testdata/GPL-2.0-only/kpasswdserver.cpp</file>
         <file>testdata/GPL-2.0-or-later/shellpluginloader.cpp</file>
         <file>testdata/GPL-2.0-or-later/view.cpp</file>
         <file>testdata/GPL-2.0-or-later/tooltip.cpp</file>
@@ -38,7 +39,11 @@
         <file>testdata/LGPL-2.0-or-later/SimplePage.qml</file>
         <file>testdata/LGPL-2.0-or-later/AboutPage.qml</file>
         <file>testdata/LGPL-2.0-or-later/AbstractListItem.qml</file>
+        <file>testdata/LGPL-2.0-or-later/joburlcache.cpp</file>
+        <file>testdata/LGPL-2.0-or-later/kacleditwidget.cpp</file>
+        <file>testdata/LGPL-2.0-or-later/kurlcompletion.cpp</file>
         <file>testdata/LGPL-2.0-only/kcodecs.cpp</file>
+        <file>testdata/LGPL-2.0-only/dataprotocol.cpp</file>
         <file>testdata/LGPL-2.0-only/kfindtest.cpp</file>
         <file>testdata/LGPL-2.0-only/krichtextwidget.cpp</file>
         <file>testdata/LGPL-2.0-only/ksycocautils_p.h</file>
@@ -49,6 +54,7 @@
         <file>testdata/LGPL-2.0-only/kquitapp.cpp</file>
         <file>testdata/LGPL-2.0-only/kcolorcollection.cpp</file>
         <file>testdata/LGPL-2.0-only/kcolorcollection.h</file>
+        <file>testdata/LGPL-2.0-only/kurlrequester.cpp</file>
         <file>testdata/LGPL-2.0_OR_LGPL-3.0_OR_LicenseRef-KDE/kmimeassociations.cpp</file>
         <file>testdata/LGPL-2.0_OR_LGPL-3.0_OR_LicenseRef-KDE/ksycocadevices_p.h</file>
         <file>testdata/LGPL-2.1-only/modeltest.cpp</file>
@@ -85,5 +91,6 @@
         <file>testdata/MIT/kconfigcompiler_test_signals.cpp</file>
         <file>testdata/MIT/prison.cpp</file>
         <file>testdata/MIT/DeclarativeDragArea.cpp</file>
+        <file>testdata/MIT/kcookiejar.cpp</file>
     </qresource>
 </RCC>
