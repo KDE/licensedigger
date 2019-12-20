@@ -27,3 +27,16 @@ kdbusaddons/tests/dbuscalltest.cpp
 kguiaddons/autotests/kcolorutilstest.cpp
 kguiaddons/autotests/kcolorutilstest.h
 kguiaddons/tests/kcolorcollectiontest.cpp
+kdesu/src/kdesud/kdesud.cpp
+kdesu/src/kdesud/secure.cpp
+kdesu/src/kdesud/secure.h
+kdesu/src/ssh.h
+kdesu/src/su.h
+kdesu/src/stub.h
+kdesu/src/kdesud/repo.h
+kdesu/src/process.h
+kdesu/src/kdesud/handler.cpp
+kdesu/src/kdesud/handler.h
+kdesu/src/kdesud/kdesud.cpp
+kdesu/src/kdesud/lexer.h
+kdesu/src/kdesud/lexer.cpp

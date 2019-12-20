@@ -4,6 +4,7 @@
         <file>testdata/BSD-2-Clause/kemailsettings.cpp</file>
         <file>testdata/BSD-3-Clause/SymbolTable.h</file>
         <file>testdata/GPL-2.0_OR_GPL-3.0_OR_LicenseRef-KDE/nsaplugin.cpp</file>
+        <file>testdata/GPL-2.0-only/client.cpp</file>
         <file>testdata/GPL-2.0-or-later/shellpluginloader.cpp</file>
         <file>testdata/GPL-2.0-or-later/view.cpp</file>
         <file>testdata/GPL-2.0-or-later/tooltip.cpp</file>

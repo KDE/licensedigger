@@ -3,6 +3,7 @@
         <file>licenses/BSD-2-Clause/karchive_unzipper_main</file>
         <file>licenses/BSD-2-Clause/kconfig_kemailsettings</file>
         <file>licenses/BSD-3-Clause/kjs_symboltable</file>
+        <file>licenses/GPL-2.0-only/kdesu_client</file>
         <file>licenses/GPL-2.0-or-later/baloo_kio_search</file>
         <file>licenses/GPL-2.0-or-later/kactivities_activityinfo</file>
         <file>licenses/GPL-2.0-or-later/kcodecs_kcharsetstest</file>

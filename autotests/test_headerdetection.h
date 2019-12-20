@@ -12,6 +12,7 @@ public:
 
 private Q_SLOTS:
     void detectGPL20_or_GPL30_or_KDE();
+    void detectGPL20only();
     void detectGPL20orlater();
     void detectGPL30orlater();
     void detectLGPL20orlater();
