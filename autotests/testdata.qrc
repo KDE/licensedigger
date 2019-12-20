@@ -4,6 +4,7 @@
         <file>testdata/BSD-2-Clause/kemailsettings.cpp</file>
         <file>testdata/BSD-3-Clause/SymbolTable.h</file>
         <file>testdata/GPL-2.0_OR_GPL-3.0_OR_LicenseRef-KDE/nsaplugin.cpp</file>
+        <file>testdata/GPL-2.0_OR_GPL-3.0_OR_LicenseRef-KDE/formats.cpp</file>
         <file>testdata/GPL-2.0-only/client.cpp</file>
         <file>testdata/GPL-2.0-or-later/shellpluginloader.cpp</file>
         <file>testdata/GPL-2.0-or-later/view.cpp</file>
@@ -14,6 +15,7 @@
         <file>testdata/GPL-3.0-or-later/testcreateddatecompat.cpp</file>
         <file>testdata/LGPL-2.0-or-later/kautostart.cpp</file>
         <file>testdata/LGPL-2.0-or-later/klineedit.cpp</file>
+        <file>testdata/LGPL-2.0-or-later/qtquicksettings.cpp</file>
         <file>testdata/LGPL-2.0-or-later/kcompletionbase.cpp</file>
         <file>testdata/LGPL-2.0-or-later/ecmatest.cpp</file>
         <file>testdata/LGPL-2.0-or-later/plugintest.cpp</file>
@@ -62,6 +64,7 @@
         <file>testdata/LGPL-2.1-or-later/databasebenchmark.cpp</file>
         <file>testdata/LGPL-2.1-or-later/basicindexingjobtest.cpp</file>
         <file>testdata/LGPL-2.1-only_WITH_Qt-LGPL-exception-1.1/kprocesslist.cpp</file>
+        <file>testdata/LGPL-2.1-only_WITH_Qt-LGPL-exception-1.1_OR_LGPL-3.0-only_WITH_Qt-LGPL-exception-1.1_OR_LicenseRef-QTCOMMERCIAL/quickviewsharedengine.cpp</file>
         <file>testdata/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/desktoptojson.cpp</file>
         <file>testdata/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/ChartsPlugin.cpp</file>
         <file>testdata/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/findservice.cpp</file>
@@ -75,5 +78,7 @@
         <file>testdata/MIT/syntaxhighlighter.cpp</file>
         <file>testdata/MIT/CharDistribution.cpp</file>
         <file>testdata/MIT/kconfigcompiler_test_signals.cpp</file>
+        <file>testdata/MIT/prison.cpp</file>
+        <file>testdata/MIT/DeclarativeDragArea.cpp</file>
     </qresource>
 </RCC>

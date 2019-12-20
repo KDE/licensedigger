@@ -126,4 +126,10 @@ void TestHeaderDetection::detectLGPL21withQtLGPLexception()
 {
     detectForIdentifier("LGPL-2.1-only_WITH_Qt-LGPL-exception-1.1");
 }
+
+void TestHeaderDetection::detectLGPL21withQtLGPLexceptionOrLGPL30withQtLGPLexception()
+{
+    detectForIdentifier("LGPL-2.1-only_WITH_Qt-LGPL-exception-1.1_OR_LGPL-3.0-only_WITH_Qt-LGPL-exception-1.1_OR_LicenseRef-QTCOMMERCIAL");
+}
+
 QTEST_GUILESS_MAIN(TestHeaderDetection);

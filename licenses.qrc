@@ -12,6 +12,7 @@
         <file>licenses/GPL-2.0-or-later/plasma-framework_tooltip</file>
         <file>licenses/GPL-2.0-or-later/plasma-framework_view</file>
         <file>licenses/GPL-2.0_OR_GPL-3.0_OR_LicenseRef-KDE/kservice_autotest_nsaplugin</file>
+        <file>licenses/GPL-2.0_OR_GPL-3.0_OR_LicenseRef-KDE/kdeclarative_formats</file>
         <file>licenses/GPL-3.0-or-later/kcalendarcore_testcreateddatecompat</file>
         <file>licenses/LGPL-2.0-only/kcodecs_kcodecs</file>
         <file>licenses/LGPL-2.0-only/kdbusaddons_kquitapp</file>
@@ -23,6 +24,7 @@
         <file>licenses/LGPL-2.0-only/kguiaddons_kcolorcorrection</file>
         <file>licenses/LGPL-2.0-only/kguiaddons_kcolorcorrection_h</file>
         <file>licenses/LGPL-2.0-or-later/baloo_balooplugin</file>
+        <file>licenses/LGPL-2.0-or-later/kdeclarative_qtquicksettings</file>
         <file>licenses/LGPL-2.0-or-later/kcompletion_klineedit</file>
         <file>licenses/LGPL-2.0-or-later/kcompletion_kcompletionbase</file>
         <file>licenses/LGPL-2.0-or-later/kholidays_holidayregionsmodel</file>
@@ -48,6 +50,7 @@
         <file>licenses/LGPL-2.1-only/kitemmodels_modeltest</file>
         <file>licenses/LGPL-2.1-only/kprocesslist_unix_procstat</file>
         <file>licenses/LGPL-2.1-only_WITH_Qt-LGPL-exception-1.1/kcoreaddons_kprocesslist</file>
+        <file>licenses/LGPL-2.1-only_WITH_Qt-LGPL-exception-1.1_OR_LGPL-3.0-only_WITH_Qt-LGPL-exception-1.1_OR_LicenseRef-QTCOMMERCIAL/kdeclarative_quickviewsharedengine</file>
         <file>licenses/LGPL-2.1-or-later/kauth_backendsmanager</file>
         <file>licenses/LGPL-2.1-or-later/baloo_basicindexingjobtest</file>
         <file>licenses/LGPL-2.1-or-later/baloo_databasebenchmark</file>
@@ -76,6 +79,8 @@
         <file>licenses/MIT/kcodecs_chardistribution</file>
         <file>licenses/MIT/kconfig_kconfigcompiler_test_signals</file>
         <file>licenses/MIT/ksyntaxhighlighter</file>
+        <file>licenses/MIT/prison</file>
+        <file>licenses/MIT/kdeclarative_declarativedragarea</file>
         <file>licenses/TO-CLARIFY/kservice_might-be-gpl-or-lgpl</file>
     </qresource>
 </RCC>

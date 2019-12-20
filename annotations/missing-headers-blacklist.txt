@@ -47,3 +47,10 @@ kcompletion/tests/kcompletionuitest.cpp
 kcompletion/tests/kcompletionuitest.h
 kcompletion/tests/klineedittest.cpp
 kcompletion/tests/klineedittest.h
+prison/tests/main.cpp
+prison/tests/prison.h
+kdeclarative/autotests/data/resizemodeitem.qml
+kdeclarative/src/qmlcontrols/kquickcontrols/KeySequenceItem.qml
+kdeclarative/tests/qiconitem_resize.qml
+kdeclarative/tests/qiconitem_test.qml
+kdeclarative/tests/qimageitemtest.qml

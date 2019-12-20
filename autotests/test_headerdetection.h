@@ -26,6 +26,7 @@ private Q_SLOTS:
     void detectBSD3Clause();
     void detectMIT();
     void detectLGPL21withQtLGPLexception();
+    void detectLGPL21withQtLGPLexceptionOrLGPL30withQtLGPLexception();
 
 private:
     void detectForIdentifier(const QString &spdxMarker);
