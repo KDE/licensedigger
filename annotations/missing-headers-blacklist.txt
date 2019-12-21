@@ -66,3 +66,5 @@ kitemmodels/autotests/proxymodeltestsuite/templates/modelreset.cpp
 kitemmodels/autotests/kconcatenaterowsproxymodeltest.cpp
 kirigami/templates/kirigami/src/contents/ui/main.qml
 kirigami/templates/kirigami/src/main.cpp
+kio/tests/previewtest.cpp
+kio/tests/previewtest.h
