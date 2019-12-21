@@ -95,5 +95,6 @@
         <file>licenses/MIT/kdeclarative_declarativedragarea</file>
         <file>licenses/MIT/kio_kcookiejar</file>
         <file>licenses/TO-CLARIFY/kservice_might-be-gpl-or-lgpl</file>
+        <file>licenses/TO-CLARIFY/kio_might-be-lgpl2.0-or-lgpl-2.1</file>
     </qresource>
 </RCC>
