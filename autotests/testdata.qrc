@@ -2,11 +2,15 @@
     <qresource prefix="/">
         <file>testdata/BSD-2-Clause/unzipper_main.cpp</file>
         <file>testdata/BSD-2-Clause/kemailsettings.cpp</file>
+        <file>testdata/BSD-2-Clause/imagefilter.cpp</file>
         <file>testdata/BSD-3-Clause/SymbolTable.h</file>
         <file>testdata/GPL-2.0_OR_GPL-3.0_OR_LicenseRef-KDE/nsaplugin.cpp</file>
         <file>testdata/GPL-2.0_OR_GPL-3.0_OR_LicenseRef-KDE/formats.cpp</file>
+        <file>testdata/GPL-2.0_OR_GPL-3.0_OR_LicenseRef-KDE/kpasswdservertest.cpp</file>
         <file>testdata/GPL-2.0-only/client.cpp</file>
         <file>testdata/GPL-2.0-only/kpasswdserver.cpp</file>
+        <file>testdata/GPL-2.0-only/useragentdlg.cpp</file>
+        <file>testdata/GPL-2.0-only/kfileplacesmodeltest.cpp</file>
         <file>testdata/GPL-2.0-or-later/shellpluginloader.cpp</file>
         <file>testdata/GPL-2.0-or-later/view.cpp</file>
         <file>testdata/GPL-2.0-or-later/tooltip.cpp</file>
@@ -14,6 +18,10 @@
         <file>testdata/GPL-2.0-or-later/activityinfo.cpp</file>
         <file>testdata/GPL-2.0-or-later/kcharsetstest.cpp</file>
         <file>testdata/GPL-2.0-or-later/udsentrybenchmark.cpp</file>
+        <file>testdata/GPL-2.0-or-later/kioexec_main.cpp</file>
+        <file>testdata/GPL-2.0-or-later/localdomainurifilter.cpp</file>
+        <file>testdata/GPL-2.0-or-later/kurlcomboboxtest.cpp</file>
+        <file>testdata/GPL-2.0-or-later/kcookiewin.h</file>
         <file>testdata/GPL-3.0-or-later/testcreateddatecompat.cpp</file>
         <file>testdata/LGPL-2.0-or-later/kautostart.cpp</file>
         <file>testdata/LGPL-2.0-or-later/klineedit.cpp</file>
@@ -23,6 +31,7 @@
         <file>testdata/LGPL-2.0-or-later/plugintest.cpp</file>
         <file>testdata/LGPL-2.0-or-later/package.cpp</file>
         <file>testdata/LGPL-2.0-or-later/framesvg.cpp</file>
+        <file>testdata/LGPL-2.0-or-later/kio_help.cpp</file>
         <file>testdata/LGPL-2.0-or-later/JSLock.cpp</file>
         <file>testdata/LGPL-2.0-or-later/dialogshadows.cpp</file>
         <file>testdata/LGPL-2.0-or-later/kmodelindexproxymapper.cpp</file>
@@ -43,7 +52,11 @@
         <file>testdata/LGPL-2.0-or-later/joburlcache.cpp</file>
         <file>testdata/LGPL-2.0-or-later/kacleditwidget.cpp</file>
         <file>testdata/LGPL-2.0-or-later/kurlcompletion.cpp</file>
+        <file>testdata/LGPL-2.0-or-later/kurlrequesterdialog.cpp</file>
+        <file>testdata/LGPL-2.0-or-later/sessiondata.cpp</file>
+        <file>testdata/LGPL-2.1-only_OR_LGPL-3.0-only/httpserver_p.cpp</file>
         <file>testdata/LGPL-2.0-only/kcodecs.cpp</file>
+        <file>testdata/LGPL-2.0-only/kioslavetest.cpp</file>
         <file>testdata/LGPL-2.0-only/dataprotocol.cpp</file>
         <file>testdata/LGPL-2.0-only/kfindtest.cpp</file>
         <file>testdata/LGPL-2.0-only/krichtextwidget.cpp</file>
@@ -56,8 +69,17 @@
         <file>testdata/LGPL-2.0-only/kcolorcollection.cpp</file>
         <file>testdata/LGPL-2.0-only/kcolorcollection.h</file>
         <file>testdata/LGPL-2.0-only/kurlrequester.cpp</file>
+        <file>testdata/LGPL-2.0-only/des.cpp</file>
+        <file>testdata/LGPL-2.0-only/cache.cpp</file>
+        <file>testdata/LGPL-2.0-only/kfilebookmarkhandler.cpp</file>
+        <file>testdata/LGPL-2.0-only_OR_LGPL-3.0-only/knewfilemenu.cpp</file>
+        <file>testdata/LGPL-2.0-only_OR_LGPL-3.0-only/dndpopupmenuplugin.cpp</file>
+        <file>testdata/LGPL-2.0-only_OR_LGPL-3.0-only/kcookiejartest.cpp</file>
         <file>testdata/LGPL-2.0_OR_LGPL-3.0_OR_LicenseRef-KDE/kmimeassociations.cpp</file>
         <file>testdata/LGPL-2.0_OR_LGPL-3.0_OR_LicenseRef-KDE/ksycocadevices_p.h</file>
+        <file>testdata/LGPL-2.0_OR_LGPL-3.0_OR_LicenseRef-KDE/knameandurlinputdialog.cpp</file>
+        <file>testdata/LGPL-2.0_OR_LGPL-3.0_OR_LicenseRef-KDE/kfilecopytomenutest.cpp</file>
+        <file>testdata/LGPL-2.0-only_WITH_Qt-GPL-exception-1.0/kstatusbarofflineindicator.cpp</file>
         <file>testdata/LGPL-2.1-only/modeltest.cpp</file>
         <file>testdata/LGPL-2.1-only/kprocesslist_unix_procstat.cpp</file>
         <file>testdata/LGPL-2.1-only/kfilesystemtype.cpp</file>
@@ -78,6 +100,8 @@
         <file>testdata/LGPL-2.1-only_WITH_Qt-LGPL-exception-1.1/kprocesslist.cpp</file>
         <file>testdata/LGPL-2.1-only_WITH_Qt-LGPL-exception-1.1_OR_LGPL-3.0-only_WITH_Qt-LGPL-exception-1.1_OR_LicenseRef-QTCOMMERCIAL/quickviewsharedengine.cpp</file>
         <file>testdata/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/desktoptojson.cpp</file>
+        <file>testdata/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/batchrenamejob.cpp</file>
+        <file>testdata/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/desktopexecparser.h</file>
         <file>testdata/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/ChartsPlugin.cpp</file>
         <file>testdata/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/findservice.cpp</file>
         <file>testdata/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/ksplittercollapserbuttontest.cpp</file>
@@ -93,5 +117,6 @@
         <file>testdata/MIT/prison.cpp</file>
         <file>testdata/MIT/DeclarativeDragArea.cpp</file>
         <file>testdata/MIT/kcookiejar.cpp</file>
+        <file>testdata/MIT/kcookieserver.cpp</file>
     </qresource>
 </RCC>

@@ -67,6 +67,16 @@ void TestHeaderDetection::detectLGPL20only()
     detectForIdentifier("LGPL-2.0-only");
 }
 
+void TestHeaderDetection::detectLGPL21onlyOrLGPL30only()
+{
+    detectForIdentifier("LGPL-2.1-only_OR_LGPL-3.0-only");
+}
+
+void TestHeaderDetection::detectLGPL20onlyWithQtGPL10exception()
+{
+    detectForIdentifier("LGPL-2.0-only_WITH_Qt-GPL-exception-1.0");
+}
+
 void TestHeaderDetection::detectLGPL20_or_LGPL30_or_KDE()
 {
     detectForIdentifier("LGPL-2.0_OR_LGPL-3.0_OR_LicenseRef-KDE");
@@ -95,6 +105,11 @@ void TestHeaderDetection::detectGPL20_or_GPL30_or_KDE()
 void TestHeaderDetection::detectLGPL21only()
 {
     detectForIdentifier("LGPL-2.1-only");
+}
+
+void TestHeaderDetection::detectLGPL20_or_LGPL30()
+{
+    detectForIdentifier("LGPL-2.0-only_OR_LGPL-3.0-only");
 }
 
 void TestHeaderDetection::detectLGPL21_or_LGPL30_or_KDE()
