@@ -22,9 +22,9 @@
         <file>licenses/GPL-2.0-or-later/plasma-framework_shellpluginloader</file>
         <file>licenses/GPL-2.0-or-later/plasma-framework_tooltip</file>
         <file>licenses/GPL-2.0-or-later/plasma-framework_view</file>
-        <file>licenses/GPL-2.0_OR_GPL-3.0_OR_LicenseRef-KDE/kdeclarative_formats</file>
-        <file>licenses/GPL-2.0_OR_GPL-3.0_OR_LicenseRef-KDE/kio_kpasswdservertest</file>
-        <file>licenses/GPL-2.0_OR_GPL-3.0_OR_LicenseRef-KDE/kservice_autotest_nsaplugin</file>
+        <file>licenses/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/kdeclarative_formats</file>
+        <file>licenses/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/kio_kpasswdservertest</file>
+        <file>licenses/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/kservice_autotest_nsaplugin</file>
         <file>licenses/GPL-3.0-or-later/kcalendarcore_testcreateddatecompat</file>
         <file>licenses/LGPL-2.0-only/kcodecs_kcodecs</file>
         <file>licenses/LGPL-2.0-only/kdbusaddons_kquitapp</file>
@@ -81,10 +81,10 @@
         <file>licenses/LGPL-2.0-or-later/kwidgetsaddons_kstyleextensions</file>
         <file>licenses/LGPL-2.0-or-later/plasma-framework_dialogshadows</file>
         <file>licenses/LGPL-2.0-or-later/plasma-framework_framesvg</file>
-        <file>licenses/LGPL-2.0_OR_LGPL-3.0_OR_LicenseRef-KDE/kio_kfilecopytomenutest</file>
-        <file>licenses/LGPL-2.0_OR_LGPL-3.0_OR_LicenseRef-KDE/kio_knameandurlinputdialog</file>
-        <file>licenses/LGPL-2.0_OR_LGPL-3.0_OR_LicenseRef-KDE/kservice_kmimeassociations</file>
-        <file>licenses/LGPL-2.0_OR_LGPL-3.0_OR_LicenseRef-KDE/kservice_ksycocadevices_p</file>
+        <file>licenses/LGPL-2.0-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/kio_kfilecopytomenutest</file>
+        <file>licenses/LGPL-2.0-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/kio_knameandurlinputdialog</file>
+        <file>licenses/LGPL-2.0-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/kservice_kmimeassociations</file>
+        <file>licenses/LGPL-2.0-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/kservice_ksycocadevices_p</file>
         <file>licenses/LGPL-2.1-only/kcoreaddons_kfilesystemtype</file>
         <file>licenses/LGPL-2.1-only/kitemmodels_modeltest</file>
         <file>licenses/LGPL-2.1-only/kprocesslist_unix_procstat</file>
@@ -106,18 +106,20 @@
         <file>licenses/LGPL-2.1-or-later/kwidgetsaddons_ktooltipwidgettest</file>
         <file>licenses/LGPL-2.1-or-later/kwidgetsaddons_kurllabel</file>
         <file>licenses/LGPL-2.1-or-later/plasma-framework_authorizationmanager_p</file>
-        <file>licenses/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/attica_projectparser</file>
-        <file>licenses/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/attica_qtplatformdependent_typo</file>
-        <file>licenses/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/kactivities_utils</file>
-        <file>licenses/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/kcoreaddons_desktoptojson</file>
-        <file>licenses/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/kio_desktopexecparser</file>
-        <file>licenses/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/kio_kbatchrenamejob</file>
-        <file>licenses/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/kquickcharts_chartsplugin</file>
-        <file>licenses/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/kservice_findservice</file>
-        <file>licenses/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/kwidgetaddons_ksplittercollapserbuttontest</file>
-        <file>licenses/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/kwidgetsaddons_kbusyindicatorwidget</file>
-        <file>licenses/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/solid_inhibition</file>
+        <file>licenses/LGPL-2.1-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/attica_projectparser</file>
+        <file>licenses/LGPL-2.1-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/attica_qtplatformdependent_typo</file>
+        <file>licenses/LGPL-2.1-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/kactivities_utils</file>
+        <file>licenses/LGPL-2.1-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/kcoreaddons_desktoptojson</file>
+        <file>licenses/LGPL-2.1-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/kio_desktopexecparser</file>
+        <file>licenses/LGPL-2.1-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/kio_kbatchrenamejob</file>
+        <file>licenses/LGPL-2.1-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/kquickcharts_chartsplugin</file>
+        <file>licenses/LGPL-2.1-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/kservice_findservice</file>
+        <file>licenses/LGPL-2.1-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/kwidgetaddons_ksplittercollapserbuttontest</file>
+        <file>licenses/LGPL-2.1-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/kwidgetsaddons_kbusyindicatorwidget</file>
+        <file>licenses/LGPL-2.1-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/solid_inhibition</file>
         <file>licenses/LGPL-3.0-or-later/kwidgetaddons_kmessagebox</file>
+        <file>licenses/LGPL-3.0-only_OR_GPL-2.0-or-later/qqc2desktop_scrollview</file>
+        <file>licenses/LGPL-3.0-only_OR_GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KFQF-GPL_OR_LicenseRef-QTCOMMERCIAL/qqc2-desktop-style_qsgdefaultninepatchnode</file>
         <file>licenses/MIT/kcodecs_chardistribution</file>
         <file>licenses/MIT/kconfig_kconfigcompiler_test_signals</file>
         <file>licenses/MIT/kdeclarative_declarativedragarea</file>

@@ -106,3 +106,7 @@ syntax-highlighting/autotests/input/preprocessor-bug363280.cpp
 syntax-highlighting/autotests/input/test.c
 widgetsaddons/tests/kledtest.cpp
 widgetsaddons/tests/kledtest.h
+qqc2-desktop-style/tests/scrollView.qml
+qqc2-desktop-style/tests/tabbar.qml
+qqc2-desktop-style/tests/testComboBox.qml
+qqc2-desktop-style/tests/testScrollView.qml

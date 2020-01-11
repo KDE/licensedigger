@@ -21,9 +21,9 @@
         <file>testdata/GPL-2.0-or-later/tooltip.cpp</file>
         <file>testdata/GPL-2.0-or-later/udsentrybenchmark.cpp</file>
         <file>testdata/GPL-2.0-or-later/view.cpp</file>
-        <file>testdata/GPL-2.0_OR_GPL-3.0_OR_LicenseRef-KDE/formats.cpp</file>
-        <file>testdata/GPL-2.0_OR_GPL-3.0_OR_LicenseRef-KDE/kpasswdservertest.cpp</file>
-        <file>testdata/GPL-2.0_OR_GPL-3.0_OR_LicenseRef-KDE/nsaplugin.cpp</file>
+        <file>testdata/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/formats.cpp</file>
+        <file>testdata/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/kpasswdservertest.cpp</file>
+        <file>testdata/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/nsaplugin.cpp</file>
         <file>testdata/GPL-3.0-or-later/testcreateddatecompat.cpp</file>
         <file>testdata/LGPL-2.0-only/cache.cpp</file>
         <file>testdata/LGPL-2.0-only/ldifconverter.h</file>
@@ -81,10 +81,10 @@
         <file>testdata/LGPL-2.0-or-later/resourceinstance.cpp</file>
         <file>testdata/LGPL-2.0-or-later/sessiondata.cpp</file>
         <file>testdata/LGPL-2.0-or-later/test_kconf_update.cpp</file>
-        <file>testdata/LGPL-2.0_OR_LGPL-3.0_OR_LicenseRef-KDE/kfilecopytomenutest.cpp</file>
-        <file>testdata/LGPL-2.0_OR_LGPL-3.0_OR_LicenseRef-KDE/kmimeassociations.cpp</file>
-        <file>testdata/LGPL-2.0_OR_LGPL-3.0_OR_LicenseRef-KDE/knameandurlinputdialog.cpp</file>
-        <file>testdata/LGPL-2.0_OR_LGPL-3.0_OR_LicenseRef-KDE/ksycocadevices_p.h</file>
+        <file>testdata/LGPL-2.0-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/kfilecopytomenutest.cpp</file>
+        <file>testdata/LGPL-2.0-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/kmimeassociations.cpp</file>
+        <file>testdata/LGPL-2.0-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/knameandurlinputdialog.cpp</file>
+        <file>testdata/LGPL-2.0-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/ksycocadevices_p.h</file>
         <file>testdata/LGPL-2.1-only/kfilesystemtype.cpp</file>
         <file>testdata/LGPL-2.1-only/kprocesslist_unix_procstat.cpp</file>
         <file>testdata/LGPL-2.1-only/modeltest.cpp</file>
@@ -105,18 +105,19 @@
         <file>testdata/LGPL-2.1-or-later/kurllabel.cpp</file>
         <file>testdata/LGPL-2.1-or-later/lessthanwidget.h</file>
         <file>testdata/LGPL-2.1-or-later/proxymodeltestwidget.cpp</file>
-        <file>testdata/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/ChartsPlugin.cpp</file>
-        <file>testdata/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/batchrenamejob.cpp</file>
-        <file>testdata/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/desktopexecparser.h</file>
-        <file>testdata/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/desktoptojson.cpp</file>
-        <file>testdata/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/findservice.cpp</file>
-        <file>testdata/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/inhibition.cpp</file>
-        <file>testdata/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/kbusyindicatorwidget.cpp</file>
-        <file>testdata/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/ksplittercollapserbuttontest.cpp</file>
-        <file>testdata/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/projectparser.cpp</file>
-        <file>testdata/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/qtplatformdependent.cpp</file>
-        <file>testdata/LGPL-2.1_OR_LGPL-3.0_OR_LicenseRef-KDE/utils.h</file>
+        <file>testdata/LGPL-2.1-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/ChartsPlugin.cpp</file>
+        <file>testdata/LGPL-2.1-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/batchrenamejob.cpp</file>
+        <file>testdata/LGPL-2.1-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/desktopexecparser.h</file>
+        <file>testdata/LGPL-2.1-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/desktoptojson.cpp</file>
+        <file>testdata/LGPL-2.1-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/findservice.cpp</file>
+        <file>testdata/LGPL-2.1-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/inhibition.cpp</file>
+        <file>testdata/LGPL-2.1-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/kbusyindicatorwidget.cpp</file>
+        <file>testdata/LGPL-2.1-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/ksplittercollapserbuttontest.cpp</file>
+        <file>testdata/LGPL-2.1-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/projectparser.cpp</file>
+        <file>testdata/LGPL-2.1-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/qtplatformdependent.cpp</file>
+        <file>testdata/LGPL-2.1-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/utils.h</file>
         <file>testdata/LGPL-3.0-or-later/main.cpp</file>
+        <file>testdata/LGPL-3.0-only_OR_GPL-2.0-or-later/ScrollView.qml</file>
         <file>testdata/MIT/CharDistribution.cpp</file>
         <file>testdata/MIT/DeclarativeDragArea.cpp</file>
         <file>testdata/MIT/fixx11h.h</file>

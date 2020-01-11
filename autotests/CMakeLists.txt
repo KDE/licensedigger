@@ -4,7 +4,8 @@ set(headerdetection_SRCS
     ../licenseregistry.cpp
 )
 qt5_add_resources(headerdetection_SRCS
-    ../licenses.qrc testdata.qrc
+    testdata.qrc
+    ../licenses.qrc
 )
 add_executable(test_headerdetection ${headerdetection_SRCS})
 target_link_libraries(test_headerdetection
