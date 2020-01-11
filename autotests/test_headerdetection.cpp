@@ -152,4 +152,9 @@ void TestHeaderDetection::detectLGPL21withQtLGPLexceptionOrLGPL30withQtLGPLexcep
     detectForIdentifier("LGPL-2.1-only_WITH_Qt-LGPL-exception-1.1_OR_LGPL-3.0-only_WITH_Qt-LGPL-exception-1.1_OR_LicenseRef-Qt-Commercial");
 }
 
+void TestHeaderDetection::detectLGPL30_or_GPL20_or_GPL30_or_GPLKFQF_or_QtCommercial()
+{
+    detectForIdentifier("LGPL-3.0-only_OR_GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KFQF-Accepted-GPL_OR_LicenseRef-Qt-Commercial");
+}
+
 QTEST_GUILESS_MAIN(TestHeaderDetection);

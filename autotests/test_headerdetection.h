@@ -31,6 +31,7 @@ private Q_SLOTS:
     void detectMIT();
     void detectLGPL21withQtLGPLexception();
     void detectLGPL21withQtLGPLexceptionOrLGPL30withQtLGPLexception();
+    void detectLGPL30_or_GPL20_or_GPL30_or_GPLKFQF_or_QtCommercial();
 
 private:
     void detectForIdentifier(const QString &spdxMarker);
