@@ -30,23 +30,36 @@ class LicenseRegistry : public QObject
 {
     Q_OBJECT
 public:
-    using SpdxIdentifer = QString;
+    using SpdxIdentifier = QString;
+    using SpdxExpression = QString;
     const static QString UnknownLicense;
     const static QString MissingLicense;
     const static QString MissingLicenseForGeneratedFile;
 
     explicit LicenseRegistry(QObject *parent = nullptr);
 
-    QVector<SpdxIdentifer> identifiers() const;
+    /**
+     * @brief list of all detectable SPDX expressions
+     */
+    QVector<SpdxExpression> expressions() const;
 
-    QVector<QString> headerTexts(const SpdxIdentifer &identifier) const;
+    /**
+     * @brief list of all known SPDX identifiers
+     */
+    QVector<SpdxIdentifier> identifiers() const;
 
-    QRegularExpression headerTextRegExp(const SpdxIdentifer &identifier) const;
+    QMap<SpdxIdentifier, QString> licenseFiles() const;
+
+    QVector<QString> headerTexts(const SpdxExpression &identifier) const;
+
+    QRegularExpression headerTextRegExp(const SpdxExpression &identifier) const;
 
 private:
     void loadLicenseHeaders();
-    QMap<SpdxIdentifer, QVector<QString>> m_registry;
-    mutable QMap<SpdxIdentifer, QRegularExpression> m_regexpCache;
+    void loadLicenseFiles();
+    QMap<SpdxExpression, QVector<QString>> m_registry;
+    mutable QMap<SpdxExpression, QRegularExpression> m_regexpCache;
+    mutable QMap<SpdxIdentifier, QString> m_licenseFiles;
 };
 
 #endif // LICENSEREGISTRY_H

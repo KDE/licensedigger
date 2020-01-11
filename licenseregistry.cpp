@@ -30,6 +30,7 @@ const QString LicenseRegistry::MissingLicenseForGeneratedFile("MISSING-LICENSE-G
 LicenseRegistry::LicenseRegistry(QObject *parent) : QObject(parent)
 {
     loadLicenseHeaders();
+    loadLicenseFiles();
 }
 
 void LicenseRegistry::loadLicenseHeaders()
@@ -57,17 +58,41 @@ void LicenseRegistry::loadLicenseHeaders()
     }
 }
 
-QVector<LicenseRegistry::SpdxIdentifer> LicenseRegistry::identifiers() const
+void LicenseRegistry::loadLicenseFiles()
+{
+    QDirIterator textIter(":/licensetexts/");
+    while (textIter.hasNext()) {
+        QString filePath = textIter.next();
+        if (textIter.fileInfo().isDir()) {
+            qWarning() << "Unexpected directory found:" << textIter.fileInfo();
+            continue;
+        }
+        QString baseName = textIter.fileName().mid(0, textIter.fileName().length() - 4); // remove ".txt"
+        m_licenseFiles.insert(baseName, textIter.filePath());
+    }
+}
+
+QVector<LicenseRegistry::SpdxExpression> LicenseRegistry::expressions() const
 {
     return m_registry.keys().toVector();
 }
 
-QVector<QString> LicenseRegistry::headerTexts(const LicenseRegistry::SpdxIdentifer &identifier) const
+QVector<LicenseRegistry::SpdxIdentifier> LicenseRegistry::identifiers() const
+{
+    return m_licenseFiles.keys().toVector();
+}
+
+QMap<LicenseRegistry::SpdxIdentifier, QString> LicenseRegistry::licenseFiles() const
+{
+    return m_licenseFiles;
+}
+
+QVector<QString> LicenseRegistry::headerTexts(const LicenseRegistry::SpdxExpression &identifier) const
 {
     return m_registry.value(identifier);
 }
 
-QRegularExpression LicenseRegistry::headerTextRegExp(const SpdxIdentifer &identifier) const
+QRegularExpression LicenseRegistry::headerTextRegExp(const SpdxExpression &identifier) const
 {
     if (!m_registry.contains(identifier)) {
         qCritical() << "Identifier not found, returning error matcher";

@@ -23,10 +23,10 @@
 #include <QTextStream>
 #include <QDebug>
 
-QMap<QString, LicenseRegistry::SpdxIdentifer> DirectoryParser::parseAll(const QString &directory) const
+QMap<QString, LicenseRegistry::SpdxExpression> DirectoryParser::parseAll(const QString &directory) const
 {
-    QVector<LicenseRegistry::SpdxIdentifer> identifiers = m_registry.identifiers();
-    QMap<QString, LicenseRegistry::SpdxIdentifer> results;
+    QVector<LicenseRegistry::SpdxExpression> expressions = m_registry.expressions();
+    QMap<QString, LicenseRegistry::SpdxExpression> results;
 
     QStringList missingLicenseHeaderBlacklist;
     {
@@ -64,13 +64,13 @@ QMap<QString, LicenseRegistry::SpdxIdentifer> DirectoryParser::parseAll(const QS
         const QString fileContent = file.readAll();
 
 //        qDebug() << "checking:" << iterator.fileInfo();
-        for (auto identifier : identifiers) {
-            auto regexp = m_registry.headerTextRegExp(identifier);
+        for (auto expression : expressions) {
+            auto regexp = m_registry.headerTextRegExp(expression);
             if (fileContent.contains(regexp)) {
                 if (results.contains(iterator.fileInfo().filePath())) {
-                    qCritical() << "UNHANDLED MULTI-LICENSE CASE" << iterator.fileInfo().filePath() << identifier << results.value(iterator.fileInfo().filePath());
+                    qCritical() << "UNHANDLED MULTI-LICENSE CASE" << iterator.fileInfo().filePath() << expression << results.value(iterator.fileInfo().filePath());
                 }
-                results.insert(iterator.fileInfo().filePath(), identifier);
+                results.insert(iterator.fileInfo().filePath(), expression);
 //                qDebug() << "---> " << iterator.fileInfo().filePath() << identifier;
             }
         }

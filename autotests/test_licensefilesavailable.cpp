@@ -29,7 +29,7 @@
 void TestLicenseFilesAvailable::checkAll()
 {
     LicenseRegistry registry;
-    QVector<QString> expressions = registry.identifiers();
+    QVector<QString> expressions = registry.expressions();
 
     QSet<QString> identifiers;
     for (const auto &expression : expressions) {
@@ -51,20 +51,8 @@ void TestLicenseFilesAvailable::checkAll()
     }
     qDebug() << "Checking for SPDX license texts:" << identifiers.toList();
 
-    // collect all license files
-    QDirIterator textIter(":/licensetexts/");
-    QHash<QString, QString> licenseFiles;
-    while (textIter.hasNext()) {
-        QString filePath = textIter.next();
-        if (textIter.fileInfo().isDir()) {
-            qWarning() << "Unexpected directory found:" << textIter.fileInfo();
-            continue;
-        }
-        QString baseName = textIter.fileName().mid(0, textIter.fileName().length() - 4); // remove ".txt"
-        licenseFiles.insert(baseName, textIter.filePath());
-    }
-
     // test missing
+    QMap<LicenseRegistry::SpdxIdentifier, QString> licenseFiles = registry.licenseFiles();
     for (const auto &identifier : identifiers) {
         QVERIFY2(licenseFiles.contains(identifier), qPrintable("Searching identifier: " + identifier));
     }

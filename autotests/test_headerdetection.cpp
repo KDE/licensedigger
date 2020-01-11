@@ -32,7 +32,7 @@ void TestHeaderDetection::detectForIdentifier(const QString &spdxMarker)
     // read comparison headers
     LicenseRegistry registry;
 
-    QVERIFY(registry.identifiers().contains(spdxMarker));
+    QVERIFY(registry.expressions().contains(spdxMarker));
     QVERIFY(registry.headerTexts(spdxMarker).size() > 0);
 
     // load test data
