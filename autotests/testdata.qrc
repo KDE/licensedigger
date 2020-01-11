@@ -90,7 +90,7 @@
         <file>testdata/LGPL-2.1-only/modeltest.cpp</file>
         <file>testdata/LGPL-2.1-only_OR_LGPL-3.0-only/httpserver_p.cpp</file>
         <file>testdata/LGPL-2.1-only_WITH_Qt-LGPL-exception-1.1/kprocesslist.cpp</file>
-        <file>testdata/LGPL-2.1-only_WITH_Qt-LGPL-exception-1.1_OR_LGPL-3.0-only_WITH_Qt-LGPL-exception-1.1_OR_LicenseRef-QTCOMMERCIAL/quickviewsharedengine.cpp</file>
+        <file>testdata/LGPL-2.1-only_WITH_Qt-LGPL-exception-1.1_OR_LGPL-3.0-only_WITH_Qt-LGPL-exception-1.1_OR_LicenseRef-Qt-Commercial/quickviewsharedengine.cpp</file>
         <file>testdata/LGPL-2.1-or-later/BackendsManager.cpp</file>
         <file>testdata/LGPL-2.1-or-later/a2dp-codecs.h</file>
         <file>testdata/LGPL-2.1-or-later/authorizationmanager_p.h</file>

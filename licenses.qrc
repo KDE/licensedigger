@@ -90,7 +90,7 @@
         <file>licenses/LGPL-2.1-only/kprocesslist_unix_procstat</file>
         <file>licenses/LGPL-2.1-only_OR_LGPL-3.0-only/kio_httpserver_p</file>
         <file>licenses/LGPL-2.1-only_WITH_Qt-LGPL-exception-1.1/kcoreaddons_kprocesslist</file>
-        <file>licenses/LGPL-2.1-only_WITH_Qt-LGPL-exception-1.1_OR_LGPL-3.0-only_WITH_Qt-LGPL-exception-1.1_OR_LicenseRef-QTCOMMERCIAL/kdeclarative_quickviewsharedengine</file>
+        <file>licenses/LGPL-2.1-only_WITH_Qt-LGPL-exception-1.1_OR_LGPL-3.0-only_WITH_Qt-LGPL-exception-1.1_OR_LicenseRef-Qt-Commercial/kdeclarative_quickviewsharedengine</file>
         <file>licenses/LGPL-2.1-or-later/baloo_basicindexingjobtest</file>
         <file>licenses/LGPL-2.1-or-later/baloo_databasebenchmark</file>
         <file>licenses/LGPL-2.1-or-later/bluezqt_a2dp-codecs</file>
@@ -119,7 +119,6 @@
         <file>licenses/LGPL-2.1-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/solid_inhibition</file>
         <file>licenses/LGPL-3.0-or-later/kwidgetaddons_kmessagebox</file>
         <file>licenses/LGPL-3.0-only_OR_GPL-2.0-or-later/qqc2desktop_scrollview</file>
-        <file>licenses/LGPL-3.0-only_OR_GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KFQF-GPL_OR_LicenseRef-QTCOMMERCIAL/qqc2-desktop-style_qsgdefaultninepatchnode</file>
         <file>licenses/MIT/kcodecs_chardistribution</file>
         <file>licenses/MIT/kconfig_kconfigcompiler_test_signals</file>
         <file>licenses/MIT/kdeclarative_declarativedragarea</file>
@@ -130,5 +129,25 @@
         <file>licenses/MIT/prison</file>
         <file>licenses/TO-CLARIFY/kio_might-be-lgpl2.0-or-lgpl-2.1</file>
         <file>licenses/TO-CLARIFY/kservice_might-be-gpl-or-lgpl</file>
+        <file>licensetexts/BSD-2-Clause.txt</file>
+        <file>licensetexts/GPL-2.0-or-later.txt</file>
+        <file>licensetexts/GPL-3.0-only.txt</file>
+        <file>licensetexts/GPL-3.0-or-later.txt</file>
+        <file>licensetexts/LGPL-2.0-only.txt</file>
+        <file>licensetexts/LGPL-2.0-or-later.txt</file>
+        <file>licensetexts/LGPL-2.1-only.txt</file>
+        <file>licensetexts/LGPL-2.1-or-later.txt</file>
+        <file>licensetexts/LGPL-3.0-only.txt</file>
+        <file>licensetexts/MIT.txt</file>
+        <file>licensetexts/LGPL-3.0-or-later.txt</file>
+        <file>licensetexts/GPL-2.0-only.txt</file>
+        <file>licensetexts/LicenseRef-KDE-Accepted-GPL.txt</file>
+        <file>licensetexts/LicenseRef-KDE-Accepted-LGPL.txt</file>
+        <file>licensetexts/Qt-GPL-exception-1.0.txt</file>
+        <file>licensetexts/BSD-3-Clause.txt</file>
+        <file>licensetexts/Qt-LGPL-exception-1.1.txt</file>
+        <file>licensetexts/LicenseRef-Qt-Commercial.txt</file>
+        <file>licensetexts/LicenseRef-KFQF-Accepted-GPL.txt</file>
+        <file>licenses/LGPL-3.0-only_OR_GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KFQF-Accepted-GPL_OR_LicenseRef-Qt-Commercial/qqc2-desktop-style_qsgdefaultninepatchnode</file>
     </qresource>
 </RCC>
