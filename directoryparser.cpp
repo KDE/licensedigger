@@ -23,10 +23,14 @@
 #include <QTextStream>
 #include <QDebug>
 
-QMap<QString, LicenseRegistry::SpdxExpression> DirectoryParser::parseAll(const QString &directory) const
+QMap<QString, LicenseRegistry::SpdxExpression> DirectoryParser::parseAll(const QString &directory, bool convertMode) const
 {
     QVector<LicenseRegistry::SpdxExpression> expressions = m_registry.expressions();
     QMap<QString, LicenseRegistry::SpdxExpression> results;
+
+    if (convertMode) {
+        qInfo() << "Running parser in CONVERT mode: every found license will be replaced with SPDX identifiers";
+    }
 
     QStringList missingLicenseHeaderBlacklist;
     {
@@ -62,6 +66,7 @@ QMap<QString, LicenseRegistry::SpdxExpression> DirectoryParser::parseAll(const Q
 
         file.open(QIODevice::ReadOnly);
         const QString fileContent = file.readAll();
+        file.close();
 
 //        qDebug() << "checking:" << iterator.fileInfo();
         for (auto expression : expressions) {
@@ -69,9 +74,11 @@ QMap<QString, LicenseRegistry::SpdxExpression> DirectoryParser::parseAll(const Q
             if (fileContent.contains(regexp)) {
                 if (results.contains(iterator.fileInfo().filePath())) {
                     qCritical() << "UNHANDLED MULTI-LICENSE CASE" << iterator.fileInfo().filePath() << expression << results.value(iterator.fileInfo().filePath());
+                    results[iterator.fileInfo().filePath()] = LicenseRegistry::AmbigiousLicense;
+                } else {
+                    results.insert(iterator.fileInfo().filePath(), expression);
+//                    qDebug() << "---> " << iterator.fileInfo().filePath() << identifier;
                 }
-                results.insert(iterator.fileInfo().filePath(), expression);
-//                qDebug() << "---> " << iterator.fileInfo().filePath() << identifier;
             }
         }
 
@@ -92,6 +99,56 @@ QMap<QString, LicenseRegistry::SpdxExpression> DirectoryParser::parseAll(const Q
         // if nothing matches, report error
         if (!results.contains(iterator.fileInfo().filePath())) {
             results.insert(iterator.fileInfo().filePath(), LicenseRegistry::UnknownLicense);
+        }
+
+        const QString expression = results.value(iterator.fileInfo().filePath());
+        if (convertMode
+                && expression != LicenseRegistry::UnknownLicense
+                && expression != LicenseRegistry::MissingLicense
+                && expression != LicenseRegistry::MissingLicenseForGeneratedFile
+                && expression != LicenseRegistry::AmbigiousLicense) {
+            auto regexp = m_registry.headerTextRegExp(expression);
+            QString outputExpression = expression;
+            outputExpression.replace('_', " ");
+            QString spdxOutputString = "SPDX-License-Identifier: " + outputExpression;
+            QString newContent = fileContent;
+            newContent.replace(regexp, spdxOutputString);
+            qDebug() << newContent;
+            file.open(QIODevice::WriteOnly);
+            file.write(newContent.toUtf8());
+            const QString fileContent = file.readAll();
+            file.close();
+        }
+    }
+
+    if (convertMode) {
+        // compute needed licenses
+        QSet<QString> identifiers;
+        for (const auto &expression : results.values()) {
+            auto expressionSplit = expression.split('_');
+            for (const auto &identifier : expressionSplit) {
+                // remove SPDX syntax attributes
+                if (identifier == "OR" || identifier == "AND" || identifier == "WITH") {
+                    continue;
+                }
+                // remove special placeholders
+                if (identifier == LicenseRegistry::UnknownLicense
+                        || identifier == LicenseRegistry::MissingLicense
+                        || identifier == LicenseRegistry::MissingLicenseForGeneratedFile
+                        || identifier == LicenseRegistry::AmbigiousLicense
+                        || identifier == "TO-CLARIFY") {
+                    continue;
+                }
+                identifiers.insert(identifier);
+            }
+        }
+        // create licenses directory and put license files therein
+        QString licenseDir = directory + "/LICENSES/";
+        QDir().mkdir(licenseDir);
+        const auto licenseFiles = m_registry.licenseFiles();
+        for (const auto &identifier : identifiers) {
+            qDebug() << "Deploy license file" << identifier << licenseFiles.value(identifier);
+            QFile::copy(licenseFiles.value(identifier), licenseDir + identifier + ".txt");
         }
     }
 

@@ -26,7 +26,7 @@
 class DirectoryParser
 {
 public:
-    QMap<QString, LicenseRegistry::SpdxExpression> parseAll(const QString &directory) const;
+    QMap<QString, LicenseRegistry::SpdxExpression> parseAll(const QString &directory, bool convertMode = false) const;
 
 private:
     LicenseRegistry m_registry;

@@ -34,6 +34,7 @@ public:
     using SpdxExpression = QString;
     const static QString UnknownLicense;
     const static QString MissingLicense;
+    const static QString AmbigiousLicense;
     const static QString MissingLicenseForGeneratedFile;
 
     explicit LicenseRegistry(QObject *parent = nullptr);

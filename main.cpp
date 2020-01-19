@@ -32,6 +32,10 @@ int main(int argc, char *argv[])
     parser.addHelpOption();
     parser.addVersionOption();
     parser.addPositionalArgument("directory", QCoreApplication::translate("main", "Source file to copy."));
+
+    QCommandLineOption convertOption(QStringList() << "c" << "convert",
+            "convert project to SPDX identifiers");
+    parser.addOption(convertOption);
     parser.process(app);
 
     const QStringList args = parser.positionalArguments();
@@ -43,7 +47,7 @@ int main(int argc, char *argv[])
 
     qInfo() << "Parsing headers in" << directory;
     DirectoryParser licenseParser;
-    const auto results = licenseParser.parseAll(directory);
+    const auto results = licenseParser.parseAll(directory, parser.isSet(convertOption));
     int undetectedLicenses = 0;
     int detectedLicenses = 0;
     for (auto iter = results.constBegin(); iter != results.constEnd(); iter++) {

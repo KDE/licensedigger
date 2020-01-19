@@ -24,6 +24,7 @@
 #include <QDirIterator>
 
 const QString LicenseRegistry::UnknownLicense("UNKNOWN-LICENSE");
+const QString LicenseRegistry::AmbigiousLicense("AMBIGIOUS");
 const QString LicenseRegistry::MissingLicense("MISSING-LICENSE");
 const QString LicenseRegistry::MissingLicenseForGeneratedFile("MISSING-LICENSE-GENERATED-FILE");
 
@@ -105,7 +106,7 @@ QRegularExpression LicenseRegistry::headerTextRegExp(const SpdxExpression &ident
     QVector<QString> patterns;
     for (const QString &header : m_registry.value(identifier)) {
         QString pattern(QRegularExpression::escape(header));
-        pattern.prepend("[\\* ]*");
+        // start detection at first word of license string to make detection easier
         pattern.replace("\\\n", "[\\* ]*\\\n[\\* ]*"); // allow prefixes and suffices of whitespace mixed with stars
         patterns.append(pattern);
     }

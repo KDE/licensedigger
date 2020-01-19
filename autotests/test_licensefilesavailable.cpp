@@ -43,6 +43,7 @@ void TestLicenseFilesAvailable::checkAll()
             if (identifier == LicenseRegistry::UnknownLicense
                     || identifier == LicenseRegistry::MissingLicense
                     || identifier == LicenseRegistry::MissingLicenseForGeneratedFile
+                    || identifier == LicenseRegistry::AmbigiousLicense
                     || identifier == "TO-CLARIFY") {
                 continue;
             }
