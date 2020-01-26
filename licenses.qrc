@@ -32,7 +32,6 @@
         <file>licenses/LGPL-2.0-only/kguiaddons_kcolorcorrection_h</file>
         <file>licenses/LGPL-2.0-only/kio_cache</file>
         <file>licenses/LGPL-2.0-only/kio_dataprotocol</file>
-        <file>licenses/LGPL-2.0-only/kio_des</file>
         <file>licenses/LGPL-2.0-only/kio_kfilebookmarkhandler</file>
         <file>licenses/LGPL-2.0-only/kio_kurlrequester</file>
         <file>licenses/LGPL-2.0-only/kioslavetest</file>
@@ -47,7 +46,7 @@
         <file>licenses/LGPL-2.0-only_OR_LGPL-3.0-only/kio_dndpopupmenuplugin</file>
         <file>licenses/LGPL-2.0-only_OR_LGPL-3.0-only/kio_kcookiejartest</file>
         <file>licenses/LGPL-2.0-only_OR_LGPL-3.0-only/kio_knewfilemenu</file>
-        <file>licenses/LGPL-2.0-only_WITH_Qt-GPL-exception-1.0/kio_kstatusbarofflineindicator</file>
+        <file>licenses/LGPL-2.0-only_WITH_Qt-Commercial-exception-1.0/kio_kstatusbarofflineindicator</file>
         <file>licenses/LGPL-2.0-or-later/kcontacts_ldif</file>
         <file>licenses/LGPL-2.0-or-later/baloo_balooplugin</file>
         <file>licenses/LGPL-2.0-or-later/kactivities_range</file>
@@ -85,11 +84,12 @@
         <file>licenses/LGPL-2.0-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/kio_knameandurlinputdialog</file>
         <file>licenses/LGPL-2.0-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/kservice_kmimeassociations</file>
         <file>licenses/LGPL-2.0-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/kservice_ksycocadevices_p</file>
+        <file>licenses/LGPL-2.1-only/kio_des</file>
         <file>licenses/LGPL-2.1-only/kcoreaddons_kfilesystemtype</file>
         <file>licenses/LGPL-2.1-only/kitemmodels_modeltest</file>
         <file>licenses/LGPL-2.1-only/kprocesslist_unix_procstat</file>
         <file>licenses/LGPL-2.1-only_OR_LGPL-3.0-only/kio_httpserver_p</file>
-        <file>licenses/LGPL-2.1-only_WITH_Qt-LGPL-exception-1.1/kcoreaddons_kprocesslist</file>
+        <file>licenses/LGPL-2.1-only_WITH_Qt-LGPL-exception-1.1_OR_LicenseRef-Qt-Commercial/kcoreaddons_kprocesslist</file>
         <file>licenses/LGPL-2.1-only_WITH_Qt-LGPL-exception-1.1_OR_LGPL-3.0-only_WITH_Qt-LGPL-exception-1.1_OR_LicenseRef-Qt-Commercial/kdeclarative_quickviewsharedengine</file>
         <file>licenses/LGPL-2.1-or-later/baloo_basicindexingjobtest</file>
         <file>licenses/LGPL-2.1-or-later/baloo_databasebenchmark</file>
@@ -150,5 +150,6 @@
         <file>licensetexts/LicenseRef-KFQF-Accepted-GPL.txt</file>
         <file>licenses/LGPL-3.0-only_OR_GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KFQF-Accepted-GPL_OR_LicenseRef-Qt-Commercial/qqc2-desktop-style_qsgdefaultninepatchnode</file>
         <file>licenses/LGPL-2.1-or-later/artikulate_gstreamerbackend</file>
+        <file>licensetexts/Qt-Commercial-exception-1.0.txt</file>
     </qresource>
 </RCC>

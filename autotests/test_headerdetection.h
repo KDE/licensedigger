@@ -17,7 +17,7 @@ private Q_SLOTS:
     void detectGPL30orlater();
     void detectLGPL20orlater();
     void detectLGPL20only();
-    void detectLGPL20onlyWithQtGPL10exception();
+    void detectLGPL20onlyWithQtCommercialException();
     void detectLGPL20_or_LGPL30_or_KDE();
     void detectLGPL21only();
     void detectLGPL21onlyOrLGPL30only();
@@ -29,7 +29,7 @@ private Q_SLOTS:
     void detectBSD2Clause();
     void detectBSD3Clause();
     void detectMIT();
-    void detectLGPL21withQtLGPLexception();
+    void detectLGPL21withQtLGPLexception_or_QtCommercial();
     void detectLGPL21withQtLGPLexceptionOrLGPL30withQtLGPLexception();
     void detectLGPL30_or_GPL20_or_GPL30_or_GPLKFQF_or_QtCommercial();
 
