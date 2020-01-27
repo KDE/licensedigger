@@ -154,3 +154,31 @@ QMap<QString, LicenseRegistry::SpdxExpression> DirectoryParser::parseAll(const Q
 
     return results;
 }
+
+void DirectoryParser::convertCopyright(const QString &directory) const
+{
+    auto regexp = QRegularExpression("Copyright( \\([cC]\\))|Copyright ©|©|Copyright");
+
+    QDirIterator iterator(directory, QDirIterator::Subdirectories);
+    while (iterator.hasNext()) {
+        QFile file(iterator.next());
+        if (!iterator.fileInfo().isFile()) {
+            continue;
+        }
+        if (!file.fileName().endsWith(".cpp") && !file.fileName().endsWith(".h") && !file.fileName().endsWith(".hpp") && !file.fileName().endsWith(".c") && !file.fileName().endsWith(".qml")) {
+            //TODO only support C files for now
+            continue;
+        }
+
+        file.open(QIODevice::ReadOnly);
+        const QString fileContent = file.readAll();
+        file.close();
+
+        QString spdxOutputString = "SPDX-FileCopyrightText:";
+        QString newContent = fileContent;
+        newContent.replace(regexp, spdxOutputString);
+        file.open(QIODevice::WriteOnly);
+        file.write(newContent.toUtf8());
+        file.close();
+    }
+}

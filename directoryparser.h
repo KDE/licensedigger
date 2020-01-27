@@ -27,6 +27,7 @@ class DirectoryParser
 {
 public:
     QMap<QString, LicenseRegistry::SpdxExpression> parseAll(const QString &directory, bool convertMode = false) const;
+    void convertCopyright(const QString &directory) const;
 
 private:
     LicenseRegistry m_registry;

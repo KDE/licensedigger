@@ -36,6 +36,11 @@ int main(int argc, char *argv[])
     QCommandLineOption convertOption(QStringList() << "c" << "convert",
             "convert project to SPDX identifiers");
     parser.addOption(convertOption);
+
+    QCommandLineOption copyrightOption(QStringList() << "r" << "copyright",
+            "convert copyright identifieres");
+    parser.addOption(copyrightOption);
+
     parser.process(app);
 
     const QStringList args = parser.positionalArguments();
@@ -57,6 +62,11 @@ int main(int argc, char *argv[])
             ++detectedLicenses;
         }
         qDebug() << iter.key() << " --> " << iter.value();
+    }
+
+    qInfo() << "Converting copyright statements";
+    if (parser.isSet(copyrightOption)) {
+        licenseParser.convertCopyright(directory);
     }
 
     qDebug().nospace() << "\n" << "Undetected files: " << undetectedLicenses << " (total: " << (undetectedLicenses + detectedLicenses) << ")";
