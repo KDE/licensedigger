@@ -11,8 +11,33 @@
 
 QRegularExpression DirectoryParser::copyrightRegExp() const
 {
-    static auto regexp = QRegularExpression("SPDX-License-Identifier:|Copyright( \\([cC]\\))|Copyright ©|©|Copyright");
+    static auto regexp = QRegularExpression("(SPDX-FileCopyrightText:|Copyright( \\([cC]\\))|Copyright ©|©|Copyright(:)?)"
+                                     "[ ]+"
+                                     "(?<years>([0-9]+(-[0-9]+|, [0-9]+)*))"
+                                     "[ ]+"
+                                     "(?<name>(\\w+( \\w+)*))"
+                                     "[ ]*"
+                                     "(?<contact>.*)"
+                                     );
     return regexp;
+}
+
+QString DirectoryParser::unifyCopyrightStatements(const QString &originalText) const
+{
+    QString header = originalText;
+    QRegularExpression regExp = copyrightRegExp();
+    auto match = regExp.match(header);
+
+    while (match.hasMatch()) {
+        QString years = match.captured("years");
+        QString name = match.captured("name");
+        QString contact = match.captured("contact");
+
+        QString unifiedCopyright = QString("SPDX-FileCopyrightText: %1 %2 %3").arg(years).arg(name).arg(contact);
+        header.replace(match.capturedStart(), match.capturedLength(), unifiedCopyright);
+        match = regExp.match(header, match.capturedStart() + unifiedCopyright.length());
+    }
+    return header;
 }
 
 QMap<QString, LicenseRegistry::SpdxExpression> DirectoryParser::parseAll(const QString &directory, bool convertMode) const
@@ -149,8 +174,6 @@ QMap<QString, LicenseRegistry::SpdxExpression> DirectoryParser::parseAll(const Q
 
 void DirectoryParser::convertCopyright(const QString &directory) const
 {
-    const auto regexp = copyrightRegExp();
-
     QDirIterator iterator(directory, QDirIterator::Subdirectories);
     while (iterator.hasNext()) {
         QFile file(iterator.next());
@@ -166,10 +189,8 @@ void DirectoryParser::convertCopyright(const QString &directory) const
         const QString fileContent = file.readAll();
         file.close();
 
-        QString spdxOutputString = "SPDX-FileCopyrightText:";
-        QString newContent = fileContent;
-        newContent.replace(regexp, spdxOutputString);
         file.open(QIODevice::WriteOnly);
+        QString newContent = unifyCopyrightStatements(fileContent);
         file.write(newContent.toUtf8());
         file.close();
     }

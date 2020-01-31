@@ -16,6 +16,7 @@ public:
     QMap<QString, LicenseRegistry::SpdxExpression> parseAll(const QString &directory, bool convertMode = false) const;
     void convertCopyright(const QString &directory) const;
     QRegularExpression copyrightRegExp() const;
+    QString unifyCopyrightStatements(const QString &originalText) const;
 
 private:
     LicenseRegistry m_registry;
