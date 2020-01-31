@@ -9,6 +9,12 @@
 #include <QTextStream>
 #include <QDebug>
 
+QRegularExpression DirectoryParser::copyrightRegExp() const
+{
+    static auto regexp = QRegularExpression("SPDX-License-Identifier:|Copyright( \\([cC]\\))|Copyright ©|©|Copyright");
+    return regexp;
+}
+
 QMap<QString, LicenseRegistry::SpdxExpression> DirectoryParser::parseAll(const QString &directory, bool convertMode) const
 {
     QVector<LicenseRegistry::SpdxExpression> expressions = m_registry.expressions();
@@ -143,7 +149,7 @@ QMap<QString, LicenseRegistry::SpdxExpression> DirectoryParser::parseAll(const Q
 
 void DirectoryParser::convertCopyright(const QString &directory) const
 {
-    auto regexp = QRegularExpression("Copyright( \\([cC]\\))|Copyright ©|©|Copyright");
+    const auto regexp = copyrightRegExp();
 
     QDirIterator iterator(directory, QDirIterator::Subdirectories);
     while (iterator.hasNext()) {
