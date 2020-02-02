@@ -26,6 +26,7 @@ void TestCopyrightConvert::detectCopyright()
 
     std::vector<CopyrightExample> testdata = {
         { "SPDX-FileCopyrightText: 2018 John Doe <mail@example.com>" , "2018", "John Doe", "<mail@example.com>" },
+        { "SPDX-FileCopyrightText: 2018 Aurélien Utfät <mail@example.com>" , "2018", "Aurélien Utfät", "<mail@example.com>" },
         { "Copyright: 2018 John Doe <mail@example.com>" , "2018", "John Doe", "<mail@example.com>" },
         { "Copyright 2018-2019 John Doe <mail@example.com>" , "2018-2019", "John Doe", "<mail@example.com>" },
         { "Copyright © 2018-2019 John Doe" , "2018-2019", "John Doe", "" },

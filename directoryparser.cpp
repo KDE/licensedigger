@@ -15,7 +15,7 @@ QRegularExpression DirectoryParser::copyrightRegExp() const
                                      "[ ]+"
                                      "(?<years>([0-9]+(-[0-9]+|, [0-9]+)*))"
                                      "[ ]+"
-                                     "(?<name>(\\w+( \\w+)*))"
+                                     "(?<name>([\u00C0-\u017Fa-zA-Z]+( [\u00C0-\u017Fa-zA-Z]+)*))"
                                      "[ ]*"
                                      "(?<contact>.*)"
                                      );
