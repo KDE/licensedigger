@@ -18,6 +18,7 @@ class LicenseRegistry : public QObject
 public:
     using SpdxIdentifier = QString;
     using SpdxExpression = QString;
+    const static QString ToClarifyLicense;
     const static QString UnknownLicense;
     const static QString MissingLicense;
     const static QString AmbigiousLicense;
