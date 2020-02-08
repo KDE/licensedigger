@@ -80,10 +80,10 @@
         <file>licenses/LGPL-2.0-or-later/kwidgetsaddons_kstyleextensions</file>
         <file>licenses/LGPL-2.0-or-later/plasma-framework_dialogshadows</file>
         <file>licenses/LGPL-2.0-or-later/plasma-framework_framesvg</file>
-        <file>licenses/LGPL-2.0-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/kio_kfilecopytomenutest</file>
-        <file>licenses/LGPL-2.0-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/kio_knameandurlinputdialog</file>
-        <file>licenses/LGPL-2.0-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/kservice_kmimeassociations</file>
-        <file>licenses/LGPL-2.0-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/kservice_ksycocadevices_p</file>
+        <file>licenses/TO-CLARIFY/kio_kfilecopytomenutest</file>
+        <file>licenses/TO-CLARIFY/kio_knameandurlinputdialog</file>
+        <file>licenses/TO-CLARIFY/kservice_kmimeassociations</file>
+        <file>licenses/TO-CLARIFY/kservice_ksycocadevices_p</file>
         <file>licenses/LGPL-2.1-only/kio_des</file>
         <file>licenses/LGPL-2.1-only/kcoreaddons_kfilesystemtype</file>
         <file>licenses/LGPL-2.1-only/kitemmodels_modeltest</file>

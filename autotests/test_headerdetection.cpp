@@ -63,11 +63,6 @@ void TestHeaderDetection::detectLGPL20onlyWithQtCommercialException()
     detectForIdentifier("LGPL-2.0-only_WITH_Qt-Commercial-exception-1.0");
 }
 
-void TestHeaderDetection::detectLGPL20_or_LGPL30_or_KDE()
-{
-    detectForIdentifier("LGPL-2.0-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL");
-}
-
 void TestHeaderDetection::detectGPL20only()
 {
     detectForIdentifier("GPL-2.0-only");

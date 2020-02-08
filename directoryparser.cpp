@@ -70,14 +70,22 @@ QMap<QString, LicenseRegistry::SpdxExpression> DirectoryParser::parseAll(const Q
         }
     }
 
+    const QStringList supportedFiles = { ".cpp", ".cc", ".c", ".h", ".hpp", ".qml", ".cmake", "CMakeLists.txt", ".in", ".py" };
+
     QDirIterator iterator(directory, QDirIterator::Subdirectories);
     while (iterator.hasNext()) {
         QFile file(iterator.next());
         if (!iterator.fileInfo().isFile()) {
             continue;
         }
-        if (!file.fileName().endsWith(".cpp") && !file.fileName().endsWith(".h") && !file.fileName().endsWith(".hpp") && !file.fileName().endsWith(".c") && !file.fileName().endsWith(".qml")) {
-            //TODO only support C files for now
+        bool skip = true;
+        for (const auto &ending : supportedFiles) {
+            if (file.fileName().endsWith(ending)) {
+                skip = false;
+                break;
+            }
+        }
+        if (skip == true) {
             continue;
         }
 
