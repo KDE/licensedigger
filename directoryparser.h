@@ -20,6 +20,7 @@ public:
 
 private:
     LicenseRegistry m_registry;
+    static const QStringList s_supportedExtensions;
 };
 
 #endif // DIRECTORYPARSER_H

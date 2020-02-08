@@ -9,6 +9,8 @@
 #include <QTextStream>
 #include <QDebug>
 
+const QStringList DirectoryParser::s_supportedExtensions = { ".cpp", ".cc", ".c", ".h", ".hpp", ".qml", ".cmake", "CMakeLists.txt", ".in", ".py", ".frag", ".vert", ".glsl" };
+
 QRegularExpression DirectoryParser::copyrightRegExp() const
 {
     static auto regexp = QRegularExpression("(SPDX-FileCopyrightText:|Copyright( \\([cC]\\))|Copyright ©|©|Copyright(:)?)"
@@ -70,8 +72,6 @@ QMap<QString, LicenseRegistry::SpdxExpression> DirectoryParser::parseAll(const Q
         }
     }
 
-    const QStringList supportedFiles = { ".cpp", ".cc", ".c", ".h", ".hpp", ".qml", ".cmake", "CMakeLists.txt", ".in", ".py" };
-
     QDirIterator iterator(directory, QDirIterator::Subdirectories);
     while (iterator.hasNext()) {
         QFile file(iterator.next());
@@ -79,7 +79,7 @@ QMap<QString, LicenseRegistry::SpdxExpression> DirectoryParser::parseAll(const Q
             continue;
         }
         bool skip = true;
-        for (const auto &ending : supportedFiles) {
+        for (const auto &ending : DirectoryParser::s_supportedExtensions) {
             if (file.fileName().endsWith(ending)) {
                 skip = false;
                 break;
@@ -188,8 +188,14 @@ void DirectoryParser::convertCopyright(const QString &directory) const
         if (!iterator.fileInfo().isFile()) {
             continue;
         }
-        if (!file.fileName().endsWith(".cpp") && !file.fileName().endsWith(".h") && !file.fileName().endsWith(".hpp") && !file.fileName().endsWith(".c") && !file.fileName().endsWith(".qml")) {
-            //TODO only support C files for now
+        bool skip = true;
+        for (const auto &ending : DirectoryParser::s_supportedExtensions) {
+            if (file.fileName().endsWith(ending)) {
+                skip = false;
+                break;
+            }
+        }
+        if (skip == true) {
             continue;
         }
 
