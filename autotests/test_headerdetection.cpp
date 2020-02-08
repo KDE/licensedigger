@@ -73,11 +73,6 @@ void TestHeaderDetection::detectGPL20orlater()
     detectForIdentifier("GPL-2.0-or-later");
 }
 
-void TestHeaderDetection::detectGPL30orlater()
-{
-    detectForIdentifier("GPL-3.0-or-later");
-}
-
 void TestHeaderDetection::detectGPL20_or_GPL30_or_KDE()
 {
     detectForIdentifier("GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL");

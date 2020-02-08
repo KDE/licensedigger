@@ -25,7 +25,6 @@
         <file>licenses/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/kdeclarative_formats</file>
         <file>licenses/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/kio_kpasswdservertest</file>
         <file>licenses/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/kservice_autotest_nsaplugin</file>
-        <file>licenses/GPL-3.0-or-later/kcalendarcore_testcreateddatecompat</file>
         <file>licenses/LGPL-2.0-only/kcodecs_kcodecs</file>
         <file>licenses/LGPL-2.0-only/kdbusaddons_kquitapp</file>
         <file>licenses/LGPL-2.0-only/kguiaddons_kcolorcorrection</file>
@@ -118,6 +117,7 @@
         <file>licenses/LGPL-2.1-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/kwidgetsaddons_kbusyindicatorwidget</file>
         <file>licenses/LGPL-2.1-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/solid_inhibition</file>
         <file>licenses/LGPL-3.0-or-later/kwidgetaddons_kmessagebox</file>
+        <file>licenses/LGPL-3.0-or-later/kcalendarcore_testcreateddatecompat</file>
         <file>licenses/LGPL-3.0-only_OR_GPL-2.0-or-later/qqc2desktop_scrollview</file>
         <file>licenses/MIT/kcodecs_chardistribution</file>
         <file>licenses/MIT/kconfig_kconfigcompiler_test_signals</file>
