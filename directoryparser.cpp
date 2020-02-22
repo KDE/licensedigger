@@ -15,11 +15,12 @@ QRegularExpression DirectoryParser::copyrightRegExp() const
 {
     static auto regexp = QRegularExpression("(SPDX-FileCopyrightText:|Copyright( \\([cC]\\))|Copyright ©|©|Copyright(:)?)"
                                      "[ ]+"
-                                     "(?<years>([0-9]+(-[0-9]+|, [0-9]+)*))"
+                                     "(?<years>([0-9]+(-[0-9]+|, [0-9]+)*|%{CURRENT_YEAR}))"
                                      "[ ]+"
-                                     "(?<name>([\u00C0-\u017Fa-zA-Z]+( [\u00C0-\u017Fa-zA-Z]+)*))"
+                                     "([bB]y[ ]+)?"
+                                     "(?<name>([\u00C0-\u017Fa-zA-Z]+( [\u00C0-\u017Fa-zA-Z]+)*|%{AUTHOR}))"
                                      "[ ]*"
-                                     "(?<contact>.*)"
+                                     "(?<contact>.*|%{EMAIL})"
                                      );
     return regexp;
 }
