@@ -127,11 +127,7 @@ QMap<QString, LicenseRegistry::SpdxExpression> DirectoryParser::parseAll(const Q
         }
 
         const QString expression = results.value(iterator.fileInfo().filePath());
-        if (convertMode
-                && expression != LicenseRegistry::UnknownLicense
-                && expression != LicenseRegistry::MissingLicense
-                && expression != LicenseRegistry::MissingLicenseForGeneratedFile
-                && expression != LicenseRegistry::AmbigiousLicense) {
+        if (convertMode && !m_registry.isFakeLicenseMarker(expression)) {
             auto regexp = m_registry.headerTextRegExp(expression);
             QString outputExpression = expression;
             outputExpression.replace('_', " ");
@@ -157,11 +153,7 @@ QMap<QString, LicenseRegistry::SpdxExpression> DirectoryParser::parseAll(const Q
                     continue;
                 }
                 // remove special placeholders
-                if (identifier == LicenseRegistry::UnknownLicense
-                        || identifier == LicenseRegistry::MissingLicense
-                        || identifier == LicenseRegistry::MissingLicenseForGeneratedFile
-                        || identifier == LicenseRegistry::AmbigiousLicense
-                        || identifier == "TO-CLARIFY") {
+                if (m_registry.isFakeLicenseMarker(identifier)) {
                     continue;
                 }
                 identifiers.insert(identifier);

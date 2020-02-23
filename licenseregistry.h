@@ -42,6 +42,12 @@ public:
 
     QRegularExpression headerTextRegExp(const SpdxExpression &identifier) const;
 
+    /**
+     * @param expression is the expression to check against license strings (this does not support syntax parameters like "OR"
+     * @return true if this is a non-license, e.g. "TO-CLARIFY" string"
+     */
+    bool isFakeLicenseMarker(const QString &expression) const;
+
 private:
     void loadLicenseHeaders();
     void loadLicenseFiles();

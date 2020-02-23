@@ -136,3 +136,15 @@ QRegularExpression LicenseRegistry::headerTextRegExp(const SpdxExpression &ident
 
     return detector;
 }
+
+bool LicenseRegistry::isFakeLicenseMarker(const QString &expression) const
+{
+    const QStringList fakeExpressions {
+        LicenseRegistry::ToClarifyLicense,
+        LicenseRegistry::UnknownLicense,
+        LicenseRegistry::MissingLicense,
+        LicenseRegistry::AmbigiousLicense,
+        LicenseRegistry::MissingLicenseForGeneratedFile
+    };
+    return fakeExpressions.contains(expression);
+}
