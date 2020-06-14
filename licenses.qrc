@@ -4,6 +4,7 @@
         <file>licenses/BSD-2-Clause/kconfig_kemailsettings</file>
         <file>licenses/BSD-2-Clause/kio_imagefilter</file>
         <file>licenses/BSD-3-Clause/kjs_symboltable</file>
+        <file>licenses/BSD-3-Clause/ecm_cmake</file>
         <file>licenses/GPL-2.0-only/kdesu_client</file>
         <file>licenses/GPL-2.0-only/kio_kfileplacesmodeltest</file>
         <file>licenses/GPL-2.0-only/kio_kpasswdserver</file>

@@ -4,6 +4,7 @@
         <file>testdata/BSD-2-Clause/kemailsettings.cpp</file>
         <file>testdata/BSD-2-Clause/unzipper_main.cpp</file>
         <file>testdata/BSD-3-Clause/SymbolTable.h</file>
+        <file>testdata/BSD-3-Clause/ecm_CMakeLists.txt</file>
         <file>testdata/GPL-2.0-only/client.cpp</file>
         <file>testdata/GPL-2.0-only/kfileplacesmodeltest.cpp</file>
         <file>testdata/GPL-2.0-only/kpasswdserver.cpp</file>
