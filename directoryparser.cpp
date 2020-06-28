@@ -25,6 +25,13 @@ QRegularExpression DirectoryParser::copyrightRegExp() const
     return regexp;
 }
 
+QString DirectoryParser::fixAnyMissingSpaceInCopyrightYearList(const QString &originalYearText) const
+{
+    static auto regex = QRegularExpression(QStringLiteral(",(?=[0-9])"));
+
+    return QString(originalYearText).replace(regex, QStringLiteral(", "));
+}
+
 QString DirectoryParser::unifyCopyrightStatements(const QString &originalText) const
 {
     QString header = originalText;
@@ -33,6 +40,7 @@ QString DirectoryParser::unifyCopyrightStatements(const QString &originalText) c
 
     while (match.hasMatch()) {
         QString years = match.captured("years");
+        years = fixAnyMissingSpaceInCopyrightYearList(years);
         QString name = match.captured("name");
         QString contact = match.captured("contact");
 
