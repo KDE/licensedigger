@@ -36,7 +36,7 @@ void TestLicenseFilesAvailable::checkAll()
             identifiers.insert(identifier);
         }
     }
-    qDebug() << "Checking for SPDX license texts:" << identifiers.toList();
+    qDebug() << "Checking for SPDX license texts:" << identifiers.values();
 
     // test missing
     QMap<LicenseRegistry::SpdxIdentifier, QString> licenseFiles = registry.licenseFiles();
