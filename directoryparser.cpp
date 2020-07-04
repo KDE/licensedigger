@@ -56,7 +56,7 @@ QString DirectoryParser::replaceHeaderText(const QString &fileContent, const QSt
     auto regexp = m_registry.headerTextRegExp(spdxExpression);
     QString outputExpression = spdxExpression;
     outputExpression.replace('_', " ");
-    QString spdxOutputString = "SPDX-License-Identifier: " + spdxExpression;
+    QString spdxOutputString = "SPDX-License-Identifier: " + outputExpression;
     QString newContent = fileContent;
     newContent.replace(regexp, spdxOutputString);
     return newContent;

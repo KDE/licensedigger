@@ -26,5 +26,7 @@ private Q_SLOTS:
      * matched and replaced.
      */
     void greedyLicenseTextConversion();
+
+    void basicConvertOrExpressions();
 };
 #endif
