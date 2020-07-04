@@ -51,6 +51,17 @@ QString DirectoryParser::unifyCopyrightStatements(const QString &originalText) c
     return header;
 }
 
+QString DirectoryParser::replaceHeaderText(const QString &fileContent, const QString &spdxExpression) const
+{
+    auto regexp = m_registry.headerTextRegExp(spdxExpression);
+    QString outputExpression = spdxExpression;
+    outputExpression.replace('_', " ");
+    QString spdxOutputString = "SPDX-License-Identifier: " + spdxExpression;
+    QString newContent = fileContent;
+    newContent.replace(regexp, spdxOutputString);
+    return newContent;
+}
+
 QMap<QString, LicenseRegistry::SpdxExpression> DirectoryParser::parseAll(const QString &directory, bool convertMode) const
 {
     QVector<LicenseRegistry::SpdxExpression> expressions = m_registry.expressions();
@@ -137,13 +148,8 @@ QMap<QString, LicenseRegistry::SpdxExpression> DirectoryParser::parseAll(const Q
 
         const QString expression = results.value(iterator.fileInfo().filePath());
         if (convertMode && !m_registry.isFakeLicenseMarker(expression)) {
-            auto regexp = m_registry.headerTextRegExp(expression);
-            QString outputExpression = expression;
-            outputExpression.replace('_', " ");
-            QString spdxOutputString = "SPDX-License-Identifier: " + outputExpression;
-            QString newContent = fileContent;
-            newContent.replace(regexp, spdxOutputString);
-            qDebug() << newContent;
+            QString newContent = replaceHeaderText(fileContent, expression);
+            //qDebug() << newContent;
             file.open(QIODevice::WriteOnly);
             file.write(newContent.toUtf8());
             const QString fileContent = file.readAll();

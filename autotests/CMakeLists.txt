@@ -32,7 +32,7 @@ add_test(NAME test_licensefilesavailable COMMAND test_licensefilesavailable)
 ecm_mark_as_test(test_licensefilesavailable)
 
 
-### Test Copyright Statement Conversoin
+### Test Copyright Statement Conversion
 set(copyrightconvert_SRCS
     test_copyrightconvert.cpp
     ../licenseregistry.cpp
@@ -47,3 +47,20 @@ target_link_libraries(test_copyrightconvert
 )
 add_test(NAME test_copyrightconvert COMMAND test_copyrightconvert)
 ecm_mark_as_test(test_copyrightconvert)
+
+
+### Test License Statement Conversion
+set(licenseconvert_SRCS
+    test_licenseconvert.cpp
+    ../licenseregistry.cpp
+    ../directoryparser.cpp
+)
+qt5_add_resources(licenseconvert_SRCS
+    ../licenses.qrc
+)
+add_executable(test_licenseconvert ${licenseconvert_SRCS})
+target_link_libraries(test_licenseconvert
+    Qt5::Test
+)
+add_test(NAME test_licenseconvert COMMAND test_licenseconvert)
+ecm_mark_as_test(test_licenseconvert)

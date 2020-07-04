@@ -18,6 +18,13 @@ public:
     QRegularExpression copyrightRegExp() const;
     QString unifyCopyrightStatements(const QString &originalText) const;
     QString fixAnyMissingSpaceInCopyrightYearList(const QString &originalYearText) const;
+    /**
+     * @brief Uses regexp for the SPDX expression and replace matching text
+     * @param fileContent The input content
+     * @param spdxExpression The SPDX expression that shall be detected
+     * @return Converted file content with correct SPDX statement
+     */
+    QString replaceHeaderText(const QString &fileContent, const QString &spdxExpression) const;
 
 private:
     LicenseRegistry m_registry;

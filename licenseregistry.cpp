@@ -56,6 +56,12 @@ void LicenseRegistry::loadLicenseHeaders()
             file.open(QIODevice::ReadOnly);
             headerTexts.append(file.readAll());
         }
+        // sort license texts lexicographically decreasing
+        // this is a simple solution for the problem when one license text is a prefix of another license text
+        // which is known for license texts with omitted "." at the end
+        std::sort(headerTexts.begin(), headerTexts.end(), [](const QString &lhs, const QString &rhs){
+            return lhs > rhs;
+        });
         m_registry[spdxIter.fileName()] = headerTexts;
     }
 }
