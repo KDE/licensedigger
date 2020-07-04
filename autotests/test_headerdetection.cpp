@@ -6,6 +6,7 @@
 
 #include "test_headerdetection.h"
 #include "../licenseregistry.h"
+#include "../directoryparser.h"
 #include <QTest>
 #include <QDebug>
 #include <QDir>
@@ -131,6 +132,24 @@ void TestHeaderDetection::detectLGPL21withQtLGPLexceptionOrLGPL30withQtLGPLexcep
 void TestHeaderDetection::detectLGPL30_or_GPL20_or_GPL30_or_GPLKFQF_or_QtCommercial()
 {
     detectForIdentifier("LGPL-3.0-only_OR_GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KFQF-Accepted-GPL_OR_LicenseRef-Qt-Commercial");
+}
+
+void TestHeaderDetection::detectSpdxExpressions()
+{
+    // read comparison headers
+    LicenseRegistry registry;
+    DirectoryParser parser;
+
+    const QString spdxMarker = "GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL";
+
+    QVERIFY(registry.expressions().contains(spdxMarker));
+    QVERIFY(registry.headerTexts(spdxMarker).size() > 0);
+
+    const QString fileContents { "SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL" };
+    auto results = parser.detectLicenses(fileContents);
+
+    QCOMPARE(results.count(), 1);
+    QCOMPARE(results.first(), "GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL");
 }
 
 QTEST_GUILESS_MAIN(TestHeaderDetection);

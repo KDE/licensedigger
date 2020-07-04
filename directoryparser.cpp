@@ -11,6 +11,12 @@
 
 const QStringList DirectoryParser::s_supportedExtensions = { ".cpp", ".cc", ".c", ".h", ".hpp", ".qml", ".cmake", "CMakeLists.txt", ".in", ".py", ".frag", ".vert", ".glsl", "php", "sh" };
 
+QRegularExpression DirectoryParser::spdxRegExp() const
+{
+    static auto regexp = QRegularExpression("(SPDX-License-Identifier: (?<expression>(.*)))");
+    return regexp;
+}
+
 QRegularExpression DirectoryParser::copyrightRegExp() const
 {
     static auto regexp = QRegularExpression("(SPDX-FileCopyrightText:|Copyright( \\([cC]\\))|Copyright ©|©|Copyright(:)?)"
@@ -24,6 +30,7 @@ QRegularExpression DirectoryParser::copyrightRegExp() const
                                      );
     return regexp;
 }
+
 
 QString DirectoryParser::cleanupSpaceInCopyrightYearList(const QString &originalYearText) const
 {
@@ -61,11 +68,40 @@ QString DirectoryParser::replaceHeaderText(const QString &fileContent, const QSt
 {
     auto regexp = m_registry.headerTextRegExp(spdxExpression);
     QString outputExpression = spdxExpression;
-    outputExpression.replace('_', " ");
+    outputExpression.replace('_', ' ');
     QString spdxOutputString = "SPDX-License-Identifier: " + outputExpression;
     QString newContent = fileContent;
     newContent.replace(regexp, spdxOutputString);
     return newContent;
+}
+
+LicenseRegistry::SpdxExpression DirectoryParser::detectLicenseStatement(const QString &fileContent) const
+{
+    QRegularExpression regExp = spdxRegExp();
+    auto match = regExp.match(fileContent);
+    if (match.hasMatch()) {
+        //TODO this very simple solution only works for SPDX expressions in our database
+        // should be made more general
+        return match.captured("expression").replace(' ', '_');
+    }
+    return QString();
+}
+
+QVector<LicenseRegistry::SpdxExpression> DirectoryParser::detectLicenses(const QString &fileContent) const
+{
+    QVector<LicenseRegistry::SpdxExpression> testExpressions = m_registry.expressions();
+    QVector<LicenseRegistry::SpdxExpression> detectedLicenses;
+    for (auto expression : testExpressions) {
+        auto regexp = m_registry.headerTextRegExp(expression);
+        if (fileContent.contains(regexp)) {
+            detectedLicenses << expression;
+        }
+    }
+    LicenseRegistry::SpdxExpression spdxStatement = detectLicenseStatement(fileContent);
+    if (!spdxStatement.isEmpty()) {
+        detectedLicenses << spdxStatement;
+    }
+    return detectedLicenses;
 }
 
 QMap<QString, LicenseRegistry::SpdxExpression> DirectoryParser::parseAll(const QString &directory, bool convertMode) const
@@ -120,36 +156,32 @@ QMap<QString, LicenseRegistry::SpdxExpression> DirectoryParser::parseAll(const Q
         file.close();
 
 //        qDebug() << "checking:" << iterator.fileInfo();
-        for (auto expression : expressions) {
-            auto regexp = m_registry.headerTextRegExp(expression);
-            if (fileContent.contains(regexp)) {
-                if (results.contains(iterator.fileInfo().filePath())) {
-                    qCritical() << "UNHANDLED MULTI-LICENSE CASE" << iterator.fileInfo().filePath() << expression << results.value(iterator.fileInfo().filePath());
-                    results[iterator.fileInfo().filePath()] = LicenseRegistry::AmbigiousLicense;
-                } else {
-                    results.insert(iterator.fileInfo().filePath(), expression);
-//                    qDebug() << "---> " << iterator.fileInfo().filePath() << identifier;
+        QVector<LicenseRegistry::SpdxExpression> licenses = detectLicenses(fileContent);
+        if (licenses.count() == 1) {
+            results.insert(iterator.fileInfo().filePath(), licenses.first());
+//            qDebug() << "---> " << iterator.fileInfo().filePath() << identifier;
+        }
+        else if (licenses.count() > 1) {
+            qCritical() << "UNHANDLED MULTI-LICENSE CASE" << iterator.fileInfo().filePath() << "-->" << licenses;
+            results[iterator.fileInfo().filePath()] = LicenseRegistry::AmbigiousLicense;
+        }
+        else {
+            // if nothing matches, report error
+            results.insert(iterator.fileInfo().filePath(), LicenseRegistry::UnknownLicense);
+
+            // check for blacklisted file because of missing license header only when no license was detected
+            for (auto backlistPath : missingLicenseHeaderBlacklist) {
+                if (iterator.fileInfo().filePath().endsWith(backlistPath)) {
+                    results.insert(iterator.fileInfo().filePath(), LicenseRegistry::MissingLicense);
+                    break;
                 }
             }
-        }
-
-        // check for blacklisted file because of missing license header
-        for (auto backlistPath : missingLicenseHeaderBlacklist) {
-            if (iterator.fileInfo().filePath().endsWith(backlistPath)) {
-                results.insert(iterator.fileInfo().filePath(), LicenseRegistry::MissingLicense);
-                break;
+            for (auto backlistPath : missingLicenseHeaderGeneratedFileBlacklist) {
+                if (iterator.fileInfo().filePath().endsWith(backlistPath)) {
+                    results.insert(iterator.fileInfo().filePath(), LicenseRegistry::MissingLicenseForGeneratedFile);
+                    break;
+                }
             }
-        }
-        for (auto backlistPath : missingLicenseHeaderGeneratedFileBlacklist) {
-            if (iterator.fileInfo().filePath().endsWith(backlistPath)) {
-                results.insert(iterator.fileInfo().filePath(), LicenseRegistry::MissingLicenseForGeneratedFile);
-                break;
-            }
-        }
-
-        // if nothing matches, report error
-        if (!results.contains(iterator.fileInfo().filePath())) {
-            results.insert(iterator.fileInfo().filePath(), LicenseRegistry::UnknownLicense);
         }
 
         const QString expression = results.value(iterator.fileInfo().filePath());

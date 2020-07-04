@@ -11,6 +11,7 @@ public:
     TestHeaderDetection() = default;
 
 private Q_SLOTS:
+    // example data based tests
     void detectGPL20_or_GPL30_or_KDE();
     void detectGPL20only();
     void detectGPL20orlater();
@@ -30,6 +31,9 @@ private Q_SLOTS:
     void detectLGPL21withQtLGPLexception_or_QtCommercial();
     void detectLGPL21withQtLGPLexceptionOrLGPL30withQtLGPLexception();
     void detectLGPL30_or_GPL20_or_GPL30_or_GPLKFQF_or_QtCommercial();
+
+    // detection logic tests
+    void detectSpdxExpressions();
 
 private:
     void detectForIdentifier(const QString &spdxMarker);

@@ -16,6 +16,7 @@ public:
     QMap<QString, LicenseRegistry::SpdxExpression> parseAll(const QString &directory, bool convertMode = false) const;
     void convertCopyright(const QString &directory) const;
     QRegularExpression copyrightRegExp() const;
+    QRegularExpression spdxRegExp() const;
     QString unifyCopyrightStatements(const QString &originalText) const;
     QString cleanupSpaceInCopyrightYearList(const QString &originalYearText) const;
     /**
@@ -25,6 +26,9 @@ public:
      * @return Converted file content with correct SPDX statement
      */
     QString replaceHeaderText(const QString &fileContent, const QString &spdxExpression) const;
+
+    QVector<LicenseRegistry::SpdxExpression> detectLicenses(const QString &fileContent) const;
+    LicenseRegistry::SpdxExpression detectLicenseStatement(const QString &fileContent) const;
 
 private:
     LicenseRegistry m_registry;

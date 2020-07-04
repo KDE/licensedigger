@@ -3,6 +3,7 @@
 set(headerdetection_SRCS
     test_headerdetection.cpp
     ../licenseregistry.cpp
+    ../directoryparser.cpp
 )
 qt5_add_resources(headerdetection_SRCS
     testdata.qrc

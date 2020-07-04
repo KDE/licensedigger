@@ -112,13 +112,6 @@ QRegularExpression LicenseRegistry::headerTextRegExp(const SpdxExpression &ident
 
     QVector<QString> patterns;
     // additional to all headers also add the SPDX identifier
-    if (identifier != LicenseRegistry::UnknownLicense
-            && identifier != LicenseRegistry::MissingLicense
-            && identifier != LicenseRegistry::MissingLicenseForGeneratedFile
-            && identifier != LicenseRegistry::ToClarifyLicense) {
-        patterns.append(QString("SPDX-License-Identifier: %1").arg(identifier).replace('_', ' '));
-    }
-
     for (const QString &header : m_registry.value(identifier)) {
         QString pattern(QRegularExpression::escape(header));
         // start detection at first word of license string to make detection easier
