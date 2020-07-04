@@ -15,7 +15,7 @@ QRegularExpression DirectoryParser::copyrightRegExp() const
 {
     static auto regexp = QRegularExpression("(SPDX-FileCopyrightText:|Copyright( \\([cC]\\))|Copyright ©|©|Copyright(:)?)"
                                      "[, ]+"
-                                     "(?<years>([0-9]+(-[0-9]+|,[ ]?[0-9]+)*|%{CURRENT_YEAR}))"
+                                     "(?<years>([0-9]+(-[0-9]+| - [0-9]+|,[ ]?[0-9]+)*|%{CURRENT_YEAR}))"
                                      "[, ]+"
                                      "([bB]y[ ]+)?"
                                      "(?<name>([\u00C0-\u017Fa-zA-Z]+( [\u00C0-\u017Fa-zA-Z\\.]+)*|%{AUTHOR}))"
@@ -25,11 +25,17 @@ QRegularExpression DirectoryParser::copyrightRegExp() const
     return regexp;
 }
 
-QString DirectoryParser::fixAnyMissingSpaceInCopyrightYearList(const QString &originalYearText) const
+QString DirectoryParser::cleanupSpaceInCopyrightYearList(const QString &originalYearText) const
 {
-    static auto regex = QRegularExpression(QStringLiteral(",(?=[0-9])"));
+    QString cleanedYearText = originalYearText;
 
-    return QString(originalYearText).replace(regex, QStringLiteral(", "));
+    static auto missingWhitespaceAfterCommaRegex = QRegularExpression(QStringLiteral(",(?=[0-9])"));
+    static auto unneededWhitespaceAroundRangeRegex = QRegularExpression(QStringLiteral(" - (?=[0-9])"));
+
+    cleanedYearText.replace(missingWhitespaceAfterCommaRegex, QStringLiteral(", "));
+    cleanedYearText.replace(unneededWhitespaceAroundRangeRegex, QStringLiteral("-"));
+
+    return cleanedYearText;
 }
 
 QString DirectoryParser::unifyCopyrightStatements(const QString &originalText) const
@@ -40,7 +46,7 @@ QString DirectoryParser::unifyCopyrightStatements(const QString &originalText) c
 
     while (match.hasMatch()) {
         QString years = match.captured("years");
-        years = fixAnyMissingSpaceInCopyrightYearList(years);
+        years = cleanupSpaceInCopyrightYearList(years);
         QString name = match.captured("name");
         QString contact = match.captured("contact");
 

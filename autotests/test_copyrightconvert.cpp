@@ -37,6 +37,7 @@ void TestCopyrightConvert::detectCopyright()
         { "Copyright 2018-2019 Foo of Baa  <mail@example.com>" , "2018-2019", "Foo of Baa", "<mail@example.com>" },
         { "Copyright 2018, 2019-2020 Foo of Baa  <mail@example.com>" , "2018, 2019-2020", "Foo of Baa", "<mail@example.com>" },
         { "Copyright 2006,2011 John M. C. Doe <mail@example.com>" , "2006, 2011", "John M. C. Doe", "<mail@example.com>" },
+        { "Copyright (C) 2010 - 2016 by Jane Doe <my.mail(at)example.com>" , "2010-2016", "Jane Doe", "<my.mail(at)example.com>" },
         // KAppTemplate template variables
         { "Copyright (C) %{CURRENT_YEAR} by %{AUTHOR} <%{EMAIL}>" , "%{CURRENT_YEAR}", "%{AUTHOR}", "<%{EMAIL}>" },
     };
@@ -47,7 +48,7 @@ void TestCopyrightConvert::detectCopyright()
         QVERIFY(match.hasMatch());
 
         QString years = match.captured("years");
-        years = parser.fixAnyMissingSpaceInCopyrightYearList(years);
+        years = parser.cleanupSpaceInCopyrightYearList(years);
         QString name = match.captured("name");
         QString contact = match.captured("contact");
         QCOMPARE(years, example.years);

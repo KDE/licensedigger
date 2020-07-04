@@ -17,7 +17,7 @@ public:
     void convertCopyright(const QString &directory) const;
     QRegularExpression copyrightRegExp() const;
     QString unifyCopyrightStatements(const QString &originalText) const;
-    QString fixAnyMissingSpaceInCopyrightYearList(const QString &originalYearText) const;
+    QString cleanupSpaceInCopyrightYearList(const QString &originalYearText) const;
     /**
      * @brief Uses regexp for the SPDX expression and replace matching text
      * @param fileContent The input content
