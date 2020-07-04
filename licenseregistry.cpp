@@ -122,7 +122,7 @@ QRegularExpression LicenseRegistry::headerTextRegExp(const SpdxExpression &ident
     for (const QString &header : m_registry.value(identifier)) {
         QString pattern(QRegularExpression::escape(header));
         // start detection at first word of license string to make detection easier
-        pattern.replace("\\\n", "[\\* ]*\\\n[\\* ]*"); // allow prefixes and suffices of whitespace mixed with stars
+        pattern.replace("\\\n", "[#\\* ]*\\\n[#\\* ]*"); // allow prefixes and suffices of whitespace mixed with stars
 
         // remove line-break pattern from last line
         pattern = pattern.left(pattern.length() - QString("[\\* ]*\\\n[\\* ]*").length());
