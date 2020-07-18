@@ -188,9 +188,8 @@ QMap<QString, LicenseRegistry::SpdxExpression> DirectoryParser::parseAll(const Q
         if (convertMode && !m_registry.isFakeLicenseMarker(expression)) {
             QString newContent = replaceHeaderText(fileContent, expression);
             //qDebug() << newContent;
-            file.open(QIODevice::ReadWrite);
+            file.open(QIODevice::WriteOnly);
             file.write(newContent.toUtf8());
-            const QString fileContent = file.readAll();
             file.close();
         }
     }
