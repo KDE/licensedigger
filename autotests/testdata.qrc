@@ -129,5 +129,8 @@
         <file>testdata/MIT/syntaxhighlighter.cpp</file>
         <file>testdata/LGPL-3.0-only_OR_GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KFQF-Accepted-GPL_OR_LicenseRef-Qt-Commercial/qsgdefaultninepatchnode_p.h</file>
         <file>testdata/LGPL-2.1-or-later/qtgstreamerbackend.cpp</file>
+        <file>testdata_conversionexamples/file_without_unrecognized_statement.h.orig</file>
+        <file>testdata_conversionexamples/fake_notifications_server.h.orig</file>
+        <file>testdata_conversionexamples/fake_notifications_server.h.spdx</file>
     </qresource>
 </RCC>

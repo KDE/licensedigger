@@ -58,6 +58,7 @@ set(licenseconvert_SRCS
 )
 qt5_add_resources(licenseconvert_SRCS
     ../licenses.qrc
+    testdata.qrc
 )
 add_executable(test_licenseconvert ${licenseconvert_SRCS})
 target_link_libraries(test_licenseconvert

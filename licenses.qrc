@@ -42,6 +42,7 @@
         <file>licenses/LGPL-2.0-only/ktextwidgets_kfindtest</file>
         <file>licenses/LGPL-2.0-only/ktextwidgets_krichtextwidget</file>
         <file>licenses/LGPL-2.0-only/kwidgetsaddons_kfontrequestertest</file>
+        <file>licenses/LGPL-2.0-only/knotification_fake_notifications_server</file>
         <file>licenses/LGPL-2.0-only/kwidgetsaddons_kmessagebox</file>
         <file>licenses/LGPL-2.0-only_OR_LGPL-3.0-only/kio_dndpopupmenuplugin</file>
         <file>licenses/LGPL-2.0-only_OR_LGPL-3.0-only/kio_kcookiejartest</file>

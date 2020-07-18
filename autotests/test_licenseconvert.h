@@ -28,5 +28,12 @@ private Q_SLOTS:
     void greedyLicenseTextConversion();
 
     void basicConvertOrExpressions();
+
+    void doNotModifyFileWithoutDetectedLicense();
+
+    /**
+     * Conformance test with original and target file format
+     */
+    void exampleFileConversion();
 };
 #endif
