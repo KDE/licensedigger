@@ -10,7 +10,7 @@
 #include <QTest>
 #include <QDebug>
 #include <QDir>
-#include <QDirIterator>
+// #include <QDirIterator>
 
 void TestLicenseConvert::greedyLicenseTextConversion()
 {
@@ -42,7 +42,7 @@ void TestLicenseConvert::basicConvertOrExpressions()
 
 void TestLicenseConvert::doNotModifyFileWithoutDetectedLicense()
 {
-    QFile fileOrig(":/testdata_conversionexamples/file_without_unrecognized_statement.h.orig");
+    QFile fileOrig(":/testdata_conversionexamples/file_without_unrecognized_statement.h.origfile");
     fileOrig.open(QIODevice::ReadOnly);
     const QString fileContentOrig = fileOrig.readAll();
 
@@ -57,7 +57,7 @@ void TestLicenseConvert::exampleFileConversion()
 {
     const QString targetSpdxMarker("LGPL-2.0-only");
 
-    QFile fileOrig(":/testdata_conversionexamples/fake_notifications_server.h.orig");
+    QFile fileOrig(":/testdata_conversionexamples/fake_notifications_server.h.origfile");
     fileOrig.open(QIODevice::ReadOnly);
     const QString fileContentOrig = fileOrig.readAll();
 

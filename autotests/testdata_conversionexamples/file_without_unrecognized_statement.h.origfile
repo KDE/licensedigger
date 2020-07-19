@@ -1,0 +1,39 @@
+/*
+   Copyright (C) 2020 Jon Doe <mail@example.org>
+
+   This it not a real license statement, just something the parser
+   shall not be able to dect
+*/
+
+#ifndef FAKE_NOTIFICATIONS_SERVER_H
+#define FAKE_NOTIFICATIONS_SERVER_H
+
+#include <QObject>
+#include <QHash>
+#include <QVariantMap>
+
+class FooItem
+{
+public:
+    QString variable;
+    uint baa;
+};
+
+class MyClass : public QObject
+{
+    Q_OBJECT
+
+public:
+    MyClass(QObject *parent = nullptr);
+
+    uint publicInt;
+    QList<String> someData;
+
+public Q_SLOTS:
+    uint doSomething(const QString &data);
+
+Q_SIGNALS:
+    void done();
+};
+
+#endif
