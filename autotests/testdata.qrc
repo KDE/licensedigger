@@ -10,6 +10,7 @@
         <file>testdata/GPL-2.0-only/kpasswdserver.cpp</file>
         <file>testdata/GPL-2.0-only/useragentdlg.cpp</file>
         <file>testdata/GPL-2.0-or-later/activityinfo.cpp</file>
+        <file>testdata/GPL-2.0-or-later/alternativesmodeltest.cpp</file>
         <file>testdata/GPL-2.0-or-later/kcharsetstest.cpp</file>
         <file>testdata/GPL-2.0-or-later/kcookiewin.h</file>
         <file>testdata/GPL-2.0-or-later/kemoticontest.cpp</file>
