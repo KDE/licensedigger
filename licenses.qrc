@@ -3,8 +3,10 @@
         <file>licenses/BSD-2-Clause/karchive_unzipper_main</file>
         <file>licenses/BSD-2-Clause/kconfig_kemailsettings</file>
         <file>licenses/BSD-2-Clause/kio_imagefilter</file>
+        <file>licenses/BSD-2-Clause/kwin_Findepoll</file>
         <file>licenses/BSD-3-Clause/kjs_symboltable</file>
         <file>licenses/BSD-3-Clause/ecm_cmake</file>
+        <file>licenses/BSD-3-Clause/kwin_Findepoxy</file>
         <file>licenses/GPL-2.0-only/kdesu_client</file>
         <file>licenses/GPL-2.0-only/kio_kfileplacesmodeltest</file>
         <file>licenses/GPL-2.0-only/kio_kpasswdserver</file>
@@ -20,6 +22,11 @@
         <file>licenses/GPL-2.0-or-later/kio_localdomainfilter</file>
         <file>licenses/GPL-2.0-or-later/kio_usdentrybenchmark</file>
         <file>licenses/GPL-2.0-or-later/kioexec_main</file>
+        <file>licenses/GPL-2.0-or-later/kwin_aurorae</file>
+        <file>licenses/GPL-2.0-or-later/kwin_blur</file>
+        <file>licenses/GPL-2.0-or-later/kwin_clockskewnotifier</file>
+        <file>licenses/GPL-2.0-or-later/kwin_rulesdialog</file>
+        <file>licenses/GPL-2.0-or-later/kwin_scripted_effects_test</file>
         <file>licenses/GPL-2.0-or-later/plasma-framework_shellpluginloader</file>
         <file>licenses/GPL-2.0-or-later/plasma-framework_tooltip</file>
         <file>licenses/GPL-2.0-or-later/plasma-framework_view</file>
@@ -80,6 +87,7 @@
         <file>licenses/LGPL-2.0-or-later/kwidgetsaddons_kpassworddialog</file>
         <file>licenses/LGPL-2.0-or-later/kwidgetsaddons_kseparator</file>
         <file>licenses/LGPL-2.0-or-later/kwidgetsaddons_kstyleextensions</file>
+        <file>licenses/LGPL-2.0-or-later/kwin_screencastmanager</file>
         <file>licenses/LGPL-2.0-or-later/plasma-framework_dialogshadows</file>
         <file>licenses/LGPL-2.0-or-later/plasma-framework_framesvg</file>
         <file>licenses/LGPL-2.0-or-later/kpublictransport</file>
@@ -120,6 +128,7 @@
         <file>licenses/LGPL-2.1-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/kwidgetaddons_ksplittercollapserbuttontest</file>
         <file>licenses/LGPL-2.1-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/kwidgetsaddons_kbusyindicatorwidget</file>
         <file>licenses/LGPL-2.1-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/solid_inhibition</file>
+        <file>licenses/GPL-3.0-or-later/kwin_screens_hwcomposer</file>
         <file>licenses/LGPL-3.0-or-later/kwidgetaddons_kmessagebox</file>
         <file>licenses/LGPL-3.0-or-later/kcalendarcore_testcreateddatecompat</file>
         <file>licenses/LGPL-3.0-only_OR_GPL-2.0-or-later/qqc2desktop_scrollview</file>
