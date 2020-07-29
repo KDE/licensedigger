@@ -21,7 +21,7 @@ QRegularExpression DirectoryParser::copyrightRegExp() const
 {
     static auto regexp = QRegularExpression("(SPDX-FileCopyrightText:|Copyright( \\([cC]\\))|Copyright ©|©|Copyright(:)?)"
                                      "[, ]+"
-                                     "(?<years>([0-9]+(-[0-9]+| - [0-9]+|,[ ]?[0-9]+)*|%{CURRENT_YEAR}))"
+                                     "(?<years>([0-9]+(-[0-9]+| - [0-9]+| to [0-9]+|,[ ]?[0-9]+)*|%{CURRENT_YEAR}))"
                                      "[, ]+"
                                      "([bB]y[ ]+)?"
                                      "(?<name>([\u00C0-\u017Fa-zA-Z]+( [\u00C0-\u017Fa-zA-Z\\.]+)*|%{AUTHOR}))"
@@ -38,9 +38,11 @@ QString DirectoryParser::cleanupSpaceInCopyrightYearList(const QString &original
 
     static auto missingWhitespaceAfterCommaRegex = QRegularExpression(QStringLiteral(",(?=[0-9])"));
     static auto unneededWhitespaceAroundRangeRegex = QRegularExpression(QStringLiteral(" - (?=[0-9])"));
+    static auto writtenRangeStatementRegex = QRegularExpression(QStringLiteral(" to (?=[0-9])"));
 
     cleanedYearText.replace(missingWhitespaceAfterCommaRegex, QStringLiteral(", "));
     cleanedYearText.replace(unneededWhitespaceAroundRangeRegex, QStringLiteral("-"));
+    cleanedYearText.replace(writtenRangeStatementRegex, QStringLiteral("-"));
 
     return cleanedYearText;
 }
