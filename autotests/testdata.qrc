@@ -133,5 +133,7 @@
         <file>testdata_conversionexamples/file_without_unrecognized_statement.h.origfile</file>
         <file>testdata_conversionexamples/fake_notifications_server.h.origfile</file>
         <file>testdata_conversionexamples/fake_notifications_server.h.spdx</file>
+        <file>testdata_conversionexamples/blur.h.origfile</file>
+        <file>testdata_conversionexamples/blur.h.spdx</file>
     </qresource>
 </RCC>

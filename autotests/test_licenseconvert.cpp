@@ -8,9 +8,9 @@
 #include "../licenseregistry.h"
 #include "../directoryparser.h"
 #include <QTest>
+#include <QVector>
 #include <QDebug>
 #include <QDir>
-// #include <QDirIterator>
 
 void TestLicenseConvert::greedyLicenseTextConversion()
 {
@@ -55,24 +55,35 @@ void TestLicenseConvert::doNotModifyFileWithoutDetectedLicense()
 
 void TestLicenseConvert::exampleFileConversion()
 {
-    const QString targetSpdxMarker("LGPL-2.0-only");
+    QVector<std::pair<QString, QString>> testFiles;
 
-    QFile fileOrig(":/testdata_conversionexamples/fake_notifications_server.h.origfile");
-    fileOrig.open(QIODevice::ReadOnly);
-    const QString fileContentOrig = fileOrig.readAll();
+    testFiles.append(std::make_pair("LGPL-2.0-only", ":/testdata_conversionexamples/fake_notifications_server.h"));
+    testFiles.append(std::make_pair("GPL-2.0-or-later", ":/testdata_conversionexamples/blur.h"));
 
-    QFile fileSpdx(":/testdata_conversionexamples/fake_notifications_server.h.spdx");
-    fileSpdx.open(QIODevice::ReadOnly);
-    const QString fileContentSpdx = fileSpdx.readAll();
+    for (auto iter = testFiles.constBegin(); iter != testFiles.constEnd(); ++iter) {
+        const QString targetSpdxMarker = iter->first;
+        const QString baseFileName = iter->second;
 
-    LicenseRegistry registry;
-    DirectoryParser parser;
+        qDebug() << "Testing:" << baseFileName;
 
-    QVERIFY(registry.expressions().contains(targetSpdxMarker));
-    QVector<LicenseRegistry::SpdxExpression> licenses = parser.detectLicenses(fileContentOrig);
-    QCOMPARE(licenses.count(), 1);
-    QCOMPARE(licenses.first(), targetSpdxMarker);
-    QCOMPARE(parser.replaceHeaderText(fileContentOrig, targetSpdxMarker), fileContentSpdx);
+        QFile fileOrig(baseFileName + ".origfile");
+        fileOrig.open(QIODevice::ReadOnly);
+        const QString fileContentOrig = fileOrig.readAll();
+
+        QFile fileSpdx(baseFileName + ".spdx");
+        fileSpdx.open(QIODevice::ReadOnly);
+        const QString fileContentSpdx = fileSpdx.readAll();
+
+        LicenseRegistry registry;
+        DirectoryParser parser;
+
+        QVERIFY(registry.expressions().contains(targetSpdxMarker));
+        QVector<LicenseRegistry::SpdxExpression> licenses = parser.detectLicenses(fileContentOrig);
+        QCOMPARE(licenses.count(), 1);
+        QCOMPARE(licenses.first(), targetSpdxMarker);
+        const QString result = parser.replaceHeaderText(fileContentOrig, targetSpdxMarker);
+        QCOMPARE(result, fileContentSpdx);
+    }
 }
 
 QTEST_GUILESS_MAIN(TestLicenseConvert);

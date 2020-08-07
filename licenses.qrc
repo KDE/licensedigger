@@ -20,6 +20,7 @@
         <file>licenses/GPL-2.0-or-later/kio_localdomainfilter</file>
         <file>licenses/GPL-2.0-or-later/kio_usdentrybenchmark</file>
         <file>licenses/GPL-2.0-or-later/kioexec_main</file>
+        <file>licenses/GPL-2.0-or-later/kwin_blur</file>
         <file>licenses/GPL-2.0-or-later/plasma-framework_shellpluginloader</file>
         <file>licenses/GPL-2.0-or-later/plasma-framework_tooltip</file>
         <file>licenses/GPL-2.0-or-later/plasma-framework_view</file>
