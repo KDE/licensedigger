@@ -9,6 +9,9 @@
         <file>licenses/GPL-2.0-only/kio_kfileplacesmodeltest</file>
         <file>licenses/GPL-2.0-only/kio_kpasswdserver</file>
         <file>licenses/GPL-2.0-only/kio_useragentdlg</file>
+        <file>licenses/GPL-2.0-only/messagelib_composerviewbasetest</file>
+        <file>licenses/GPL-2.0-or-later/akonadi-search_akonadisearchdebugdialog</file>
+        <file>licenses/GPL-2.0-or-later/akonadiconsole_agentconfigdialog</file>
         <file>licenses/GPL-2.0-or-later/baloo_kio_search</file>
         <file>licenses/GPL-2.0-or-later/kactivities_activityinfo</file>
         <file>licenses/GPL-2.0-or-later/kcodecs_kcharsetstest</file>
@@ -21,6 +24,12 @@
         <file>licenses/GPL-2.0-or-later/kio_usdentrybenchmark</file>
         <file>licenses/GPL-2.0-or-later/kioexec_main</file>
         <file>licenses/GPL-2.0-or-later/kwin_blur</file>
+        <file>licenses/GPL-2.0-or-later/messagelib_attachmentcontrollerbase</file>
+        <file>licenses/GPL-2.0-or-later/messagelib_attachmentjob</file>
+        <file>licenses/GPL-2.0-or-later/messagelib_composerlineedit</file>
+        <file>licenses/GPL-2.0-or-later/messagelib_qgpgmejobexecutor</file>
+        <file>licenses/GPL-2.0-or-later/messagelib_searchcollectionindexingwarning</file>
+        <file>licenses/GPL-2.0-or-later/messagelib_templatesutil</file>
         <file>licenses/GPL-2.0-or-later/plasma-framework_shellpluginloader</file>
         <file>licenses/GPL-2.0-or-later/plasma-framework_tooltip</file>
         <file>licenses/GPL-2.0-or-later/plasma-framework_view</file>
@@ -28,6 +37,7 @@
         <file>licenses/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/kdeclarative_formats</file>
         <file>licenses/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/kio_kpasswdservertest</file>
         <file>licenses/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/kservice_autotest_nsaplugin</file>
+        <file>licenses/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/messagelib_stringutil</file>
         <file>licenses/LGPL-2.0-only/kcodecs_kcodecs</file>
         <file>licenses/LGPL-2.0-only/kdbusaddons_kquitapp</file>
         <file>licenses/LGPL-2.0-only/kguiaddons_kcolorcorrection</file>
@@ -50,6 +60,7 @@
         <file>licenses/LGPL-2.0-only_OR_LGPL-3.0-only/kio_kcookiejartest</file>
         <file>licenses/LGPL-2.0-only_OR_LGPL-3.0-only/kio_knewfilemenu</file>
         <file>licenses/LGPL-2.0-only_WITH_Qt-Commercial-exception-1.0/kio_kstatusbarofflineindicator</file>
+        <file>licenses/LGPL-2.0-or-later/akonadi_main</file>
         <file>licenses/LGPL-2.0-or-later/kcontacts_ldif</file>
         <file>licenses/LGPL-2.0-or-later/baloo_balooplugin</file>
         <file>licenses/LGPL-2.0-or-later/kactivities_range</file>
@@ -120,6 +131,7 @@
         <file>licenses/LGPL-2.1-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/kservice_findservice</file>
         <file>licenses/LGPL-2.1-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/kwidgetaddons_ksplittercollapserbuttontest</file>
         <file>licenses/LGPL-2.1-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/kwidgetsaddons_kbusyindicatorwidget</file>
+        <file>licenses/LGPL-2.1-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/libkgapi_taskservice</file>
         <file>licenses/LGPL-2.1-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/solid_inhibition</file>
         <file>licenses/LGPL-3.0-or-later/kwidgetaddons_kmessagebox</file>
         <file>licenses/LGPL-3.0-or-later/kcalendarcore_testcreateddatecompat</file>
