@@ -31,6 +31,8 @@ private Q_SLOTS:
 
     void doNotModifyFileWithoutDetectedLicense();
 
+    void pruneLicenseList();
+
     /**
      * Conformance test with original and target file format
      */

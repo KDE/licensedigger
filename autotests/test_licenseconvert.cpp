@@ -53,6 +53,17 @@ void TestLicenseConvert::doNotModifyFileWithoutDetectedLicense()
     QCOMPARE(parser.replaceHeaderText(fileContentOrig, QString()), fileContentOrig);
 }
 
+void TestLicenseConvert::pruneLicenseList()
+{
+    LicenseRegistry registry;
+    DirectoryParser parser;
+    {
+        QVector<LicenseRegistry::SpdxExpression> licenses{ "LGPL-2.0-only", "LGPL-2.0-only"};
+        auto prunedLicenses = parser.pruneLicenseList(licenses);
+        QCOMPARE(prunedLicenses.length(), 1);
+    }
+}
+
 void TestLicenseConvert::exampleFileConversion()
 {
     QVector<std::pair<QString, QString>> testFiles;

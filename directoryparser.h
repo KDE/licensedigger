@@ -27,8 +27,26 @@ public:
      */
     QString replaceHeaderText(const QString &fileContent, const QString &spdxExpression) const;
 
+    /**
+     * @brief Detect licenses by computing all matches
+     * @param fileContent the content of the file
+     * @return the list of detected license matches
+     */
     QVector<LicenseRegistry::SpdxExpression> detectLicenses(const QString &fileContent) const;
     LicenseRegistry::SpdxExpression detectLicenseStatement(const QString &fileContent) const;
+
+    /**
+     * @brief Take license liste and prune statements
+     *
+     * This is a simple algorithm can handle the following cases:
+     * - license containted twice
+     * - license detacted singular and detected in OR statement as well
+     * - license detacted singular and detected in WITH statement as well
+     *
+     * @param inputLicenses
+     * @return
+     */
+    QVector<LicenseRegistry::SpdxExpression> pruneLicenseList(const QVector<LicenseRegistry::SpdxExpression> &inputLicenses) const;
 
 private:
     LicenseRegistry m_registry;

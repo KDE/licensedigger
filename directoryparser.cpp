@@ -89,6 +89,15 @@ LicenseRegistry::SpdxExpression DirectoryParser::detectLicenseStatement(const QS
     return QString();
 }
 
+QVector<LicenseRegistry::SpdxExpression> DirectoryParser::pruneLicenseList(const QVector<LicenseRegistry::SpdxExpression> &inputLicenses) const
+{
+    auto licenses = inputLicenses;
+    std::sort(licenses.begin(), licenses.end());
+    licenses.erase(std::unique(licenses.begin(), licenses.end()), licenses.end()); //remove duplicates
+
+    return licenses;
+}
+
 QVector<LicenseRegistry::SpdxExpression> DirectoryParser::detectLicenses(const QString &fileContent) const
 {
     QVector<LicenseRegistry::SpdxExpression> testExpressions = m_registry.expressions();
@@ -159,8 +168,7 @@ QMap<QString, LicenseRegistry::SpdxExpression> DirectoryParser::parseAll(const Q
 
 //        qDebug() << "checking:" << iterator.fileInfo();
         QVector<LicenseRegistry::SpdxExpression> licenses = detectLicenses(fileContent);
-        std::sort(licenses.begin(), licenses.end());
-        licenses.erase(std::unique(licenses.begin(), licenses.end() ), licenses.end()); //remove duplicates
+        licenses = pruneLicenseList(licenses);
 
         if (licenses.count() == 1) {
             results.insert(iterator.fileInfo().filePath(), licenses.first());
