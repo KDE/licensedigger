@@ -9,7 +9,7 @@
 #include <QTextStream>
 #include <QDebug>
 
-const QStringList DirectoryParser::s_supportedExtensions = { ".cpp", ".cc", ".c", ".h", ".hpp", ".qml", ".cmake", "CMakeLists.txt", ".in", ".py", ".frag", ".vert", ".glsl", "php", "sh" };
+const QStringList DirectoryParser::s_supportedExtensions = { ".cpp", ".cc", ".c", ".h", ".css", ".hpp", ".qml", ".cmake", "CMakeLists.txt", ".in", ".py", ".frag", ".vert", ".glsl", "php", "sh" };
 
 QRegularExpression DirectoryParser::spdxRegExp() const
 {
@@ -159,6 +159,9 @@ QMap<QString, LicenseRegistry::SpdxExpression> DirectoryParser::parseAll(const Q
 
 //        qDebug() << "checking:" << iterator.fileInfo();
         QVector<LicenseRegistry::SpdxExpression> licenses = detectLicenses(fileContent);
+        std::sort(licenses.begin(), licenses.end());
+        licenses.erase(std::unique(licenses.begin(), licenses.end() ), licenses.end()); //remove duplicates
+
         if (licenses.count() == 1) {
             results.insert(iterator.fileInfo().filePath(), licenses.first());
 //            qDebug() << "---> " << iterator.fileInfo().filePath() << identifier;
