@@ -57,10 +57,29 @@ void TestLicenseConvert::pruneLicenseList()
 {
     LicenseRegistry registry;
     DirectoryParser parser;
+
+    // prune multiple detections of same license
     {
         QVector<LicenseRegistry::SpdxExpression> licenses{ "LGPL-2.0-only", "LGPL-2.0-only"};
         auto prunedLicenses = parser.pruneLicenseList(licenses);
         QCOMPARE(prunedLicenses.length(), 1);
+        QCOMPARE(prunedLicenses.first(), "LGPL-2.0-only");
+    }
+
+    // prune licenses that are detected both "LIC-A" as well as "LIC-A OR LIC-B"
+    {
+        QVector<LicenseRegistry::SpdxExpression> licenses{ "LGPL-2.1-only", "LGPL-2.1-only_OR_LGPL-3.0-only"};
+        auto prunedLicenses = parser.pruneLicenseList(licenses);
+        QCOMPARE(prunedLicenses.length(), 1);
+        QCOMPARE(prunedLicenses.first(), "LGPL-2.1-only_OR_LGPL-3.0-only");
+    }
+
+    // prune licenses that are detected both "LIC-A" as well as "LIC-A OR LIC-B"
+    {
+        QVector<LicenseRegistry::SpdxExpression> licenses{ "LGPL-2.1-only", "LGPL-2.1-only_WITH_Qt-Commercial-exception-1.0"};
+        auto prunedLicenses = parser.pruneLicenseList(licenses);
+        QCOMPARE(prunedLicenses.length(), 1);
+        QCOMPARE(prunedLicenses.first(), "LGPL-2.1-only_WITH_Qt-Commercial-exception-1.0");
     }
 }
 

@@ -8,6 +8,7 @@
 #include <QDirIterator>
 #include <QTextStream>
 #include <QDebug>
+#include <QVector>
 
 const QStringList DirectoryParser::s_supportedExtensions = { ".cpp", ".cc", ".c", ".h", ".css", ".hpp", ".qml", ".cmake", "CMakeLists.txt", ".in", ".py", ".frag", ".vert", ".glsl", "php", "sh" };
 
@@ -91,10 +92,46 @@ LicenseRegistry::SpdxExpression DirectoryParser::detectLicenseStatement(const QS
 
 QVector<LicenseRegistry::SpdxExpression> DirectoryParser::pruneLicenseList(const QVector<LicenseRegistry::SpdxExpression> &inputLicenses) const
 {
+    //TODO
+    // - handle AND combinations
+    // - handle complex OR combinations
+    // - revisit operator preference order in SPDX and implement it here
+
+    if (inputLicenses.length() == 1) {
+        return inputLicenses;
+    }
+
     auto licenses = inputLicenses;
     std::sort(licenses.begin(), licenses.end());
-    licenses.erase(std::unique(licenses.begin(), licenses.end()), licenses.end()); //remove duplicates
 
+    // pruning step: remove duplicates
+    licenses.erase(std::unique(licenses.begin(), licenses.end()), licenses.end());
+
+    // pruning step: compute which licenses are supported with SPDX expression (splitting at "OR")
+    //TODO this a very simple initial version and only works yet with simple license statements, not with multiple OR combinations
+    QMap<LicenseRegistry::SpdxExpression, QVector<LicenseRegistry::SpdxExpression>> licenseClosure;
+    for (const auto &license : qAsConst(licenses)) {
+        QVector<LicenseRegistry::SpdxExpression> licenseChoice = license.split("_OR_").toVector();
+
+        // remove all "WITH" statements
+        for (int i = 0; i < licenseChoice.size(); ++i) {
+            licenseChoice[i].remove(QRegularExpression("_WITH.*"));
+        }
+        licenseClosure[license] = licenseChoice;
+    }
+    QMutableVectorIterator<LicenseRegistry::SpdxExpression> iter(licenses);
+    while (iter.hasNext()) {
+        bool licensedContainedInClosure{ false };
+        LicenseRegistry::SpdxExpression expression = iter.next();
+        for (auto iter = licenseClosure.begin(); iter != licenseClosure.end(); ++iter) {
+            if (expression != iter.key() && iter.value().contains(expression)) {
+                licensedContainedInClosure = true;
+            }
+        }
+        if (licensedContainedInClosure) {
+            iter.remove();
+        }
+    }
     return licenses;
 }
 
