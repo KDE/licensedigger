@@ -168,5 +168,7 @@
         <file>licenses/LGPL-3.0-only_OR_GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KFQF-Accepted-GPL_OR_LicenseRef-Qt-Commercial/qqc2-desktop-style_qsgdefaultninepatchnode</file>
         <file>licenses/LGPL-2.1-or-later/artikulate_gstreamerbackend</file>
         <file>licensetexts/Qt-Commercial-exception-1.0.txt</file>
+        <file>licenses/GPL-2.0-or-later_WITH_Qt-Commercial-exception-1.0/syndication_testloader</file>
+        <file>licenses/GPL-2.0-or-later_WITH_Qt-Commercial-exception-1.0/incidenceeditor_attachmenteditdialog</file>
     </qresource>
 </RCC>

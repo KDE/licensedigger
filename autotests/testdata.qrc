@@ -135,5 +135,6 @@
         <file>testdata_conversionexamples/fake_notifications_server.h.spdx</file>
         <file>testdata_conversionexamples/blur.h.origfile</file>
         <file>testdata_conversionexamples/blur.h.spdx</file>
+        <file>testdata/GPL-2.0-or-later_WITH_Qt-Commercial-exception-1.0/attachmenteditdialog.cpp</file>
     </qresource>
 </RCC>
