@@ -20,5 +20,6 @@ private Q_SLOTS:
     void detectCopyright();
     void convertSingleCopyrightStatement();
     void convertFullHeader();
+    void skipSourceCodeStrings();
 };
 #endif

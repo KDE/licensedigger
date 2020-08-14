@@ -102,4 +102,14 @@ void TestCopyrightConvert::convertFullHeader()
     QCOMPARE(header, targetHeader);
 }
 
+void TestCopyrightConvert::skipSourceCodeStrings()
+{
+    const QString originalHeader =
+            "i18n(\"Copyright 2020 KDE Developers\")";
+
+    DirectoryParser parser;
+    QString header = parser.unifyCopyrightStatements(originalHeader);
+    QCOMPARE(header, originalHeader);
+}
+
 QTEST_GUILESS_MAIN(TestCopyrightConvert);
