@@ -42,6 +42,7 @@ void TestCopyrightConvert::detectCopyright()
         { "Copyright (C) 2020, Méven Doe <mail@example.com>", "2020", "Méven Doe", "<mail@example.com>" },
         { "Copyright (c) 2006,2007 Laurent Doe, <mail@example.com>", "2006, 2007", "Laurent Doe", "<mail@example.com>" },
         { "Copyright (C) 1997 to 2002 Jane Doe <mail@example.com>", "1997-2002", "Jane Doe", "<mail@example.com>" },
+        { "Copyright 2011 A.B. Foo Software Ltda.", "2011", "A.B. Foo Software Ltda.", "" },
         // KAppTemplate template variables
         { "Copyright (C) %{CURRENT_YEAR} by %{AUTHOR} <%{EMAIL}>" , "%{CURRENT_YEAR}", "%{AUTHOR}", "<%{EMAIL}>" },
     };
