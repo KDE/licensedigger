@@ -10,7 +10,7 @@
 #include <QDebug>
 #include <QVector>
 
-const QStringList DirectoryParser::s_supportedExtensions = { ".cpp", ".cc", ".c", ".h", ".css", ".hpp", ".qml", ".cmake", "CMakeLists.txt", ".in", ".py", ".frag", ".vert", ".glsl", "php", "sh", ".mm", ".java" };
+const QStringList DirectoryParser::s_supportedExtensions = { ".cpp", ".cc", ".c", ".h", ".css", ".hpp", ".qml", ".cmake", "CMakeLists.txt", ".in", ".py", ".frag", ".vert", ".glsl", "php", "sh", ".mm", ".java", ".kt" };
 
 QRegularExpression DirectoryParser::spdxRegExp() const
 {
