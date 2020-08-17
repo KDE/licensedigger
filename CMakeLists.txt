@@ -41,3 +41,5 @@ target_compile_definitions(licensedigger
   PRIVATE $<$<OR:$<CONFIG:Debug>,$<CONFIG:RelWithDebInfo>>:QT_QML_DEBUG>)
 target_link_libraries(licensedigger
   PRIVATE Qt5::Core Qt5::Quick)
+
+install(TARGETS licensedigger ${INSTALL_TARGETS_DEFAULT_ARGS})
