@@ -172,5 +172,7 @@
         <file>licenses/GPL-2.0-or-later_WITH_Qt-Commercial-exception-1.0/syndication_testloader</file>
         <file>licenses/GPL-2.0-or-later_WITH_Qt-Commercial-exception-1.0/incidenceeditor_attachmenteditdialog</file>
         <file>licenses/GPL-2.0-or-later_WITH_Qt-Commercial-exception-1.0/syndication_benchmark</file>
+        <file>licenses/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/kdeconnect_android_startactivityalertdialogfragment</file>
+        <file>licenses/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/kdeconnect_android_uploadnotification</file>
     </qresource>
 </RCC>
