@@ -21,7 +21,6 @@ include(KDECompilerSettings NO_POLICY_SCOPE)
 
 find_package(Qt5 REQUIRED COMPONENTS
     Core
-    Quick
     Test
 )
 
@@ -32,7 +31,6 @@ add_executable(
     main.cpp
     licenseregistry.cpp
     directoryparser.cpp
-    qml.qrc
     licenses.qrc
     annotations.qrc
 )
@@ -40,6 +38,6 @@ add_executable(
 target_compile_definitions(licensedigger
   PRIVATE $<$<OR:$<CONFIG:Debug>,$<CONFIG:RelWithDebInfo>>:QT_QML_DEBUG>)
 target_link_libraries(licensedigger
-  PRIVATE Qt5::Core Qt5::Quick)
+  PRIVATE Qt5::Core)
 
 install(TARGETS licensedigger ${INSTALL_TARGETS_DEFAULT_ARGS})

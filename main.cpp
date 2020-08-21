@@ -5,7 +5,7 @@
  */
 
 #include "directoryparser.h"
-#include <QGuiApplication>
+#include <QCoreApplication>
 #include <QCommandLineParser>
 #include <QDebug>
 #include <iostream>
