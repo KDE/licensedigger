@@ -35,7 +35,7 @@ add_executable(
     annotations.qrc
 )
 
-set_target_properties(licensedigger PROPERTIES MACOSX_BUNDLE OFF)
+ecm_mark_nongui_executable(licensedigger)
 
 target_compile_definitions(licensedigger
   PRIVATE $<$<OR:$<CONFIG:Debug>,$<CONFIG:RelWithDebInfo>>:QT_QML_DEBUG>)
