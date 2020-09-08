@@ -10,6 +10,7 @@
         <file>licenses/GPL-2.0-only/kio_kpasswdserver</file>
         <file>licenses/GPL-2.0-only/kio_useragentdlg</file>
         <file>licenses/GPL-2.0-only/messagelib_composerviewbasetest</file>
+        <file>licenses/GPL-2.0-only/plasma-sdk_lnflistmodel</file>
         <file>licenses/GPL-2.0-or-later/akonadi-search_akonadisearchdebugdialog</file>
         <file>licenses/GPL-2.0-or-later/akonadiconsole_agentconfigdialog</file>
         <file>licenses/GPL-2.0-or-later/baloo_kio_search</file>
@@ -35,6 +36,7 @@
         <file>licenses/GPL-2.0-or-later/plasma-framework_view</file>
         <file>licenses/GPL-2.0-or-later/purpose_alternativesmodeltest</file>
         <file>licenses/GPL-2.0-or-later/kdeconnect-sendfileitemaction</file>
+        <file>licenses/GPL-2.0-or-later/plasma-sdk_engineexplorer</file>
         <file>licenses/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/kdeclarative_formats</file>
         <file>licenses/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/kio_kpasswdservertest</file>
         <file>licenses/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/kservice_autotest_nsaplugin</file>
@@ -146,7 +148,6 @@
         <file>licenses/MIT/ksyntaxhighlighter</file>
         <file>licenses/MIT/prison</file>
         <file>licenses/TO-CLARIFY/kio_might-be-lgpl2.0-or-lgpl-2.1</file>
-        <file>licenses/TO-CLARIFY/kservice_might-be-gpl-or-lgpl</file>
         <file>licensetexts/BSD-2-Clause.txt</file>
         <file>licensetexts/GPL-2.0-or-later.txt</file>
         <file>licensetexts/GPL-3.0-only.txt</file>
