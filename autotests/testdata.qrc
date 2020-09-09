@@ -28,7 +28,6 @@
         <file>testdata/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/formats.cpp</file>
         <file>testdata/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/kpasswdservertest.cpp</file>
         <file>testdata/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/nsaplugin.cpp</file>
-        <file>testdata/GPL-3.0-or-later/testcreateddatecompat.cpp</file>
         <file>testdata/LGPL-2.0-only/cache.cpp</file>
         <file>testdata/LGPL-2.0-only/ldifconverter.h</file>
         <file>testdata/LGPL-2.0-only/dataprotocol.cpp</file>
@@ -121,6 +120,7 @@
         <file>testdata/LGPL-2.1-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/qtplatformdependent.cpp</file>
         <file>testdata/LGPL-2.1-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/utils.h</file>
         <file>testdata/LGPL-3.0-or-later/main.cpp</file>
+        <file>testdata/LGPL-3.0-or-later/testcreateddatecompat.cpp</file>
         <file>testdata/LGPL-3.0-only_OR_GPL-2.0-or-later/ScrollView.qml</file>
         <file>testdata/MIT/CharDistribution.cpp</file>
         <file>testdata/MIT/DeclarativeDragArea.cpp</file>
