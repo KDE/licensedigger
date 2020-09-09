@@ -74,6 +74,11 @@ void TestHeaderDetection::detectGPL20orlater()
     detectForIdentifier("GPL-2.0-or-later");
 }
 
+void TestHeaderDetection::detectGPL30orlater()
+{
+    detectForIdentifier("GPL-3.0-or-later");
+}
+
 void TestHeaderDetection::detectGPL2orlaterwithQtCommercialException()
 {
     detectForIdentifier("GPL-2.0-or-later_WITH_Qt-Commercial-exception-1.0");

@@ -16,6 +16,7 @@ private Q_SLOTS:
     void detectGPL20only();
     void detectGPL20orlater();
     void detectGPL2orlaterwithQtCommercialException();
+    void detectGPL30orlater();
     void detectLGPL20orlater();
     void detectLGPL20only();
     void detectLGPL20onlyWithQtCommercialException();

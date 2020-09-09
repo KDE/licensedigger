@@ -41,6 +41,7 @@
         <file>licenses/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/kio_kpasswdservertest</file>
         <file>licenses/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/kservice_autotest_nsaplugin</file>
         <file>licenses/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/messagelib_stringutil</file>
+        <file>licenses/GPL-3.0-or-later/kpeopleactionsplugin</file>
         <file>licenses/LGPL-2.0-only/kcodecs_kcodecs</file>
         <file>licenses/LGPL-2.0-only/kdbusaddons_kquitapp</file>
         <file>licenses/LGPL-2.0-only/kguiaddons_kcolorcorrection</file>
