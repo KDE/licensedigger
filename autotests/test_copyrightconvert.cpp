@@ -68,7 +68,7 @@ void TestCopyrightConvert::convertSingleCopyrightStatement()
     QRegularExpression exp = parser.copyrightRegExp();
 
     std::vector<std::pair<QString, QString>> testdata = {
-        {"Copyright  2018   John Doe   <mail@example.com>", "SPDX-FileCopyrightText: 2018 John Doe <mail@example.com>"}
+        {"Copyright  2018   John Doe   <mail@example.com>", "SPDX-FileCopyrightText: 2018 John Doe <mail@example.com>"},
     };
 
     for (const auto &example : testdata) {
@@ -90,12 +90,14 @@ void TestCopyrightConvert::convertFullHeader()
             "/*\n"
             " * Copyright  2018   John Doe   <mail@example.com>\n"
             " * Copyright  2018-2019   Jane Doe <another@example.com>\n"
+            " * Copyright (c) 2001 the KMime authors.\n"
             " */\n";
 
     const QString targetHeader =
             "/*\n"
             " * SPDX-FileCopyrightText: 2018 John Doe <mail@example.com>\n"
             " * SPDX-FileCopyrightText: 2018-2019 Jane Doe <another@example.com>\n"
+            " * SPDX-FileCopyrightText: 2001 the KMime authors.\n"
             " */\n";
 
     DirectoryParser parser;

@@ -62,7 +62,7 @@ QString DirectoryParser::unifyCopyrightStatements(const QString &originalText) c
         QString name = match.captured("name");
         QString contact = match.captured("contact");
 
-        QString unifiedCopyright = QString("SPDX-FileCopyrightText: %1 %2 %3").arg(years).arg(name).arg(contact);
+        QString unifiedCopyright = QString("SPDX-FileCopyrightText: %1 %2 %3").arg(years).arg(name).arg(contact).trimmed();
         header.replace(match.capturedStart(), match.capturedLength(), unifiedCopyright);
         match = regExp.match(header, match.capturedStart() + unifiedCopyright.length());
     }
