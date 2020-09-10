@@ -84,6 +84,11 @@ void TestHeaderDetection::detectGPL2orlaterwithQtCommercialException()
     detectForIdentifier("GPL-2.0-or-later_WITH_Qt-Commercial-exception-1.0");
 }
 
+void TestHeaderDetection::detectGPL30_or_KDE()
+{
+    detectForIdentifier("GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL");
+}
+
 void TestHeaderDetection::detectGPL20_or_GPL30_or_KDE()
 {
     detectForIdentifier("GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL");

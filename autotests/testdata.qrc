@@ -3,6 +3,7 @@
         <file>testdata/BSD-2-Clause/imagefilter.cpp</file>
         <file>testdata/BSD-2-Clause/kemailsettings.cpp</file>
         <file>testdata/BSD-2-Clause/unzipper_main.cpp</file>
+        <file>testdata/BSD-2-Clause/FindPlymouth.cmake</file>
         <file>testdata/BSD-3-Clause/SymbolTable.h</file>
         <file>testdata/BSD-3-Clause/ecm_CMakeLists.txt</file>
         <file>testdata/GPL-2.0-only/client.cpp</file>
@@ -25,10 +26,12 @@
         <file>testdata/GPL-2.0-or-later/udsentrybenchmark.cpp</file>
         <file>testdata/GPL-2.0-or-later/view.cpp</file>
         <file>testdata/GPL-2.0-or-later/engineexplorer.cpp</file>
+        <file>testdata/GPL-2.0-or-later/plugin.c</file>
         <file>testdata/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/formats.cpp</file>
         <file>testdata/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/kpasswdservertest.cpp</file>
         <file>testdata/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/nsaplugin.cpp</file>
         <file>testdata/GPL-3.0-or-later/kpeopleactionsplugin.h</file>
+        <file>testdata/GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/breeze.script.cmake</file>
         <file>testdata/LGPL-2.0-only/cache.cpp</file>
         <file>testdata/LGPL-2.0-only/ldifconverter.h</file>
         <file>testdata/LGPL-2.0-only/dataprotocol.cpp</file>

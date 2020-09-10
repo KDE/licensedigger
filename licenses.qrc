@@ -3,6 +3,7 @@
         <file>licenses/BSD-2-Clause/karchive_unzipper_main</file>
         <file>licenses/BSD-2-Clause/kconfig_kemailsettings</file>
         <file>licenses/BSD-2-Clause/kio_imagefilter</file>
+        <file>licenses/BSD-2-Clause/breeze-plymouth_FindPlymouth</file>
         <file>licenses/BSD-3-Clause/kjs_symboltable</file>
         <file>licenses/BSD-3-Clause/ecm_cmake</file>
         <file>licenses/GPL-2.0-only/kdesu_client</file>
@@ -37,6 +38,7 @@
         <file>licenses/GPL-2.0-or-later/purpose_alternativesmodeltest</file>
         <file>licenses/GPL-2.0-or-later/kdeconnect-sendfileitemaction</file>
         <file>licenses/GPL-2.0-or-later/plasma-sdk_engineexplorer</file>
+        <file>licenses/GPL-2.0-or-later/breeze-plymouth_plugin</file>
         <file>licenses/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/kdeclarative_formats</file>
         <file>licenses/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/kio_kpasswdservertest</file>
         <file>licenses/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/kservice_autotest_nsaplugin</file>
@@ -177,5 +179,6 @@
         <file>licenses/GPL-2.0-or-later_WITH_Qt-Commercial-exception-1.0/syndication_benchmark</file>
         <file>licenses/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/kdeconnect_android_startactivityalertdialogfragment</file>
         <file>licenses/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/kdeconnect_android_uploadnotification</file>
+        <file>licenses/GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/breeze-plymouth_breeze.script</file>
     </qresource>
 </RCC>
