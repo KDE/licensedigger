@@ -4,6 +4,7 @@
         <file>testdata/BSD-2-Clause/kemailsettings.cpp</file>
         <file>testdata/BSD-2-Clause/unzipper_main.cpp</file>
         <file>testdata/BSD-2-Clause/FindPlymouth.cmake</file>
+        <file>testdata/BSD-2-Clause/FindXSettingsd.cmake</file>
         <file>testdata/BSD-3-Clause/SymbolTable.h</file>
         <file>testdata/BSD-3-Clause/ecm_CMakeLists.txt</file>
         <file>testdata/BSD-3-Clause/FindPackageKitQt2.cmake</file>

@@ -4,6 +4,7 @@
         <file>licenses/BSD-2-Clause/kconfig_kemailsettings</file>
         <file>licenses/BSD-2-Clause/kio_imagefilter</file>
         <file>licenses/BSD-2-Clause/breeze-plymouth_FindPlymouth</file>
+        <file>licenses/BSD-2-Clause/kde-gtk-config_FindXSettingsd</file>
         <file>licenses/BSD-3-Clause/kjs_symboltable</file>
         <file>licenses/BSD-3-Clause/ecm_cmake</file>
         <file>licenses/BSD-3-Clause/discover_FindPackageKitQt2</file>
