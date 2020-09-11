@@ -6,6 +6,7 @@
         <file>testdata/BSD-2-Clause/FindPlymouth.cmake</file>
         <file>testdata/BSD-3-Clause/SymbolTable.h</file>
         <file>testdata/BSD-3-Clause/ecm_CMakeLists.txt</file>
+        <file>testdata/BSD-3-Clause/FindPackageKitQt2.cmake</file>
         <file>testdata/GPL-2.0-only/client.cpp</file>
         <file>testdata/GPL-2.0-only/kfileplacesmodeltest.cpp</file>
         <file>testdata/GPL-2.0-only/kpasswdserver.cpp</file>
@@ -135,6 +136,7 @@
         <file>testdata/MIT/prison.cpp</file>
         <file>testdata/MIT/breezeexceptionlist.cpp</file>
         <file>testdata/MIT/syntaxhighlighter.cpp</file>
+        <file>testdata/MIT/FindGLib.cmake</file>
         <file>testdata/LGPL-3.0-only_OR_GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KFQF-Accepted-GPL_OR_LicenseRef-Qt-Commercial/qsgdefaultninepatchnode_p.h</file>
         <file>testdata/LGPL-2.1-or-later/qtgstreamerbackend.cpp</file>
         <file>testdata_conversionexamples/file_without_unrecognized_statement.h.origfile</file>

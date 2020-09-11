@@ -6,6 +6,7 @@
         <file>licenses/BSD-2-Clause/breeze-plymouth_FindPlymouth</file>
         <file>licenses/BSD-3-Clause/kjs_symboltable</file>
         <file>licenses/BSD-3-Clause/ecm_cmake</file>
+        <file>licenses/BSD-3-Clause/discover_FindPackageKitQt2</file>
         <file>licenses/GPL-2.0-only/kdesu_client</file>
         <file>licenses/GPL-2.0-only/kio_kfileplacesmodeltest</file>
         <file>licenses/GPL-2.0-only/kio_kpasswdserver</file>
@@ -151,6 +152,7 @@
         <file>licenses/MIT/ksyntaxhighlighter</file>
         <file>licenses/MIT/prison</file>
         <file>licenses/MIT/breeze_breezeexceptionslist</file>
+        <file>licenses/MIT/discover_FindGLib</file>
         <file>licenses/TO-CLARIFY/kio_might-be-lgpl2.0-or-lgpl-2.1</file>
         <file>licensetexts/BSD-2-Clause.txt</file>
         <file>licensetexts/GPL-2.0-or-later.txt</file>
