@@ -9,12 +9,9 @@ qt5_add_resources(headerdetection_SRCS
     testdata.qrc
     ../licenses.qrc
 )
-add_executable(test_headerdetection ${headerdetection_SRCS})
-target_link_libraries(test_headerdetection
-    Qt5::Test
-)
-add_test(NAME test_headerdetection COMMAND test_headerdetection)
-ecm_mark_as_test(test_headerdetection)
+ecm_add_test(${headerdetection_SRCS}
+             TEST_NAME test_headerdetection
+             LINK_LIBRARIES Qt5::Test)
 
 
 ### Test If All License Texts are Available
@@ -25,12 +22,9 @@ set(licensefilesavailable_SRCS
 qt5_add_resources(licensefilesavailable_SRCS
     ../licenses.qrc
 )
-add_executable(test_licensefilesavailable ${licensefilesavailable_SRCS})
-target_link_libraries(test_licensefilesavailable
-    Qt5::Test
-)
-add_test(NAME test_licensefilesavailable COMMAND test_licensefilesavailable)
-ecm_mark_as_test(test_licensefilesavailable)
+ecm_add_test(${licensefilesavailable_SRCS}
+             TEST_NAME test_licensefilesavailable
+             LINK_LIBRARIES Qt5::Test)
 
 
 ### Test Copyright Statement Conversion
@@ -42,12 +36,9 @@ set(copyrightconvert_SRCS
 qt5_add_resources(copyrightconvert_SRCS
     ../licenses.qrc
 )
-add_executable(test_copyrightconvert ${copyrightconvert_SRCS})
-target_link_libraries(test_copyrightconvert
-    Qt5::Test
-)
-add_test(NAME test_copyrightconvert COMMAND test_copyrightconvert)
-ecm_mark_as_test(test_copyrightconvert)
+ecm_add_test(${copyrightconvert_SRCS}
+             TEST_NAME test_copyrightconvert
+             LINK_LIBRARIES Qt5::Test)
 
 
 ### Test License Statement Conversion
@@ -60,9 +51,6 @@ qt5_add_resources(licenseconvert_SRCS
     ../licenses.qrc
     testdata.qrc
 )
-add_executable(test_licenseconvert ${licenseconvert_SRCS})
-target_link_libraries(test_licenseconvert
-    Qt5::Test
-)
-add_test(NAME test_licenseconvert COMMAND test_licenseconvert)
-ecm_mark_as_test(test_licenseconvert)
+ecm_add_test(${licenseconvert_SRCS}
+             TEST_NAME test_licenseconvert
+             LINK_LIBRARIES Qt5::Test)
