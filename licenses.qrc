@@ -110,6 +110,7 @@
         <file>licenses/TO-CLARIFY/kio_knameandurlinputdialog</file>
         <file>licenses/TO-CLARIFY/kservice_kmimeassociations</file>
         <file>licenses/TO-CLARIFY/kservice_ksycocadevices_p</file>
+        <file>licenses/LGPL-2.1-only/gsettingsitem</file>
         <file>licenses/LGPL-2.1-only/kio_des</file>
         <file>licenses/LGPL-2.1-only/kcoreaddons_kfilesystemtype</file>
         <file>licenses/LGPL-2.1-only/kitemmodels_modeltest</file>
