@@ -13,6 +13,7 @@
         <file>testdata/GPL-2.0-only/kpasswdserver.cpp</file>
         <file>testdata/GPL-2.0-only/useragentdlg.cpp</file>
         <file>testdata/GPL-2.0-only/lnflistmodel.cpp</file>
+        <file>testdata/GPL-2.0-only/generate.rb</file>
         <file>testdata/GPL-2.0-or-later/activityinfo.cpp</file>
         <file>testdata/GPL-2.0-or-later/alternativesmodeltest.cpp</file>
         <file>testdata/GPL-2.0-or-later/kcharsetstest.cpp</file>

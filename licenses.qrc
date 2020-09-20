@@ -14,6 +14,7 @@
         <file>licenses/GPL-2.0-only/kio_useragentdlg</file>
         <file>licenses/GPL-2.0-only/messagelib_composerviewbasetest</file>
         <file>licenses/GPL-2.0-only/plasma-sdk_lnflistmodel</file>
+        <file>licenses/GPL-2.0-only/kturtle_generate_rb</file>
         <file>licenses/GPL-2.0-or-later/akonadi-search_akonadisearchdebugdialog</file>
         <file>licenses/GPL-2.0-or-later/akonadiconsole_agentconfigdialog</file>
         <file>licenses/GPL-2.0-or-later/baloo_kio_search</file>
