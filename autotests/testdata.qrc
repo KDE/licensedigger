@@ -30,6 +30,7 @@
         <file>testdata/GPL-2.0-or-later/engineexplorer.cpp</file>
         <file>testdata/GPL-2.0-or-later/plugin.c</file>
         <file>testdata/GPL-2.0-or-later/bugreportaddress.h</file>
+        <file>testdata/GPL-2.0-or-later/sprite.h</file>
         <file>testdata/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/formats.cpp</file>
         <file>testdata/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/kpasswdservertest.cpp</file>
         <file>testdata/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/nsaplugin.cpp</file>
