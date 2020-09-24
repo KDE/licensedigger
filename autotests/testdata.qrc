@@ -36,6 +36,7 @@
         <file>testdata/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/kpasswdservertest.cpp</file>
         <file>testdata/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/nsaplugin.cpp</file>
         <file>testdata/GPL-3.0-or-later/kpeopleactionsplugin.h</file>
+        <file>testdata/GPL-3.0-or-later/main.qml</file>
         <file>testdata/GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/breeze.script.cmake</file>
         <file>testdata/LGPL-2.0-only/cache.cpp</file>
         <file>testdata/LGPL-2.0-only/ldifconverter.h</file>
