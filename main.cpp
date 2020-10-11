@@ -39,6 +39,10 @@ int main(int argc, char *argv[])
             "convert copyright statements to SPDX-FileCopyrightText, but nothing else");
     parser.addOption(copyrightConvertOption);
 
+    QCommandLineOption ignorePatternOption(QStringList() << "i" << "ignore",
+            "Ignore file path matching the pattern", "ignorePattern", "");
+    parser.addOption(ignorePatternOption);
+
     parser.process(app);
 
     const QStringList args = parser.positionalArguments();
@@ -47,6 +51,7 @@ int main(int argc, char *argv[])
         return 1;
     }
     const QString directory = args.at(0);
+    const QString ignorePattern = parser.value(ignorePatternOption);
 
     qInfo() << "Digging recursively all files in directory:" << directory;
     DirectoryParser licenseParser;
@@ -58,7 +63,7 @@ int main(int argc, char *argv[])
                   << "= LICENSE DETECTION OVERVIEW =" << std::endl
                   << "==============================" << defaultOut
                   << std::endl;
-        const auto results = licenseParser.parseAll(directory, false);
+        const auto results = licenseParser.parseAll(directory, false, ignorePattern);
         int undetectedLicenses = 0;
         int detectedLicenses = 0;
         for (auto iter = results.constBegin(); iter != results.constEnd(); iter++) {
@@ -91,7 +96,7 @@ int main(int argc, char *argv[])
 
     if (convertLicense) {
         std::cout << hightlightOut << "Convert license statements: starting..." << defaultOut << std::endl;
-        licenseParser.parseAll(directory, true);
+        licenseParser.parseAll(directory, true, ignorePattern);
         std::cout << hightlightOut << "Convert license statements: DONE." << defaultOut << std::endl;
     }
 

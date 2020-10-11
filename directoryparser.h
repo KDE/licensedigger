@@ -13,8 +13,8 @@
 class DirectoryParser
 {
 public:
-    QMap<QString, LicenseRegistry::SpdxExpression> parseAll(const QString &directory, bool convertMode = false) const;
-    void convertCopyright(const QString &directory) const;
+    QMap<QString, LicenseRegistry::SpdxExpression> parseAll(const QString &directory, bool convertMode = false, const QString& ignorePattern = QString()) const;
+    void convertCopyright(const QString &directory, const QString& ignorePattern = QString()) const;
     QRegularExpression copyrightRegExp() const;
     QRegularExpression spdxRegExp() const;
     QString unifyCopyrightStatements(const QString &originalText) const;

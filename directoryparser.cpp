@@ -12,6 +12,13 @@
 
 const QStringList DirectoryParser::s_supportedExtensions = { ".cpp", ".cc", ".c", ".h", ".css", ".hpp", ".qml", ".cmake", "CMakeLists.txt", ".in", ".py", ".frag", ".vert", ".glsl", "php", "sh", ".mm", ".java", ".kt", ".js", ".xml", ".xsd", ".xsl", ".pl", ".rb", ".docbook" };
 
+bool shallIgnoreFile(const QDirIterator& iterator, const QRegularExpression& fileToIgnorePattern)
+{
+    QFileInfo fileInfo(iterator.fileInfo());
+    return !fileInfo.isFile() or
+        fileToIgnorePattern.match(fileInfo.filePath()).hasMatch();
+}
+
 QRegularExpression DirectoryParser::spdxRegExp() const
 {
     static auto regexp = QRegularExpression("(SPDX-License-Identifier: (?<expression>(.*)))");
@@ -154,7 +161,7 @@ QVector<LicenseRegistry::SpdxExpression> DirectoryParser::detectLicenses(const Q
     return detectedLicenses;
 }
 
-QMap<QString, LicenseRegistry::SpdxExpression> DirectoryParser::parseAll(const QString &directory, bool convertMode) const
+QMap<QString, LicenseRegistry::SpdxExpression> DirectoryParser::parseAll(const QString &directory, bool convertMode, const QString& ignorePattern) const
 {
     QVector<LicenseRegistry::SpdxExpression> expressions = m_registry.expressions();
     QMap<QString, LicenseRegistry::SpdxExpression> results;
@@ -184,12 +191,15 @@ QMap<QString, LicenseRegistry::SpdxExpression> DirectoryParser::parseAll(const Q
         }
     }
 
+    QRegularExpression ignoreFile(ignorePattern);
+
     QDirIterator iterator(directory, QDirIterator::Subdirectories);
     while (iterator.hasNext()) {
         QFile file(iterator.next());
-        if (!iterator.fileInfo().isFile()) {
+        if (shallIgnoreFile(iterator, ignoreFile)) {
             continue;
         }
+
         bool skip = true;
         for (const auto &ending : DirectoryParser::s_supportedExtensions) {
             if (file.fileName().endsWith(ending)) {
@@ -197,7 +207,7 @@ QMap<QString, LicenseRegistry::SpdxExpression> DirectoryParser::parseAll(const Q
                 break;
             }
         }
-        if (skip == true) {
+        if (skip) {
             continue;
         }
 
@@ -276,12 +286,14 @@ QMap<QString, LicenseRegistry::SpdxExpression> DirectoryParser::parseAll(const Q
     return results;
 }
 
-void DirectoryParser::convertCopyright(const QString &directory) const
+void DirectoryParser::convertCopyright(const QString &directory, const QString& ignorePattern) const
 {
+    QRegularExpression ignoreFile(ignorePattern);
+
     QDirIterator iterator(directory, QDirIterator::Subdirectories);
     while (iterator.hasNext()) {
         QFile file(iterator.next());
-        if (!iterator.fileInfo().isFile()) {
+        if (shallIgnoreFile(iterator, ignoreFile)) {
             continue;
         }
         bool skip = true;
@@ -291,7 +303,7 @@ void DirectoryParser::convertCopyright(const QString &directory) const
                 break;
             }
         }
-        if (skip == true) {
+        if (skip) {
             continue;
         }
 
