@@ -8,6 +8,7 @@
         <file>licenses/BSD-3-Clause/kjs_symboltable</file>
         <file>licenses/BSD-3-Clause/ecm_cmake</file>
         <file>licenses/BSD-3-Clause/discover_FindPackageKitQt2</file>
+        <file>licenses/BSD-3-Clause/konversation_guess_ja</file>
         <file>licenses/GPL-2.0-only/kdesu_client</file>
         <file>licenses/GPL-2.0-only/kio_kfileplacesmodeltest</file>
         <file>licenses/GPL-2.0-only/kio_kpasswdserver</file>
@@ -49,6 +50,8 @@
         <file>licenses/GPL-2.0-or-later/symmy_compositejob</file>
         <file>licenses/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/kdeclarative_formats</file>
         <file>licenses/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/kio_kpasswdservertest</file>
+        <file>licenses/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/konversation_queuetuner</file>
+        <file>licenses/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/konversation_viewspringloader</file>
         <file>licenses/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/kservice_autotest_nsaplugin</file>
         <file>licenses/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/messagelib_stringutil</file>
         <file>licenses/GPL-3.0-or-later/kpeopleactionsplugin</file>

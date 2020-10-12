@@ -8,6 +8,7 @@
         <file>testdata/BSD-3-Clause/SymbolTable.h</file>
         <file>testdata/BSD-3-Clause/ecm_CMakeLists.txt</file>
         <file>testdata/BSD-3-Clause/FindPackageKitQt2.cmake</file>
+        <file>testdata/BSD-3-Clause/guess_ja.h</file>
         <file>testdata/GPL-2.0-only/client.cpp</file>
         <file>testdata/GPL-2.0-only/kfileplacesmodeltest.cpp</file>
         <file>testdata/GPL-2.0-only/kpasswdserver.cpp</file>
@@ -36,6 +37,8 @@
         <file>testdata/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/formats.cpp</file>
         <file>testdata/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/kpasswdservertest.cpp</file>
         <file>testdata/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/nsaplugin.cpp</file>
+        <file>testdata/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/queuetuner.h</file>
+        <file>testdata/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/viewspringloader.cpp</file>
         <file>testdata/GPL-3.0-or-later/kpeopleactionsplugin.h</file>
         <file>testdata/GPL-3.0-or-later/main.qml</file>
         <file>testdata/GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/breeze.script.cmake</file>
