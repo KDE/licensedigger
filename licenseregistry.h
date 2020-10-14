@@ -40,7 +40,7 @@ public:
 
     QVector<QString> headerTexts(const SpdxExpression &identifier) const;
 
-    QRegularExpression headerTextRegExp(const SpdxExpression &identifier) const;
+    QVector<QRegularExpression> headerTextRegExps(const SpdxExpression &identifier) const;
 
     /**
      * @param expression is the expression to check against license strings (this does not support syntax parameters like "OR"
@@ -52,7 +52,7 @@ private:
     void loadLicenseHeaders();
     void loadLicenseFiles();
     QMap<SpdxExpression, QVector<QString>> m_registry;
-    mutable QMap<SpdxExpression, QRegularExpression> m_regexpCache;
+    mutable QMap<SpdxExpression, QVector<QRegularExpression>> m_regexpsCache;
     mutable QMap<SpdxIdentifier, QString> m_licenseFiles;
 };
 

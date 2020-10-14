@@ -14,7 +14,7 @@
 
 void TestLicenseConvert::greedyLicenseTextConversion()
 {
-    // use non-correctly converted licese as test data
+    // use non-correctly converted license as test data
     QFile file(":/licenses/LGPL-2.0-or-later/kservice");
     file.open(QIODevice::ReadOnly);
     const QString expression{ "LGPL-2.0-or-later" };
@@ -22,13 +22,20 @@ void TestLicenseConvert::greedyLicenseTextConversion()
 
     LicenseRegistry registry;
     DirectoryParser parser;
-    QVERIFY(fileContent.contains(registry.headerTextRegExp(expression)));
+    bool result = false;
+    for (auto regexp: registry.headerTextRegExps(expression)) {
+        result = fileContent.contains(regexp);
+        if (result) {
+            break;
+        }
+    }
+    QVERIFY(result);
     QCOMPARE(parser.replaceHeaderText(fileContent, expression), "SPDX-License-Identifier: LGPL-2.0-or-later\n");
 }
 
 void TestLicenseConvert::basicConvertOrExpressions()
 {
-    // use non-correctly converted licese as test data
+    // use non-correctly converted license as test data
     QFile file(":/licenses/LGPL-2.1-only_OR_LGPL-3.0-only/kio_httpserver_p");
     file.open(QIODevice::ReadOnly);
     const QString expression{ "LGPL-2.1-only_OR_LGPL-3.0-only" };
@@ -36,7 +43,15 @@ void TestLicenseConvert::basicConvertOrExpressions()
 
     LicenseRegistry registry;
     DirectoryParser parser;
-    QVERIFY(fileContent.contains(registry.headerTextRegExp(expression)));
+
+    bool result = false;
+    for (auto regexp: registry.headerTextRegExps(expression)) {
+        result = fileContent.contains(regexp);
+        if (result) {
+            break;
+        }
+    }
+    QVERIFY(result);
     QCOMPARE(parser.replaceHeaderText(fileContent, expression), "SPDX-License-Identifier: LGPL-2.1-only OR LGPL-3.0-only\n");
 }
 

@@ -100,14 +100,14 @@ QVector<QString> LicenseRegistry::headerTexts(const LicenseRegistry::SpdxExpress
     return m_registry.value(identifier);
 }
 
-QRegularExpression LicenseRegistry::headerTextRegExp(const SpdxExpression &identifier) const
+QVector<QRegularExpression> LicenseRegistry::headerTextRegExps(const SpdxExpression &identifier) const
 {
     if (!m_registry.contains(identifier)) {
         qCritical() << "Identifier not found, returning error matcher";
-        return QRegularExpression("DOES_NOT_MATCH_ANY_LICENSE_HEADER");
+        return QVector<QRegularExpression>{QRegularExpression("DOES_NOT_MATCH_ANY_LICENSE_HEADER")};
     }
-    if (m_regexpCache.contains(identifier)) {
-        return m_regexpCache.value(identifier);
+    if (m_regexpsCache.contains(identifier)) {
+        return m_regexpsCache.value(identifier);
     }
 
     QVector<QString> patterns;
@@ -126,14 +126,24 @@ QRegularExpression LicenseRegistry::headerTextRegExp(const SpdxExpression &ident
 
     QVector<QString>::const_iterator iter = patterns.constBegin();
     QString fullPattern = QString("(%1)").arg(*iter);
-    while (++iter != patterns.constEnd()) {
-        fullPattern.append(QString("|(%1)").arg(*iter));
-    }
-//    qDebug() << "PATTERN" << fullPattern;
-    QRegularExpression detector(fullPattern);
-    m_regexpCache[identifier] = detector;
+    QVector<QRegularExpression> regexps;
+    QRegularExpression testExpr;
 
-    return detector;
+    while (++iter != patterns.constEnd()) {
+        QString patternItem = QString("|(%1)").arg(*iter);
+        testExpr.setPattern(fullPattern + patternItem);
+
+        if (!testExpr.isValid()) {
+            regexps += QRegularExpression(fullPattern);
+            fullPattern = QString("(%1)").arg(*iter);
+        } else {
+            fullPattern.append(patternItem);
+        }
+    }
+
+    regexps += QRegularExpression(fullPattern);
+    m_regexpsCache[identifier] = regexps;
+    return regexps;
 }
 
 bool LicenseRegistry::isFakeLicenseMarker(const QString &expression) const

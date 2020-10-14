@@ -31,7 +31,14 @@ void TestHeaderDetection::detectForIdentifier(const QString &spdxMarker)
         file.open(QIODevice::ReadOnly);
         const QString fileContents { file.readAll() };
         QVERIFY(!fileContents.isEmpty());
-        bool result = fileContents.contains(registry.headerTextRegExp(spdxMarker));
+        bool result = false;
+        for (auto regexp: registry.headerTextRegExps(spdxMarker)) {
+            result = fileContents.contains(regexp);
+            if (result) {
+                break;
+            }
+        }
+
         if (!result) {
             qWarning() << "Could not detect" << spdxMarker << ":" << testdataIter.filePath();
         }

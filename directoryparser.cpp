@@ -78,12 +78,14 @@ QString DirectoryParser::unifyCopyrightStatements(const QString &originalText) c
 
 QString DirectoryParser::replaceHeaderText(const QString &fileContent, const QString &spdxExpression) const
 {
-    auto regexp = m_registry.headerTextRegExp(spdxExpression);
+    auto regexps = m_registry.headerTextRegExps(spdxExpression);
     QString outputExpression = spdxExpression;
     outputExpression.replace('_', ' ');
     QString spdxOutputString = "SPDX-License-Identifier: " + outputExpression;
     QString newContent = fileContent;
-    newContent.replace(regexp, spdxOutputString);
+    for (auto regexp: regexps) {
+        newContent.replace(regexp, spdxOutputString);
+    }
     return newContent;
 }
 
@@ -149,9 +151,11 @@ QVector<LicenseRegistry::SpdxExpression> DirectoryParser::detectLicenses(const Q
     QVector<LicenseRegistry::SpdxExpression> testExpressions = m_registry.expressions();
     QVector<LicenseRegistry::SpdxExpression> detectedLicenses;
     for (auto expression : testExpressions) {
-        auto regexp = m_registry.headerTextRegExp(expression);
-        if (fileContent.contains(regexp)) {
-            detectedLicenses << expression;
+        auto regexps = m_registry.headerTextRegExps(expression);
+        for (auto regexp: regexps) {
+            if (fileContent.contains(regexp)) {
+                detectedLicenses << expression;
+            }
         }
     }
     LicenseRegistry::SpdxExpression spdxStatement = detectLicenseStatement(fileContent);
