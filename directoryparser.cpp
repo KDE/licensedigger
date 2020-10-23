@@ -16,7 +16,7 @@ bool shallIgnoreFile(const QDirIterator& iterator, const QRegularExpression& fil
 {
     QFileInfo fileInfo(iterator.fileInfo());
     return !fileInfo.isFile() or
-        fileToIgnorePattern.match(fileInfo.filePath()).hasMatch();
+        (!fileToIgnorePattern.pattern().isEmpty() && fileToIgnorePattern.match(fileInfo.filePath()).hasMatch());
 }
 
 QRegularExpression DirectoryParser::spdxRegExp() const
