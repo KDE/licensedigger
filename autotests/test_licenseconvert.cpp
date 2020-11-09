@@ -12,10 +12,12 @@
 #include <QDebug>
 #include <QDir>
 
+static const QString licensesRootPath(":/licenses_templates/%1");
+
 void TestLicenseConvert::greedyLicenseTextConversion()
 {
     // use non-correctly converted license as test data
-    QFile file(":/licenses/LGPL-2.0-or-later/kservice");
+    QFile file(licensesRootPath.arg("LGPL-2.0-or-later/kservice"));
     file.open(QIODevice::ReadOnly);
     const QString expression{ "LGPL-2.0-or-later" };
     const QString fileContent = file.readAll();
@@ -36,7 +38,7 @@ void TestLicenseConvert::greedyLicenseTextConversion()
 void TestLicenseConvert::basicConvertOrExpressions()
 {
     // use non-correctly converted license as test data
-    QFile file(":/licenses/LGPL-2.1-only_OR_LGPL-3.0-only/kio_httpserver_p");
+    QFile file(licensesRootPath.arg("LGPL-2.1-only_OR_LGPL-3.0-only/kio_httpserver_p"));
     file.open(QIODevice::ReadOnly);
     const QString expression{ "LGPL-2.1-only_OR_LGPL-3.0-only" };
     const QString fileContent = file.readAll();

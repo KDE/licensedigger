@@ -42,7 +42,7 @@ void LicenseRegistry::loadLicenseHeaders()
     }
     m_registry[LicenseRegistry::UnknownLicense] = QVector<QString>{ "THIS IS A STUB HEADER FOR UNKNOWN LICENSES, IT SHALL NEVER MATCH" };
 
-    QDirIterator spdxIter(":/licenses/");
+    QDirIterator spdxIter(":/licenses_templates/");
     while (spdxIter.hasNext()) {
         QString filePath = spdxIter.next();
         if (!spdxIter.fileInfo().isDir()) {
