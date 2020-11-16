@@ -23,7 +23,7 @@ For more options, see `licensedigger -h`.
 Due to its design, license digger is not guessing any licence but detects it only if it matches exactly (except white-spaces and asterisks) with a license statement from the internal license database.
 You can easily add a new license to the database by the following steps:
 
-1. Create a folder (in case it does not exist yet) in folder `licenses/` that is named exactly as the target SPDX expression for the license header that you want to add. All white-spaces have to be replaced by underbars.
+1. Create a folder (in case it does not exist yet) in folder `licenses_templates/` that is named exactly as the target SPDX expression for the license header that you want to add. All white-spaces have to be replaced by underbars.
 2. In that folder create a text file that contains the license header that you want to add. It must not contain any comments or indentations.
 3. Edit `licenses.qrc` and add the newly created file.
 4. If you added a completely new license, add the canonical license text to `licensetexts/` and also add this file in `licenses.qrc`.
