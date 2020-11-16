@@ -26,6 +26,8 @@
         <file>licenses_templates/GPL-2.0-or-later/akonadi-search_akonadisearchdebugdialog</file>
         <file>licenses_templates/GPL-2.0-or-later/akonadiconsole_agentconfigdialog</file>
         <file>licenses_templates/GPL-2.0-or-later/baloo_kio_search</file>
+        <file>licenses_templates/GPL-2.0-or-later/dragon_blockAnalyzer</file>
+        <file>licenses_templates/GPL-2.0-or-later/dragon_fht</file>
         <file>licenses_templates/GPL-2.0-or-later/kactivities_activityinfo</file>
         <file>licenses_templates/GPL-2.0-or-later/kcodecs_kcharsetstest</file>
         <file>licenses_templates/GPL-2.0-or-later/kconfigwidgets_kimageframe</file>
