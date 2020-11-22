@@ -38,6 +38,7 @@
         <file>licenses_templates/GPL-2.0-or-later/kio_localdomainfilter</file>
         <file>licenses_templates/GPL-2.0-or-later/kio_usdentrybenchmark</file>
         <file>licenses_templates/GPL-2.0-or-later/kioexec_main</file>
+        <file>licenses_templates/GPL-2.0-or-later/kmplayer_gstplayer</file>
         <file>licenses_templates/GPL-2.0-or-later/kwin_blur</file>
         <file>licenses_templates/GPL-2.0-or-later/messagelib_attachmentcontrollerbase</file>
         <file>licenses_templates/GPL-2.0-or-later/messagelib_attachmentjob</file>
@@ -91,6 +92,7 @@
         <file>licenses_templates/LGPL-2.0-only/kio_kfilebookmarkhandler</file>
         <file>licenses_templates/LGPL-2.0-only/kio_kurlrequester</file>
         <file>licenses_templates/LGPL-2.0-only/kioslavetest</file>
+        <file>licenses_templates/LGPL-2.0-only/kmplayerconfig</file>
         <file>licenses_templates/LGPL-2.0-only/kservice</file>
         <file>licenses_templates/LGPL-2.0-only/kcontacts_ldifconverter</file>
         <file>licenses_templates/LGPL-2.0-only/kservice_kbuildservicegroupfactory</file>
@@ -133,6 +135,7 @@
         <file>licenses_templates/LGPL-2.0-or-later/kitemmodels_kmodelindexproymapper</file>
         <file>licenses_templates/LGPL-2.0-or-later/kjs_ecmatest</file>
         <file>licenses_templates/LGPL-2.0-or-later/kjs_jslock</file>
+        <file>licenses_templates/LGPL-2.0-or-later/kmplayerprocess</file>
         <file>licenses_templates/LGPL-2.0-or-later/kservice</file>
         <file>licenses_templates/LGPL-2.0-or-later/kservice_plugintest</file>
         <file>licenses_templates/LGPL-2.0-or-later/kwidgetsaddons_kcourser_p</file>

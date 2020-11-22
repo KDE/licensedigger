@@ -26,6 +26,7 @@
         <file>testdata/GPL-2.0-or-later/alternativesmodeltest.cpp</file>
         <file>testdata/GPL-2.0-or-later/blockAnalyzer.cpp</file>
         <file>testdata/GPL-2.0-or-later/fht.cpp</file>
+        <file>testdata/GPL-2.0-or-later/gstplayer.cpp</file>
         <file>testdata/GPL-2.0-or-later/kcharsetstest.cpp</file>
         <file>testdata/GPL-2.0-or-later/kcookiewin.h</file>
         <file>testdata/GPL-2.0-or-later/kemoticontest.cpp</file>
@@ -79,6 +80,7 @@
         <file>testdata/LGPL-2.0-only/kfindtest.cpp</file>
         <file>testdata/LGPL-2.0-only/kfontrequestertest.cpp</file>
         <file>testdata/LGPL-2.0-only/kioslavetest.cpp</file>
+        <file>testdata/LGPL-2.0-only/kmplayerconfig.cpp</file>
         <file>testdata/LGPL-2.0-only/kmessagebox.cpp</file>
         <file>testdata/LGPL-2.0-only/kmimetypetrader.cpp</file>
         <file>testdata/LGPL-2.0-only/kquitapp.cpp</file>
@@ -114,6 +116,7 @@
         <file>testdata/LGPL-2.0-or-later/kio_help.cpp</file>
         <file>testdata/LGPL-2.0-or-later/klineedit.cpp</file>
         <file>testdata/LGPL-2.0-or-later/kmodelindexproxymapper.cpp</file>
+        <file>testdata/LGPL-2.0-or-later/kmplayerprocess.cpp</file>
         <file>testdata/LGPL-2.0-or-later/kpagemodel.cpp</file>
         <file>testdata/LGPL-2.0-or-later/kpassworddialog.h</file>
         <file>testdata/LGPL-2.0-or-later/kseparator.cpp</file>
