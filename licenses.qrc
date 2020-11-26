@@ -81,6 +81,10 @@
         <file>licenses_templates/GPL-3.0-or-later/comics_export_dialog</file>
         <file>licenses_templates/GPL-3.0-or-later/tablettest</file>
         <file>licenses_templates/GPL-3.0-or-later/kshortcutschemeseditor</file>
+        <file>licenses_templates/GPL-3.0-or-later/gcompris_synth</file>
+        <file>licenses_templates/GPL-3.0-or-later/gcompris_http</file>
+        <file>licenses_templates/GPL-3.0-or-later/gcompris_https</file>
+
         <file>licenses_templates/ICS/palettegeneratorconfig</file>
         <file>licenses_templates/LGPL-2.0-only/kcodecs_kcodecs</file>
         <file>licenses_templates/LGPL-2.0-only/kdbusaddons_kquitapp</file>
