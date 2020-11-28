@@ -67,6 +67,9 @@
         <file>testdata/GPL-3.0-or-later/comics_export_dialog.py</file>
         <file>testdata/GPL-3.0-or-later/tablettest.cpp</file>
         <file>testdata/GPL-3.0-or-later/kshortcutschemeseditor.h</file>
+        <file>testdata/GPL-3.0-or-later/GCompris_http.qml</file>
+        <file>testdata/GPL-3.0-or-later/GCompris_https.qml</file>
+        <file>testdata/GPL-3.0-or-later/GCompris_synth.cpp</file>
         <file>testdata/GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/breeze.script.cmake</file>
         <file>testdata/ICS/palettegeneratorconfig.h</file>
         <file>testdata/LGPL-2.0-only/cache.cpp</file>
