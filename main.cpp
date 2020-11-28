@@ -102,7 +102,7 @@ int main(int argc, char *argv[])
 
     if (convertCopyright) {
         std::cout << hightlightOut << "Convert copyright statements: starting..." << defaultOut << std::endl;
-        licenseParser.convertCopyright(directory);
+        licenseParser.convertCopyright(directory, ignorePattern);
         std::cout << hightlightOut << "Convert copyright statements: DONE." << defaultOut << std::endl;
     }
 }
