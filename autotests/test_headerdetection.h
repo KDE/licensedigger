@@ -1,3 +1,9 @@
+/*
+ *  SPDX-FileCopyrightText: 2019  Andreas Cord-Landwehr <cordlandwehr@kde.org>
+ *
+ *  SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+ */
+
 #ifndef TEST_HEADERDETECTION_H
 #define TEST_HEADERDETECTION_H
 
