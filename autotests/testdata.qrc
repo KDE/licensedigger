@@ -173,6 +173,7 @@
         <file>testdata/LGPL-2.1-or-later/kis_wdg_options_heightmap.h</file>
         <file>testdata/LGPL-2.1-or-later/RgbCompositeOps.h</file>
         <file>testdata/LGPL-2.1-or-later/KoTriangleColorSelector.h</file>
+        <file>testdata/LGPL-2.1-or-later/approver_channelapprover.cpp</file>
         <file>testdata/LGPL-2.1-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/ChartsPlugin.cpp</file>
         <file>testdata/LGPL-2.1-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/batchrenamejob.cpp</file>
         <file>testdata/LGPL-2.1-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/desktopexecparser.h</file>

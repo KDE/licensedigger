@@ -192,6 +192,7 @@
         <file>licenses_templates/LGPL-2.1-or-later/kis_wdg_options_heightmap</file>
         <file>licenses_templates/LGPL-2.1-or-later/RgbCompositeOps</file>
         <file>licenses_templates/LGPL-2.1-or-later/KoTriangleColorSelector</file>
+        <file>licenses_templates/LGPL-2.1-or-later/plasmadialer_channelapprover</file>
         <file>licenses_templates/LGPL-2.1-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/attica_projectparser</file>
         <file>licenses_templates/LGPL-2.1-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/attica_qtplatformdependent_typo</file>
         <file>licenses_templates/LGPL-2.1-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/kactivities_utils</file>
