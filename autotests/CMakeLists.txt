@@ -1,3 +1,15 @@
+### Test Skip Parser
+set(skipparsertest_SRCS
+    test_skipparser.cpp
+    ../skipparser.cpp
+    ../licenseregistry.cpp
+)
+qt5_add_resources(skipparsertest_SRCS
+    ../licenses.qrc
+)
+ecm_add_test(${skipparsertest_SRCS}
+             TEST_NAME test_skipparser
+             LINK_LIBRARIES Qt5::Test)
 
 ### Test Detection of License Headers
 set(headerdetection_SRCS
