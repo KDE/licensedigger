@@ -10,7 +10,7 @@
 #include <optional>
 #include <functional>
 
-std::optional<std::pair<int, int>> SkipParser::findMatch(QString text, QString pattern) const
+std::optional<std::pair<int, int>> SkipParser::findMatchNaive(QString text, QString pattern) const
 {
     static std::set<QChar> patternSkipChars = {' ', '\n', '\t', '/', '-', '*', '#'};
     static std::set<QChar> textSkipChars = patternSkipChars;
@@ -44,10 +44,6 @@ std::optional<std::pair<int, int>> SkipParser::findMatch(QString text, QString p
             }
         }
         if (matchFound) {
-//            qDebug() << "text   :" << text;
-//            qDebug() << "pattern:" << pattern;
-//            qDebug() << "start:  " << start;
-//            qDebug() << "skip:   " << textSkipOffset << " / " << patternSkipOffset;
             return std::optional<std::pair<int,int>>{ {start, start + textSkipOffset + pattern.length() - patternSkipOffset - 1} };
         } else {
             ++start;
@@ -57,11 +53,82 @@ std::optional<std::pair<int, int>> SkipParser::findMatch(QString text, QString p
     return {};
 }
 
+std::optional<std::pair<int, int>> SkipParser::findMatchKMP(QString origText, QString origPattern) const
+{
+    static std::set<QChar> skipChars = {' ', '\n', '\t', '/', '-', '*', '#'};
+    const int origTextLength = origText.size();
+
+    // prune text and compute skip prefix
+    // skip prefix notes number of skipped chars for each position in "text"
+    QString text = QString();
+    std::vector<int> textSkipPrefix(origTextLength);
+    int skipped = 0;
+    for (int i = 0; i < origTextLength; ++i) {
+        if (skipChars.find(origText.at(i)) != skipChars.end()) {
+            textSkipPrefix.at(i - skipped) = skipped;
+            ++skipped;
+        } else {
+            text += origText.at(i);
+            textSkipPrefix.at(i - skipped) = skipped;
+        }
+    }
+
+    // prune all skip chars from pattern
+    QString pattern = origPattern;
+    for (auto skipChar : skipChars) {
+        pattern.remove(skipChar);
+    }
+
+    //BEGIN compute KMP prefix function
+    const int patternLength = pattern.size();
+    std::vector<int> prefix(patternLength, -1); // -1 used as not initialized
+    prefix[0] = 0;
+    int k = 0;
+    for (int q = 2; q <= patternLength; ++q) {
+        while (k > 0 && pattern.at(k) != pattern.at(q - 1)) {
+            Q_ASSERT(prefix.at(k) != -1);
+            k = prefix.at(k-1);
+        }
+        if (pattern.at(k) == pattern.at(q - 1)) {
+            k = k + 1;
+        }
+        prefix[q-1] = k;
+    }
+    //END
+
+    // KMP Matcher
+    const int textLength = text.size();
+    int q = 0;
+    for (int i = 1; i <= textLength; ++i) {
+        while(q > 0 && pattern.at(q) != text.at(i - 1)) {
+            q = prefix.at(q - 1);
+        }
+        if (pattern.at(q) == text.at(i - 1)) {
+            q = q + 1;
+        }
+        if (q == patternLength) {
+            return std::optional<std::pair<int,int>>{ {i - q + textSkipPrefix.at(i-q), i - 1 + textSkipPrefix.at(i - 1)} };
+        }
+    }
+
+    return {};
+}
+
+std::optional<std::pair<int, int>> SkipParser::findMatch(QString text, QString pattern) const
+{
+    auto match = findMatchKMP(text, pattern);
+    qDebug() << "text   :" << text;
+    qDebug() << "pattern:" << pattern;
+    //            qDebug() << "start:  " << start;
+    //            qDebug() << "skip:   " << textSkipOffset << " / " << patternSkipOffset;
+    return match;
+}
+
 // TODO: naive and inefficient implementation, but setting a baseline
 std::optional<std::pair<int, int>> SkipParser::findMatch(QString text, QVector<QString> patterns) const
 {
     for (const auto &pattern : patterns) {
-        if (auto match = findMatch(text, pattern)) {
+        if (auto match = findMatchKMP(text, pattern)) {
             return match;
         }
     }
