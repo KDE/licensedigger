@@ -12,8 +12,8 @@
 
 std::optional<std::pair<int, int>> SkipParser::findMatch(QString text, QString pattern) const
 {
-    static std::set<QChar> patternSkipChars = {' ', '\n'};
-    static std::set<QChar> textSkipChars = {' ', '*', '\n', '/', '#'};
+    static std::set<QChar> patternSkipChars = {' ', '\n', '\t', '/', '-', '*', '#'};
+    static std::set<QChar> textSkipChars = patternSkipChars;
 
     if (pattern.length() > text.length()) {
         return {};
@@ -44,10 +44,10 @@ std::optional<std::pair<int, int>> SkipParser::findMatch(QString text, QString p
             }
         }
         if (matchFound) {
-            qDebug() << "text   :" << text;
-            qDebug() << "pattern:" << pattern;
-            qDebug() << "start:  " << start;
-            qDebug() << "skip:   " << textSkipOffset << " / " << patternSkipOffset;
+//            qDebug() << "text   :" << text;
+//            qDebug() << "pattern:" << pattern;
+//            qDebug() << "start:  " << start;
+//            qDebug() << "skip:   " << textSkipOffset << " / " << patternSkipOffset;
             return std::optional<std::pair<int,int>>{ {start, start + textSkipOffset + pattern.length() - patternSkipOffset - 1} };
         } else {
             ++start;
@@ -58,7 +58,7 @@ std::optional<std::pair<int, int>> SkipParser::findMatch(QString text, QString p
 }
 
 // TODO: naive and inefficient implementation, but setting a baseline
-std::optional<std::pair<int, int>> SkipParser::findMatch(QString text, std::vector<QString> patterns) const
+std::optional<std::pair<int, int>> SkipParser::findMatch(QString text, QVector<QString> patterns) const
 {
     for (const auto &pattern : patterns) {
         if (auto match = findMatch(text, pattern)) {

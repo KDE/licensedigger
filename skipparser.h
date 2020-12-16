@@ -24,7 +24,7 @@ public:
      * @param pattern
      * @return position, if found
      */
-    std::optional<std::pair<int, int>> findMatch(QString text, std::vector<QString> pattern) const;
+    std::optional<std::pair<int, int>> findMatch(QString text, QVector<QString> pattern) const;
 };
 
 #endif

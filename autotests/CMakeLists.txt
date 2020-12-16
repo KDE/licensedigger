@@ -1,8 +1,8 @@
 ### Test Skip Parser
 set(skipparsertest_SRCS
     test_skipparser.cpp
-    ../skipparser.cpp
     ../licenseregistry.cpp
+    ../skipparser.cpp
 )
 qt5_add_resources(skipparsertest_SRCS
     ../licenses.qrc
@@ -16,6 +16,7 @@ set(headerdetection_SRCS
     test_headerdetection.cpp
     ../licenseregistry.cpp
     ../directoryparser.cpp
+    ../skipparser.cpp
 )
 qt5_add_resources(headerdetection_SRCS
     testdata.qrc
@@ -30,6 +31,7 @@ ecm_add_test(${headerdetection_SRCS}
 set(licensefilesavailable_SRCS
     test_licensefilesavailable.cpp
     ../licenseregistry.cpp
+    ../skipparser.cpp
 )
 qt5_add_resources(licensefilesavailable_SRCS
     ../licenses.qrc
@@ -44,6 +46,7 @@ set(copyrightconvert_SRCS
     test_copyrightconvert.cpp
     ../licenseregistry.cpp
     ../directoryparser.cpp
+    ../skipparser.cpp
 )
 qt5_add_resources(copyrightconvert_SRCS
     ../licenses.qrc
@@ -58,6 +61,7 @@ set(licenseconvert_SRCS
     test_licenseconvert.cpp
     ../licenseregistry.cpp
     ../directoryparser.cpp
+    ../skipparser.cpp
 )
 qt5_add_resources(licenseconvert_SRCS
     ../licenses.qrc

@@ -66,7 +66,7 @@ void TestLicenseConvert::doNotModifyFileWithoutDetectedLicense()
     LicenseRegistry registry;
     DirectoryParser parser;
 
-    QCOMPARE(parser.detectLicenseStatement(fileContentOrig), QString());
+    QCOMPARE(parser.detectSpdxLicenseStatement(fileContentOrig), QString());
     QCOMPARE(parser.replaceHeaderText(fileContentOrig, QString()), fileContentOrig);
 }
 

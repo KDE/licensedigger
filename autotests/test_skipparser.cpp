@@ -83,7 +83,7 @@ void TestSkipParser::basicPatternSetMatcher()
 {
     SkipParser parser;
     { // skipping whites in pattern
-        std::vector<QString> patterns = {{"aa a"} , {"aaa"}};
+        QVector<QString> patterns = {{"aa a"} , {"aaa"}};
         QString text{"abcaaabc"};
         auto match = parser.findMatch(text, patterns);
         QVERIFY(match);
