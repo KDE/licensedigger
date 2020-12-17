@@ -10,6 +10,8 @@
 #include <optional>
 #include <functional>
 
+QVector<QChar> SkipParser::sSkipChars = {' ', '\n', '\t', '/', '-', '*', '#'};
+
 std::optional<std::pair<int, int>> SkipParser::findMatchNaive(QString text, QString pattern) const
 {
     static std::set<QChar> patternSkipChars = {' ', '\n', '\t', '/', '-', '*', '#'};
@@ -55,7 +57,6 @@ std::optional<std::pair<int, int>> SkipParser::findMatchNaive(QString text, QStr
 
 std::optional<std::pair<int, int>> SkipParser::findMatchKMP(QString origText, QString origPattern) const
 {
-    static std::set<QChar> skipChars = {' ', '\n', '\t', '/', '-', '*', '#'};
     const int origTextLength = origText.size();
 
     // prune text and compute skip prefix
@@ -64,7 +65,7 @@ std::optional<std::pair<int, int>> SkipParser::findMatchKMP(QString origText, QS
     std::vector<int> textSkipPrefix(origTextLength);
     int skipped = 0;
     for (int i = 0; i < origTextLength; ++i) {
-        if (skipChars.find(origText.at(i)) != skipChars.end()) {
+        if (sSkipChars.contains(origText.at(i))) {
             textSkipPrefix.at(i - skipped) = skipped;
             ++skipped;
         } else {
@@ -75,7 +76,7 @@ std::optional<std::pair<int, int>> SkipParser::findMatchKMP(QString origText, QS
 
     // prune all skip chars from pattern
     QString pattern = origPattern;
-    for (auto skipChar : skipChars) {
+    for (auto skipChar : sSkipChars) {
         pattern.remove(skipChar);
     }
 
@@ -124,10 +125,21 @@ std::optional<std::pair<int, int>> SkipParser::findMatch(QString text, QString p
     return match;
 }
 
-// TODO: naive and inefficient implementation, but setting a baseline
 std::optional<std::pair<int, int>> SkipParser::findMatch(QString text, QVector<QString> patterns) const
 {
+    // KMP can work with pruned patterns
+    QSet<QString> prunedPatterns;
+    // prune all skip chars from pattern
     for (const auto &pattern : patterns) {
+        QString tmpPattern = pattern;
+        for (auto skipChar : sSkipChars) {
+            tmpPattern.remove(skipChar);
+        }
+        prunedPatterns.insert(tmpPattern);
+    }
+//    qDebug() << "Pruned canonical texts:" << (patterns.count() - prunedPatterns.count());
+
+    for (const auto &pattern : prunedPatterns) {
         if (auto match = findMatchKMP(text, pattern)) {
             return match;
         }
