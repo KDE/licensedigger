@@ -30,6 +30,7 @@
         <file>testdata/GPL-2.0-or-later/kcharsetstest.cpp</file>
         <file>testdata/GPL-2.0-or-later/kcookiewin.h</file>
         <file>testdata/GPL-2.0-or-later/kemoticontest.cpp</file>
+        <file>testdata/GPL-2.0-or-later/kgamepopupitem.h</file>
         <file>testdata/GPL-2.0-or-later/kimageframe.cpp</file>
         <file>testdata/GPL-2.0-or-later/kio_search.cpp</file>
         <file>testdata/GPL-2.0-or-later/kioexec_main.cpp</file>
@@ -82,6 +83,7 @@
         <file>testdata/LGPL-2.0-only/kfilebookmarkhandler.cpp</file>
         <file>testdata/LGPL-2.0-only/kfindtest.cpp</file>
         <file>testdata/LGPL-2.0-only/kfontrequestertest.cpp</file>
+        <file>testdata/LGPL-2.0-only/kgtheme.h</file>
         <file>testdata/LGPL-2.0-only/kioslavetest.cpp</file>
         <file>testdata/LGPL-2.0-only/kmplayerconfig.cpp</file>
         <file>testdata/LGPL-2.0-only/kmessagebox.cpp</file>
@@ -116,6 +118,7 @@
         <file>testdata/LGPL-2.0-or-later/kcharselect-translation.cpp</file>
         <file>testdata/LGPL-2.0-or-later/kcompletionbase.cpp</file>
         <file>testdata/LGPL-2.0-or-later/kcursor_p.h</file>
+        <file>testdata/LGPL-2.0-or-later/kgamedifficulty.h</file>
         <file>testdata/LGPL-2.0-or-later/kio_help.cpp</file>
         <file>testdata/LGPL-2.0-or-later/klineedit.cpp</file>
         <file>testdata/LGPL-2.0-or-later/kmodelindexproxymapper.cpp</file>

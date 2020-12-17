@@ -33,6 +33,7 @@
         <file>licenses_templates/GPL-2.0-or-later/kconfigwidgets_kimageframe</file>
         <file>licenses_templates/GPL-2.0-or-later/kde-licensing-wiki</file>
         <file>licenses_templates/GPL-2.0-or-later/kemoticontest</file>
+        <file>licenses_templates/GPL-2.0-or-later/kgamepopupitem</file>
         <file>licenses_templates/GPL-2.0-or-later/kio_kcookiewin</file>
         <file>licenses_templates/GPL-2.0-or-later/kio_kurlcomboboxtest</file>
         <file>licenses_templates/GPL-2.0-or-later/kio_localdomainfilter</file>
@@ -89,6 +90,7 @@
         <file>licenses_templates/ICS/palettegeneratorconfig</file>
         <file>licenses_templates/LGPL-2.0-only/kcodecs_kcodecs</file>
         <file>licenses_templates/LGPL-2.0-only/kdbusaddons_kquitapp</file>
+        <file>licenses_templates/LGPL-2.0-only/kgtheme</file>
         <file>licenses_templates/LGPL-2.0-only/kguiaddons_kcolorcorrection</file>
         <file>licenses_templates/LGPL-2.0-only/kguiaddons_kcolorcorrection_h</file>
         <file>licenses_templates/LGPL-2.0-only/kio_cache</file>
@@ -126,6 +128,7 @@
         <file>licenses_templates/LGPL-2.0-or-later/kcompletion_klineedit</file>
         <file>licenses_templates/LGPL-2.0-or-later/kconfig_test_kconf_update</file>
         <file>licenses_templates/LGPL-2.0-or-later/kdeclarative_qtquicksettings</file>
+        <file>licenses_templates/LGPL-2.0-or-later/kgamedifficulty</file>
         <file>licenses_templates/LGPL-2.0-or-later/kholidays_holidayregionsmodel</file>
         <file>licenses_templates/LGPL-2.0-or-later/kio_help</file>
         <file>licenses_templates/LGPL-2.0-or-later/kio_joburlcache</file>
