@@ -108,6 +108,8 @@
         <file>licenses_templates/LGPL-2.0-only/kwidgetsaddons_kmessagebox</file>
         <file>licenses_templates/LGPL-2.0-only/kis_hsv_adjustment_filter</file>
         <file>licenses_templates/LGPL-2.0-only/PluginSettings</file>
+        <file>licenses_templates/LGPL-2.0-only/kwidgetsaddons_kpassworddialog</file>
+        <file>licenses_templates/LGPL-2.0-only/kwidgetsaddons_kstyleextensions</file>
         <file>licenses_templates/LGPL-2.0-only_OR_LGPL-3.0-only/kio_dndpopupmenuplugin</file>
         <file>licenses_templates/LGPL-2.0-only_OR_LGPL-3.0-only/kio_kcookiejartest</file>
         <file>licenses_templates/LGPL-2.0-only_OR_LGPL-3.0-only/kio_knewfilemenu</file>
@@ -144,9 +146,7 @@
         <file>licenses_templates/LGPL-2.0-or-later/kservice_plugintest</file>
         <file>licenses_templates/LGPL-2.0-or-later/kwidgetsaddons_kcourser_p</file>
         <file>licenses_templates/LGPL-2.0-or-later/kwidgetsaddons_kpagemodel</file>
-        <file>licenses_templates/LGPL-2.0-or-later/kwidgetsaddons_kpassworddialog</file>
         <file>licenses_templates/LGPL-2.0-or-later/kwidgetsaddons_kseparator</file>
-        <file>licenses_templates/LGPL-2.0-or-later/kwidgetsaddons_kstyleextensions</file>
         <file>licenses_templates/LGPL-2.0-or-later/plasma-framework_dialogshadows</file>
         <file>licenses_templates/LGPL-2.0-or-later/plasma-framework_framesvg</file>
         <file>licenses_templates/LGPL-2.0-or-later/kpublictransport</file>
