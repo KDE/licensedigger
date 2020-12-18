@@ -29,9 +29,6 @@ constexpr bool isSkipChar(const QChar &character) {
 
 std::optional<std::pair<int, int>> SkipParser::findMatchNaive(QString text, QString pattern) const
 {
-    static std::set<QChar> patternSkipChars = {' ', '\n', '\t', '/', '-', '*', '#'};
-    static std::set<QChar> textSkipChars = patternSkipChars;
-
     if (pattern.length() > text.length()) {
         return {};
     }
@@ -44,11 +41,11 @@ std::optional<std::pair<int, int>> SkipParser::findMatchNaive(QString text, QStr
         for (int i = 0; i < pattern.length(); ++i) {
             // skip pattern char if contained in skip-list
             // outcondition: valid char that can be matched
-            if (patternSkipChars.find(pattern.at(i)) != patternSkipChars.end()) {
+            if (isSkipChar(pattern.at(i))) {
                 ++patternSkipOffset;
                 continue;
             }
-            while (textSkipChars.find(text.at(start + textSkipOffset + i - patternSkipOffset)) != textSkipChars.end()) {
+            while (isSkipChar(text.at(start + textSkipOffset + i - patternSkipOffset))) {
                 if (start + textSkipOffset + i - patternSkipOffset + 1 >= text.length() - 1) {
                     matchFound = false; // we know this, because otherwise we would not be in this loop
                     break;
