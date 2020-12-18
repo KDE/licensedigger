@@ -13,10 +13,16 @@
 class DirectoryParser
 {
 public:
+    enum class LicenseParser {
+        SKIP_PARSER,
+        REGEXP_PARSER
+    };
+
+    void setLicenseHeaderParser(LicenseParser parser);
     QMap<QString, LicenseRegistry::SpdxExpression> parseAll(const QString &directory, bool convertMode = false, const QString& ignorePattern = QString()) const;
     void convertCopyright(const QString &directory, const QString& ignorePattern = QString()) const;
     QRegularExpression copyrightRegExp() const;
-    QRegularExpression spdxRegExp() const;
+    QRegularExpression spdxStatementRegExp() const;
     QString unifyCopyrightStatements(const QString &originalText) const;
     QString cleanupSpaceInCopyrightYearList(const QString &originalYearText) const;
     /**
@@ -33,7 +39,7 @@ public:
      * @return the list of detected license matches
      */
     QVector<LicenseRegistry::SpdxExpression> detectLicenses(const QString &fileContent) const;
-    LicenseRegistry::SpdxExpression detectLicenseStatement(const QString &fileContent) const;
+    LicenseRegistry::SpdxExpression detectSpdxLicenseStatement(const QString &fileContent) const;
 
     /**
      * @brief Take license liste and prune statements
@@ -49,7 +55,11 @@ public:
     QVector<LicenseRegistry::SpdxExpression> pruneLicenseList(const QVector<LicenseRegistry::SpdxExpression> &inputLicenses) const;
 
 private:
+    QVector<LicenseRegistry::SpdxExpression> detectLicensesRegexpParser(const QString &fileContent) const;
+    QVector<LicenseRegistry::SpdxExpression> detectLicensesSkipParser(const QString &fileContent) const;
+
     LicenseRegistry m_registry;
+    LicenseParser m_parserType{ LicenseParser::REGEXP_PARSER };
     static const QStringList s_supportedExtensions;
 };
 

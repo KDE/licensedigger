@@ -98,6 +98,8 @@
         <file>testdata/LGPL-2.0-only_OR_LGPL-3.0-only/kcookiejartest.cpp</file>
         <file>testdata/LGPL-2.0-only_OR_LGPL-3.0-only/version_checker.h</file>
         <file>testdata/LGPL-2.0-only_OR_LGPL-3.0-only/knewfilemenu.cpp</file>
+        <file>testdata/LGPL-2.0-only/kpassworddialog.h</file>
+        <file>testdata/LGPL-2.0-only/kstyleextensions.cpp</file>
         <file>testdata/LGPL-2.0-only_WITH_Qt-Commercial-exception-1.0/kstatusbarofflineindicator.cpp</file>
         <file>testdata/LGPL-2.0-or-later/ldif.cpp</file>
         <file>testdata/LGPL-2.0-or-later/AboutPage.qml</file>
@@ -124,9 +126,7 @@
         <file>testdata/LGPL-2.0-or-later/kmodelindexproxymapper.cpp</file>
         <file>testdata/LGPL-2.0-or-later/kmplayerprocess.cpp</file>
         <file>testdata/LGPL-2.0-or-later/kpagemodel.cpp</file>
-        <file>testdata/LGPL-2.0-or-later/kpassworddialog.h</file>
         <file>testdata/LGPL-2.0-or-later/kseparator.cpp</file>
-        <file>testdata/LGPL-2.0-or-later/kstyleextensions.cpp</file>
         <file>testdata/LGPL-2.0-or-later/kurlcompletion.cpp</file>
         <file>testdata/LGPL-2.0-or-later/kurlrequesterdialog.cpp</file>
         <file>testdata/LGPL-2.0-or-later/package.cpp</file>

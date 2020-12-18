@@ -45,6 +45,7 @@ private Q_SLOTS:
     void detectSpdxExpressions();
 
 private:
-    void detectForIdentifier(const QString &spdxMarker);
+    void detectForIdentifierRegExpParser(const QString &spdxMarker);
+    void detectForIdentifierSkipParser(const QString &spdxMarker);
 };
 #endif
