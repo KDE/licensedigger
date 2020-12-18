@@ -77,6 +77,32 @@ void TestSkipParser::basicStringMatcher()
         auto match = parser.findMatch(text, pattern);
         QVERIFY(!match);
     }
+
+    // test all skip characters
+    {
+        QString pattern{"aa-a"};
+        QString text{"abca--a"};
+        auto match = parser.findMatch(text, pattern);
+        QVERIFY(!match);
+    }
+    {
+        QString pattern{"aa#a"};
+        QString text{"abca##a"};
+        auto match = parser.findMatch(text, pattern);
+        QVERIFY(!match);
+    }
+    {
+        QString pattern{"aa\na"};
+        QString text{"abca\n\na"};
+        auto match = parser.findMatch(text, pattern);
+        QVERIFY(!match);
+    }
+    {
+        QString pattern{"aa\ta"};
+        QString text{"abca\t\ta"};
+        auto match = parser.findMatch(text, pattern);
+        QVERIFY(!match);
+    }
 }
 
 void TestSkipParser::basicPatternSetMatcher()

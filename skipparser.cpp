@@ -10,8 +10,9 @@
 #include <optional>
 #include <functional>
 
-QSet<QChar> SkipParser::sSkipChars = {' ', '\n', '\t', '/', '-', '*', '#'};
-
+// for performance reasons, we need to have to lists
+// but they must be kept in sync
+const QRegularExpression SkipParser::sSkipCharDetection("[ |\\\n|\\\t|/|\\-|\\*|#]");
 constexpr bool isSkipChar(const QChar &character) {
     switch(character.unicode()) {
     case ' ': return true;
@@ -90,9 +91,7 @@ std::optional<std::pair<int, int>> SkipParser::findMatchKMP(QString origText, QS
 
     // prune all skip chars from pattern
     QString pattern = origPattern;
-    for (auto skipChar : sSkipChars) {
-        pattern.remove(skipChar);
-    }
+    pattern.remove(sSkipCharDetection);
 
     //BEGIN compute KMP prefix function
     const int patternLength = pattern.size();
@@ -146,9 +145,7 @@ std::optional<std::pair<int, int>> SkipParser::findMatch(QString text, QVector<Q
     // prune all skip chars from pattern
     for (const auto &pattern : patterns) {
         QString tmpPattern = pattern;
-        for (auto skipChar : sSkipChars) {
-            tmpPattern.remove(skipChar);
-        }
+        tmpPattern.remove(sSkipCharDetection);
         prunedPatterns.insert(tmpPattern);
     }
 //    qDebug() << "Pruned canonical texts:" << (patterns.count() - prunedPatterns.count());

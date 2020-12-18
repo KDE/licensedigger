@@ -27,7 +27,7 @@ public:
      * @return position, if found
      */
     std::optional<std::pair<int, int>> findMatch(QString text, QVector<QString> pattern) const;
-    static QSet<QChar> sSkipChars;
+    static const QRegularExpression sSkipCharDetection;
 };
 
 #endif
