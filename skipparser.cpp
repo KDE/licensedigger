@@ -10,7 +10,21 @@
 #include <optional>
 #include <functional>
 
-QVector<QChar> SkipParser::sSkipChars = {' ', '\n', '\t', '/', '-', '*', '#'};
+QSet<QChar> SkipParser::sSkipChars = {' ', '\n', '\t', '/', '-', '*', '#'};
+
+constexpr bool isSkipChar(const QChar &character) {
+    switch(character.unicode()) {
+    case ' ': return true;
+    case '\n': return true;
+    case '\t': return true;
+    case '/': return true;
+    case '-': return true;
+    case '*': return true;
+    case '#': return true;
+    default: return false;
+    }
+    return false;
+}
 
 std::optional<std::pair<int, int>> SkipParser::findMatchNaive(QString text, QString pattern) const
 {
@@ -65,7 +79,7 @@ std::optional<std::pair<int, int>> SkipParser::findMatchKMP(QString origText, QS
     std::vector<int> textSkipPrefix(origTextLength);
     int skipped = 0;
     for (int i = 0; i < origTextLength; ++i) {
-        if (sSkipChars.contains(origText.at(i))) {
+        if (isSkipChar(origText.at(i))) {
             textSkipPrefix.at(i - skipped) = skipped;
             ++skipped;
         } else {
