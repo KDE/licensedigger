@@ -34,7 +34,9 @@ private:
      */
     std::vector<int> computeKmpPrefix(const QString &prunedPattern) const;
 
-    std::optional<std::pair<int, int>> findMatchKMP(QString text, QString pattern) const;
+    std::pair<std::vector<QChar>, std::vector<int>> computeTextSkipPrefix(const QString &text) const;
+
+    std::optional<std::pair<int, int>> findMatchKMP(std::vector<QChar> prunedText, std::vector<int> textSkipPrefix, QString pattern) const;
     std::optional<std::pair<int, int>> findMatchNaive(QString text, QString pattern) const;
     static const QRegularExpression sSkipCharDetection;
     mutable QHash<QString, std::vector<int>> mPrefixCache;
