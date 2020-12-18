@@ -37,6 +37,7 @@ private:
     std::optional<std::pair<int, int>> findMatchKMP(QString text, QString pattern) const;
     std::optional<std::pair<int, int>> findMatchNaive(QString text, QString pattern) const;
     static const QRegularExpression sSkipCharDetection;
+    mutable QHash<QString, std::vector<int>> mPrefixCache;
 };
 
 #endif

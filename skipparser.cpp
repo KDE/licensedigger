@@ -85,7 +85,7 @@ std::vector<int> SkipParser::computeKmpPrefix(const QString &pattern) const
     return prefix;
 }
 
-std::optional<std::pair<int, int>> SkipParser::findMatchKMP(QString origText, QString origPattern) const
+std::optional<std::pair<int, int>> SkipParser::findMatchKMP(QString origText, QString pattern) const
 {
     const int origTextLength = origText.size();
 
@@ -104,10 +104,14 @@ std::optional<std::pair<int, int>> SkipParser::findMatchKMP(QString origText, QS
         }
     }
 
-    // prune all skip chars from pattern
-    QString pattern = origPattern;
-    pattern.remove(sSkipCharDetection);
-    std::vector<int> prefix = computeKmpPrefix(pattern);
+    // obtain prefix
+    std::vector<int> prefix;
+    if (mPrefixCache.contains(pattern)) {
+        prefix = mPrefixCache[pattern];
+    } else {
+        prefix = computeKmpPrefix(pattern);
+        mPrefixCache.insert(pattern, prefix);
+    }
 
     // KMP Matcher
     const int textLength = text.size();
@@ -129,7 +133,7 @@ std::optional<std::pair<int, int>> SkipParser::findMatchKMP(QString origText, QS
 
 std::optional<std::pair<int, int>> SkipParser::findMatch(QString text, QString pattern) const
 {
-    auto match = findMatchKMP(text, pattern);
+    auto match = findMatchKMP(text, pattern.remove(sSkipCharDetection));
     qDebug() << "text   :" << text;
     qDebug() << "pattern:" << pattern;
     //            qDebug() << "start:  " << start;
