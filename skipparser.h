@@ -16,8 +16,6 @@
 class SkipParser
 {
 public:
-    std::optional<std::pair<int, int>> findMatchNaive(QString text, QString pattern) const;
-    std::optional<std::pair<int, int>> findMatchKMP(QString text, QString pattern) const;
     std::optional<std::pair<int, int>> findMatch(QString text, QString pattern) const;
 
     /**
@@ -27,6 +25,17 @@ public:
      * @return position, if found
      */
     std::optional<std::pair<int, int>> findMatch(QString text, QVector<QString> pattern) const;
+
+private:
+    /**
+     * @brief computeKmpPrefix
+     * @param prunedPattern pattern must not contain any skip character, no additional pruning here
+     * @return
+     */
+    std::vector<int> computeKmpPrefix(const QString &prunedPattern) const;
+
+    std::optional<std::pair<int, int>> findMatchKMP(QString text, QString pattern) const;
+    std::optional<std::pair<int, int>> findMatchNaive(QString text, QString pattern) const;
     static const QRegularExpression sSkipCharDetection;
 };
 

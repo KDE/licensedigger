@@ -59,7 +59,7 @@ private:
     QVector<LicenseRegistry::SpdxExpression> detectLicensesSkipParser(const QString &fileContent) const;
 
     LicenseRegistry m_registry;
-    LicenseParser m_parserType{ LicenseParser::REGEXP_PARSER };
+    LicenseParser m_parserType{ LicenseParser::SKIP_PARSER };
     static const QStringList s_supportedExtensions;
 };
 

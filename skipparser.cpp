@@ -14,7 +14,7 @@
 // but they must be kept in sync
 const QRegularExpression SkipParser::sSkipCharDetection("[ |\\\n|\\\t|/|\\-|\\*|#]");
 constexpr bool isSkipChar(const QChar &character) {
-    switch(character.unicode()) {
+    switch(character.toLatin1()) {
     case ' ': return true;
     case '\n': return true;
     case '\t': return true;
@@ -67,6 +67,24 @@ std::optional<std::pair<int, int>> SkipParser::findMatchNaive(QString text, QStr
     return {};
 }
 
+std::vector<int> SkipParser::computeKmpPrefix(const QString &pattern) const
+{
+    const int length = pattern.length();
+    std::vector<int> prefix(length);
+    prefix[0] = 0;
+    int k = 0;
+    for (int q = 2; q <= length; ++q) {
+        while (k > 0 && pattern.at(k) != pattern.at(q - 1)) {
+            k = prefix.at(k-1);
+        }
+        if (pattern.at(k) == pattern.at(q - 1)) {
+            k = k + 1;
+        }
+        prefix[q-1] = k;
+    }
+    return prefix;
+}
+
 std::optional<std::pair<int, int>> SkipParser::findMatchKMP(QString origText, QString origPattern) const
 {
     const int origTextLength = origText.size();
@@ -89,23 +107,7 @@ std::optional<std::pair<int, int>> SkipParser::findMatchKMP(QString origText, QS
     // prune all skip chars from pattern
     QString pattern = origPattern;
     pattern.remove(sSkipCharDetection);
-
-    //BEGIN compute KMP prefix function
-    const int patternLength = pattern.size();
-    std::vector<int> prefix(patternLength, -1); // -1 used as not initialized
-    prefix[0] = 0;
-    int k = 0;
-    for (int q = 2; q <= patternLength; ++q) {
-        while (k > 0 && pattern.at(k) != pattern.at(q - 1)) {
-            Q_ASSERT(prefix.at(k) != -1);
-            k = prefix.at(k-1);
-        }
-        if (pattern.at(k) == pattern.at(q - 1)) {
-            k = k + 1;
-        }
-        prefix[q-1] = k;
-    }
-    //END
+    std::vector<int> prefix = computeKmpPrefix(pattern);
 
     // KMP Matcher
     const int textLength = text.size();
@@ -117,8 +119,8 @@ std::optional<std::pair<int, int>> SkipParser::findMatchKMP(QString origText, QS
         if (pattern.at(q) == text.at(i - 1)) {
             q = q + 1;
         }
-        if (q == patternLength) {
-            return std::optional<std::pair<int,int>>{ {i - q + textSkipPrefix.at(i-q), i - 1 + textSkipPrefix.at(i - 1)} };
+        if (q == pattern.length()) {
+            return std::optional<std::pair<int,int>>{ {i - q + textSkipPrefix.at(i - q), i - 1 + textSkipPrefix.at(i - 1)} };
         }
     }
 
