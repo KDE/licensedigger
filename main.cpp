@@ -27,6 +27,10 @@ int main(int argc, char *argv[])
             "only show detected licenses, do not change any file");
     parser.addOption(dryOption);
 
+    QCommandLineOption skipParserOption(QStringList() << "skipparser",
+            "use skip parser variant (slower by factor ~5 currently, but maches more)");
+    parser.addOption(skipParserOption);
+
     QCommandLineOption forceOption(QStringList() << "f" << "force",
             "convert stated directory right away, do not ask");
     parser.addOption(forceOption);
@@ -55,6 +59,9 @@ int main(int argc, char *argv[])
 
     qInfo() << "Digging recursively all files in directory:" << directory;
     DirectoryParser licenseParser;
+    if (parser.isSet(skipParserOption)) {
+        licenseParser.setLicenseHeaderParser(DirectoryParser::LicenseParser::SKIP_PARSER);
+    }
 
     // print overview if no parameter is set
     if (!(parser.isSet(licenseConvertOption) || parser.isSet(copyrightConvertOption) || parser.isSet(forceOption))) {
