@@ -18,6 +18,7 @@ include(ECMAddTests)
 include(KDEInstallDirs)
 include(KDECMakeSettings)
 include(KDECompilerSettings NO_POLICY_SCOPE)
+include(KDEClangFormat)
 
 find_package(Qt5 REQUIRED COMPONENTS
     Core
