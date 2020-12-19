@@ -54,6 +54,8 @@
         <file>testdata/GPL-2.0-or-later/kis_tone_curve_widget.h</file>
         <file>testdata/GPL-2.0-or-later/wacom-properties.h</file>
         <file>testdata/GPL-2.0-or-later/thememanager.h</file>
+        <file>testdata/GPL-2.0-or-later/kmahjongg.h</file>
+        <file>testdata/GPL-2.0-or-later/gameremovedtiles.h</file>
         <file>testdata/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/formats.cpp</file>
         <file>testdata/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/kpasswdservertest.cpp</file>
         <file>testdata/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/nsaplugin.cpp</file>

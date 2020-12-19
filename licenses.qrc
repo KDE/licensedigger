@@ -39,6 +39,8 @@
         <file>licenses_templates/GPL-2.0-or-later/kio_localdomainfilter</file>
         <file>licenses_templates/GPL-2.0-or-later/kio_usdentrybenchmark</file>
         <file>licenses_templates/GPL-2.0-or-later/kioexec_main</file>
+        <file>licenses_templates/GPL-2.0-or-later/kmahjongg</file>
+        <file>licenses_templates/GPL-2.0-or-later/kmahjongg_gameremovedtiles</file>
         <file>licenses_templates/GPL-2.0-or-later/kmplayer_gstplayer</file>
         <file>licenses_templates/GPL-2.0-or-later/kwin_blur</file>
         <file>licenses_templates/GPL-2.0-or-later/messagelib_attachmentcontrollerbase</file>
