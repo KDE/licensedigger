@@ -6,18 +6,18 @@
 
 #include "directoryparser.h"
 #include "skipparser.h"
+#include <QDebug>
 #include <QDirIterator>
 #include <QTextStream>
-#include <QDebug>
 #include <QVector>
 
-const QStringList DirectoryParser::s_supportedExtensions = { ".cpp", ".cc", ".c", ".h", ".css", ".hpp", ".qml", ".cmake", "CMakeLists.txt", ".in", ".py", ".frag", ".vert", ".glsl", "php", "sh", ".mm", ".java", ".kt", ".js", ".xml", ".xsd", ".xsl", ".pl", ".rb", ".docbook" };
+const QStringList DirectoryParser::s_supportedExtensions = {".cpp",  ".cc", ".c", ".h",  ".css",  ".hpp", ".qml", ".cmake", "CMakeLists.txt", ".in",  ".py", ".frag", ".vert",
+                                                            ".glsl", "php", "sh", ".mm", ".java", ".kt",  ".js",  ".xml",   ".xsd",           ".xsl", ".pl", ".rb",   ".docbook"};
 
-bool shallIgnoreFile(const QDirIterator& iterator, const QRegularExpression& fileToIgnorePattern)
+bool shallIgnoreFile(const QDirIterator &iterator, const QRegularExpression &fileToIgnorePattern)
 {
     QFileInfo fileInfo(iterator.fileInfo());
-    return !fileInfo.isFile() or
-        (!fileToIgnorePattern.pattern().isEmpty() && fileToIgnorePattern.match(fileInfo.filePath()).hasMatch());
+    return !fileInfo.isFile() or (!fileToIgnorePattern.pattern().isEmpty() && fileToIgnorePattern.match(fileInfo.filePath()).hasMatch());
 }
 
 void DirectoryParser::setLicenseHeaderParser(LicenseParser parser)
@@ -34,19 +34,17 @@ QRegularExpression DirectoryParser::spdxStatementRegExp() const
 QRegularExpression DirectoryParser::copyrightRegExp() const
 {
     static auto regexp = QRegularExpression(
-                                     "(?<!\")" // negative lookahead for quotation marks, to skip string statements
-                                     "(SPDX-FileCopyrightText:|Copyright( \\([cC]\\))|Copyright ©|©|Copyright(:)?)"
-                                     "[, ]+"
-                                     "(?<years>([0-9]+(-[0-9]+| - [0-9]+| to [0-9]+|,[ ]?[0-9]+)*|%{CURRENT_YEAR}))"
-                                     "[, ]+"
-                                     "([bB]y[ ]+)?"
-                                     "(?<name>([\u00C0-\u017Fa-zA-Z\\-\\.]+( [\u00C0-\u017Fa-zA-Z\\-\\.]+)*|%{AUTHOR}))"
-                                     "[, ]*"
-                                     "(?<contact>.*|%{EMAIL})"
-                                     );
+        "(?<!\")" // negative lookahead for quotation marks, to skip string statements
+        "(SPDX-FileCopyrightText:|Copyright( \\([cC]\\))|Copyright ©|©|Copyright(:)?)"
+        "[, ]+"
+        "(?<years>([0-9]+(-[0-9]+| - [0-9]+| to [0-9]+|,[ ]?[0-9]+)*|%{CURRENT_YEAR}))"
+        "[, ]+"
+        "([bB]y[ ]+)?"
+        "(?<name>([\u00C0-\u017Fa-zA-Z\\-\\.]+( [\u00C0-\u017Fa-zA-Z\\-\\.]+)*|%{AUTHOR}))"
+        "[, ]*"
+        "(?<contact>.*|%{EMAIL})");
     return regexp;
 }
-
 
 QString DirectoryParser::cleanupSpaceInCopyrightYearList(const QString &originalYearText) const
 {
@@ -89,7 +87,7 @@ QString DirectoryParser::replaceHeaderText(const QString &fileContent, const QSt
     outputExpression.replace('_', ' ');
     QString spdxOutputString = "SPDX-License-Identifier: " + outputExpression;
     QString newContent = fileContent;
-    for (auto regexp: regexps) {
+    for (auto regexp : regexps) {
         newContent.replace(regexp, spdxOutputString);
     }
     return newContent;
@@ -100,7 +98,7 @@ LicenseRegistry::SpdxExpression DirectoryParser::detectSpdxLicenseStatement(cons
     QRegularExpression regExp = spdxStatementRegExp();
     auto match = regExp.match(fileContent);
     if (match.hasMatch()) {
-        //TODO this very simple solution only works for SPDX expressions in our database
+        // TODO this very simple solution only works for SPDX expressions in our database
         // should be made more general
         return match.captured("expression").replace(' ', '_');
     }
@@ -109,7 +107,7 @@ LicenseRegistry::SpdxExpression DirectoryParser::detectSpdxLicenseStatement(cons
 
 QVector<LicenseRegistry::SpdxExpression> DirectoryParser::pruneLicenseList(const QVector<LicenseRegistry::SpdxExpression> &inputLicenses) const
 {
-    //TODO
+    // TODO
     // - handle AND combinations
     // - handle complex OR combinations
     // - revisit operator preference order in SPDX and implement it here
@@ -125,7 +123,7 @@ QVector<LicenseRegistry::SpdxExpression> DirectoryParser::pruneLicenseList(const
     licenses.erase(std::unique(licenses.begin(), licenses.end()), licenses.end());
 
     // pruning step: compute which licenses are supported with SPDX expression (splitting at "OR")
-    //TODO this a very simple initial version and only works yet with simple license statements, not with multiple OR combinations
+    // TODO this a very simple initial version and only works yet with simple license statements, not with multiple OR combinations
     QMap<LicenseRegistry::SpdxExpression, QVector<LicenseRegistry::SpdxExpression>> licenseClosure;
     for (const auto &license : qAsConst(licenses)) {
         QVector<LicenseRegistry::SpdxExpression> licenseChoice = license.split("_OR_").toVector();
@@ -138,7 +136,7 @@ QVector<LicenseRegistry::SpdxExpression> DirectoryParser::pruneLicenseList(const
     }
     QMutableVectorIterator<LicenseRegistry::SpdxExpression> iter(licenses);
     while (iter.hasNext()) {
-        bool licensedContainedInClosure{ false };
+        bool licensedContainedInClosure {false};
         LicenseRegistry::SpdxExpression expression = iter.next();
         for (auto iter = licenseClosure.begin(); iter != licenseClosure.end(); ++iter) {
             if (expression != iter.key() && iter.value().contains(expression)) {
@@ -154,8 +152,7 @@ QVector<LicenseRegistry::SpdxExpression> DirectoryParser::pruneLicenseList(const
 
 QVector<LicenseRegistry::SpdxExpression> DirectoryParser::detectLicenses(const QString &fileContent) const
 {
-    switch(m_parserType)
-    {
+    switch (m_parserType) {
     case DirectoryParser::LicenseParser::REGEXP_PARSER:
         return detectLicensesRegexpParser(fileContent);
     case DirectoryParser::LicenseParser::SKIP_PARSER:
@@ -182,14 +179,13 @@ QVector<LicenseRegistry::SpdxExpression> DirectoryParser::detectLicensesSkipPars
     return detectedLicenses;
 }
 
-
 QVector<LicenseRegistry::SpdxExpression> DirectoryParser::detectLicensesRegexpParser(const QString &fileContent) const
 {
     QVector<LicenseRegistry::SpdxExpression> testExpressions = m_registry.expressions();
     QVector<LicenseRegistry::SpdxExpression> detectedLicenses;
     for (auto expression : testExpressions) {
         auto regexps = m_registry.headerTextRegExps(expression);
-        for (auto regexp: regexps) {
+        for (auto regexp : regexps) {
             if (fileContent.contains(regexp)) {
                 detectedLicenses << expression;
             }
@@ -202,7 +198,7 @@ QVector<LicenseRegistry::SpdxExpression> DirectoryParser::detectLicensesRegexpPa
     return detectedLicenses;
 }
 
-QMap<QString, LicenseRegistry::SpdxExpression> DirectoryParser::parseAll(const QString &directory, bool convertMode, const QString& ignorePattern) const
+QMap<QString, LicenseRegistry::SpdxExpression> DirectoryParser::parseAll(const QString &directory, bool convertMode, const QString &ignorePattern) const
 {
     QVector<LicenseRegistry::SpdxExpression> expressions = m_registry.expressions();
     QMap<QString, LicenseRegistry::SpdxExpression> results;
@@ -256,19 +252,17 @@ QMap<QString, LicenseRegistry::SpdxExpression> DirectoryParser::parseAll(const Q
         const QString fileContent = file.readAll();
         file.close();
 
-//        qDebug() << "checking:" << iterator.fileInfo();
+        //        qDebug() << "checking:" << iterator.fileInfo();
         QVector<LicenseRegistry::SpdxExpression> licenses = detectLicenses(fileContent);
         licenses = pruneLicenseList(licenses);
 
         if (licenses.count() == 1) {
             results.insert(iterator.fileInfo().filePath(), licenses.first());
-//            qDebug() << "---> " << iterator.fileInfo().filePath() << identifier;
-        }
-        else if (licenses.count() > 1) {
+            //            qDebug() << "---> " << iterator.fileInfo().filePath() << identifier;
+        } else if (licenses.count() > 1) {
             qCritical() << "UNHANDLED MULTI-LICENSE CASE" << iterator.fileInfo().filePath() << "-->" << licenses;
             results[iterator.fileInfo().filePath()] = LicenseRegistry::AmbigiousLicense;
-        }
-        else {
+        } else {
             // if nothing matches, report error
             results.insert(iterator.fileInfo().filePath(), LicenseRegistry::UnknownLicense);
 
@@ -290,7 +284,7 @@ QMap<QString, LicenseRegistry::SpdxExpression> DirectoryParser::parseAll(const Q
         const QString expression = results.value(iterator.fileInfo().filePath());
         if (convertMode && !m_registry.isFakeLicenseMarker(expression)) {
             QString newContent = replaceHeaderText(fileContent, expression);
-            //qDebug() << newContent;
+            // qDebug() << newContent;
             file.open(QIODevice::WriteOnly);
             file.write(newContent.toUtf8());
             file.close();
@@ -327,7 +321,7 @@ QMap<QString, LicenseRegistry::SpdxExpression> DirectoryParser::parseAll(const Q
     return results;
 }
 
-void DirectoryParser::convertCopyright(const QString &directory, const QString& ignorePattern) const
+void DirectoryParser::convertCopyright(const QString &directory, const QString &ignorePattern) const
 {
     QRegularExpression ignoreFile(ignorePattern);
 

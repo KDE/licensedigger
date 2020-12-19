@@ -29,7 +29,8 @@ const QString LicenseRegistry::AmbigiousLicense("AMBIGIOUS");
 const QString LicenseRegistry::MissingLicense("MISSING-LICENSE");
 const QString LicenseRegistry::MissingLicenseForGeneratedFile("MISSING-LICENSE-GENERATED-FILE");
 
-LicenseRegistry::LicenseRegistry(QObject *parent) : QObject(parent)
+LicenseRegistry::LicenseRegistry(QObject *parent)
+    : QObject(parent)
 {
     loadLicenseHeaders();
     loadLicenseFiles();
@@ -40,7 +41,7 @@ void LicenseRegistry::loadLicenseHeaders()
     if (!m_registry.isEmpty()) {
         m_registry.clear();
     }
-    m_registry[LicenseRegistry::UnknownLicense] = QVector<QString>{ "THIS IS A STUB HEADER FOR UNKNOWN LICENSES, IT SHALL NEVER MATCH" };
+    m_registry[LicenseRegistry::UnknownLicense] = QVector<QString> {"THIS IS A STUB HEADER FOR UNKNOWN LICENSES, IT SHALL NEVER MATCH"};
 
     QDirIterator spdxIter(":/licenses_templates/");
     while (spdxIter.hasNext()) {
@@ -59,9 +60,7 @@ void LicenseRegistry::loadLicenseHeaders()
         // sort license texts lexicographically decreasing
         // this is a simple solution for the problem when one license text is a prefix of another license text
         // which is known for license texts with omitted "." at the end
-        std::sort(headerTexts.begin(), headerTexts.end(), [](const QString &lhs, const QString &rhs){
-            return lhs > rhs;
-        });
+        std::sort(headerTexts.begin(), headerTexts.end(), [](const QString &lhs, const QString &rhs) { return lhs > rhs; });
         m_registry[spdxIter.fileName()] = headerTexts;
     }
 }
@@ -104,7 +103,7 @@ QVector<QRegularExpression> LicenseRegistry::headerTextRegExps(const SpdxExpress
 {
     if (!m_registry.contains(identifier)) {
         qCritical() << "Identifier not found, returning error matcher";
-        return QVector<QRegularExpression>{QRegularExpression("DOES_NOT_MATCH_ANY_LICENSE_HEADER")};
+        return QVector<QRegularExpression> {QRegularExpression("DOES_NOT_MATCH_ANY_LICENSE_HEADER")};
     }
     if (m_regexpsCache.contains(identifier)) {
         return m_regexpsCache.value(identifier);
@@ -148,12 +147,6 @@ QVector<QRegularExpression> LicenseRegistry::headerTextRegExps(const SpdxExpress
 
 bool LicenseRegistry::isFakeLicenseMarker(const QString &expression) const
 {
-    const QStringList fakeExpressions {
-        LicenseRegistry::ToClarifyLicense,
-        LicenseRegistry::UnknownLicense,
-        LicenseRegistry::MissingLicense,
-        LicenseRegistry::AmbigiousLicense,
-        LicenseRegistry::MissingLicenseForGeneratedFile
-    };
+    const QStringList fakeExpressions {LicenseRegistry::ToClarifyLicense, LicenseRegistry::UnknownLicense, LicenseRegistry::MissingLicense, LicenseRegistry::AmbigiousLicense, LicenseRegistry::MissingLicenseForGeneratedFile};
     return fakeExpressions.contains(expression);
 }

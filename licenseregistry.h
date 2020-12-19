@@ -7,10 +7,10 @@
 #ifndef LICENSEREGISTRY_H
 #define LICENSEREGISTRY_H
 
-#include <QObject>
-#include <QVector>
 #include <QMap>
+#include <QObject>
 #include <QRegularExpression>
+#include <QVector>
 
 class LicenseRegistry : public QObject
 {

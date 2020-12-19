@@ -6,23 +6,32 @@
 
 #include "skipparser.h"
 #include <QDebug>
-#include <set>
-#include <optional>
 #include <functional>
+#include <optional>
+#include <set>
 
 // for performance reasons, we need to have to lists
 // but they must be kept in sync
 const QRegularExpression SkipParser::sSkipCharDetection("[ |\\\n|\\\t|/|\\-|\\*|#]");
-constexpr bool isSkipChar(const QChar &character) {
-    switch(character.toLatin1()) {
-    case ' ': return true;
-    case '\n': return true;
-    case '\t': return true;
-    case '/': return true;
-    case '-': return true;
-    case '*': return true;
-    case '#': return true;
-    default: return false;
+constexpr bool isSkipChar(const QChar &character)
+{
+    switch (character.toLatin1()) {
+    case ' ':
+        return true;
+    case '\n':
+        return true;
+    case '\t':
+        return true;
+    case '/':
+        return true;
+    case '-':
+        return true;
+    case '*':
+        return true;
+    case '#':
+        return true;
+    default:
+        return false;
     }
     return false;
 }
@@ -35,9 +44,9 @@ std::optional<std::pair<int, int>> SkipParser::findMatchNaive(QString text, QStr
 
     int start = 0;
     while (start <= text.length() - pattern.length()) {
-        bool matchFound{ true };
-        int patternSkipOffset{ 0 };
-        int textSkipOffset{ 0 };
+        bool matchFound {true};
+        int patternSkipOffset {0};
+        int textSkipOffset {0};
         for (int i = 0; i < pattern.length(); ++i) {
             // skip pattern char if contained in skip-list
             // outcondition: valid char that can be matched
@@ -58,7 +67,7 @@ std::optional<std::pair<int, int>> SkipParser::findMatchNaive(QString text, QStr
             }
         }
         if (matchFound) {
-            return std::optional<std::pair<int,int>>{ {start, start + textSkipOffset + pattern.length() - patternSkipOffset - 1} };
+            return std::optional<std::pair<int, int>> {{start, start + textSkipOffset + pattern.length() - patternSkipOffset - 1}};
         } else {
             ++start;
         }
@@ -75,12 +84,12 @@ std::vector<int> SkipParser::computeKmpPrefix(const QString &pattern) const
     int k = 0;
     for (int q = 2; q <= length; ++q) {
         while (k > 0 && pattern.at(k) != pattern.at(q - 1)) {
-            k = prefix.at(k-1);
+            k = prefix.at(k - 1);
         }
         if (pattern.at(k) == pattern.at(q - 1)) {
             k = k + 1;
         }
-        prefix[q-1] = k;
+        prefix[q - 1] = k;
     }
     return prefix;
 }
@@ -100,14 +109,14 @@ std::optional<std::pair<int, int>> SkipParser::findMatchKMP(std::vector<QChar> p
     const int textLength = prunedText.size();
     int q = 0;
     for (int i = 1; i <= textLength; ++i) {
-        while(q > 0 && pattern.at(q) != prunedText.at(i - 1)) {
+        while (q > 0 && pattern.at(q) != prunedText.at(i - 1)) {
             q = prefix.at(q - 1);
         }
         if (pattern.at(q) == prunedText.at(i - 1)) {
             q = q + 1;
         }
         if (q == pattern.length()) {
-            return std::optional<std::pair<int,int>>{ {i - q + textSkipPrefix.at(i - q), i - 1 + textSkipPrefix.at(i - 1)} };
+            return std::optional<std::pair<int, int>> {{i - q + textSkipPrefix.at(i - q), i - 1 + textSkipPrefix.at(i - 1)}};
         }
     }
 
@@ -143,7 +152,7 @@ std::pair<std::vector<QChar>, std::vector<int>> SkipParser::computeTextSkipPrefi
         }
     }
     prunedText.shrink_to_fit();
-    return { prunedText, textSkipPrefix };
+    return {prunedText, textSkipPrefix};
 }
 
 std::optional<std::pair<int, int>> SkipParser::findMatch(QString text, QVector<QString> patterns) const
@@ -156,7 +165,7 @@ std::optional<std::pair<int, int>> SkipParser::findMatch(QString text, QVector<Q
         tmpPattern.remove(sSkipCharDetection);
         prunedPatterns.insert(tmpPattern);
     }
-//    qDebug() << "Pruned canonical texts:" << (patterns.count() - prunedPatterns.count());
+    //    qDebug() << "Pruned canonical texts:" << (patterns.count() - prunedPatterns.count());
 
     auto textPreprocessing = computeTextSkipPrefix(text);
     for (const auto &pattern : prunedPatterns) {

@@ -13,14 +13,11 @@
 class DirectoryParser
 {
 public:
-    enum class LicenseParser {
-        SKIP_PARSER,
-        REGEXP_PARSER
-    };
+    enum class LicenseParser { SKIP_PARSER, REGEXP_PARSER };
 
     void setLicenseHeaderParser(LicenseParser parser);
-    QMap<QString, LicenseRegistry::SpdxExpression> parseAll(const QString &directory, bool convertMode = false, const QString& ignorePattern = QString()) const;
-    void convertCopyright(const QString &directory, const QString& ignorePattern = QString()) const;
+    QMap<QString, LicenseRegistry::SpdxExpression> parseAll(const QString &directory, bool convertMode = false, const QString &ignorePattern = QString()) const;
+    void convertCopyright(const QString &directory, const QString &ignorePattern = QString()) const;
     QRegularExpression copyrightRegExp() const;
     QRegularExpression spdxStatementRegExp() const;
     QString unifyCopyrightStatements(const QString &originalText) const;
@@ -59,7 +56,7 @@ private:
     QVector<LicenseRegistry::SpdxExpression> detectLicensesSkipParser(const QString &fileContent) const;
 
     LicenseRegistry m_registry;
-    LicenseParser m_parserType{ LicenseParser::REGEXP_PARSER };
+    LicenseParser m_parserType {LicenseParser::REGEXP_PARSER};
     static const QStringList s_supportedExtensions;
 };
 

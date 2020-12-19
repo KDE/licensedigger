@@ -7,10 +7,10 @@
 #ifndef SKIPPARSER_H
 #define SKIPPARSER_H
 
-#include <QObject>
-#include <QVector>
 #include <QMap>
+#include <QObject>
 #include <QRegularExpression>
+#include <QVector>
 #include <optional>
 
 class SkipParser

@@ -5,15 +5,15 @@
  */
 
 #include "directoryparser.h"
-#include <QCoreApplication>
 #include <QCommandLineParser>
+#include <QCoreApplication>
 #include <QDebug>
 #include <iostream>
 
 int main(int argc, char *argv[])
 {
-    const std::string hightlightOut{"\033[1;34m"};
-    const std::string defaultOut{"\033[0m"};
+    const std::string hightlightOut {"\033[1;34m"};
+    const std::string defaultOut {"\033[0m"};
 
     QCoreApplication app(argc, argv);
 
@@ -23,28 +23,32 @@ int main(int argc, char *argv[])
     parser.addVersionOption();
     parser.addPositionalArgument("directory", QCoreApplication::translate("main", "Source file to copy."));
 
-    QCommandLineOption dryOption(QStringList() << "dry",
-            "only show detected licenses, do not change any file");
+    QCommandLineOption dryOption(QStringList() << "dry", "only show detected licenses, do not change any file");
     parser.addOption(dryOption);
 
-    QCommandLineOption skipParserOption(QStringList() << "skipparser",
-            "use skip parser variant (slower by factor ~5 currently, but maches more)");
+    QCommandLineOption skipParserOption(QStringList() << "skipparser", "use skip parser variant (slower by factor ~5 currently, but maches more)");
     parser.addOption(skipParserOption);
 
-    QCommandLineOption forceOption(QStringList() << "f" << "force",
-            "convert stated directory right away, do not ask");
+    QCommandLineOption forceOption(QStringList() << "f"
+                                                 << "force",
+                                   "convert stated directory right away, do not ask");
     parser.addOption(forceOption);
 
-    QCommandLineOption licenseConvertOption(QStringList() << "l" << "licenses",
-            "convert license statements to SPDX-License-Identifier, but nothing else");
+    QCommandLineOption licenseConvertOption(QStringList() << "l"
+                                                          << "licenses",
+                                            "convert license statements to SPDX-License-Identifier, but nothing else");
     parser.addOption(licenseConvertOption);
 
-    QCommandLineOption copyrightConvertOption(QStringList() << "c" << "copyright",
-            "convert copyright statements to SPDX-FileCopyrightText, but nothing else");
+    QCommandLineOption copyrightConvertOption(QStringList() << "c"
+                                                            << "copyright",
+                                              "convert copyright statements to SPDX-FileCopyrightText, but nothing else");
     parser.addOption(copyrightConvertOption);
 
-    QCommandLineOption ignorePatternOption(QStringList() << "i" << "ignore",
-            "Ignore file path matching the pattern", "ignorePattern", "");
+    QCommandLineOption ignorePatternOption(QStringList() << "i"
+                                                         << "ignore",
+                                           "Ignore file path matching the pattern",
+                                           "ignorePattern",
+                                           "");
     parser.addOption(ignorePatternOption);
 
     parser.process(app);
@@ -65,11 +69,7 @@ int main(int argc, char *argv[])
 
     // print overview if no parameter is set
     if (!(parser.isSet(licenseConvertOption) || parser.isSet(copyrightConvertOption) || parser.isSet(forceOption))) {
-        std::cout << hightlightOut
-                  << "==============================" << std::endl
-                  << "= LICENSE DETECTION OVERVIEW =" << std::endl
-                  << "==============================" << defaultOut
-                  << std::endl;
+        std::cout << hightlightOut << "==============================" << std::endl << "= LICENSE DETECTION OVERVIEW =" << std::endl << "==============================" << defaultOut << std::endl;
         const auto results = licenseParser.parseAll(directory, false, ignorePattern);
         int undetectedLicenses = 0;
         int detectedLicenses = 0;
@@ -81,12 +81,13 @@ int main(int argc, char *argv[])
             }
             qInfo() << iter.key() << " --> " << iter.value();
         }
-        qInfo().nospace() << "\n" << "Undetected files: " << undetectedLicenses << " (total: " << (undetectedLicenses + detectedLicenses) << ")";
+        qInfo().nospace() << "\n"
+                          << "Undetected files: " << undetectedLicenses << " (total: " << (undetectedLicenses + detectedLicenses) << ")";
     }
 
-    bool userWantsConversion{ false };
+    bool userWantsConversion {false};
     if (!(parser.isSet(dryOption) || parser.isSet(licenseConvertOption) || parser.isSet(copyrightConvertOption) || parser.isSet(forceOption))) {
-        std::string convertAnswer{ "" };
+        std::string convertAnswer {""};
         std::cout << std::endl;
         while (convertAnswer != "n" && convertAnswer != "y") {
             std::cout << "Perform file conversions? [y/n] ";
