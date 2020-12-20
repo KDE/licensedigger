@@ -70,6 +70,7 @@
         <file>licenses_templates/GPL-2.0-or-later/kis_tone_curve_widget</file>
         <file>licenses_templates/GPL-2.0-or-later/wacom-properties</file>
         <file>licenses_templates/GPL-2.0-or-later/thememanager</file>
+        <file>licenses_templates/GPL-2.0-or-later/kiten_configdictionaryselector</file>
         <file>licenses_templates/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/kdeclarative_formats</file>
         <file>licenses_templates/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/kio_kpasswdservertest</file>
         <file>licenses_templates/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/konversation_queuetuner</file>
