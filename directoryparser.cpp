@@ -80,6 +80,32 @@ QString DirectoryParser::unifyCopyrightStatements(const QString &originalText) c
     return header;
 }
 
+QString DirectoryParser::unifyCopyrightCommentHeader(const QString &originalText) const
+{
+    // restrict conversion to top-file comments
+    if (!originalText.startsWith("/*")) {
+        qWarning() << "File not starting with comment";
+        return originalText;
+    }
+    auto lines = originalText.split("\n");
+    for (int i = 0; i < lines.size(); ++i) {
+        lines[i].replace(QRegularExpression("/(\\*)+"), "/*"); // initial comment line
+        if (lines[i].startsWith("/*")) {
+            continue; // do not further modify first line
+        }
+        lines[i].replace(QRegularExpression("[ ]*(\\*)+/"), "*/"); // final comment line
+        if (lines[i].startsWith("*/")) {
+            break;
+        }
+        // invariant: the following line is guaranteed to be a port of multiline comment
+        lines[i].replace(QRegularExpression("^[ \\*]+(?!(\\\\))"), "    "); // in-between line
+        lines[i].replace(QRegularExpression("[ \\*]+$"), ""); // in-between line
+    }
+    QString text = lines.join("\n");
+    //qDebug() << text;
+    return text;
+}
+
 QString DirectoryParser::replaceHeaderText(const QString &fileContent, const QString &spdxExpression) const
 {
     auto regexps = m_registry.headerTextRegExps(spdxExpression);
@@ -321,7 +347,7 @@ QMap<QString, LicenseRegistry::SpdxExpression> DirectoryParser::parseAll(const Q
     return results;
 }
 
-void DirectoryParser::convertCopyright(const QString &directory, const QString &ignorePattern) const
+void DirectoryParser::convertCopyright(const QString &directory, const QString &ignorePattern, bool pretty) const
 {
     QRegularExpression ignoreFile(ignorePattern);
 
@@ -348,6 +374,9 @@ void DirectoryParser::convertCopyright(const QString &directory, const QString &
 
         file.open(QIODevice::WriteOnly);
         QString newContent = unifyCopyrightStatements(fileContent);
+        if (pretty) {
+            newContent = unifyCopyrightCommentHeader(newContent);
+        }
         file.write(newContent.toUtf8());
         file.close();
     }

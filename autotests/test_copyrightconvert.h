@@ -17,9 +17,13 @@ public:
     TestCopyrightConvert() = default;
 
 private Q_SLOTS:
+    // convert statements
     void detectCopyright();
     void convertSingleCopyrightStatement();
     void convertFullHeader();
     void skipSourceCodeStrings();
+
+    // convert copyright comments
+    void prettyPrintCopyrightComment();
 };
 #endif

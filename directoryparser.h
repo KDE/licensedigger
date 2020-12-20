@@ -17,10 +17,11 @@ public:
 
     void setLicenseHeaderParser(LicenseParser parser);
     QMap<QString, LicenseRegistry::SpdxExpression> parseAll(const QString &directory, bool convertMode = false, const QString &ignorePattern = QString()) const;
-    void convertCopyright(const QString &directory, const QString &ignorePattern = QString()) const;
+    void convertCopyright(const QString &directory, const QString &ignorePattern = QString(), bool pretty = false) const;
     QRegularExpression copyrightRegExp() const;
     QRegularExpression spdxStatementRegExp() const;
     QString unifyCopyrightStatements(const QString &originalText) const;
+    QString unifyCopyrightCommentHeader(const QString &originalText) const;
     QString cleanupSpaceInCopyrightYearList(const QString &originalYearText) const;
     /**
      * @brief Uses regexp for the SPDX expression and replace matching text

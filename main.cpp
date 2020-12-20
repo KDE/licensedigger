@@ -44,6 +44,11 @@ int main(int argc, char *argv[])
                                               "convert copyright statements to SPDX-FileCopyrightText, but nothing else");
     parser.addOption(copyrightConvertOption);
 
+    QCommandLineOption prettyHeaderOption(QStringList() << "p"
+                                                            << "prettyheader",
+                                              "perform pretty-print conversion on copyright comment header");
+    parser.addOption(prettyHeaderOption);
+
     QCommandLineOption ignorePatternOption(QStringList() << "i"
                                                          << "ignore",
                                            "Ignore file path matching the pattern",
@@ -101,6 +106,7 @@ int main(int argc, char *argv[])
     // actual conversion steps
     const bool convertLicense = userWantsConversion || parser.isSet(licenseConvertOption) || parser.isSet(forceOption);
     const bool convertCopyright = userWantsConversion || parser.isSet(copyrightConvertOption) || parser.isSet(forceOption);
+    const bool prettyConvert = parser.isSet(prettyHeaderOption);
 
     if (convertLicense) {
         std::cout << hightlightOut << "Convert license statements: starting..." << defaultOut << std::endl;
@@ -110,7 +116,7 @@ int main(int argc, char *argv[])
 
     if (convertCopyright) {
         std::cout << hightlightOut << "Convert copyright statements: starting..." << defaultOut << std::endl;
-        licenseParser.convertCopyright(directory, ignorePattern);
+        licenseParser.convertCopyright(directory, ignorePattern, prettyConvert);
         std::cout << hightlightOut << "Convert copyright statements: DONE." << defaultOut << std::endl;
     }
 }

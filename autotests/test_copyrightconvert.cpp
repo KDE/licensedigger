@@ -115,4 +115,23 @@ void TestCopyrightConvert::skipSourceCodeStrings()
     QCOMPARE(header, originalHeader);
 }
 
+void TestCopyrightConvert::prettyPrintCopyrightComment()
+{
+    const QString originalHeader =
+            "/**********************************************************************\n"
+            " * SPDX-FileCopyrightText: 2018 John Doe <mail@example.com>           *\n"
+            " * SPDX-FileCopyrightText: 2018-2019 Jane Doe <another@example.com>   *\n"
+            " * SPDX-FileCopyrightText: 2001 the KMime authors.\n"
+            " **********************************************************************/\n";
+
+    const QString targetHeader =
+            "/*\n"
+            "    SPDX-FileCopyrightText: 2018 John Doe <mail@example.com>\n"
+            "    SPDX-FileCopyrightText: 2018-2019 Jane Doe <another@example.com>\n"
+            "    SPDX-FileCopyrightText: 2001 the KMime authors.\n"
+            "*/\n";
+    DirectoryParser parser;
+    QString header = parser.unifyCopyrightCommentHeader(originalHeader);
+    QCOMPARE(header, targetHeader);}
+
 QTEST_GUILESS_MAIN(TestCopyrightConvert);
