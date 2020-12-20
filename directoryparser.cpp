@@ -347,7 +347,7 @@ QMap<QString, LicenseRegistry::SpdxExpression> DirectoryParser::parseAll(const Q
     return results;
 }
 
-void DirectoryParser::convertCopyright(const QString &directory, const QString &ignorePattern, bool pretty) const
+void DirectoryParser::convertCopyright(const QString &directory, ConvertOptions options, const QString &ignorePattern) const
 {
     QRegularExpression ignoreFile(ignorePattern);
 
@@ -369,15 +369,16 @@ void DirectoryParser::convertCopyright(const QString &directory, const QString &
         }
 
         file.open(QIODevice::ReadOnly);
-        const QString fileContent = file.readAll();
+        QString content = file.readAll();
         file.close();
-
-        file.open(QIODevice::WriteOnly);
-        QString newContent = unifyCopyrightStatements(fileContent);
-        if (pretty) {
-            newContent = unifyCopyrightCommentHeader(newContent);
+        if (options & ConvertOption::COPYRIGHT_TEXT) {
+            content = unifyCopyrightStatements(content);
         }
-        file.write(newContent.toUtf8());
+        if (options & ConvertOption::PRETTY) {
+            content = unifyCopyrightCommentHeader(content);
+        }
+        file.open(QIODevice::WriteOnly);
+        file.write(content.toUtf8());
         file.close();
     }
 }

@@ -105,8 +105,14 @@ int main(int argc, char *argv[])
 
     // actual conversion steps
     const bool convertLicense = userWantsConversion || parser.isSet(licenseConvertOption) || parser.isSet(forceOption);
-    const bool convertCopyright = userWantsConversion || parser.isSet(copyrightConvertOption) || parser.isSet(forceOption);
-    const bool prettyConvert = parser.isSet(prettyHeaderOption);
+
+    DirectoryParser::ConvertOptions options = DirectoryParser::ConvertOption::NONE;
+    if (userWantsConversion || parser.isSet(copyrightConvertOption) || parser.isSet(forceOption)) {
+        options |= DirectoryParser::ConvertOption::COPYRIGHT_TEXT;
+    }
+    if (parser.isSet(prettyHeaderOption)) {
+        options |= DirectoryParser::ConvertOption::PRETTY;
+    }
 
     if (convertLicense) {
         std::cout << hightlightOut << "Convert license statements: starting..." << defaultOut << std::endl;
@@ -114,9 +120,9 @@ int main(int argc, char *argv[])
         std::cout << hightlightOut << "Convert license statements: DONE." << defaultOut << std::endl;
     }
 
-    if (convertCopyright) {
+    if (options & DirectoryParser::ConvertOption::COPYRIGHT_TEXT || options & DirectoryParser::ConvertOption::PRETTY) {
         std::cout << hightlightOut << "Convert copyright statements: starting..." << defaultOut << std::endl;
-        licenseParser.convertCopyright(directory, ignorePattern, prettyConvert);
+        licenseParser.convertCopyright(directory, options, ignorePattern);
         std::cout << hightlightOut << "Convert copyright statements: DONE." << defaultOut << std::endl;
     }
 }
