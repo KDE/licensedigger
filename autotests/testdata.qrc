@@ -15,6 +15,7 @@
         <file>testdata/BSD-3-Clause/lut.h</file>
         <file>testdata/BSL-1.0/GetGitRevisionDescription.cmake</file>
         <file>testdata/CC0-1.0/colorspace.py</file>
+        <file>testdata/GPL-2.0-only/callview.h</file>
         <file>testdata/GPL-2.0-only/client.cpp</file>
         <file>testdata/GPL-2.0-only/kfileplacesmodeltest.cpp</file>
         <file>testdata/GPL-2.0-only/kpasswdserver.cpp</file>
@@ -159,6 +160,7 @@
         <file>testdata/LGPL-2.1-only_OR_LGPL-3.0-only/httpserver_p.cpp</file>
         <file>testdata/LGPL-2.1-only_WITH_Qt-LGPL-exception-1.1_OR_LicenseRef-Qt-Commercial/kprocesslist.cpp</file>
         <file>testdata/LGPL-2.1-only_WITH_Qt-LGPL-exception-1.1_OR_LGPL-3.0-only_WITH_Qt-LGPL-exception-1.1_OR_LicenseRef-Qt-Commercial/quickviewsharedengine.cpp</file>
+        <file>testdata/LGPL-2.1-only_WITH_Qt-LGPL-exception-1.1_OR_LGPL-3.0-only_WITH_Qt-LGPL-exception-1.1_OR_LicenseRef-Qt-Commercial/qtcolorbutton.h</file>
         <file>testdata/LGPL-2.1-or-later/BackendsManager.cpp</file>
         <file>testdata/LGPL-2.1-or-later/a2dp-codecs.h</file>
         <file>testdata/LGPL-2.1-or-later/authorizationmanager_p.h</file>

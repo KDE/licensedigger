@@ -15,6 +15,7 @@
         <file>licenses_templates/BSD-3-Clause/lut</file>
         <file>licenses_templates/BSL-1.0/GetGitRevisionDescription</file>
         <file>licenses_templates/CC0-1.0/colorspace</file>
+        <file>licenses_templates/GPL-2.0-only/kcachegrind_callview</file>
         <file>licenses_templates/GPL-2.0-only/kdesu_client</file>
         <file>licenses_templates/GPL-2.0-only/kio_kfileplacesmodeltest</file>
         <file>licenses_templates/GPL-2.0-only/kio_kpasswdserver</file>
@@ -177,6 +178,7 @@
         <file>licenses_templates/LGPL-2.1-only_OR_LGPL-3.0-only/kio_httpserver_p</file>
         <file>licenses_templates/LGPL-2.1-only_WITH_Qt-LGPL-exception-1.1_OR_LicenseRef-Qt-Commercial/kcoreaddons_kprocesslist</file>
         <file>licenses_templates/LGPL-2.1-only_WITH_Qt-LGPL-exception-1.1_OR_LGPL-3.0-only_WITH_Qt-LGPL-exception-1.1_OR_LicenseRef-Qt-Commercial/kdeclarative_quickviewsharedengine</file>
+        <file>licenses_templates/LGPL-2.1-only_WITH_Qt-LGPL-exception-1.1_OR_LGPL-3.0-only_WITH_Qt-LGPL-exception-1.1_OR_LicenseRef-Qt-Commercial/kcachegrind_qtcolorbutton</file>
         <file>licenses_templates/LGPL-2.1-or-later/baloo_basicindexingjobtest</file>
         <file>licenses_templates/LGPL-2.1-or-later/baloo_databasebenchmark</file>
         <file>licenses_templates/LGPL-2.1-or-later/bluezqt_a2dp-codecs</file>
