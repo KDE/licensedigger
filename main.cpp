@@ -101,6 +101,10 @@ int main(int argc, char *argv[])
         if (convertAnswer == "y") {
             userWantsConversion = true;
         }
+        if (convertAnswer == "n") {
+            std::cout << "Goodbye." << std::endl;
+            return 0;
+        }
     }
 
     // actual conversion steps
