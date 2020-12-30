@@ -38,6 +38,7 @@
         <file>testdata/GPL-2.0-or-later/kio_search.cpp</file>
         <file>testdata/GPL-2.0-or-later/kioexec_main.cpp</file>
         <file>testdata/GPL-2.0-or-later/kreversiplayer.h</file>
+        <file>testdata/GPL-2.0-or-later/kspaceduel_main.cpp</file>
         <file>testdata/GPL-2.0-or-later/kurlcomboboxtest.cpp</file>
         <file>testdata/GPL-2.0-or-later/localdomainurifilter.cpp</file>
         <file>testdata/GPL-2.0-or-later/shellpluginloader.cpp</file>
