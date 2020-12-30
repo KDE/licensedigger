@@ -32,6 +32,7 @@
         <file>testdata/GPL-2.0-or-later/kcharsetstest.cpp</file>
         <file>testdata/GPL-2.0-or-later/kcookiewin.h</file>
         <file>testdata/GPL-2.0-or-later/kemoticontest.cpp</file>
+        <file>testdata/GPL-2.0-or-later/kexiv2.h</file>
         <file>testdata/GPL-2.0-or-later/kgamepopupitem.h</file>
         <file>testdata/GPL-2.0-or-later/kimageframe.cpp</file>
         <file>testdata/GPL-2.0-or-later/kio_search.cpp</file>
