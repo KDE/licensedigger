@@ -62,6 +62,7 @@
         <file>testdata/GPL-2.0-or-later/kis_tone_curve_widget.h</file>
         <file>testdata/GPL-2.0-or-later/wacom-properties.h</file>
         <file>testdata/GPL-2.0-or-later/thememanager.h</file>
+        <file>testdata/GPL-2.0-or-later/kdiamond_main.cpp</file>
         <file>testdata/GPL-2.0-or-later/kmahjongg.h</file>
         <file>testdata/GPL-2.0-or-later/gameremovedtiles.h</file>
         <file>testdata/GPL-2.0-or-later/configdictionaryselector.cpp</file>
