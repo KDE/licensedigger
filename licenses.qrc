@@ -134,6 +134,7 @@
         <file>licenses_templates/LGPL-2.0-only_WITH_Qt-Commercial-exception-1.0/kio_kstatusbarofflineindicator</file>
         <file>licenses_templates/LGPL-2.0-or-later/akonadi_main</file>
         <file>licenses_templates/LGPL-2.0-or-later/Canvas</file>
+        <file>licenses_templates/LGPL-2.0-or-later/bomberwidget</file>
         <file>licenses_templates/LGPL-2.0-or-later/kcontacts_ldif</file>
         <file>licenses_templates/LGPL-2.0-or-later/baloo_balooplugin</file>
         <file>licenses_templates/LGPL-2.0-or-later/kactivities_range</file>

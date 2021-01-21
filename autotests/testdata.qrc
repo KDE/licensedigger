@@ -119,6 +119,7 @@
         <file>testdata/LGPL-2.0-or-later/JSLock.cpp</file>
         <file>testdata/LGPL-2.0-or-later/SimplePage.qml</file>
         <file>testdata/LGPL-2.0-or-later/balooplugin.cpp</file>
+        <file>testdata/LGPL-2.0-or-later/bomberwidget.h</file>
         <file>testdata/LGPL-2.0-or-later/Canvas.cpp</file>
         <file>testdata/LGPL-2.0-or-later/dialogshadows.cpp</file>
         <file>testdata/LGPL-2.0-or-later/ecmatest.cpp</file>
