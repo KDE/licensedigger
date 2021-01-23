@@ -141,6 +141,8 @@
         <file>licenses_templates/LGPL-2.0-or-later/kactivities_range</file>
         <file>licenses_templates/LGPL-2.0-or-later/kactivities_resourceinstance</file>
         <file>licenses_templates/LGPL-2.0-or-later/kbookmarks_kbookmarkdombuilder</file>
+        <file>licenses_templates/LGPL-2.0-or-later/kbounce_ball</file>
+        <file>licenses_templates/LGPL-2.0-or-later/kbounce_renderer</file>
         <file>licenses_templates/LGPL-2.0-or-later/kcharselect-translation</file>
         <file>licenses_templates/LGPL-2.0-or-later/kcontacts_contactgroup</file>
         <file>licenses_templates/LGPL-2.0-or-later/kcompletion_kcompletionbase</file>

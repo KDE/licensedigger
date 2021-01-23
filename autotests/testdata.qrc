@@ -131,6 +131,8 @@
         <file>testdata/LGPL-2.0-or-later/kacleditwidget.cpp</file>
         <file>testdata/LGPL-2.0-or-later/kautostart.cpp</file>
         <file>testdata/LGPL-2.0-or-later/kbookmarkdombuilder.cpp</file>
+        <file>testdata/LGPL-2.0-or-later/kbounce_ball.h</file>
+        <file>testdata/LGPL-2.0-or-later/kbounce_renderer.h</file>
         <file>testdata/LGPL-2.0-or-later/kcharselect-translation.cpp</file>
         <file>testdata/LGPL-2.0-or-later/kcompletionbase.cpp</file>
         <file>testdata/LGPL-2.0-or-later/kcursor_p.h</file>
