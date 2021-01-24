@@ -146,6 +146,8 @@
         <file>testdata/LGPL-2.0-or-later/kurlcompletion.cpp</file>
         <file>testdata/LGPL-2.0-or-later/kurlrequesterdialog.cpp</file>
         <file>testdata/LGPL-2.0-or-later/package.cpp</file>
+        <file>testdata/LGPL-2.0-or-later/palapeli_elidinglabel.h</file>
+        <file>testdata/LGPL-2.0-or-later/palapeli_slicer.h</file>
         <file>testdata/LGPL-2.0-or-later/plugintest.cpp</file>
         <file>testdata/LGPL-2.0-or-later/qtquicksettings.cpp</file>
         <file>testdata/LGPL-2.0-or-later/range.h</file>
