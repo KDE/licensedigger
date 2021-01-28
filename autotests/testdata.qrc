@@ -129,6 +129,7 @@
         <file>testdata/LGPL-2.0-or-later/holidayregionsmodel.cpp</file>
         <file>testdata/LGPL-2.0-or-later/joburlcache.cpp</file>
         <file>testdata/LGPL-2.0-or-later/kacleditwidget.cpp</file>
+        <file>testdata/LGPL-2.0-or-later/kasync-async.h</file>
         <file>testdata/LGPL-2.0-or-later/kautostart.cpp</file>
         <file>testdata/LGPL-2.0-or-later/kbookmarkdombuilder.cpp</file>
         <file>testdata/LGPL-2.0-or-later/kbounce_ball.h</file>
