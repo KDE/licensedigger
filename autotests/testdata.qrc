@@ -23,6 +23,7 @@
         <file>testdata/GPL-2.0-only/lnflistmodel.cpp</file>
         <file>testdata/GPL-2.0-only/generate.rb</file>
         <file>testdata/GPL-2.0-only/create_tarball_kf5.rb</file>
+        <file>testdata/GPL-2.0-only/menufile.h</file>
         <file>testdata/GPL-2.0-or-later/activityinfo.cpp</file>
         <file>testdata/GPL-2.0-or-later/alternativesmodeltest.cpp</file>
         <file>testdata/GPL-2.0-or-later/apptemplateitem.h</file>
