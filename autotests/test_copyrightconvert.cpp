@@ -33,6 +33,7 @@ void TestCopyrightConvert::detectCopyright()
         { "Copyright (C) 2020 Andreas Cord-Landwehr <mail@example.com>", "2020", "Andreas Cord-Landwehr", "<mail@example.com>" },
         { "Copyright 2018-2019 John Doe <mail@example.com>" , "2018-2019", "John Doe", "<mail@example.com>" },
         { "Copyright © 2018-2019 John Doe" , "2018-2019", "John Doe", "" },
+        { "© 2018-2019 John Doe" , "2018-2019", "John Doe", "" },
         { "Copyright (C) 2015-2019 Jane Doe <mail@example.com>" , "2015-2019", "Jane Doe", "<mail@example.com>" },
         { "Copyright 2018-2019 Singlename <mail@example.com>" , "2018-2019", "Singlename", "<mail@example.com>" },
         { "Copyright 2018-2019 Foo of Baa  <mail@example.com>" , "2018-2019", "Foo of Baa", "<mail@example.com>" },
@@ -132,6 +133,17 @@ void TestCopyrightConvert::prettyPrintCopyrightComment()
             "*/\n";
     DirectoryParser parser;
     QString header = parser.unifyCopyrightCommentHeader(originalHeader);
-    QCOMPARE(header, targetHeader);}
+    QCOMPARE(header, targetHeader);
+}
+
+void TestCopyrightConvert::doNotConvertCopyrightKeyworsInCode()
+{
+    const QString originalSnippet =
+            "i18n(\"Copyright © 2019 John Doe\"))\n";
+
+    DirectoryParser parser;
+    QString convertedSnippet = parser.unifyCopyrightStatements(originalSnippet);
+    QCOMPARE(convertedSnippet, originalSnippet);
+}
 
 QTEST_GUILESS_MAIN(TestCopyrightConvert);

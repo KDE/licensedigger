@@ -25,5 +25,8 @@ private Q_SLOTS:
 
     // convert copyright comments
     void prettyPrintCopyrightComment();
+
+    // do not convert statements in code
+    void doNotConvertCopyrightKeyworsInCode();
 };
 #endif
