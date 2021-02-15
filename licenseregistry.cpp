@@ -102,7 +102,7 @@ QVector<QString> LicenseRegistry::headerTexts(const LicenseRegistry::SpdxExpress
 QVector<QRegularExpression> LicenseRegistry::headerTextRegExps(const SpdxExpression &identifier) const
 {
     if (!m_registry.contains(identifier)) {
-        qCritical() << "Identifier not found, returning error matcher";
+        qCritical() << identifier << "identifier not found, returning error matcher";
         return QVector<QRegularExpression> {QRegularExpression("DOES_NOT_MATCH_ANY_LICENSE_HEADER")};
     }
     if (m_regexpsCache.contains(identifier)) {

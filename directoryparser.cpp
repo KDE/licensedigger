@@ -84,7 +84,7 @@ QString DirectoryParser::unifyCopyrightCommentHeader(const QString &originalText
 {
     // restrict conversion to top-file comments
     if (!originalText.startsWith("/*")) {
-        qWarning() << "File not starting with comment";
+        qWarning() << "\tFile not starting with a comment.";
         return originalText;
     }
     auto lines = originalText.split("\n");
@@ -354,7 +354,11 @@ void DirectoryParser::convertCopyright(const QString &directory, ConvertOptions 
     QDirIterator iterator(directory, QDirIterator::Subdirectories);
     while (iterator.hasNext()) {
         QFile file(iterator.next());
+
+        qInfo() << "Processing file:" << file.fileName();
+
         if (shallIgnoreFile(iterator, ignoreFile)) {
+            qInfo() << "\tAsked to be ignored, skipping.";
             continue;
         }
         bool skip = true;
@@ -365,6 +369,7 @@ void DirectoryParser::convertCopyright(const QString &directory, ConvertOptions 
             }
         }
         if (skip) {
+            qInfo() << "\tUnsupported extension, skipping.";
             continue;
         }
 
