@@ -30,6 +30,7 @@
         <file>testdata/GPL-2.0-or-later/blockAnalyzer.cpp</file>
         <file>testdata/GPL-2.0-or-later/fht.cpp</file>
         <file>testdata/GPL-2.0-or-later/gstplayer.cpp</file>
+        <file>testdata/GPL-2.0-or-later/interfaceloader.cpp</file>
         <file>testdata/GPL-2.0-or-later/katomic_atom.h</file>
         <file>testdata/GPL-2.0-or-later/kbbmainwindow.h</file>
         <file>testdata/GPL-2.0-or-later/kcharsetstest.cpp</file>
