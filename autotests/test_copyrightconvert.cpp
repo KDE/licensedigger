@@ -31,6 +31,7 @@ void TestCopyrightConvert::detectCopyright()
         { "copyright: 2018 John Doe <mail@example.com>" , "2018", "John Doe", "<mail@example.com>" },
         { "Copyright: 2018, John Doe, <mail@example.com>" , "2018", "John Doe", "<mail@example.com>" },
         { "Copyright: 2018 John M. C. Doe <mail@example.com>" , "2018", "John M. C. Doe", "<mail@example.com>" },
+        { "Copyright : 2018 John M. C. Doe <mail@example.com>" , "2018", "John M. C. Doe", "<mail@example.com>" },
         { "Copyright (C) 2020 Andreas Cord-Landwehr <mail@example.com>", "2020", "Andreas Cord-Landwehr", "<mail@example.com>" },
         { "Copyright 2018-2019 John Doe <mail@example.com>" , "2018-2019", "John Doe", "<mail@example.com>" },
         { "Copyright © 2018-2019 John Doe" , "2018-2019", "John Doe", "" },
