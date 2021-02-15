@@ -35,7 +35,7 @@ QRegularExpression DirectoryParser::copyrightRegExp() const
 {
     static auto regexp = QRegularExpression(
         "(?<!\")" // negative lookahead for quotation marks, to skip string statements
-        "(SPDX-FileCopyrightText:|Copyright( \\([cC]\\))|Copyright ©|(?<!Copyright )©|Copyright(:)?)"
+        "(SPDX-FileCopyrightText:|Copyright( \\([cC]\\))|(?<!Copyright )\\([cC]\\)|Copyright ©|(?<!Copyright )©|Copyright(:)?)"
         "[, ]+"
         "(?<years>([0-9]+(-[0-9]+| - [0-9]+| to [0-9]+|,[ ]?[0-9]+)*|%{CURRENT_YEAR}))"
         "[, ]+"
