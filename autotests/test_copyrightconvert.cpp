@@ -93,6 +93,8 @@ void TestCopyrightConvert::convertFullHeader()
             "/*\n"
             " * Copyright  2018   John Doe   <mail@example.com>\n"
             " * Copyright  2018-2019   Jane Doe <another@example.com>\n"
+            " * Copyright  (C) 2013 by Volker Paul\n"
+            " * Copyright  © 2013 by Volker Paul\n"
             " * Copyright (c) 2001 the KMime authors.\n"
             " */\n";
 
@@ -100,6 +102,8 @@ void TestCopyrightConvert::convertFullHeader()
             "/*\n"
             " * SPDX-FileCopyrightText: 2018 John Doe <mail@example.com>\n"
             " * SPDX-FileCopyrightText: 2018-2019 Jane Doe <another@example.com>\n"
+            " * SPDX-FileCopyrightText: 2013 Volker Paul\n"
+            " * SPDX-FileCopyrightText: 2013 Volker Paul\n"
             " * SPDX-FileCopyrightText: 2001 the KMime authors.\n"
             " */\n";
 
