@@ -184,6 +184,7 @@
         <file>licenses_templates/LGPL-2.0-or-later/PythonPluginsModel</file>
         <file>licenses_templates/LGPL-2.0-or-later/kis_dodgehighlights_adjustment</file>
         <file>licenses_templates/LGPL-2.0-or-later/kmainwindowiface_p</file>
+        <file>licenses_templates/GPL-2.0-only_OR_GPL-3.0-only/kde_cli_tools_typeslistitem</file>
         <file>licenses_templates/TO-CLARIFY/kio_kfilecopytomenutest</file>
         <file>licenses_templates/TO-CLARIFY/kio_knameandurlinputdialog</file>
         <file>licenses_templates/TO-CLARIFY/kservice_kmimeassociations</file>
