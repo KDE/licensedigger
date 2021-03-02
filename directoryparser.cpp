@@ -121,6 +121,7 @@ QString DirectoryParser::replaceHeaderText(const QString &fileContent, const QSt
         QRegularExpressionMatch match;
         if (newContent.contains(regexp, &match) && match.capturedLength() > bestCapturedLength) {
             bestMatchingExpr = regexp;
+            bestCapturedLength = match.capturedLength();
         }
     }
     newContent.replace(bestMatchingExpr, spdxOutputString);
