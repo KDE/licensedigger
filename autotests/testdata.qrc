@@ -69,6 +69,7 @@
         <file>testdata/GPL-2.0-or-later/kmahjongg.h</file>
         <file>testdata/GPL-2.0-or-later/gameremovedtiles.h</file>
         <file>testdata/GPL-2.0-or-later/configdictionaryselector.cpp</file>
+        <file>testdata/GPL-2.0-only_OR_GPL-3.0-only/xcursortheme.h</file>
         <file>testdata/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/formats.cpp</file>
         <file>testdata/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/kpasswdservertest.cpp</file>
         <file>testdata/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/nsaplugin.cpp</file>
@@ -213,6 +214,7 @@
         <file>testdata/LGPL-3.0-or-later/main.cpp</file>
         <file>testdata/LGPL-3.0-or-later/testcreateddatecompat.cpp</file>
         <file>testdata/LGPL-3.0-only_OR_GPL-2.0-or-later/ScrollView.qml</file>
+        <file>testdata/LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/ContextualHelpButton.qml</file>
         <file>testdata/MIT/CharDistribution.cpp</file>
         <file>testdata/MIT/DeclarativeDragArea.cpp</file>
         <file>testdata/MIT/fixx11h.h</file>

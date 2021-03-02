@@ -113,9 +113,18 @@ QString DirectoryParser::replaceHeaderText(const QString &fileContent, const QSt
     outputExpression.replace('_', ' ');
     QString spdxOutputString = "SPDX-License-Identifier: " + outputExpression;
     QString newContent = fileContent;
+
+    // replace by longest match
+    QRegularExpression bestMatchingExpr = regexps.first();
+    int bestCapturedLength = 0;
     for (auto regexp : regexps) {
-        newContent.replace(regexp, spdxOutputString);
+        QRegularExpressionMatch match;
+        if (newContent.contains(regexp, &match) && match.capturedLength() > bestCapturedLength) {
+            bestMatchingExpr = regexp;
+            bestCapturedLength = match.capturedLength();
+        }
     }
+    newContent.replace(bestMatchingExpr, spdxOutputString);
     return newContent;
 }
 

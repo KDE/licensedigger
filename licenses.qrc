@@ -25,6 +25,7 @@
         <file>licenses_templates/GPL-2.0-only/kturtle_generate_rb</file>
         <file>licenses_templates/GPL-2.0-only/create_tarball_kf5</file>
         <file>licenses_templates/GPL-2.0-only/kmenuedit_menufile</file>
+        <file>licenses_templates/GPL-2.0-only/plasma-workspace_krdb</file>
         <file>licenses_templates/GPL-2.0-or-later/akonadi-search_akonadisearchdebugdialog</file>
         <file>licenses_templates/GPL-2.0-or-later/akonadiconsole_agentconfigdialog</file>
         <file>licenses_templates/GPL-2.0-or-later/baloo_kio_search</file>
@@ -83,6 +84,10 @@
         <file>licenses_templates/GPL-2.0-or-later/wacom-properties</file>
         <file>licenses_templates/GPL-2.0-or-later/thememanager</file>
         <file>licenses_templates/GPL-2.0-or-later/kiten_configdictionaryselector</file>
+        <file>licenses_templates/GPL-2.0-or-later/plasma-workspace_kfontinst</file>
+        <file>licenses_templates/GPL-2.0-or-later/plasma-workspace_filebrowserengine</file>
+        <file>licenses_templates/GPL-2.0-only_OR_GPL-3.0-only/plasma-workspace_cursortheme</file>
+        <file>licenses_templates/GPL-2.0-only_OR_GPL-3.0-only/plasma-workspace_xcursortheme</file>
         <file>licenses_templates/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/kdeclarative_formats</file>
         <file>licenses_templates/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/kio_kpasswdservertest</file>
         <file>licenses_templates/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/konversation_queuetuner</file>
@@ -184,6 +189,12 @@
         <file>licenses_templates/LGPL-2.0-or-later/PythonPluginsModel</file>
         <file>licenses_templates/LGPL-2.0-or-later/kis_dodgehighlights_adjustment</file>
         <file>licenses_templates/LGPL-2.0-or-later/kmainwindowiface_p</file>
+        <file>licenses_templates/LGPL-2.0-or-later/plasma-workspace_expandedrepresentation</file>
+        <file>licenses_templates/LGPL-2.0-or-later/plasma-workspace_pulseanimation</file>
+        <file>licenses_templates/LGPL-2.0-or-later/plasma-workspace_notification_test</file>
+        <file>licenses_templates/LGPL-2.0-or-later/plasma-workspace_pipewiresourcestream</file>
+        <file>licenses_templates/LGPL-2.0-or-later/plasma-workspace_faviconprovider</file>
+        <file>licenses_templates/LGPL-2.0-or-later/plasma-workspace_faviconprovider2</file>
         <file>licenses_templates/TO-CLARIFY/kio_kfilecopytomenutest</file>
         <file>licenses_templates/TO-CLARIFY/kio_knameandurlinputdialog</file>
         <file>licenses_templates/TO-CLARIFY/kservice_kmimeassociations</file>
@@ -282,5 +293,7 @@
         <file>licenses_templates/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/kdeconnect_android_startactivityalertdialogfragment</file>
         <file>licenses_templates/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/kdeconnect_android_uploadnotification</file>
         <file>licenses_templates/GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/breeze-plymouth_breeze.script</file>
+        <file>licenses_templates/GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/plasma-workspace_globalshortcuts</file>
+        <file>licenses_templates/LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/plasma-workspace_contextualhelpbutton</file>
     </qresource>
 </RCC>
