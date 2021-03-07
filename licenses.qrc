@@ -90,6 +90,11 @@
         <file>licenses_templates/GPL-2.0-or-later/systemsettings_iconmode</file>
         <file>licenses_templates/GPL-2.0-or-later/kio-extras_windowsimagecreator</file>
         <file>licenses_templates/GPL-2.0-or-later/spectacle_kpiimagecollectionselector</file>
+        <file>licenses_templates/GPL-2.0-or-later/gwenview_browsemainpage</file>
+        <file>licenses_templates/GPL-2.0-or-later/gwenview_zoommode</file>
+        <file>licenses_templates/GPL-2.0-or-later/gwenview_transformimageoperation</file>
+        <file>licenses_templates/GPL-2.0-or-later/gwenview_touchhelper</file>
+        <file>licenses_templates/GPL-2.0-or-later/gwenview_about</file>
         <file>licenses_templates/GPL-2.0-only_OR_GPL-3.0-only/plasma-workspace_cursortheme</file>
         <file>licenses_templates/GPL-2.0-only_OR_GPL-3.0-only/plasma-workspace_xcursortheme</file>
         <file>licenses_templates/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/kdeclarative_formats</file>
@@ -241,6 +246,7 @@
         <file>licenses_templates/LGPL-2.1-or-later/RgbCompositeOps</file>
         <file>licenses_templates/LGPL-2.1-or-later/KoTriangleColorSelector</file>
         <file>licenses_templates/LGPL-2.1-or-later/plasmadialer_channelapprover</file>
+        <file>licenses_templates/LGPL-2.1-or-later/gwenview_bayer</file>
         <file>licenses_templates/LGPL-2.1-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/attica_projectparser</file>
         <file>licenses_templates/LGPL-2.1-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/attica_qtplatformdependent_typo</file>
         <file>licenses_templates/LGPL-2.1-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/kactivities_utils</file>
@@ -266,6 +272,7 @@
         <file>licenses_templates/MIT/prison</file>
         <file>licenses_templates/MIT/breeze_breezeexceptionslist</file>
         <file>licenses_templates/MIT/discover_FindGLib</file>
+        <file>licenses_templates/MIT/gwenview_iccjpeg</file>
         <file>licenses_templates/MIT_OR_BSL-1.0/patched_boykov_kolmogorov_max_flow</file>
         <file>licenses_templates/TO-CLARIFY/kio_might-be-lgpl2.0-or-lgpl-2.1</file>
         <file>licensetexts/Apache-2.0.txt</file>
