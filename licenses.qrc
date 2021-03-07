@@ -26,6 +26,7 @@
         <file>licenses_templates/GPL-2.0-only/create_tarball_kf5</file>
         <file>licenses_templates/GPL-2.0-only/kmenuedit_menufile</file>
         <file>licenses_templates/GPL-2.0-only/plasma-workspace_krdb</file>
+        <file>licenses_templates/GPL-2.0-only/kio-extras_fish</file>
         <file>licenses_templates/GPL-2.0-or-later/akonadi-search_akonadisearchdebugdialog</file>
         <file>licenses_templates/GPL-2.0-or-later/akonadiconsole_agentconfigdialog</file>
         <file>licenses_templates/GPL-2.0-or-later/baloo_kio_search</file>
@@ -87,6 +88,7 @@
         <file>licenses_templates/GPL-2.0-or-later/plasma-workspace_kfontinst</file>
         <file>licenses_templates/GPL-2.0-or-later/plasma-workspace_filebrowserengine</file>
         <file>licenses_templates/GPL-2.0-or-later/systemsettings_iconmode</file>
+        <file>licenses_templates/GPL-2.0-or-later/kio-extras_windowsimagecreator</file>
         <file>licenses_templates/GPL-2.0-only_OR_GPL-3.0-only/plasma-workspace_cursortheme</file>
         <file>licenses_templates/GPL-2.0-only_OR_GPL-3.0-only/plasma-workspace_xcursortheme</file>
         <file>licenses_templates/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/kdeclarative_formats</file>
@@ -208,6 +210,7 @@
         <file>licenses_templates/LGPL-2.1-only/kitemmodels_modeltest</file>
         <file>licenses_templates/LGPL-2.1-only/kprocesslist_unix_procstat</file>
         <file>licenses_templates/LGPL-2.1-only/jp2_import</file>
+        <file>licenses_templates/LGPL-2.1-only/kio-extras_audiocreator</file>
         <file>licenses_templates/LGPL-2.1-only_OR_LGPL-3.0-only/kio_httpserver_p</file>
         <file>licenses_templates/LGPL-2.1-only_WITH_Qt-LGPL-exception-1.1_OR_LicenseRef-Qt-Commercial/kcoreaddons_kprocesslist</file>
         <file>licenses_templates/LGPL-2.1-only_WITH_Qt-LGPL-exception-1.1_OR_LGPL-3.0-only_WITH_Qt-LGPL-exception-1.1_OR_LicenseRef-Qt-Commercial/kdeclarative_quickviewsharedengine</file>
