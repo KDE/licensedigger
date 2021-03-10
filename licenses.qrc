@@ -89,6 +89,7 @@
         <file>licenses_templates/GPL-2.0-or-later/plasma-workspace_filebrowserengine</file>
         <file>licenses_templates/GPL-2.0-or-later/systemsettings_iconmode</file>
         <file>licenses_templates/GPL-2.0-or-later/kio-extras_windowsimagecreator</file>
+        <file>licenses_templates/GPL-2.0-or-later/spectacle_kpiimagecollectionselector</file>
         <file>licenses_templates/GPL-2.0-only_OR_GPL-3.0-only/plasma-workspace_cursortheme</file>
         <file>licenses_templates/GPL-2.0-only_OR_GPL-3.0-only/plasma-workspace_xcursortheme</file>
         <file>licenses_templates/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/kdeclarative_formats</file>
@@ -199,6 +200,7 @@
         <file>licenses_templates/LGPL-2.0-or-later/plasma-workspace_pipewiresourcestream</file>
         <file>licenses_templates/LGPL-2.0-or-later/plasma-workspace_faviconprovider</file>
         <file>licenses_templates/LGPL-2.0-or-later/plasma-workspace_faviconprovider2</file>
+        <file>licenses_templates/LGPL-2.0-or-later/spectacle_ksgkipiinterface</file>
         <file>licenses_templates/TO-CLARIFY/kio_kfilecopytomenutest</file>
         <file>licenses_templates/TO-CLARIFY/kio_knameandurlinputdialog</file>
         <file>licenses_templates/TO-CLARIFY/kservice_kmimeassociations</file>
