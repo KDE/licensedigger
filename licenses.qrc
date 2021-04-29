@@ -219,6 +219,7 @@
         <file>licenses_templates/LGPL-2.1-only/jp2_import</file>
         <file>licenses_templates/LGPL-2.1-only/kio-extras_audiocreator</file>
         <file>licenses_templates/LGPL-2.1-only_OR_LGPL-3.0-only/kio_httpserver_p</file>
+        <file>licenses_templates/LGPL-2.1-only/kamoso_videomaterial</file>
         <file>licenses_templates/LGPL-2.1-only_WITH_Qt-LGPL-exception-1.1_OR_LicenseRef-Qt-Commercial/kcoreaddons_kprocesslist</file>
         <file>licenses_templates/LGPL-2.1-only_WITH_Qt-LGPL-exception-1.1_OR_LGPL-3.0-only_WITH_Qt-LGPL-exception-1.1_OR_LicenseRef-Qt-Commercial/kdeclarative_quickviewsharedengine</file>
         <file>licenses_templates/LGPL-2.1-only_WITH_Qt-LGPL-exception-1.1_OR_LGPL-3.0-only_WITH_Qt-LGPL-exception-1.1_OR_LicenseRef-Qt-Commercial/kcachegrind_qtcolorbutton</file>
