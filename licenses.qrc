@@ -156,6 +156,7 @@
         <file>licenses_templates/LGPL-2.0-or-later/bomberwidget</file>
         <file>licenses_templates/LGPL-2.0-or-later/kasync</file>
         <file>licenses_templates/LGPL-2.0-or-later/kcontacts_ldif</file>
+        <file>licenses_templates/LGPL-2.0-or-later/kdb_connectoroptiontest</file>
         <file>licenses_templates/LGPL-2.0-or-later/baloo_balooplugin</file>
         <file>licenses_templates/LGPL-2.0-or-later/kactivities_range</file>
         <file>licenses_templates/LGPL-2.0-or-later/kactivities_resourceinstance</file>
