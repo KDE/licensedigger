@@ -68,6 +68,7 @@
         <file>licenses_templates/GPL-2.0-or-later/plasma-framework_view</file>
         <file>licenses_templates/GPL-2.0-or-later/purpose_alternativesmodeltest</file>
         <file>licenses_templates/GPL-2.0-or-later/kdeconnect-sendfileitemaction</file>
+        <file>licenses_templates/GPL-2.0-or-later/polkit_kde_agent_main</file>
         <file>licenses_templates/GPL-2.0-or-later/plasma-sdk_engineexplorer</file>
         <file>licenses_templates/GPL-2.0-or-later/breeze-plymouth_plugin</file>
         <file>licenses_templates/GPL-2.0-or-later/drkonqi_bugreportaddress</file>
