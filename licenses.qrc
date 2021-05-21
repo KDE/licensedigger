@@ -210,6 +210,7 @@
         <file>licenses_templates/LGPL-2.0-or-later/spectacle_ksgkipiinterface</file>
         <file>licenses_templates/LGPL-2.0-or-later/umbrello_phpitem</file>
         <file>licenses_templates/LGPL-2.0-or-later/umbrello_ast</file>
+        <file>licenses_templates/LGPL-2.0-or-later/plasma-desktop_launcher</file>
         <file>licenses_templates/TO-CLARIFY/kio_kfilecopytomenutest</file>
         <file>licenses_templates/TO-CLARIFY/kio_knameandurlinputdialog</file>
         <file>licenses_templates/TO-CLARIFY/kservice_kmimeassociations</file>
