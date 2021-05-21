@@ -96,6 +96,7 @@
         <file>licenses_templates/GPL-2.0-or-later/gwenview_touchhelper</file>
         <file>licenses_templates/GPL-2.0-or-later/gwenview_about</file>
         <file>licenses_templates/GPL-2.0-or-later/cantor_worksheetentry</file>
+        <file>licenses_templates/GPL-2.0-or-later/umbrello_basictypes</file>
         <file>licenses_templates/GPL-2.0-only_OR_GPL-3.0-only/plasma-workspace_cursortheme</file>
         <file>licenses_templates/GPL-2.0-only_OR_GPL-3.0-only/plasma-workspace_xcursortheme</file>
         <file>licenses_templates/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/kdeclarative_formats</file>
