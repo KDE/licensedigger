@@ -226,6 +226,7 @@
         <file>testdata/MIT/syntaxhighlighter.cpp</file>
         <file>testdata/MIT/FindGLib.cmake</file>
         <file>testdata/MIT_OR_BSL-1.0/patched_boykov_kolmogorov_max_flow.hpp</file>
+        <file>testdata/X11/synctex_parser_utils.c</file>
         <file>testdata/LGPL-3.0-only_OR_GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KFQF-Accepted-GPL_OR_LicenseRef-Qt-Commercial/qsgdefaultninepatchnode_p.h</file>
         <file>testdata/LGPL-2.1-or-later/qtgstreamerbackend.cpp</file>
         <file>testdata_conversionexamples/file_without_unrecognized_statement.h.origfile</file>

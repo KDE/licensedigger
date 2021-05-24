@@ -311,6 +311,7 @@
         <file>licensetexts/Qt-LGPL-exception-1.1.txt</file>
         <file>licensetexts/LicenseRef-Qt-Commercial.txt</file>
         <file>licensetexts/LicenseRef-KFQF-Accepted-GPL.txt</file>
+        <file>licensetexts/X11.txt</file>
         <file>licenses_templates/LGPL-3.0-only_OR_GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KFQF-Accepted-GPL_OR_LicenseRef-Qt-Commercial/qqc2-desktop-style_qsgdefaultninepatchnode</file>
         <file>licenses_templates/LGPL-2.1-or-later/artikulate_gstreamerbackend</file>
         <file>licensetexts/Qt-Commercial-exception-1.0.txt</file>
@@ -322,5 +323,6 @@
         <file>licenses_templates/GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/breeze-plymouth_breeze.script</file>
         <file>licenses_templates/GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/plasma-workspace_globalshortcuts</file>
         <file>licenses_templates/LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/plasma-workspace_contextualhelpbutton</file>
+        <file>licenses_templates/X11/okular_synctex_parser_utils</file>
     </qresource>
 </RCC>

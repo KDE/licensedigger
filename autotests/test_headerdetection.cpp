@@ -188,6 +188,12 @@ void TestHeaderDetection::detectMIT()
     detectForIdentifierSkipParser("MIT");
 }
 
+void TestHeaderDetection::detectX11()
+{
+    detectForIdentifierRegExpParser("X11");
+    detectForIdentifierSkipParser("X11");
+}
+
 void TestHeaderDetection::detectLGPL21withQtLGPLexception_or_QtCommercial()
 {
     detectForIdentifierRegExpParser("LGPL-2.1-only_WITH_Qt-LGPL-exception-1.1_OR_LicenseRef-Qt-Commercial");

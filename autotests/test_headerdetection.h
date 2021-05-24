@@ -37,6 +37,7 @@ private Q_SLOTS:
     void detectBSD2Clause();
     void detectBSD3Clause();
     void detectMIT();
+    void detectX11();
     void detectLGPL21withQtLGPLexception_or_QtCommercial();
     void detectLGPL21withQtLGPLexceptionOrLGPL30withQtLGPLexception();
     void detectLGPL30_or_GPL20_or_GPL30_or_GPLKFQF_or_QtCommercial();
