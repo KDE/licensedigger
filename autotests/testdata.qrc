@@ -197,6 +197,7 @@
         <file>testdata/LGPL-2.1-or-later/kpixmapsequence.cpp</file>
         <file>testdata/LGPL-2.1-or-later/ktooltipwidgettest.cpp</file>
         <file>testdata/LGPL-2.1-or-later/kurllabel.cpp</file>
+        <file>testdata/LGPL-2.1-or-later/kwebkitpart.h</file>
         <file>testdata/LGPL-2.1-or-later/lessthanwidget.h</file>
         <file>testdata/LGPL-2.1-or-later/proxymodeltestwidget.cpp</file>
         <file>testdata/LGPL-2.1-or-later/KoBasicHistogramProducers.cpp</file>
