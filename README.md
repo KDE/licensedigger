@@ -11,6 +11,22 @@ The tools goal is only the _conversion_ of license headers. This means, explicit
 - Generate an overview of used licenses in your project. `reuse spdx` might be your answer.
 - Evaluating the outbound license of your compiled binaries. This is a difficult task with separate tooling.
 
+## Compile and Install
+
+This is a CMake based project and can be built with the following commands.
+Optionally you can define an installation folder with `-DCMAKE_INSTALL_PREFIX=/tmp/myinstalldir`. When skipping this parameter, the install step tries to install into your system folders and requires root privileges for this.
+
+```
+git clone https://invent.kde.org/sdk/licensedigger.git
+cd licensedigger/
+mkdir build && cd build/
+cmake -DCMAKE_INSTALL_PREFIX=/tmp/myinstalldir ..
+cmake --build . --parallel
+cmake --install .
+```
+
+If you use a custom install folder, make sure to at this folder to your path variable `PATH`.
+
 ## Usage
 
 Simply run `licensedigger <your-project-root-directory>`. You will be presented the detected licenses and be asked if you want to proceed with the conversion.
