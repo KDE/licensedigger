@@ -167,6 +167,9 @@
         <file>licenses_templates/LGPL-2.0-or-later/akonadi_main</file>
         <file>licenses_templates/LGPL-2.0-or-later/Canvas</file>
         <file>licenses_templates/LGPL-2.0-or-later/bomberwidget</file>
+        <file>licenses_templates/LGPL-2.0-or-later/breeze-gtk_oxygentileset</file>
+        <file>licenses_templates/LGPL-2.0-or-later/breeze-gtk_oxygenshadowhelper</file>
+        <file>licenses_templates/LGPL-2.0-or-later/breeze-gtk_oxygentreeviewstatedata</file>
         <file>licenses_templates/LGPL-2.0-or-later/kasync</file>
         <file>licenses_templates/LGPL-2.0-or-later/kcontacts_ldif</file>
         <file>licenses_templates/LGPL-2.0-or-later/kdb_connectoroptiontest</file>
