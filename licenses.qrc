@@ -178,6 +178,7 @@
         <file>licenses_templates/LGPL-2.0-or-later/kactivities_range</file>
         <file>licenses_templates/LGPL-2.0-or-later/kactivities_resourceinstance</file>
         <file>licenses_templates/LGPL-2.0-or-later/kbookmarks_kbookmarkdombuilder</file>
+        <file>licenses_templates/LGPL-2.0-or-later/kio_without_lgpl-version</file>
         <file>licenses_templates/LGPL-2.0-or-later/kbounce_ball</file>
         <file>licenses_templates/LGPL-2.0-or-later/kbounce_renderer</file>
         <file>licenses_templates/LGPL-2.0-or-later/kcharselect-translation</file>
@@ -297,7 +298,6 @@
         <file>licenses_templates/MIT/discover_FindGLib</file>
         <file>licenses_templates/MIT/gwenview_iccjpeg</file>
         <file>licenses_templates/MIT_OR_BSL-1.0/patched_boykov_kolmogorov_max_flow</file>
-        <file>licenses_templates/TO-CLARIFY/kio_might-be-lgpl2.0-or-lgpl-2.1</file>
         <file>licensetexts/Apache-2.0.txt</file>
         <file>licensetexts/BSD-2-Clause.txt</file>
         <file>licensetexts/BSL-1.0.txt</file>
