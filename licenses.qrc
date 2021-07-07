@@ -228,10 +228,10 @@
         <file>licenses_templates/LGPL-2.0-or-later/umbrello_phpitem</file>
         <file>licenses_templates/LGPL-2.0-or-later/umbrello_ast</file>
         <file>licenses_templates/LGPL-2.0-or-later/plasma-desktop_launcher</file>
-        <file>licenses_templates/TO-CLARIFY/kio_kfilecopytomenutest</file>
-        <file>licenses_templates/TO-CLARIFY/kio_knameandurlinputdialog</file>
-        <file>licenses_templates/TO-CLARIFY/kservice_kmimeassociations</file>
-        <file>licenses_templates/TO-CLARIFY/kservice_ksycocadevices_p</file>
+        <file>licenses_templates/LGPL-2.0-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/kio_kfilecopytomenutest</file>
+        <file>licenses_templates/LGPL-2.0-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/kio_knameandurlinputdialog</file>
+        <file>licenses_templates/LGPL-2.0-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/kservice_kmimeassociations</file>
+        <file>licenses_templates/LGPL-2.0-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/kservice_ksycocadevices_p</file>
         <file>licenses_templates/LGPL-2.1-only/gsettingsitem</file>
         <file>licenses_templates/LGPL-2.1-only/kio_des</file>
         <file>licenses_templates/LGPL-2.1-only/kcoreaddons_kfilesystemtype</file>
