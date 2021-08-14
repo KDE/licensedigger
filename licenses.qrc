@@ -106,6 +106,7 @@
         <file>licenses_templates/GPL-2.0-or-later/gwenview_about</file>
         <file>licenses_templates/GPL-2.0-or-later/cantor_worksheetentry</file>
         <file>licenses_templates/GPL-2.0-or-later/umbrello_basictypes</file>
+        <file>licenses_templates/GPL-2.0-or-later/kalzium_unitcombobox</file>
         <file>licenses_templates/GPL-2.0-only_OR_GPL-3.0-only/khelpcenter_navigatorappitem</file>
         <file>licenses_templates/GPL-2.0-only_OR_GPL-3.0-only/khelpcenter_scopeitem</file>
         <file>licenses_templates/GPL-2.0-only_OR_GPL-3.0-only/plasma-workspace_cursortheme</file>
@@ -246,6 +247,7 @@
         <file>licenses_templates/LGPL-2.1-only_WITH_Qt-LGPL-exception-1.1_OR_LGPL-3.0-only_WITH_Qt-LGPL-exception-1.1_OR_LicenseRef-Qt-Commercial/kdeclarative_quickviewsharedengine</file>
         <file>licenses_templates/LGPL-2.1-only_WITH_Qt-LGPL-exception-1.1_OR_LGPL-3.0-only_WITH_Qt-LGPL-exception-1.1_OR_LicenseRef-Qt-Commercial/kcachegrind_qtcolorbutton</file>
         <file>licenses_templates/LGPL-2.1-or-later/baloo_basicindexingjobtest</file>
+        <file>licenses_templates/LGPL-2.1-or-later/kalzium_elementitem</file>
         <file>licenses_templates/LGPL-2.1-or-later/baloo_databasebenchmark</file>
         <file>licenses_templates/LGPL-2.1-or-later/bluezqt_a2dp-codecs</file>
         <file>licenses_templates/LGPL-2.1-or-later/kauth_backendsmanager</file>
