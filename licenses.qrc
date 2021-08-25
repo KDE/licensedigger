@@ -12,6 +12,7 @@
         <file>licenses_templates/BSD-3-Clause/discover_FindPackageKitQt2</file>
         <file>licenses_templates/BSD-3-Clause/konversation_guess_ja</file>
         <file>licenses_templates/BSD-3-Clause/Page</file>
+        <file>licenses_templates/BSD-3-Clause/kstars_mathtools</file>
         <file>licenses_templates/BSD-3-Clause/lut</file>
         <file>licenses_templates/BSL-1.0/GetGitRevisionDescription</file>
         <file>licenses_templates/CC0-1.0/colorspace</file>
@@ -81,6 +82,7 @@
         <file>licenses_templates/GPL-2.0-or-later/drkonqi_bugreportaddress</file>
         <file>licenses_templates/GPL-2.0-or-later/plasmaphonecomponents_homescreencontrols</file>
         <file>licenses_templates/GPL-2.0-or-later/plasmaphonecomponents_simplenotification</file>
+        <file>licenses_templates/GPL-2.0-or-later/kstars_customproperties</file>
         <file>licenses_templates/GPL-2.0-or-later/kturtle_sprite</file>
         <file>licenses_templates/GPL-2.0-or-later/symmy_compositejob</file>
         <file>licenses_templates/GPL-2.0-or-later/lattedock_taskconfig</file>
