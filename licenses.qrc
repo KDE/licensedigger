@@ -272,6 +272,7 @@
         <file>licenses_templates/LGPL-2.1-or-later/kis_xcf_import</file>
         <file>licenses_templates/LGPL-2.1-or-later/kis_wdg_options_heightmap</file>
         <file>licenses_templates/LGPL-2.1-or-later/RgbCompositeOps</file>
+        <file>licenses_templates/LGPL-2.1-or-later/sweeper_main</file>
         <file>licenses_templates/LGPL-2.1-or-later/KoTriangleColorSelector</file>
         <file>licenses_templates/LGPL-2.1-or-later/plasmadialer_channelapprover</file>
         <file>licenses_templates/LGPL-2.1-or-later/gwenview_bayer</file>
