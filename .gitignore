@@ -72,3 +72,5 @@ Thumbs.db
 *.exe
 
 .clang-format
+.cache
+compile_commands.json
