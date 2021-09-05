@@ -339,6 +339,7 @@
         <file>licenses_templates/GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/breeze-plymouth_breeze.script</file>
         <file>licenses_templates/GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/plasma-workspace_globalshortcuts</file>
         <file>licenses_templates/LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/plasma-workspace_contextualhelpbutton</file>
+        <file>licenses_templates/LGPL-2.0-or-later/marble</file>
         <file>licenses_templates/X11/okular_synctex_parser_utils</file>
     </qresource>
 </RCC>
