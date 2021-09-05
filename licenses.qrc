@@ -7,6 +7,7 @@
         <file>licenses_templates/BSD-2-Clause/breeze-plymouth_FindPlymouth</file>
         <file>licenses_templates/BSD-2-Clause/kde-gtk-config_FindXSettingsd</file>
         <file>licenses_templates/BSD-2-Clause/kis_tablet_support_win8</file>
+        <file>licenses_templates/BSD-2-Clause/ark_gzip</file>
         <file>licenses_templates/BSD-3-Clause/kjs_symboltable</file>
         <file>licenses_templates/BSD-3-Clause/ecm_cmake</file>
         <file>licenses_templates/BSD-3-Clause/discover_FindPackageKitQt2</file>
