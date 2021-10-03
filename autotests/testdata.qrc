@@ -188,6 +188,7 @@
         <file>testdata/LGPL-2.1-or-later/authorizationmanager_p.h</file>
         <file>testdata/LGPL-2.1-or-later/basicindexingjobtest.cpp</file>
         <file>testdata/LGPL-2.1-or-later/databasebenchmark.cpp</file>
+        <file>testdata/LGPL-2.1-or-later/grantlee_template.h</file>
         <file>testdata/LGPL-2.1-or-later/kis_legacy_importer.cc</file>
         <file>testdata/LGPL-2.1-or-later/kcollapsiblegroupboxtest.cpp</file>
         <file>testdata/LGPL-2.1-or-later/kcombobox.cpp</file>

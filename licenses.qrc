@@ -256,6 +256,7 @@
         <file>licenses_templates/LGPL-2.1-or-later/kalzium_elementitem</file>
         <file>licenses_templates/LGPL-2.1-or-later/baloo_databasebenchmark</file>
         <file>licenses_templates/LGPL-2.1-or-later/bluezqt_a2dp-codecs</file>
+        <file>licenses_templates/LGPL-2.1-or-later/grantlee</file>
         <file>licenses_templates/LGPL-2.1-or-later/kauth_backendsmanager</file>
         <file>licenses_templates/LGPL-2.1-or-later/kcompletion_kcombobox</file>
         <file>licenses_templates/LGPL-2.1-or-later/kis_legacy_importer</file>
