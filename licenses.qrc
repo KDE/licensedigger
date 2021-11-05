@@ -14,7 +14,6 @@
         <file>licenses_templates/BSD-3-Clause/konversation_guess_ja</file>
         <file>licenses_templates/BSD-3-Clause/Page</file>
         <file>licenses_templates/BSD-3-Clause/kstars_mathtools</file>
-        <file>licenses_templates/BSD-3-Clause/labplot</file>
         <file>licenses_templates/BSD-3-Clause/lut</file>
         <file>licenses_templates/BSL-1.0/GetGitRevisionDescription</file>
         <file>licenses_templates/CC0-1.0/colorspace</file>
@@ -89,7 +88,6 @@
         <file>licenses_templates/GPL-2.0-or-later/kturtle_sprite</file>
         <file>licenses_templates/GPL-2.0-or-later/symmy_compositejob</file>
         <file>licenses_templates/GPL-2.0-or-later/lattedock_taskconfig</file>
-        <file>licenses_templates/GPL-2.0-or-later/make-elles-profiles</file>
         <file>licenses_templates/GPL-2.0-or-later/KoPathShape</file>
         <file>licenses_templates/GPL-2.0-or-later/KisSnapPixelStrategy</file>
         <file>licenses_templates/GPL-2.0-or-later/dockwidget</file>
@@ -103,7 +101,6 @@
         <file>licenses_templates/GPL-2.0-or-later/plasma-workspace_filebrowserengine</file>
         <file>licenses_templates/GPL-2.0-or-later/systemsettings_iconmode</file>
         <file>licenses_templates/GPL-2.0-or-later/kio-extras_windowsimagecreator</file>
-        <file>licenses_templates/GPL-2.0-or-later/spectacle_kpiimagecollectionselector</file>
         <file>licenses_templates/GPL-2.0-or-later/gwenview_browsemainpage</file>
         <file>licenses_templates/GPL-2.0-or-later/gwenview_zoommode</file>
         <file>licenses_templates/GPL-2.0-or-later/gwenview_transformimageoperation</file>
@@ -161,7 +158,6 @@
         <file>licenses_templates/LGPL-2.0-only/ktextwidgets_kfindtest</file>
         <file>licenses_templates/LGPL-2.0-only/ktextwidgets_krichtextwidget</file>
         <file>licenses_templates/LGPL-2.0-only/kwidgetsaddons_kfontrequestertest</file>
-        <file>licenses_templates/LGPL-2.0-only/knotification_fake_notifications_server</file>
         <file>licenses_templates/LGPL-2.0-only/kwidgetsaddons_kmessagebox</file>
         <file>licenses_templates/LGPL-2.0-only/kis_hsv_adjustment_filter</file>
         <file>licenses_templates/LGPL-2.0-only/PluginSettings</file>
@@ -222,7 +218,6 @@
         <file>licenses_templates/LGPL-2.0-or-later/ToolReferenceImages</file>
         <file>licenses_templates/LGPL-2.0-or-later/tga</file>
         <file>licenses_templates/LGPL-2.0-or-later/kis_heightmap_export</file>
-        <file>licenses_templates/LGPL-2.0-or-later/PythonPluginsModel</file>
         <file>licenses_templates/LGPL-2.0-or-later/kis_dodgehighlights_adjustment</file>
         <file>licenses_templates/LGPL-2.0-or-later/kmainwindowiface_p</file>
         <file>licenses_templates/LGPL-2.0-or-later/plasma-workspace_expandedrepresentation</file>
@@ -275,7 +270,6 @@
         <file>licenses_templates/LGPL-2.1-or-later/plasma-framework_authorizationmanager_p</file>
         <file>licenses_templates/LGPL-2.1-or-later/KoBasicHistogramProducers</file>
         <file>licenses_templates/LGPL-2.1-or-later/kis_xcf_import</file>
-        <file>licenses_templates/LGPL-2.1-or-later/kis_wdg_options_heightmap</file>
         <file>licenses_templates/LGPL-2.1-or-later/RgbCompositeOps</file>
         <file>licenses_templates/LGPL-2.1-or-later/sweeper_main</file>
         <file>licenses_templates/LGPL-2.1-or-later/KoTriangleColorSelector</file>
@@ -337,7 +331,6 @@
         <file>licensetexts/Qt-Commercial-exception-1.0.txt</file>
         <file>licenses_templates/GPL-2.0-or-later_WITH_Qt-Commercial-exception-1.0/syndication_testloader</file>
         <file>licenses_templates/GPL-2.0-or-later_WITH_Qt-Commercial-exception-1.0/incidenceeditor_attachmenteditdialog</file>
-        <file>licenses_templates/GPL-2.0-or-later_WITH_Qt-Commercial-exception-1.0/syndication_benchmark</file>
         <file>licenses_templates/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/kdeconnect_android_startactivityalertdialogfragment</file>
         <file>licenses_templates/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/kdeconnect_android_uploadnotification</file>
         <file>licenses_templates/GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/breeze-plymouth_breeze.script</file>
