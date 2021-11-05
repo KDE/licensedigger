@@ -28,7 +28,10 @@
         <file>testdata/GPL-2.0-or-later/alternativesmodeltest.cpp</file>
         <file>testdata/GPL-2.0-or-later/apptemplateitem.h</file>
         <file>testdata/GPL-2.0-or-later/blockAnalyzer.cpp</file>
+        <file>testdata/GPL-2.0-or-later/breakpointwidget.h</file>
         <file>testdata/GPL-2.0-or-later/cachereader.h</file>
+        <file>testdata/GPL-2.0-or-later/customchecksetconfigproxywidget.h</file>
+        <file>testdata/GPL-2.0-or-later/custommakemanager.h</file>
         <file>testdata/GPL-2.0-or-later/docentry.h</file>
         <file>testdata/GPL-2.0-or-later/fht.cpp</file>
         <file>testdata/GPL-2.0-or-later/gstplayer.cpp</file>
@@ -37,6 +40,8 @@
         <file>testdata/GPL-2.0-or-later/kbbmainwindow.h</file>
         <file>testdata/GPL-2.0-or-later/kcharsetstest.cpp</file>
         <file>testdata/GPL-2.0-or-later/kcookiewin.h</file>
+        <file>testdata/GPL-2.0-or-later/kdevelop_cppchecK_globalconfigpage.h</file>
+        <file>testdata/GPL-2.0-or-later/kdevformatfile.h</file>
         <file>testdata/GPL-2.0-or-later/kemoticontest.cpp</file>
         <file>testdata/GPL-2.0-or-later/kexiv2.h</file>
         <file>testdata/GPL-2.0-or-later/kgamepopupitem.h</file>
@@ -51,6 +56,8 @@
         <file>testdata/GPL-2.0-or-later/kurlcomboboxtest.cpp</file>
         <file>testdata/GPL-2.0-or-later/localdomainurifilter.cpp</file>
         <file>testdata/GPL-2.0-or-later/shellpluginloader.cpp</file>
+        <file>testdata/GPL-2.0-or-later/sourceformatterselectionedit.h</file>
+        <file>testdata/GPL-2.0-or-later/test_qmljscompletion.h</file>
         <file>testdata/GPL-2.0-or-later/tooltip.cpp</file>
         <file>testdata/GPL-2.0-or-later/udsentrybenchmark.cpp</file>
         <file>testdata/GPL-2.0-or-later/view.cpp</file>
@@ -72,6 +79,7 @@
         <file>testdata/GPL-2.0-or-later/kmahjongg.h</file>
         <file>testdata/GPL-2.0-or-later/gameremovedtiles.h</file>
         <file>testdata/GPL-2.0-or-later/configdictionaryselector.cpp</file>
+        <file>testdata/GPL-2.0-or-later/ColorPicker.qml</file>
         <file>testdata/GPL-2.0-only_OR_GPL-3.0-only/navigatorappitem.h</file>
         <file>testdata/GPL-2.0-only_OR_GPL-3.0-only/scopeitem.h</file>
         <file>testdata/GPL-2.0-only_OR_GPL-3.0-only/xcursortheme.h</file>
@@ -80,6 +88,8 @@
         <file>testdata/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/nsaplugin.cpp</file>
         <file>testdata/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/queuetuner.h</file>
         <file>testdata/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/viewspringloader.cpp</file>
+        <file>testdata/GPL-2.0-only_OR_GPL-3.0-or-later/configwidget.h</file>
+        <file>testdata/GPL-2.0-only_OR_GPL-3.0-or-later/definesandincludesconfigpage.h</file>
         <file>testdata/GPL-3.0-only/batch_exporter.py</file>
         <file>testdata/GPL-3.0-or-later/kpeopleactionsplugin.h</file>
         <file>testdata/GPL-3.0-or-later/main.qml</file>
@@ -93,6 +103,7 @@
         <file>testdata/GPL-3.0-or-later/GCompris_https.qml</file>
         <file>testdata/GPL-3.0-or-later/GCompris_synth.cpp</file>
         <file>testdata/GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/breeze.script.cmake</file>
+        <file>testdata/GPL-3.0-only_WITH_Qt-GPL-exception-1.0_OR_LicenseRef-Qt-Commercial/qobjectdefs.h</file>
         <file>testdata/ICS/palettegeneratorconfig.h</file>
         <file>testdata/LGPL-2.0-only/cache.cpp</file>
         <file>testdata/LGPL-2.0-only/ldifconverter.h</file>
@@ -129,7 +140,9 @@
         <file>testdata/LGPL-2.0-or-later/SimplePage.qml</file>
         <file>testdata/LGPL-2.0-or-later/balooplugin.cpp</file>
         <file>testdata/LGPL-2.0-or-later/bomberwidget.h</file>
+        <file>testdata/LGPL-2.0-or-later/breakpoint.h</file>
         <file>testdata/LGPL-2.0-or-later/Canvas.cpp</file>
+        <file>testdata/LGPL-2.0-or-later/containertypes.h</file>
         <file>testdata/LGPL-2.0-or-later/dialogshadows.cpp</file>
         <file>testdata/LGPL-2.0-or-later/ecmatest.cpp</file>
         <file>testdata/LGPL-2.0-or-later/contactgroup.cpp</file>
@@ -154,6 +167,8 @@
         <file>testdata/LGPL-2.0-or-later/kseparator.cpp</file>
         <file>testdata/LGPL-2.0-or-later/kurlcompletion.cpp</file>
         <file>testdata/LGPL-2.0-or-later/kurlrequesterdialog.cpp</file>
+        <file>testdata/LGPL-2.0-or-later/mibreakpointcontroller.h</file>
+        <file>testdata/LGPL-2.0-or-later/milexer.h</file>
         <file>testdata/LGPL-2.0-or-later/package.cpp</file>
         <file>testdata/LGPL-2.0-or-later/palapeli_elidinglabel.h</file>
         <file>testdata/LGPL-2.0-or-later/palapeli_slicer.h</file>
@@ -169,6 +184,7 @@
         <file>testdata/LGPL-2.0-or-later/PythonPluginsModel.h</file>
         <file>testdata/LGPL-2.0-or-later/kis_dodgehighlights_adjustment.h</file>
         <file>testdata/LGPL-2.0-or-later/kmainwindowiface_p.h</file>
+        <file>testdata/LGPL-2.0-or-later/viewbarcontainer.h</file>
         <file>testdata/LGPL-2.0-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/kfilecopytomenutest.cpp</file>
         <file>testdata/LGPL-2.0-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/kmimeassociations.cpp</file>
         <file>testdata/LGPL-2.0-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/knameandurlinputdialog.cpp</file>
@@ -218,6 +234,7 @@
         <file>testdata/LGPL-2.1-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/projectparser.cpp</file>
         <file>testdata/LGPL-2.1-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/qtplatformdependent.cpp</file>
         <file>testdata/LGPL-2.1-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/utils.h</file>
+        <file>testdata/LGPL-2.1-only_WITH_LicenseRef-Qt-LGPL-exception-1.0_OR_GPL-3.0-only_OR_LicenseRef-Qt-Commercial/qendian.h</file>
         <file>testdata/LGPL-3.0-or-later/main.cpp</file>
         <file>testdata/LGPL-3.0-or-later/testcreateddatecompat.cpp</file>
         <file>testdata/LGPL-3.0-only_OR_GPL-2.0-or-later/ScrollView.qml</file>

@@ -41,6 +41,14 @@
         <file>licenses_templates/GPL-2.0-or-later/kcodecs_kcharsetstest</file>
         <file>licenses_templates/GPL-2.0-or-later/kconfigwidgets_kimageframe</file>
         <file>licenses_templates/GPL-2.0-or-later/kde-licensing-wiki</file>
+        <file>licenses_templates/GPL-2.0-or-later/kdevelop_breakpointwidget</file>
+        <file>licenses_templates/GPL-2.0-or-later/kdevelop_cppchecK_globalconfigpage</file>
+        <file>licenses_templates/GPL-2.0-or-later/kdevelop_ColorPicker</file>
+        <file>licenses_templates/GPL-2.0-or-later/kdevelop_customchecksetconfigproxywidget</file>
+        <file>licenses_templates/GPL-2.0-or-later/kdevelop_custommakemanager</file>
+        <file>licenses_templates/GPL-2.0-or-later/kdevelop_kdevformatfile</file>
+        <file>licenses_templates/GPL-2.0-or-later/kdevelop_sourceformatterselectionedit</file>
+        <file>licenses_templates/GPL-2.0-or-later/kdevelop_test_qmljscompletion</file>
         <file>licenses_templates/GPL-2.0-or-later/kdiamond</file>
         <file>licenses_templates/GPL-2.0-or-later/kemoticontest</file>
         <file>licenses_templates/GPL-2.0-or-later/kexiv2</file>
@@ -123,6 +131,8 @@
         <file>licenses_templates/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/messagelib_stringutil</file>
         <file>licenses_templates/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/kde_cli_tools_mimetypewriter</file>
         <file>licenses_templates/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/yakuake_skin</file>
+        <file>licenses_templates/GPL-2.0-only_OR_GPL-3.0-or-later/kdevelop_custom-buildsystem_configwidget</file>
+        <file>licenses_templates/GPL-2.0-only_OR_GPL-3.0-or-later/kdevelop_custom-definesandincludes_definesandincludesconfigpage</file>
         <file>licenses_templates/GPL-3.0-only/batch_exporter</file>
         <file>licenses_templates/GPL-3.0-or-later/kpeopleactionsplugin</file>
         <file>licenses_templates/GPL-3.0-or-later/kdeplasma-addons_timer_main</file>
@@ -138,7 +148,7 @@
         <file>licenses_templates/GPL-3.0-or-later/isoimagewriter_usbdevice</file>
         <file>licenses_templates/GPL-3.0-or-later/pbi</file>
         <file>licenses_templates/GPL-3.0-or-later/pbi2</file>
-
+        <file>licenses_templates/GPL-3.0-only_WITH_Qt-GPL-exception-1.0_OR_LicenseRef-Qt-Commercial/kdevelop_qobjectdefs</file>
         <file>licenses_templates/ICS/palettegeneratorconfig</file>
         <file>licenses_templates/LGPL-2.0-only/kcodecs_kcodecs</file>
         <file>licenses_templates/LGPL-2.0-only/kdbusaddons_kquitapp</file>
@@ -190,6 +200,11 @@
         <file>licenses_templates/LGPL-2.0-or-later/kcompletion_klineedit</file>
         <file>licenses_templates/LGPL-2.0-or-later/kconfig_test_kconf_update</file>
         <file>licenses_templates/LGPL-2.0-or-later/kdeclarative_qtquicksettings</file>
+        <file>licenses_templates/LGPL-2.0-or-later/kdevelop_breakpoint</file>
+        <file>licenses_templates/LGPL-2.0-or-later/kdevelop_containertypes</file>
+        <file>licenses_templates/LGPL-2.0-or-later/kdevelop_mibreakpointcontroller</file>
+        <file>licenses_templates/LGPL-2.0-or-later/kdevelop_milexer</file>
+        <file>licenses_templates/LGPL-2.0-or-later/kdevelop_viewbarcontainer</file>
         <file>licenses_templates/LGPL-2.0-or-later/kgamedifficulty</file>
         <file>licenses_templates/LGPL-2.0-or-later/kholidays_holidayregionsmodel</file>
         <file>licenses_templates/LGPL-2.0-or-later/kio_help</file>
@@ -287,6 +302,7 @@
         <file>licenses_templates/LGPL-2.1-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/kwidgetsaddons_kbusyindicatorwidget</file>
         <file>licenses_templates/LGPL-2.1-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/libkgapi_taskservice</file>
         <file>licenses_templates/LGPL-2.1-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/solid_inhibition</file>
+        <file>licenses_templates/LGPL-2.1-only_WITH_LicenseRef-Qt-LGPL-exception-1.0_OR_GPL-3.0-only_OR_LicenseRef-Qt-Commercial/qendian</file>
         <file>licenses_templates/LGPL-3.0-or-later/kwidgetaddons_kmessagebox</file>
         <file>licenses_templates/LGPL-3.0-or-later/kcalendarcore_testcreateddatecompat</file>
         <file>licenses_templates/LGPL-3.0-only_OR_GPL-2.0-or-later/qqc2desktop_scrollview</file>
@@ -325,6 +341,7 @@
         <file>licensetexts/Qt-LGPL-exception-1.1.txt</file>
         <file>licensetexts/LicenseRef-Qt-Commercial.txt</file>
         <file>licensetexts/LicenseRef-KFQF-Accepted-GPL.txt</file>
+        <file>licensetexts/LicenseRef-Qt-LGPL-exception-1.0.txt</file>
         <file>licensetexts/X11.txt</file>
         <file>licenses_templates/LGPL-3.0-only_OR_GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KFQF-Accepted-GPL_OR_LicenseRef-Qt-Commercial/qqc2-desktop-style_qsgdefaultninepatchnode</file>
         <file>licenses_templates/LGPL-2.1-or-later/artikulate_gstreamerbackend</file>
