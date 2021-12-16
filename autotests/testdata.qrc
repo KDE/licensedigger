@@ -83,6 +83,8 @@
         <file>testdata/GPL-2.0-only_OR_GPL-3.0-only/navigatorappitem.h</file>
         <file>testdata/GPL-2.0-only_OR_GPL-3.0-only/scopeitem.h</file>
         <file>testdata/GPL-2.0-only_OR_GPL-3.0-only/xcursortheme.h</file>
+        <file>testdata/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/choqok_notification.h</file>
+        <file>testdata/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/choqoktools.h</file>
         <file>testdata/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/formats.cpp</file>
         <file>testdata/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/kpasswdservertest.cpp</file>
         <file>testdata/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/nsaplugin.cpp</file>

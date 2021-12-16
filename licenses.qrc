@@ -121,6 +121,8 @@
         <file>licenses_templates/GPL-2.0-only_OR_GPL-3.0-only/khelpcenter_scopeitem</file>
         <file>licenses_templates/GPL-2.0-only_OR_GPL-3.0-only/plasma-workspace_cursortheme</file>
         <file>licenses_templates/GPL-2.0-only_OR_GPL-3.0-only/plasma-workspace_xcursortheme</file>
+        <file>licenses_templates/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/choqok_notification</file>
+        <file>licenses_templates/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/choqoktools</file>
         <file>licenses_templates/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/kdeclarative_formats</file>
         <file>licenses_templates/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/kio_kpasswdservertest</file>
         <file>licenses_templates/GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KDE-Accepted-GPL/konversation_queuetuner</file>
