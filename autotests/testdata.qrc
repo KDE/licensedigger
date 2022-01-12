@@ -48,6 +48,7 @@
         <file>testdata/GPL-2.0-or-later/kimageframe.cpp</file>
         <file>testdata/GPL-2.0-or-later/kio_search.cpp</file>
         <file>testdata/GPL-2.0-or-later/kioexec_main.cpp</file>
+        <file>testdata/GPL-2.0-or-later/kipiinterface.h</file>
         <file>testdata/GPL-2.0-or-later/killbots_main.cpp</file>
         <file>testdata/GPL-2.0-or-later/Konquest.cc</file>
         <file>testdata/GPL-2.0-or-later/kreversiplayer.h</file>
