@@ -34,6 +34,7 @@
         <file>licenses_templates/GPL-2.0-or-later/baloo_kio_search</file>
         <file>licenses_templates/GPL-2.0-or-later/dragon_blockAnalyzer</file>
         <file>licenses_templates/GPL-2.0-or-later/dragon_fht</file>
+        <file>licenses_templates/GPL-2.0-or-later/libalkimia</file>
         <file>licenses_templates/GPL-2.0-or-later/katomic</file>
         <file>licenses_templates/GPL-2.0-or-later/kactivities_activityinfo</file>
         <file>licenses_templates/GPL-2.0-or-later/kapptemplate_apptemplateitem</file>
@@ -270,6 +271,7 @@
         <file>licenses_templates/LGPL-2.1-or-later/baloo_databasebenchmark</file>
         <file>licenses_templates/LGPL-2.1-or-later/bluezqt_a2dp-codecs</file>
         <file>licenses_templates/LGPL-2.1-or-later/grantlee</file>
+        <file>licenses_templates/LGPL-2.1-or-later/libalkimia</file>
         <file>licenses_templates/LGPL-2.1-or-later/kauth_backendsmanager</file>
         <file>licenses_templates/LGPL-2.1-or-later/kcompletion_kcombobox</file>
         <file>licenses_templates/LGPL-2.1-or-later/kis_legacy_importer</file>
@@ -309,6 +311,7 @@
         <file>licenses_templates/LGPL-3.0-or-later/kwidgetaddons_kmessagebox</file>
         <file>licenses_templates/LGPL-3.0-or-later/kcalendarcore_testcreateddatecompat</file>
         <file>licenses_templates/LGPL-3.0-only_OR_GPL-2.0-or-later/qqc2desktop_scrollview</file>
+        <file>licenses_templates/MIT/libalkimia</file>
         <file>licenses_templates/MIT/kcodecs_chardistribution</file>
         <file>licenses_templates/MIT/kconfig_kconfigcompiler_test_signals</file>
         <file>licenses_templates/MIT/kdeclarative_declarativedragarea</file>
