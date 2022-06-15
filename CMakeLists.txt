@@ -11,6 +11,10 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+set(QT_MIN_VERSION "5.15.0")
+set(KF5_MIN_VERSION "5.90.0")
+set(KDE_COMPILERSETTINGS_LEVEL "5.82")
+
 # ECM
 find_package(ECM ${KF5_MIN_VERSION} REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
@@ -20,7 +24,7 @@ include(KDECMakeSettings)
 include(KDECompilerSettings NO_POLICY_SCOPE)
 include(KDEClangFormat)
 
-find_package(Qt5 REQUIRED COMPONENTS
+find_package(Qt${QT_MAJOR_VERSION} REQUIRED COMPONENTS
     Core
     Test
 )
@@ -42,6 +46,6 @@ ecm_mark_nongui_executable(licensedigger)
 target_compile_definitions(licensedigger
   PRIVATE $<$<OR:$<CONFIG:Debug>,$<CONFIG:RelWithDebInfo>>:QT_QML_DEBUG>)
 target_link_libraries(licensedigger
-  PRIVATE Qt5::Core)
+  PRIVATE Qt::Core)
 
 install(TARGETS licensedigger ${INSTALL_TARGETS_DEFAULT_ARGS})
