@@ -1,6 +1,7 @@
 <RCC>
     <qresource prefix="/">
         <file>testdata/Apache-2.0/FileUtils.java</file>
+        <file>testdata/AGPL-3.0-or-later/nextcloud-groufolder.php</file>
         <file>testdata/BSD-2-Clause/imagefilter.cpp</file>
         <file>testdata/BSD-2-Clause/kemailsettings.cpp</file>
         <file>testdata/BSD-2-Clause/unzipper_main.cpp</file>

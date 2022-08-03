@@ -18,6 +18,7 @@ public:
 
 private Q_SLOTS:
     // example data based tests
+    void detectAGPL30orlater();
     void detectGPL20_or_GPL30_or_KDE();
     void detectGPL20only();
     void detectGPL20orlater();

@@ -1,6 +1,10 @@
 <RCC>
     <qresource prefix="/">
         <file>licenses_templates/Apache-2.0/FileUtils</file>
+        <file>licenses_templates/AGPL-3.0-or-later/nextcloud</file>
+        <file>licenses_templates/AGPL-3.0-or-later/nextcloud1</file>
+        <file>licenses_templates/AGPL-3.0-or-later/nextcloud2</file>
+        <file>licenses_templates/AGPL-3.0-or-later/nextcloud3</file>
         <file>licenses_templates/BSD-2-Clause/karchive_unzipper_main</file>
         <file>licenses_templates/BSD-2-Clause/kconfig_kemailsettings</file>
         <file>licenses_templates/BSD-2-Clause/kio_imagefilter</file>
