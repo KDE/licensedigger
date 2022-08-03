@@ -12,7 +12,7 @@
 #include <QVector>
 
 const QStringList DirectoryParser::s_supportedExtensions = {".cpp",  ".cc", ".c", ".h",  ".css",  ".hpp", ".qml", ".cmake", "CMakeLists.txt", ".in",  ".py", ".frag", ".vert",
-                                                            ".glsl", "php", "sh", ".mm", ".java", ".kt",  ".js",  ".xml",   ".xsd",           ".xsl", ".pl", ".rb",   ".docbook"};
+                                                            ".glsl", "php", "sh", ".mm", ".java", ".kt",  ".js",  ".xml",   ".xsd",           ".xsl", ".pl", ".rb",   ".docbook", ".vue"};
 
 bool shallIgnoreFile(const QDirIterator &iterator, const QRegularExpression &fileToIgnorePattern)
 {
@@ -35,7 +35,7 @@ QRegularExpression DirectoryParser::copyrightRegExp() const
 {
     static auto regexp = QRegularExpression(
         "(?<!\")" // negative lookahead for quotation marks, to skip string statements
-        "(SPDX-FileCopyrightText:|[cC]opyright(\\s*:?\\s+\\([cC]\\))|(?<![cC]opyright )\\([cC]\\)|[cC]opyright\\s+©|(?<![cC]opyright )©|[cC]opyright(\\s*:)?)"
+        "(SPDX-FileCopyrightText:|[cC]opyright(\\s*:?\\s+\\([cC]\\))|(?<![cC]opyright )\\([cC]\\)|[cC]opyright\\s+©|(?<![cC]opyright )©|@[cC]opyright (Copyright \\([cC]\\))?|@author|[cC]opyright(\\s*:)?)"
         "[, ]+"
         "(?<years>([0-9]+(-[0-9]+| - [0-9]+| to [0-9]+|,[ ]?[0-9]+)*|%{CURRENT_YEAR}))"
         "[, ]+"
