@@ -74,6 +74,12 @@ void TestHeaderDetection::detectForIdentifierSkipParser(const QString &spdxMarke
     }
 }
 
+void TestHeaderDetection::detectAGPL30orlater()
+{
+    detectForIdentifierRegExpParser("AGPL-3.0-or-later");
+    detectForIdentifierSkipParser("AGPL-3.0-or-later");
+}
+
 void TestHeaderDetection::detectLGPL20orlater()
 {
     detectForIdentifierRegExpParser("LGPL-2.0-or-later");
