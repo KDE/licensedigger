@@ -48,4 +48,4 @@ target_compile_definitions(licensedigger
 target_link_libraries(licensedigger
   PRIVATE Qt::Core)
 
-install(TARGETS licensedigger ${INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS licensedigger ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
