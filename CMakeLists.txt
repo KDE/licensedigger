@@ -11,8 +11,8 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-set(QT_MIN_VERSION "5.15.0")
-set(KF5_MIN_VERSION "5.90.0")
+set(QT_MIN_VERSION "5.15.2")
+set(KF5_MIN_VERSION "5.91.0")
 set(KDE_COMPILERSETTINGS_LEVEL "5.82")
 
 # ECM
@@ -23,11 +23,18 @@ include(KDEInstallDirs)
 include(KDECMakeSettings)
 include(KDECompilerSettings NO_POLICY_SCOPE)
 include(KDEClangFormat)
+include(ECMDeprecationSettings)
 
 find_package(Qt${QT_MAJOR_VERSION} REQUIRED COMPONENTS
     Core
     Test
 )
+
+ecm_set_disabled_deprecation_versions(
+    QT 5.15.2
+    KF 5.102.0
+)
+
 
 add_subdirectory(autotests)
 
