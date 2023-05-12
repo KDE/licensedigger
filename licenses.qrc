@@ -249,6 +249,7 @@
         <file>licenses_templates/LGPL-2.0-or-later/umbrello_phpitem</file>
         <file>licenses_templates/LGPL-2.0-or-later/umbrello_ast</file>
         <file>licenses_templates/LGPL-2.0-or-later/plasma-desktop_launcher</file>
+        <file>licenses_templates/LGPL-2.0-or-later/ktexttemplate</file>
         <file>licenses_templates/LGPL-2.0-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/kio_kfilecopytomenutest</file>
         <file>licenses_templates/LGPL-2.0-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/kio_knameandurlinputdialog</file>
         <file>licenses_templates/LGPL-2.0-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/kservice_kmimeassociations</file>
@@ -295,6 +296,7 @@
         <file>licenses_templates/LGPL-2.1-or-later/KoTriangleColorSelector</file>
         <file>licenses_templates/LGPL-2.1-or-later/plasmadialer_channelapprover</file>
         <file>licenses_templates/LGPL-2.1-or-later/gwenview_bayer</file>
+        <file>licenses_templates/LGPL-2.1-or-later/ktexttemplate</file>
         <file>licenses_templates/LGPL-2.1-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/attica_projectparser</file>
         <file>licenses_templates/LGPL-2.1-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/attica_qtplatformdependent_typo</file>
         <file>licenses_templates/LGPL-2.1-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL/kactivities_utils</file>
