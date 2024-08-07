@@ -71,6 +71,7 @@
         <file>licenses_templates/GPL-2.0-or-later/krdc</file>
         <file>licenses_templates/GPL-2.0-or-later/kletters_languageutils</file>
         <file>licenses_templates/GPL-2.0-or-later/kreversiplayer</file>
+        <file>licenses_templates/GPL-2.0-or-later/krfb_rfbservermanager</file>
         <file>licenses_templates/GPL-2.0-or-later/krusader_iso</file>
         <file>licenses_templates/GPL-2.0-or-later/kspaceduel_main</file>
         <file>licenses_templates/GPL-2.0-or-later/kwin_blur</file>
@@ -105,6 +106,7 @@
         <file>licenses_templates/GPL-2.0-or-later/KisSqueezedComboBox_cpp</file>
         <file>licenses_templates/GPL-2.0-or-later/kis_tone_curve_widget</file>
         <file>licenses_templates/GPL-2.0-or-later/wacom-properties</file>
+        <file>licenses_templates/GPL-2.0-or-later/xcb_framebuffer</file>
         <file>licenses_templates/GPL-2.0-or-later/thememanager</file>
         <file>licenses_templates/GPL-2.0-or-later/kiten_configdictionaryselector</file>
         <file>licenses_templates/GPL-2.0-or-later/plasma-workspace_kfontinst</file>
@@ -145,6 +147,7 @@
         <file>licenses_templates/GPL-3.0-or-later/channels2layers</file>
         <file>licenses_templates/GPL-3.0-or-later/color_slider</file>
         <file>licenses_templates/GPL-3.0-or-later/plugin_importer</file>
+        <file>licenses_templates/GPL-3.0-or-later/pw_framebuffer</file>
         <file>licenses_templates/GPL-3.0-or-later/comics_export_dialog</file>
         <file>licenses_templates/GPL-3.0-or-later/tablettest</file>
         <file>licenses_templates/GPL-3.0-or-later/kshortcutschemeseditor</file>
